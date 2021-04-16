@@ -424,3 +424,5 @@ INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xc7283b66Eb1EB
 *
 INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xFd2a8fA60Abd58Efe3EeE34dd494cD491dC14900", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xFd2a8fA60Abd58Efe3EeE34dd494cD491dC14900", "C", "Curve.fi aDAI/aUSDC/aUSDT", "a3CRV", 1608558126, NULL, NULL, "", "0xFd2a8fA60Abd58Efe3EeE34dd494cD491dC14900");
 *
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x51e00a95748DBd2a3F47bC5c3b3E7B3F0fea666c", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x51e00a95748DBd2a3F47bC5c3b3E7B3F0fea666c", "C", "DVGToken", "DVG", 1611997374, NULL, "daoventures", "DVG", "0x51e00a95748DBd2a3F47bC5c3b3E7B3F0fea666c");
+*

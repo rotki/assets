@@ -418,3 +418,9 @@ INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingec
 *
 INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("XTZHEDGE", "W", "1X Short Tezos Token", "XTZHEDGE", 1596679200, NULL, "1x-short-tezos-token", "XTZHEDGE", "XTZHEDGE"); INSERT INTO common_asset_details(asset_id, forked) VALUES("XTZHEDGE", NULL);
 *
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x956F47F50A910163D8BF957Cf5846D573E7f87CA", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x956F47F50A910163D8BF957Cf5846D573E7f87CA", "C", "Fei USD", "FEI", 1616909037, NULL, "fei-protocol", "", "0x956F47F50A910163D8BF957Cf5846D573E7f87CA");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xc7283b66Eb1EB5FB86327f08e1B5816b0720212B", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xc7283b66Eb1EB5FB86327f08e1B5816b0720212B", "C", "Tribe", "TRIBE", 1616909037, NULL, "tribe", "", "0xc7283b66Eb1EB5FB86327f08e1B5816b0720212B");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xFd2a8fA60Abd58Efe3EeE34dd494cD491dC14900", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xFd2a8fA60Abd58Efe3EeE34dd494cD491dC14900", "C", "Curve.fi aDAI/aUSDC/aUSDT", "a3CRV", 1608558126, NULL, NULL, "", "0xFd2a8fA60Abd58Efe3EeE34dd494cD491dC14900");
+*

@@ -286,8 +286,6 @@ INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xC2685307Ef2B8
 *
 INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("LEOHALF", "W", "0.5X Long LEO Token", "LEOHALF", 1590372000, NULL, NULL, "LEOHALF", "LEOHALF"); INSERT INTO common_asset_details(asset_id, forked) VALUES("LEOHALF", NULL);
 *
-INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xfdc3D57eB7839ca68A2fAD7A93799c8e8aFA61B7", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xfdc3D57eB7839ca68A2fAD7A93799c8e8aFA61B7", "C", "1X Short Algorand Token", "ALGOHEDGE", 1566119012, NULL, "1x-short-algorand-token", "ALGOHEDGE", "0xfdc3D57eB7839ca68A2fAD7A93799c8e8aFA61B7");
-*
 INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("LINKHALF", "W", "0.5X Long Chainlink Token", "LINKHALF", 1598234400, NULL, "0-5x-long-chainlink-token", "LINKHALF", "LINKHALF"); INSERT INTO common_asset_details(asset_id, forked) VALUES("LINKHALF", NULL);
 *
 INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("LINKHEDGE", "W", "1X Short Chainlink Token", "LINKHEDGE", 1596852000, NULL, "1x-short-chainlink-token", "LINKHEDGE", "LINKHEDGE"); INSERT INTO common_asset_details(asset_id, forked) VALUES("LINKHEDGE", NULL);
@@ -376,7 +374,7 @@ INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xA5dDFCA8B837c
 *
 INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xc7038cCf60E48C5b7119E55566A6aD9f2D66C7c2", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xc7038cCf60E48C5b7119E55566A6aD9f2D66C7c2", "C", "3X Long BiLira Token", "TRYBBULL", 1580720322, NULL, "3x-long-bilira-token", "TRYBBULL", "0xc7038cCf60E48C5b7119E55566A6aD9f2D66C7c2");
 *
-INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("TRXHALF", "W", "0.5X Long BiLira Token", "TRYBHALF", 1592816322, NULL, NULL, "TRYBHALF", "TRYBHALF"); INSERT INTO common_asset_details(asset_id, forked) VALUES("TRYBHALF", NULL);
+INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("TRYBHALF", "W", "0.5X Long BiLira Token", "TRYBHALF", 1592816322, NULL, NULL, "TRYBHALF", "TRYBHALF"); INSERT INTO common_asset_details(asset_id, forked) VALUES("TRYBHALF", NULL);
 *
 INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("TRYBHEDGE", "W", "1X Short BiLira Token", "TRYBHEDGE", 1592816322, NULL, NULL, "TRYBHEDGE", "TRYBHEDGE"); INSERT INTO common_asset_details(asset_id, forked) VALUES("TRYBHEDGE", NULL);
 *

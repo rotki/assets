@@ -10,5 +10,4 @@ jobs:
 
     - name: Count number of changes
       run: |
-        chmod +x tests/count_last_changes.sh
-        bash tests/count_last_changes.sh
+        python tests/test_infojson.py

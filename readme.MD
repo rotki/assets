@@ -24,7 +24,9 @@ INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xa74476443119A
 
 and the second line needs to be a simple insertion statement. If the first line, the actual change, is also just inserting a new asset then the seconde line can simply be an ``*`` which means "the same thing".
 
-Make sure that the `updates/info.json` file is always kept up to date with the updates and the amount of changes in each update.
+Make sure that the `updates/info.json` file is always kept up to date with the updates, the amount of changes in each update and what's the min/max schema that each update can be applied to.
+
+Only the last one needs to be done manually. The rest can be taken care of by running the ``populate_infojson.py`` script.
 
 ### Adding ethereum tokens
 

@@ -180,6 +180,8 @@ INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingec
 *
 INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x02E88a689fdfB920e7Aa6174Fb7AB72add3C5694", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x02E88a689fdfB920e7Aa6174Fb7AB72add3C5694", "C", "1X Short Bitcoin Cash Token", "BCHHEDGE", 1566117917, NULL, "1x-short-bitcoin-cash-token", "BCHHEDGE", "0x02E88a689fdfB920e7Aa6174Fb7AB72add3C5694");
 *
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xd06b25F67A17f12b41F615b34D87ECd716fF55a0", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xd06b25F67A17f12b41F615b34D87ECd716fF55a0", "C", "3X Long Shitcoin Index Token", "BULLSHIT", 1566117877, NULL, "3x-long-shitcoin-index-token", "BULLSHIT", "0xd06b25F67A17f12b41F615b34D87ECd716fF55a0");
+*
 INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x48dEE19C81B89A9aB473361bAE7a19210f2DEaA4", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x48dEE19C81B89A9aB473361bAE7a19210f2DEaA4", "C", "3X Short Shitcoin Index Token", "BEARSHIT", 1566118923, NULL, "3x-short-shitcoin-index-token", "BEARSHIT", "0x48dEE19C81B89A9aB473361bAE7a19210f2DEaA4");
 *
 INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("BNBHALF", "W", "0.5X Long BNB Token", "BNBHALF", 1616000400, NULL, NULL, "BNBHALF", "BNBHALF"); INSERT INTO common_asset_details(asset_id, forked) VALUES("BNBHALF", NULL);
@@ -231,6 +233,8 @@ INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x3335f16AF9008
 INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("DRGNHALF", "W", "0.5X Long Dragon Index Token", "DRGNHALF", 1604451600, NULL, "0-5x-long-dragon-index-token", "DRGNHALF", "DRGNHALF"); INSERT INTO common_asset_details(asset_id, forked) VALUES("DRGNHALF", NULL);
 *
 INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("DRGNHEDGE", "W", "1X Short Dragon Index Token", "DRGNHEDGE", 1604451600, NULL, NULL, "DRGNHEDGE", "DRGNHEDGE"); INSERT INTO common_asset_details(asset_id, forked) VALUES("DRGNHEDGE", NULL);
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xb38f206615325306DddEB0794A6482486B6B78b8", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xb38f206615325306DddEB0794A6482486B6B78b8", "C", "1X Short EOS Token", "EOSHEDGE", 1552912006, NULL, "1x-short-eos-token", "EOSHEDGE", "0xb38f206615325306DddEB0794A6482486B6B78b8");
 *
 INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("EOSHALF", "W", "0.5X Long EOS Token", "EOSHALF", 1597370400, NULL, "0-5x-long-eos-token", "EOSHALF", "EOSHALF"); INSERT INTO common_asset_details(asset_id, forked) VALUES("EOSHALF", NULL);
 *
@@ -285,6 +289,8 @@ INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x3c955e35b6da1
 INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xC2685307Ef2B8842fbf3DeF432408C46Bd0420fd", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xC2685307Ef2B8842fbf3DeF432408C46Bd0420fd", "C", "3X Long LEO Token", "LEOBULL", 1566118887, NULL, "3x-long-leo-token", "LEOBULL", "0xC2685307Ef2B8842fbf3DeF432408C46Bd0420fd");
 *
 INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("LEOHALF", "W", "0.5X Long LEO Token", "LEOHALF", 1590372000, NULL, NULL, "LEOHALF", "LEOHALF"); INSERT INTO common_asset_details(asset_id, forked) VALUES("LEOHALF", NULL);
+*
+INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("LEOHEDGE", "W", "1X Short LEO Token", "LEOHEDGE", 1564963200, NULL, NULL, "LEOHEDGE", "LEOHEDGE"); INSERT INTO common_asset_details(asset_id, forked) VALUES("LEOHEDGE", NULL);
 *
 INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("LINKHALF", "W", "0.5X Long Chainlink Token", "LINKHALF", 1598234400, NULL, "0-5x-long-chainlink-token", "LINKHALF", "LINKHALF"); INSERT INTO common_asset_details(asset_id, forked) VALUES("LINKHALF", NULL);
 *
@@ -462,3 +468,19 @@ UPDATE assets SET cryptocompare="ALPA" WHERE identifier="_ceth_0x7cA4408137eb639
 INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x7cA4408137eb639570F8E647d9bD7B7E8717514A", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x7cA4408137eb639570F8E647d9bD7B7E8717514A", "C", "AlpaToken"", "ALPA", 1603590090, NULL, "alpaca", "ALPA", "0x7cA4408137eb639570F8E647d9bD7B7E8717514A");
 UPDATE assets SET cryptocompare="MOB" WHERE identifier="MOB";/*Add a cryptocompare identifier for mobilecoin*/
 INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("MOB", "B", "MobileCoin", "MOB", 1607212800, NULL, "mobilecoin", "MOB", "MOB"); INSERT INTO common_asset_details(asset_id, forked) VALUES("MOB", NULL);
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x174aFE7A032b5A33a3270a9f6C30746E25708532", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x174aFE7A032b5A33a3270a9f6C30746E25708532", "C", "Humanscape", "HUM", 1565746138, NULL, "humanscape", "HUM", "0x174aFE7A032b5A33a3270a9f6C30746E25708532");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xdBF637f78624F896B92F801E81f6031b7865eD20", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xdBF637f78624F896B92F801E81f6031b7865eD20", "C", "3X Short BitMax Token Token", "BTMXBEAR", 1580722860, NULL, "3x-short-bitmax-token-token", "BTMXBEAR", "0xdBF637f78624F896B92F801E81f6031b7865eD20");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x9885cA101DFd8f23D364874F799554C52BFee820", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x9885cA101DFd8f23D364874F799554C52BFee820", "C", "3X Long BitMax Token Token", "BTMXBULL", 1580720515, NULL, "3x-long-bitmax-token-token", "BTMXBULL", "0x9885cA101DFd8f23D364874F799554C52BFee820");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x9885cA101DFd8f23D364874F799554C52BFee820", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x9885cA101DFd8f23D364874F799554C52BFee820", "C", "3X Long BitMax Token Token", "BTMXBULL", 1580720515, NULL, "3x-long-bitmax-token-token", "BTMXBULL", "0x9885cA101DFd8f23D364874F799554C52BFee820");
+*
+INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("BTMXHALF", "W", "0.5X Long BitMax Token Token", "BTMXHALF", 1586736000, NULL, NULL, "BTMXHALF", "BTMXHALF"); INSERT INTO common_asset_details(asset_id, forked) VALUES("BTMXHALF", NULL);
+*
+INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("BTMXHEDGE", "W", "1X Short BitMax Token Token", "BTMXHEDGE", 1571616000, NULL, NULL, "BTMXHEDGE", "BTMXHEDGE"); INSERT INTO common_asset_details(asset_id, forked) VALUES("BTMXHEDGE", NULL);
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x3301Ee63Fb29F863f2333Bd4466acb46CD8323E6", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x3301Ee63Fb29F863f2333Bd4466acb46CD8323E6", "C", "Akita Inu", "AKITA", 1612076328, NULL, "akita-inu", "", "0x3301Ee63Fb29F863f2333Bd4466acb46CD8323E6");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x95aD61b0a150d79219dCF64E1E6Cc01f0B64C4cE", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x95aD61b0a150d79219dCF64E1E6Cc01f0B64C4cE", "C", "SHIBA INU", "SHIBA", 1596220363, NULL, "shiba-inu", "", "0x95aD61b0a150d79219dCF64E1E6Cc01f0B64C4cE");
+*

@@ -474,8 +474,6 @@ INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xdBF637f78624F
 *
 INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x9885cA101DFd8f23D364874F799554C52BFee820", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x9885cA101DFd8f23D364874F799554C52BFee820", "C", "3X Long BitMax Token Token", "BTMXBULL", 1580720515, NULL, "3x-long-bitmax-token-token", "BTMXBULL", "0x9885cA101DFd8f23D364874F799554C52BFee820");
 *
-INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x9885cA101DFd8f23D364874F799554C52BFee820", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x9885cA101DFd8f23D364874F799554C52BFee820", "C", "3X Long BitMax Token Token", "BTMXBULL", 1580720515, NULL, "3x-long-bitmax-token-token", "BTMXBULL", "0x9885cA101DFd8f23D364874F799554C52BFee820");
-*
 INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("BTMXHALF", "W", "0.5X Long BitMax Token Token", "BTMXHALF", 1586736000, NULL, NULL, "BTMXHALF", "BTMXHALF"); INSERT INTO common_asset_details(asset_id, forked) VALUES("BTMXHALF", NULL);
 *
 INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("BTMXHEDGE", "W", "1X Short BitMax Token Token", "BTMXHEDGE", 1571616000, NULL, NULL, "BTMXHEDGE", "BTMXHEDGE"); INSERT INTO common_asset_details(asset_id, forked) VALUES("BTMXHEDGE", NULL);

@@ -482,3 +482,7 @@ INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x3301Ee63Fb29F
 *
 INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x95aD61b0a150d79219dCF64E1E6Cc01f0B64C4cE", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x95aD61b0a150d79219dCF64E1E6Cc01f0B64C4cE", "C", "SHIBA INU", "SHIB", 1596220363, NULL, "shiba-inu", "", "0x95aD61b0a150d79219dCF64E1E6Cc01f0B64C4cE");
 *
+INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("WIN-3", "P", "WINk", "WIN", 1564704000, NULL, "wink", "WIN", "WIN-3"); INSERT INTO common_asset_details(asset_id, forked) VALUES("WIN-3", NULL);
+*
+INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("MTC-3", "B", "Metacoin", "MTC", 1559692800, NULL, "metacoin", "METAC", "MTC-3"); INSERT INTO common_asset_details(asset_id, forked) VALUES("MTC-3", NULL);
+*

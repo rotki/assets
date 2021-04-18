@@ -450,8 +450,8 @@ UPDATE assets SET cryptocompare="" WHERE identifier="EDR-2";/*Remove cryptocompa
 INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("EDR-2", "B", "E-Dinar Coin", "EDR", 1472226274, NULL, NULL, "", "EDR-2"); INSERT INTO common_asset_details(asset_id, forked) VALUES("EDR-2", NULL);
 UPDATE assets SET coingecko="faircoin" WHERE identifier="FAIR";/*Add a coingecko identifier for FairCoin*/
 INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("FAIR", "B", "FairCoin", "FAIR", 1393286400, NULL, "faircoin", "FAIR", "FAIR"); INSERT INTO common_asset_details(asset_id, forked) VALUES("FAIR", NULL);
-UPDATE assets SET cryptocompare="" WHERE identifier="SPA";/*Remove cryptocompare identifier for SpainCoin. We have no data anymore for this*/
-INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("SPA", "B", "SpainCoin", "SPA", 1394668800, NULL, NULL, "", "SPA"); INSERT INTO common_asset_details(asset_id, forked) VALUES("SPA", NULL);
+UPDATE assets SET cryptocompare="SPAIN" WHERE identifier="SPA";/*Update cryptocompare identifier for SpainCoin.*/
+INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("SPA", "B", "SpainCoin", "SPA", 1394668800, NULL, NULL, "SPAIN", "SPA"); INSERT INTO common_asset_details(asset_id, forked) VALUES("SPA", NULL);
 UPDATE assets SET coingecko="tokes", cryptocompare="TKS" WHERE identifier="TKS";/*Add a coingecko and cryptocompare identifier for Tokes*/
 INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("TKS", "M", "Tokes", "TKS", 1480723200, NULL, "tokes", "TKS", "TKS"); INSERT INTO common_asset_details(asset_id, forked) VALUES("TKS", NULL);
 UPDATE assets SET coingecko="terrausd", cryptocompare="UST" WHERE identifier="UST";/*Add a coingecko and cryptocompare identifier for TerraUSD*/

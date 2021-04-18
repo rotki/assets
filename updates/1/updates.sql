@@ -28,7 +28,7 @@ INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xD2dDa223b2617
 *
 INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xdBdb4d16EdA451D0503b854CF79D55697F90c8DF", 18, NULL); INSERT INTO assets(identifier, type, name, symbol,started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xdBdb4d16EdA451D0503b854CF79D55697F90c8DF", "C", "Alchemix", "ALCX", 1614400082, NULL, "alchemix", "ALCX", "0xdBdb4d16EdA451D0503b854CF79D55697F90c8DF");
 *
-INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x420412E765BFa6d85aaaC94b4f7b708C89be2e2B", 4, NULL); INSERT INTO assets(identifier, type, name, symbol,started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x420412E765BFa6d85aaaC94b4f7b708C89be2e2B", "C", "Brazilian Digital Token", "BRZ", 1552417004, NULL, "brazilian-digital-token", "BRZ", "0x420412E765BFa6d85aaaC94b4f7b708C89be2e2B");
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x420412E765BFa6d85aaaC94b4f7b708C89be2e2B", 4, NULL); INSERT INTO assets(identifier, type, name, symbol,started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x420412E765BFa6d85aaaC94b4f7b708C89be2e2B", "C", "Brazilian Digital Token", "BRZ", 1552417004, NULL, "brz", "BRZ", "0x420412E765BFa6d85aaaC94b4f7b708C89be2e2B");
 *
 INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xcca0c9c383076649604eE31b20248BC04FdF61cA", 18, NULL); INSERT INTO assets(identifier, type, name, symbol,started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xcca0c9c383076649604eE31b20248BC04FdF61cA", "C", "Bitmax Token", "BTMX", 1590380637, NULL, "bmax", "BTMX", "0xcca0c9c383076649604eE31b20248BC04FdF61cA");
 *

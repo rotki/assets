@@ -480,5 +480,5 @@ INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingec
 *
 INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x3301Ee63Fb29F863f2333Bd4466acb46CD8323E6", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x3301Ee63Fb29F863f2333Bd4466acb46CD8323E6", "C", "Akita Inu", "AKITA", 1612076328, NULL, "akita-inu", "", "0x3301Ee63Fb29F863f2333Bd4466acb46CD8323E6");
 *
-INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x95aD61b0a150d79219dCF64E1E6Cc01f0B64C4cE", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x95aD61b0a150d79219dCF64E1E6Cc01f0B64C4cE", "C", "SHIBA INU", "SHIBA", 1596220363, NULL, "shiba-inu", "", "0x95aD61b0a150d79219dCF64E1E6Cc01f0B64C4cE");
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x95aD61b0a150d79219dCF64E1E6Cc01f0B64C4cE", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x95aD61b0a150d79219dCF64E1E6Cc01f0B64C4cE", "C", "SHIBA INU", "SHIB", 1596220363, NULL, "shiba-inu", "", "0x95aD61b0a150d79219dCF64E1E6Cc01f0B64C4cE");
 *

@@ -364,7 +364,7 @@ INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xa38920C00D1a5
 *
 INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("TOMOHALF", "W", "0.5X Long TomoChain Token", "TOMOHALF", 1597024800, NULL, NULL, "TOMOHALF", "TOMOHALF"); INSERT INTO common_asset_details(asset_id, forked) VALUES("TOMOHALF", NULL);
 *
-INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("TOMOHEDGE", "W", "1X Short TomoChain Token", "TOMOHEDGE", 1596765600, NULL, "1x-short-tomochain-token", "TOMOHEDGE", "TOMOHEDGE"); INSERT INTO common_asset_details(asset_id, forked) VALUES("TOMOHALF", NULL);
+INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("TOMOHEDGE", "W", "1X Short TomoChain Token", "TOMOHEDGE", 1596765600, NULL, "1x-short-tomochain-token", "TOMOHEDGE", "TOMOHEDGE"); INSERT INTO common_asset_details(asset_id, forked) VALUES("TOMOHEDGE", NULL);
 *
 INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("TRXHALF", "W", "0.5X Long TRX Token", "TRXHALF", 1590372000, NULL, NULL, "TRXHALF", "TRXHALF"); INSERT INTO common_asset_details(asset_id, forked) VALUES("TRXHALF", NULL);
 *

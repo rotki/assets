@@ -106,8 +106,6 @@ INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xE748269494e76
 *
 INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("WAXP", "B", "WAX", "WAXP", 1528419600, NULL, "wax", "WAXP", "WAXP"); INSERT INTO common_asset_details(asset_id, forked) VALUES("WAXP", NULL);
 *
-INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("WIN", "P", "WINk", "WIN", 1562532570, NULL, "wink", "WIN", "WIN"); INSERT INTO common_asset_details(asset_id, forked) VALUES("WIN", NULL);
-*
 INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("DON", "B", "Donnie Finance", "DON", 1615954083, NULL, "donnie-finance", "", "DON"); INSERT INTO common_asset_details(asset_id, forked) VALUES("DON", NULL);
 *
 INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xD478161C952357F05f0292B56012Cd8457F1cfbF", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xD478161C952357F05f0292B56012Cd8457F1cfbF", "C", "Polkamarkets", "POLK", 1613820933, NULL, "polkamarkets", "POLK", "0xD478161C952357F05f0292B56012Cd8457F1cfbF");
@@ -465,7 +463,7 @@ INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingec
 UPDATE assets SET coingecko="milk-alliance", cryptocompare="MLK" WHERE identifier="MLK";/*Fix a coingecko and cryptocompare identifier for MiL.k*/
 INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("MLK", "V", "MiL.k", "MLK", 1595462400, NULL, "milk-alliance", "MLK", "MLK"); INSERT INTO common_asset_details(asset_id, forked) VALUES("MLK", NULL);
 UPDATE assets SET cryptocompare="ALPA" WHERE identifier="_ceth_0x7cA4408137eb639570F8E647d9bD7B7E8717514A";/*Set a coingecko identifier for ALPA*/
-INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x7cA4408137eb639570F8E647d9bD7B7E8717514A", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x7cA4408137eb639570F8E647d9bD7B7E8717514A", "C", "AlpaToken"", "ALPA", 1603590090, NULL, "alpaca", "ALPA", "0x7cA4408137eb639570F8E647d9bD7B7E8717514A");
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x7cA4408137eb639570F8E647d9bD7B7E8717514A", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x7cA4408137eb639570F8E647d9bD7B7E8717514A", "C", "AlpaToken", "ALPA", 1603590090, NULL, "alpaca", "ALPA", "0x7cA4408137eb639570F8E647d9bD7B7E8717514A");
 UPDATE assets SET cryptocompare="MOB" WHERE identifier="MOB";/*Add a cryptocompare identifier for mobilecoin*/
 INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("MOB", "B", "MobileCoin", "MOB", 1607212800, NULL, "mobilecoin", "MOB", "MOB"); INSERT INTO common_asset_details(asset_id, forked) VALUES("MOB", NULL);
 INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x174aFE7A032b5A33a3270a9f6C30746E25708532", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x174aFE7A032b5A33a3270a9f6C30746E25708532", "C", "Humanscape", "HUM", 1565746138, NULL, "humanscape", "HUM", "0x174aFE7A032b5A33a3270a9f6C30746E25708532");
@@ -482,7 +480,7 @@ INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x3301Ee63Fb29F
 *
 INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x95aD61b0a150d79219dCF64E1E6Cc01f0B64C4cE", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x95aD61b0a150d79219dCF64E1E6Cc01f0B64C4cE", "C", "SHIBA INU", "SHIB", 1596220363, NULL, "shiba-inu", "", "0x95aD61b0a150d79219dCF64E1E6Cc01f0B64C4cE");
 *
-INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("WIN-3", "P", "WINk", "WIN", 1564704000, NULL, "wink", "WIN", "WIN-3"); INSERT INTO common_asset_details(asset_id, forked) VALUES("WIN-3", NULL);
+INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("WIN-3", "P", "WINk", "WIN", 1562532570, NULL, "wink", "WIN", "WIN-3"); INSERT INTO common_asset_details(asset_id, forked) VALUES("WIN-3", NULL);
 *
 INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("MTC-3", "B", "Metacoin", "MTC", 1559692800, NULL, "metacoin", "METAC", "MTC-3"); INSERT INTO common_asset_details(asset_id, forked) VALUES("MTC-3", NULL);
 *

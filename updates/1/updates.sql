@@ -484,3 +484,7 @@ INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingec
 *
 INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("MTC-3", "B", "Metacoin", "MTC", 1559692800, NULL, "metacoin", "METAC", "MTC-3"); INSERT INTO common_asset_details(asset_id, forked) VALUES("MTC-3", NULL);
 *
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x126c121f99e1E211dF2e5f8De2d96Fa36647c855", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x126c121f99e1E211dF2e5f8De2d96Fa36647c855", "C", "DEGEN Index", "DEGEN", 1614594627, NULL, "degen-index", "", "0x126c121f99e1E211dF2e5f8De2d96Fa36647c855");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xD6cb2aDF47655B1bABdDc214d79257348CBC39A7", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xD6cb2aDF47655B1bABdDc214d79257348CBC39A7", "C", "Oracle Top 5 Tokens Index", "ORCL5", 1613758218, NULL, "oracle-top-5-index", "", "0xD6cb2aDF47655B1bABdDc214d79257348CBC39A7");
+*

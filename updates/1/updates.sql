@@ -78,7 +78,7 @@ INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x725C263e32c72
 *
 INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x1B073382E63411E3BcfFE90aC1B9A43feFa1Ec6F", 8, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x1B073382E63411E3BcfFE90aC1B9A43feFa1Ec6F", "C", "Bitpanda Ecosystem Token", "BEST", 1564487711, NULL, "bitpanda-ecosystem-token", "BEST", "0x1B073382E63411E3BcfFE90aC1B9A43feFa1Ec6F");
 *
-INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x738865301a9b7dd80dc3666dd48cf034ec42bdda", 8, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x738865301a9b7dd80dc3666dd48cf034ec42bdda", "C", "Agoras Token", "AGRS", 1610671100, NULL, "agoras-token", "AGRS", "0x738865301a9b7dd80dc3666dd48cf034ec42bdda");
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x738865301A9b7Dd80Dc3666dD48cF034ec42bdDa", 8, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x738865301A9b7Dd80Dc3666dD48cF034ec42bdDa", "C", "Agoras Token", "AGRS", 1610671100, NULL, "agoras-token", "AGRS", "0x738865301A9b7Dd80Dc3666dD48cF034ec42bdDa");
 *
 INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x2001f2A0Cf801EcFda622f6C28fb6E10d803D969", 8, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x2001f2A0Cf801EcFda622f6C28fb6E10d803D969", "C", "CoinLoan", "CLT", 1518798365, NULL, "coinloan", "", "0x2001f2A0Cf801EcFda622f6C28fb6E10d803D969");
 *

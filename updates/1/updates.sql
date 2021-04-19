@@ -488,3 +488,7 @@ INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x126c121f99e1E
 *
 INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xD6cb2aDF47655B1bABdDc214d79257348CBC39A7", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xD6cb2aDF47655B1bABdDc214d79257348CBC39A7", "C", "Oracle Top 5 Tokens Index", "ORCL5", 1613758218, NULL, "oracle-top-5", "", "0xD6cb2aDF47655B1bABdDc214d79257348CBC39A7");
 *
+INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("PNG", "X", "Pangolin", "PNG", 1613750451, NULL, "pangolin", "", "PNG"); INSERT INTO common_asset_details(asset_id, forked) VALUES("PNG", NULL);
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xF6eA0E60cee427B90aA36f327eE61d1d4CABC49F", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xF6eA0E60cee427B90aA36f327eE61d1d4CABC49F", "C", "FOTO", "FOTO", 1612087883, NULL, "unique-photo", "FOTO", "0xF6eA0E60cee427B90aA36f327eE61d1d4CABC49F");
+*

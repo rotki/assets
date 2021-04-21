@@ -154,7 +154,7 @@ INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x90B417Ab46244
 *
 INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xd829664CDbF3195b2cE76047A65de29e7ED0a9A8", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xd829664CDbF3195b2cE76047A65de29e7ED0a9A8", "C", "3X Long Altcoin Index Token", "ALTBULL", 1566117832, NULL, "3x-long-altcoin-index-token", "ALTBULL", "0xd829664CDbF3195b2cE76047A65de29e7ED0a9A8");
 *
-INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("ALTHALF", "W", "0.5X Long Algorand Token", "ALTHALF", 1603332000, NULL, "0-5x-long-altcoin-index-token", "ALTHALF", "ALTHALF"); INSERT INTO common_asset_details(asset_id, forked) VALUES("ALTHALF", NULL);
+INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("ALTHALF", "W", "0.5X Long Altcoin Index Token", "ALTHALF", 1603332000, NULL, "0-5x-long-altcoin-index-token", "ALTHALF", "ALTHALF"); INSERT INTO common_asset_details(asset_id, forked) VALUES("ALTHALF", NULL);
 *
 INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x258FEc90B7788E60dA3bc6f81d5839Dc5B36a110", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x258FEc90B7788E60dA3bc6f81d5839Dc5B36a110", "C", "1X Short Altcoin Index Token", "ALTHEDGE", 1566118867, NULL, NULL, "ALTHEDGE", "0x258FEc90B7788E60dA3bc6f81d5839Dc5B36a110");
 *
@@ -324,7 +324,7 @@ INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x8aF785687ee8D
 *
 INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("OKBHALF", "W", "0.5X Long OKB Token", "OKBHALF", 1596765600, NULL, "0-5x-long-okb-token", "OKBHALF", "OKBHALF"); INSERT INTO common_asset_details(asset_id, forked) VALUES("OKBHALF", NULL);
 *
-INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x889BC62E94bb6902D022bB82B38f7FCd637Df28C", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x889BC62E94bb6902D022bB82B38f7FCd637Df28C", "C", "1X Short OKB Token", "OKBHEDGE", 1570234092, NULL, "3x-short-okb-token", "OKBHEDGE", "0x889BC62E94bb6902D022bB82B38f7FCd637Df28C");
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x889BC62E94bb6902D022bB82B38f7FCd637Df28C", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x889BC62E94bb6902D022bB82B38f7FCd637Df28C", "C", "1X Short OKB Token", "OKBHEDGE", 1570234092, NULL, "1x-short-okb-token", "OKBHEDGE", "0x889BC62E94bb6902D022bB82B38f7FCd637Df28C");
 *
 INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x3C4a46F0C075A7F191A7459bb51EB1f81ac36F8A", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x3C4a46F0C075A7F191A7459bb51EB1f81ac36F8A", "C", "3X Short PAX Gold Token", "PAXGBEAR", 1580719612, NULL, "3x-short-pax-gold-token", "PAXGBEAR", "0x3C4a46F0C075A7F191A7459bb51EB1f81ac36F8A");
 *
@@ -336,7 +336,7 @@ INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingec
 *
 INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("PRIVBEAR", "W", "3X Short Privacy Index Token", "PRIVBEAR", 1596679200, NULL, "3x-short-privacy-index-token", "PRIVBEAR", "PRIVBEAR"); INSERT INTO common_asset_details(asset_id, forked) VALUES("PRIVBEAR", NULL);
 *
-INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("PRIVBULL", "W", "3X Short Privacy Index Token", "PRIVBULL", 1618536783, NULL, "3x-long-privacy-index-token", "PRIVBULL", "PRIVBULL"); INSERT INTO common_asset_details(asset_id, forked) VALUES("PRIVBULL", NULL);
+INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("PRIVBULL", "W", "3X Long Privacy Index Token", "PRIVBULL", 1618536783, NULL, "3x-long-privacy-index-token", "PRIVBULL", "PRIVBULL"); INSERT INTO common_asset_details(asset_id, forked) VALUES("PRIVBULL", NULL);
 *
 INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("PRIVHALF", "W", "0.5X Long Privacy Index Token", "PRIVHALF", 1603332000, NULL, "0-5x-long-privacy-index-token", "PRIVHALF", "PRIVHALF"); INSERT INTO common_asset_details(asset_id, forked) VALUES("PRIVHALF", NULL);
 *

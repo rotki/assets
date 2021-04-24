@@ -6,7 +6,7 @@ import pytest
 from validator.checker import UpdateChecker
 from validator.utils import get_latest_version
 
-@pytest.mark.parametrize("version", range(1,get_latest_version()+1))
+@pytest.mark.parametrize('version', range(1, get_latest_version() + 1))
 def test_valid_sql_sentences(version):
     root_dir = Path(__file__).parents[1]
     upgrade = root_dir / 'updates' / str(version) / 'updates.sql'

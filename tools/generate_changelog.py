@@ -2,7 +2,7 @@ import argparse
 from pathlib import Path
 
 from validator.checker import UpdateChecker
-from validator import get_latest_version
+from validator.utils import get_latest_version
 
 root_dir = Path(__file__).parents[1]
 

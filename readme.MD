@@ -77,7 +77,7 @@ To detect some errors we have a test that checks every entry:
 
 2. Run the tests with
 
-        python -m pytest tests
+        pytest tests
 
 ## Generate a list of changes
 

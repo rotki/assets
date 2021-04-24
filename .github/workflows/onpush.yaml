@@ -7,7 +7,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-
-    - name: Count number of changes
+    - name: Set up python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.7.10'
+    - name: Install dependencies
+      run: |
+        python3 -m pip install --upgrade pip setuptools wheel
+        pip3 install -r requirements.txt
+    - name: Store python cache
+      uses: actions/cache@v2
+      with:
+        path: ~/.cache/pip
+        key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+    - name: Verify changes
       run: |
         python tests/test_infojson.py
+        python -m tests.test_correct_entries

@@ -66,3 +66,21 @@ Then an addition to the common asset details which at the moment consist only of
 
 - **asset_id**: This is the asset identifier.
 - **forked**: Optional. Can be ``NULL``. This is the asset identifier of the asset from which this asset was forked if any. For example for `BCH` this is `BTC` and for `ETC` this is `ETH`.
+
+## Test your changes
+
+To detect some errors we have a test that checks every entry:
+
+1. Install the dependencies with
+
+        pip install -r requirements.txt
+
+2. Run the tests with
+
+        pytest tests
+
+## Generate a list of changes
+
+To generate a list of changes for a specific version use
+
+    python -m tools.generate_changelog 1

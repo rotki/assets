@@ -1,0 +1,251 @@
+"""
+Code extracted from the rotki's updater for version 1.16.0
+https://github.com/rotki/rotki/blob/8f41fcba4732fba4af563c45c34ad9ad288906a2/rotkehlchen/globaldb/updates.py
+"""
+
+import re
+from typing import NamedTuple, NewType, Optional, Tuple, Union
+from eth_utils import is_checksum_formatted_address
+
+T_Timestamp = int
+Timestamp = NewType('Timestamp', T_Timestamp)
+
+CHANGELOG_MSG = """
+Added support for the following assets:
+
+{}
+
+Updated the information of the following assets:
+
+{}
+"""
+
+
+class DeserializationError(Exception):
+    """Raised when deserializing data from the outside and something unexpected is found"""
+
+
+class ParsedAssetData(NamedTuple):
+    identifier: str
+    asset_type: str
+    name: str
+    symbol: str
+    started: Optional[int]
+    swapped_for: Optional[str]
+    coingecko: Optional[str]
+    cryptocompare: Optional[str]
+
+
+class AssetData(NamedTuple):
+    identifier: str
+    asset_type: str
+    name: str
+    symbol: str
+    started: Optional[int]
+    swapped_for: Optional[str]
+    coingecko: Optional[str]
+    cryptocompare: Optional[str]
+    forked: Optional[str]
+    ethereum_address: Optional[str]
+    protocol: Optional[str]
+    decimals: Optional[int]
+
+
+class UpdateChecker:
+
+    def __init__(self):
+        self.versions = {
+            2: {
+                "assets_re": re.compile(r'.*INSERT +INTO +assets\( *identifier *, *type *, *name *, *symbol *, *started *, *swapped_for *, *coingecko *, *cryptocompare *, *details_reference *\) +VALUES\((.*?),(.*?),(.*?),(.*?),(.*?),(.*?),(.*?),(.*?),(.*?)\).*?'),
+                "ethereum_tokens_re": re.compile(r'.*INSERT +INTO +ethereum_tokens\( *address *, *decimals *, *protocol *\) +VALUES\((.*?),(.*?),(.*?)\).*'),
+                "common_asset_details_re": re.compile(r'.*INSERT +INTO +common_asset_details\( *asset_id *, *forked *\) +VALUES\((.*?),(.*?)\).*')
+            }
+        }
+        self.string_re = re.compile(r'.*"(.*?)".*')
+        self.test_version = 2
+
+    def _parse_value(self, value: str) -> Optional[Union[str, int]]:
+        match = self.string_re.match(value)
+        if match is not None:
+            return match.group(1)
+
+        value = value.strip()
+        if value == 'NULL':
+            return None
+
+        try:
+            return int(value)
+        except ValueError:
+            return value
+
+    def _parse_str(self, value: str, name: str, insert_text: str) -> str:
+        result = self._parse_value(value)
+        if not isinstance(result, str):
+            raise DeserializationError(
+                f'At asset DB update got invalid {name} {value} from {insert_text}',
+            )
+        return result
+
+    def _parse_optional_str(self, value: str, name: str, insert_text: str) -> Optional[str]:
+        result = self._parse_value(value)
+        if result is not None and not isinstance(result, str):
+            raise DeserializationError(
+                f'At asset DB update got invalid {name} {value} from {insert_text}',
+            )
+        return result
+
+    def _parse_optional_int(self, value: str, name: str, insert_text: str) -> Optional[int]:
+        result = self._parse_value(value)
+        if result is not None and not isinstance(result, int):
+            raise DeserializationError(
+                f'At asset DB update got invalid {name} {value} from {insert_text}',
+            )
+        return result
+
+    def _parse_asset_data(self, insert_text: str) -> ParsedAssetData:
+        match = self.versions[self.test_version]['assets_re'].match(insert_text)
+        if match is None:
+            raise DeserializationError(
+                f'At asset DB update could not parse asset data out of {insert_text}',
+            )
+        if len(match.groups()) != 9:
+            raise DeserializationError(
+                f'At asset DB update could not parse asset data out of {insert_text}',
+            )
+
+        raw_type = self._parse_str(match.group(2), 'asset type', insert_text)
+        asset_type = raw_type
+        raw_started = self._parse_optional_int(match.group(5), 'started', insert_text)
+        started = Timestamp(raw_started) if raw_started else None
+        return ParsedAssetData(
+            identifier=self._parse_str(match.group(1), 'identifier', insert_text),
+            asset_type=asset_type,
+            name=self._parse_str(match.group(3), 'name', insert_text),
+            symbol=self._parse_str(match.group(4), 'symbol', insert_text),
+            started=started,
+            swapped_for=self._parse_optional_str(match.group(6), 'swapped_for', insert_text),
+            coingecko=self._parse_optional_str(match.group(7), 'coingecko', insert_text),
+            cryptocompare=self._parse_optional_str(match.group(8), 'cryptocompare', insert_text),
+        )
+
+    def _parse_ethereum_token_data(self, insert_text: str) -> Tuple[str, Optional[int], Optional[str]]:  # noqa: E501
+        match = self.versions[self.test_version]['ethereum_tokens_re'].match(insert_text)
+        if match is None:
+            raise DeserializationError(
+                f'At asset DB update could not parse ethereum token data out '
+                f'of {insert_text}',
+            )
+
+        if len(match.groups()) != 3:
+            raise DeserializationError(
+                f'At asset DB update could not parse ethereum token data out of {insert_text}',
+            )
+
+        return (
+            self._parse_str(match.group(1), 'address', insert_text),
+            self._parse_optional_int(match.group(2), 'decimals', insert_text),
+            self._parse_optional_str(match.group(3), 'protocol', insert_text),
+        )
+
+    def _parse_full_insert(self, insert_text: str) -> AssetData:
+        """Parses the full insert line for an asset to give information for the conflict to the user
+
+        Note: In the future this needs to be different for each version
+        May raise:
+        - DeserializationError if the appropriate data is not found or if it can't
+        be properly parsed.
+        """
+        asset_data = self._parse_asset_data(insert_text)
+        forked = address = decimals = protocol = None
+        if asset_data.asset_type == 'C':
+            address, decimals, protocol = self._parse_ethereum_token_data(insert_text)
+        else:
+            match = self.versions[self.test_version]['common_asset_details_re'].match(insert_text)
+            if match is None:
+                raise DeserializationError(
+                    f'At asset DB update could not parse common asset '
+                    f'details data out of {insert_text}',
+                )
+            forked = self._parse_optional_str(match.group(2), 'forked', insert_text)
+
+        return AssetData(  # types are not really proper here (except for asset_type)
+            identifier=asset_data.identifier,
+            name=asset_data.name,
+            symbol=asset_data.symbol,
+            asset_type=asset_data.asset_type,
+            started=asset_data.started,
+            forked=forked,
+            swapped_for=asset_data.swapped_for,
+            ethereum_address=address,
+            decimals=decimals,
+            cryptocompare=asset_data.cryptocompare,
+            coingecko=asset_data.coingecko,
+            protocol=protocol,
+        )
+
+    def check_single_version_update(
+            self,
+            text: str,
+    ) -> None:
+        lines = text.splitlines()
+        seen_elements = set()
+        for action, full_insert in zip(*[iter(lines)] * 2):
+            insert = False
+            if full_insert == '*':
+                full_insert = action
+                insert = True
+
+            # Use the same regex as in the rotki servers to obtain the assets
+            asset_data = self._parse_full_insert(full_insert)
+
+            assert asset_data.cryptocompare is not None or asset_data.coingecko is not None
+            assert len(asset_data.name) != 0
+            assert len(asset_data.symbol) != 0
+
+            # Check agains duplicate information
+            if insert:
+                assert asset_data.cryptocompare not in seen_elements, f'Duplicate cryptocompare {asset_data.cryptocompare}'
+                assert asset_data.coingecko not in seen_elements, f'Duplicate coingecko {asset_data.coingecko}'
+                assert asset_data.name not in seen_elements, f'Duplicate name {asset_data.name}'
+                assert asset_data.symbol not in seen_elements, f'Duplicate symbol {asset_data.symbol}'
+
+            # For ethereum address, make a checksum of addresses
+            if asset_data.ethereum_address is not None:
+                assert is_checksum_formatted_address(asset_data.ethereum_address)
+                assert asset_data.ethereum_address in action
+                if insert:
+                    assert asset_data.ethereum_address not in seen_elements, f'Duplicate address {asset_data.ethereum_address}'
+                    seen_elements.add(asset_data.ethereum_address)
+
+            if insert:
+                seen_elements.update((asset_data.symbol, asset_data.name))
+                if (asset_data.cryptocompare is not None) and len(asset_data.cryptocompare) != 0:
+                    seen_elements.add(asset_data.cryptocompare)
+                if (asset_data.coingecko is not None) and len(asset_data.coingecko) != 0:
+                    seen_elements.add(asset_data.coingecko)
+
+    def generate_report(
+        self,
+        text: str,
+    ) -> str:
+        lines = text.splitlines()
+        new_assets = []
+        updated_assets = []
+        for action, full_insert in zip(*[iter(lines)] * 2):
+            is_new = False
+            if full_insert == '*':
+                full_insert = action
+                is_new = True
+            asset_data = self._parse_full_insert(full_insert)
+            if asset_data.coingecko is not None:
+                msg = f'- [{asset_data.name} ({asset_data.symbol})](https://www.coingecko.com/en/coins/{asset_data.coingecko})'
+            elif asset_data.cryptocompare is not None:
+                msg = f'- [{asset_data.name} ({asset_data.symbol})](https://www.cryptocompare.com/coins/{asset_data.cryptocompare}/overview/)'
+            else:
+                msg = f'- {asset_data.name} ({asset_data.symbol})'
+            if is_new:
+                new_assets.append(msg)
+            else:
+                updated_assets.append(msg)
+
+        return CHANGELOG_MSG.format('\n'.join(new_assets), '\n'.join(updated_assets))

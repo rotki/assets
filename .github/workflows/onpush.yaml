@@ -22,5 +22,4 @@ jobs:
         key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
     - name: Verify changes
       run: |
-        python tests/test_infojson.py
-        python -m tests.test_correct_entries
+        pytest tests

@@ -8,3 +8,5 @@ INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x16980b3B4a3f9
 *
 INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x71F85B2E46976bD21302B64329868fd15eb0D127", 18, NULL); INSERT INTO assets(identifier, type, name, symbol,started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x71F85B2E46976bD21302B64329868fd15eb0D127", "C", "Axion", "AXN", 1608233622, NULL, "axion", "AXN", "0x71F85B2E46976bD21302B64329868fd15eb0D127");
 *
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x11613b1f840bb5A40F8866d857e24DA126B79D73", 2, NULL); INSERT INTO assets(identifier, type, name, symbol,started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x11613b1f840bb5A40F8866d857e24DA126B79D73", "C", "CAPP Token", "CAPP", 1604300729, NULL, "cappasity", "", "0x11613b1f840bb5A40F8866d857e24DA126B79D73");
+*

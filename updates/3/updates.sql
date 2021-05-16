@@ -36,3 +36,5 @@ INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x9F9c8ec3534c3
 *
 INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x7825e833D495F3d1c28872415a4aee339D26AC88", 18, NULL); INSERT INTO assets(identifier, type, name, symbol,started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x7825e833D495F3d1c28872415a4aee339D26AC88", "C", "pTokens TLOS", "TLOS", 1613670383, NULL, "telos", "TLOS", "0x7825e833D495F3d1c28872415a4aee339D26AC88");
 *
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x8798249c2E607446EfB7Ad49eC89dD1865Ff4272", 18, NULL); INSERT INTO assets(identifier, type, name, symbol,started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x8798249c2E607446EfB7Ad49eC89dD1865Ff4272", "C", "SushiBar", "xSUSHI", 1599311156, NULL, "xsushi", "", "0x8798249c2E607446EfB7Ad49eC89dD1865Ff4272");
+*

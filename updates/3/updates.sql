@@ -42,3 +42,9 @@ INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x1eB754B8355d3
 *
 UPDATE assets SET swapped_for="_ceth_0x1eB754B8355d3185A7429109bde75e473434B26B" WHERE identifier="_ceth_0x913D8ADf7CE6986a8CbFee5A54725D9Eea4F0729";/*Migration of EeasyFi*/
 INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x913D8ADf7CE6986a8CbFee5A54725D9Eea4F0729", 18, NULL); INSERT INTO assets(identifier, type, name, symbol,started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x913D8ADf7CE6986a8CbFee5A54725D9Eea4F0729", "C", "EASY", "EZ", 1601459453, "_ceth_0x1eB754B8355d3185A7429109bde75e473434B26B", "easyfi", "EZ", "0x913D8ADf7CE6986a8CbFee5A54725D9Eea4F0729");
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xE66747a101bFF2dBA3697199DCcE5b743b454759", 18, NULL); INSERT INTO assets(identifier, type, name, symbol,started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xE66747a101bFF2dBA3697199DCcE5b743b454759", "C", "GateChainToken", "GT", 1557411619, NULL, "gatetoken", "GT", "0xE66747a101bFF2dBA3697199DCcE5b743b454759");
+*
+INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("MEDIA", "Y", "Media Network", "MEDIA", 1619799163, NULL, "media-network", "", "MEDIA"); INSERT INTO common_asset_details(asset_id, forked) VALUES("MEDIA", NULL);
+*
+INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("STEP", "Y", "Step Finance", "STEP", 1619335055, NULL, "step-finance", "", "STEP"); INSERT INTO common_asset_details(asset_id, forked) VALUES("STEP", NULL);
+*

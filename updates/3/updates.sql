@@ -38,3 +38,7 @@ INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x7825e833D495F
 *
 INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x8798249c2E607446EfB7Ad49eC89dD1865Ff4272", 18, NULL); INSERT INTO assets(identifier, type, name, symbol,started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x8798249c2E607446EfB7Ad49eC89dD1865Ff4272", "C", "SushiBar", "xSUSHI", 1599311156, NULL, "xsushi", "", "0x8798249c2E607446EfB7Ad49eC89dD1865Ff4272");
 *
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x1eB754B8355d3185A7429109bde75e473434B26B", 18, NULL); INSERT INTO assets(identifier, type, name, symbol,started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x1eB754B8355d3185A7429109bde75e473434B26B", "C", "EASY V2", "EZ", 1619411513, NULL, "easyfi", "EZ", "0x1eB754B8355d3185A7429109bde75e473434B26B");
+*
+UPDATE assets SET swapped_for="_ceth_0x1eB754B8355d3185A7429109bde75e473434B26B" WHERE identifier="_ceth_0x913D8ADf7CE6986a8CbFee5A54725D9Eea4F0729";/*Migration of EeasyFi*/
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x913D8ADf7CE6986a8CbFee5A54725D9Eea4F0729", 18, NULL); INSERT INTO assets(identifier, type, name, symbol,started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x913D8ADf7CE6986a8CbFee5A54725D9Eea4F0729", "C", "EASY", "EZ", 1601459453, "_ceth_0x1eB754B8355d3185A7429109bde75e473434B26B", "easyfi", "EZ", "0x913D8ADf7CE6986a8CbFee5A54725D9Eea4F0729");

@@ -14,3 +14,7 @@ INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xDd1Ad9A21Ce72
 *
 INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("MHC", "W", "#MetaHash", "MHC", 1550624400, NULL, "metahash", "MHC", "MHC"); INSERT INTO common_asset_details(asset_id, forked) VALUES("MHC", NULL);
 *
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xC477D038d5420C6A9e0b031712f61c5120090de9", 18, NULL); INSERT INTO assets(identifier, type, name, symbol,started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xC477D038d5420C6A9e0b031712f61c5120090de9", "C", "Boson Token", "BOSON", 1616145920, NULL, "boson-protocol", "BOSON", "0xC477D038d5420C6A9e0b031712f61c5120090de9");
+*
+INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("ANC", "W", "Anchor Protocol", "ANC", 1615986013, NULL, "anchor-protocol", "ANC", "ANC"); INSERT INTO common_asset_details(asset_id, forked) VALUES("ANC", NULL);
+*

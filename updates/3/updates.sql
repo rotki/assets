@@ -48,3 +48,5 @@ INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingec
 *
 INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("STEP", "Y", "Step Finance", "STEP", 1619335055, NULL, "step-finance", "", "STEP"); INSERT INTO common_asset_details(asset_id, forked) VALUES("STEP", NULL);
 *
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x4e3FBD56CD56c3e72c1403e103b45Db9da5B9D2B", 18, NULL); INSERT INTO assets(identifier, type, name, symbol,started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x4e3FBD56CD56c3e72c1403e103b45Db9da5B9D2B", "C", "Convex Token", "CVX", 1621242525, NULL, "convex-finance", "", "0x4e3FBD56CD56c3e72c1403e103b45Db9da5B9D2B");
+*

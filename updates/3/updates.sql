@@ -50,3 +50,31 @@ INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingec
 *
 INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x4e3FBD56CD56c3e72c1403e103b45Db9da5B9D2B", 18, NULL); INSERT INTO assets(identifier, type, name, symbol,started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x4e3FBD56CD56c3e72c1403e103b45Db9da5B9D2B", "C", "Convex Token", "CVX", 1621242525, NULL, "convex-finance", "", "0x4e3FBD56CD56c3e72c1403e103b45Db9da5B9D2B");
 *
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xC08512927D12348F6620a698105e1BAac6EcD911", 6, NULL); INSERT INTO assets(identifier, type, name, symbol,started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xC08512927D12348F6620a698105e1BAac6EcD911", "C", "GMO JPY", "GYEN", 1576043730, NULL, "gyen", "GYEN", "0xC08512927D12348F6620a698105e1BAac6EcD911");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xB8E2e2101eD11e9138803cd3e06e16dd19910647", 2, NULL); INSERT INTO assets(identifier, type, name, symbol,started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xB8E2e2101eD11e9138803cd3e06e16dd19910647", "C", "ArdCoin", "ARDX", 1566984871, NULL, "ardcoin", "ARDX", "0xB8E2e2101eD11e9138803cd3e06e16dd19910647");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x5Ca381bBfb58f0092df149bD3D243b08B9a8386e", 18, NULL); INSERT INTO assets(identifier, type, name, symbol,started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x5Ca381bBfb58f0092df149bD3D243b08B9a8386e", "C", "MXCToken", "MXC", 1533749838, NULL, "mxc", "", "0x5Ca381bBfb58f0092df149bD3D243b08B9a8386e");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xAE1eaAE3F627AAca434127644371b67B18444051", 8, NULL); INSERT INTO assets(identifier, type, name, symbol,started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xAE1eaAE3F627AAca434127644371b67B18444051", "C", "YOP", "YOP", 1605033356, NULL, "yield-optimization-platform", "YOP", "0xAE1eaAE3F627AAca434127644371b67B18444051");
+*
+INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("LNCHX", "S", "LaunchX", "LNCHX", 1620720017, NULL, "launchx", "", "LNCHX"); INSERT INTO common_asset_details(asset_id, forked) VALUES("LNCHX", NULL);
+*
+INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("POLX", "S", "Polylastic", "POLX", 1619730927, NULL, "polylastic", "POLX", "POLX"); INSERT INTO common_asset_details(asset_id, forked) VALUES("POLX", NULL);
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xF4d861575ecC9493420A3f5a14F85B13f0b50EB3", 18, NULL); INSERT INTO assets(identifier, type, name, symbol,started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xF4d861575ecC9493420A3f5a14F85B13f0b50EB3", "C", "Fractal Protocol Token", "FCL", 1613480889, NULL, "fractal", "FCL", "0xF4d861575ecC9493420A3f5a14F85B13f0b50EB3");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xbDEC45952B5E234EdDC2981B43eeD360826D5087", 18, NULL); INSERT INTO assets(identifier, type, name, symbol,started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xbDEC45952B5E234EdDC2981B43eeD360826D5087", "C", "Mogu Token", "MOGX", 1566834869, NULL, "mogu", "MOGU", "0xbDEC45952B5E234EdDC2981B43eeD360826D5087");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x5273063725a43A323300C502478C22FbB4e92C2D", 18, NULL); INSERT INTO assets(identifier, type, name, symbol,started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x5273063725a43A323300C502478C22FbB4e92C2D", "C", "MY IDENTITY COIN", "MYID", 1614319404, NULL, "my-identity-coin", "MYID", "0x5273063725a43A323300C502478C22FbB4e92C2D");
+*
+INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("NDAU", "W", "Ndau", "NDAU", 1569891600, NULL, "ndau", "XND", "NDAU"); INSERT INTO common_asset_details(asset_id, forked) VALUES("NDAU", NULL);
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xaA8330FB2B4D5D07ABFE7A72262752a8505C6B37", 18, NULL); INSERT INTO assets(identifier, type, name, symbol,started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xaA8330FB2B4D5D07ABFE7A72262752a8505C6B37", "C", "Polka City", "POLC", 1613575886, NULL, "polkacity", "", "0xaA8330FB2B4D5D07ABFE7A72262752a8505C6B37");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xDf801468a808a32656D2eD2D2d80B72A129739f4", 8, NULL); INSERT INTO assets(identifier, type, name, symbol,started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xDf801468a808a32656D2eD2D2d80B72A129739f4", "C", "Somnium Space Cubes", "CUBE", 1570181738, NULL, "somnium-space-cubes", "CUBE", "0xDf801468a808a32656D2eD2D2d80B72A129739f4");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xd794DD1CAda4cf79C9EebaAb8327a1B0507ef7d4", 18, NULL); INSERT INTO assets(identifier, type, name, symbol,started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xd794DD1CAda4cf79C9EebaAb8327a1B0507ef7d4", "C", "HYVE", "HYVE", 1602545820, NULL, "hyve", "", "0xd794DD1CAda4cf79C9EebaAb8327a1B0507ef7d4");
+*
+UPDATE assets SET cryptocompare="CPC" WHERE identifier="_ceth_0xfAE4Ee59CDd86e3Be9e8b90b53AA866327D7c090";/*Update crytocompare*/
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xfAE4Ee59CDd86e3Be9e8b90b53AA866327D7c090", 18, NULL); INSERT INTO assets(identifier, type, name, symbol,started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xfAE4Ee59CDd86e3Be9e8b90b53AA866327D7c090", "C", "CPChain", "CPC", 1516060800, NULL, "cpchain", "CPC", "0xfAE4Ee59CDd86e3Be9e8b90b53AA866327D7c090");

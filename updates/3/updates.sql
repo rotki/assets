@@ -130,3 +130,13 @@ UPDATE assets SET cryptocompare="FLUX" WHERE identifier="FLUX";/*Update cryptoco
 INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("FLUX", "B", "Flux", "FLUX", 1564624800, NULL, "zelcash", "FLUX", "FLUX"); INSERT INTO common_asset_details(asset_id, forked) VALUES("FLUX", NULL);
 UPDATE assets SET cryptocompare="BAR" WHERE identifier="BAR";/*Update cryptocompare*/
 INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("BAR", "W", "FC Barcelona Fan Token", "BAR", 1557885600, NULL, "fc-barcelona-fan-token", "", "BAR"); INSERT INTO common_asset_details(asset_id, forked) VALUES("BAR", NULL);
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xA2b4C0Af19cC16a6CfAcCe81F192B024d625817D", 9, NULL); INSERT INTO assets(identifier, type, name, symbol,started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xA2b4C0Af19cC16a6CfAcCe81F192B024d625817D", "C", "Kishu Inu", "KISHU", 1618701107, NULL, "kishu-inu", "KISHU", "0xA2b4C0Af19cC16a6CfAcCe81F192B024d625817D");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xB4d930279552397bbA2ee473229f89Ec245bc365", 18, NULL); INSERT INTO assets(identifier, type, name, symbol,started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xB4d930279552397bbA2ee473229f89Ec245bc365", "C", "MahaDAO", "MAHA", 1608180794, NULL, "mahadao", "MAHA", "0xB4d930279552397bbA2ee473229f89Ec245bc365");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x850aAB69f0e0171A9a49dB8BE3E71351c8247Df4", 18, NULL); INSERT INTO assets(identifier, type, name, symbol,started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x850aAB69f0e0171A9a49dB8BE3E71351c8247Df4", "C", "Konomi", "KONO", 1615080162, NULL, "konomi-network", "KONO", "0x850aAB69f0e0171A9a49dB8BE3E71351c8247Df4");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x0FCbC31c503b4A9eD90E87f8Ff46C318a4a14260", 8, NULL); INSERT INTO assets(identifier, type, name, symbol,started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x0FCbC31c503b4A9eD90E87f8Ff46C318a4a14260", "C", "Quantfury Token", "QTF", 1615080162, NULL, "quantfury", "QTF", "0x0FCbC31c503b4A9eD90E87f8Ff46C318a4a14260");
+*
+INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("MDX", "W", "Mdex", "MDX", 1611045443, NULL, "mdex", "MDX", "MDX"); INSERT INTO common_asset_details(asset_id, forked) VALUES("MDX", NULL);
+*

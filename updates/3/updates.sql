@@ -122,3 +122,7 @@ INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x0FCbC31c503b4
 *
 INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("MDX", "W", "Mdex", "MDX", 1611045443, NULL, "mdex", "MDX", "MDX"); INSERT INTO common_asset_details(asset_id, forked) VALUES("MDX", NULL);
 *
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x474021845C4643113458ea4414bdb7fB74A01A77", 18, NULL); INSERT INTO assets(identifier, type, name, symbol,started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x474021845C4643113458ea4414bdb7fB74A01A77", "C", "UnoRe", "UNO", 1619478432, NULL, "unore", "UNORE", "0x474021845C4643113458ea4414bdb7fB74A01A77");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x9534ad65fb398E27Ac8F4251dAe1780B989D136e", 18, NULL); INSERT INTO assets(identifier, type, name, symbol,started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x9534ad65fb398E27Ac8F4251dAe1780B989D136e", "C", "PYR Token", "PYR", 1616095445, NULL, "vulcan-forged", "PYR", "0x9534ad65fb398E27Ac8F4251dAe1780B989D136e");
+*

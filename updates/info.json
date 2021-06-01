@@ -1,1 +1,1 @@
-{"updates": {"1": {"min_schema_version": 2, "max_schema_version": 2, "changes": 249}, "2": {"min_schema_version": 2, "max_schema_version": 2, "changes": 27}, "3": {"min_schema_version": 2, "max_schema_version": 2, "changes": 64}}, "latest": 3}
+{"updates": {"1": {"min_schema_version": 2, "max_schema_version": 2, "changes": 249}, "2": {"min_schema_version": 2, "max_schema_version": 2, "changes": 27}, "3": {"min_schema_version": 2, "max_schema_version": 2, "changes": 64}, "4": {"min_schema_version": 2, "max_schema_version": 2, "changes": 6}}, "latest": 4}

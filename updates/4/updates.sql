@@ -1,0 +1,12 @@
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xDe30da39c46104798bB5aA3fe8B9e0e1F348163F", 18, NULL); INSERT INTO assets(identifier, type, name, symbol,started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xDe30da39c46104798bB5aA3fe8B9e0e1F348163F", "C", "Gitcoin", "GTC", 1620856082, NULL, "gitcoin", "", "0xDe30da39c46104798bB5aA3fe8B9e0e1F348163F");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x0eC9F76202a7061eB9b3a7D6B59D36215A7e37da", 18, NULL); INSERT INTO assets(identifier, type, name, symbol,started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x0eC9F76202a7061eB9b3a7D6B59D36215A7e37da", "C", "BlackPool Token", "BPT", 1622152335, NULL, "blackpool-token", "", "0x0eC9F76202a7061eB9b3a7D6B59D36215A7e37da");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x05Ac103f68e05da35E78f6165b9082432FE64B58", 18, NULL); INSERT INTO assets(identifier, type, name, symbol,started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x05Ac103f68e05da35E78f6165b9082432FE64B58", "C", "eToro Euro", "EURX", 1551109014, NULL, "etoro-euro", "", "0x05Ac103f68e05da35E78f6165b9082432FE64B58");
+*
+INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("ANI", "S", "Anime", "ANI", 1611654649, NULL, "anime-token", "", "ANI"); INSERT INTO common_asset_details(asset_id, forked) VALUES("ANI", NULL);
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xc5bDdf9843308380375a611c18B50Fb9341f502A", 18, NULL); INSERT INTO assets(identifier, type, name, symbol,started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xc5bDdf9843308380375a611c18B50Fb9341f502A", "C", "veCRV-DAO yVault", "yveCRV-DAO", 1604573459, NULL, "vecrv-dao-yvault", "", "0xc5bDdf9843308380375a611c18B50Fb9341f502A");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x9d409a0A012CFbA9B15F6D4B36Ac57A46966Ab9a", 18, NULL); INSERT INTO assets(identifier, type, name, symbol,started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x9d409a0A012CFbA9B15F6D4B36Ac57A46966Ab9a", "C", "Yearn Compounding veCRV yVault", "yvBOOST", 1617828349, NULL, "yvboost", "YVBOOST", "0x9d409a0A012CFbA9B15F6D4B36Ac57A46966Ab9a");
+*

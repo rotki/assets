@@ -26,13 +26,17 @@ INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x4B1E80cAC91e2
 *
 UPDATE assets SET cryptocompare="MEDIA" WHERE identifier="MEDIA";/*Update crytocompare*/
 INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("MEDIA", "Y", "Media Network", "MEDIA", 1619799163, NULL, "media-network", "MEDIA", "MEDIA"); INSERT INTO common_asset_details(asset_id, forked) VALUES("MEDIA", NULL);
-UPDATE assets SET coingecko=NULL WHERE identifier="_ceth_0x4D9e23a3842fE7Eb7682B9725cF6c507C424A41B";/*Coingecko doesnt provide informationm anymore*/
-INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x4D9e23a3842fE7Eb7682B9725cF6c507C424A41B", 18, NULL); INSERT INTO assets(identifier, type, name, symbol,started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x4D9e23a3842fE7Eb7682B9725cF6c507C424A41B", "C", "CarBlock", "CAR", 1530154004, NULL, NULL, "CAR", "0x4D9e23a3842fE7Eb7682B9725cF6c507C424A41B");
 UPDATE assets SET coingecko="celletf" WHERE identifier="_ceth_0x9b62Ec1453cEa5Dde760AAf662048cA6eEB66E7f";/*Coingecko changed id*/
 INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x9b62Ec1453cEa5Dde760AAf662048cA6eEB66E7f", 2, NULL); INSERT INTO assets(identifier, type, name, symbol,started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x9b62Ec1453cEa5Dde760AAf662048cA6eEB66E7f", "C", "Consensus Cell Network", "ECELL", 1566879537, NULL, "celletf", "ECELL", "0x9b62Ec1453cEa5Dde760AAf662048cA6eEB66E7f");
 UPDATE assets SET coingecko="uno-re" WHERE identifier="_ceth_0x474021845C4643113458ea4414bdb7fB74A01A77";/*Coingecko changed id*/
 INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x474021845C4643113458ea4414bdb7fB74A01A77", 18, NULL); INSERT INTO assets(identifier, type, name, symbol,started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x474021845C4643113458ea4414bdb7fB74A01A77", "C", "UnoRe", "UNO", 1619478432, NULL, "uno-re", "UNORE", "0x474021845C4643113458ea4414bdb7fB74A01A77");
 UPDATE assets SET coingecko="bitcny" WHERE identifier="BITCNY";/*Coingecko changed id*/
 INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("BITCNY", "G", "bitCNY", "BITCNY", 1411446262, NULL, "bitcny", "BITCNY", "BITCNY"); INSERT INTO common_asset_details(asset_id, forked) VALUES("BITCNY", NULL);
-UPDATE assets SET coingecko=NULL WHERE identifier="PIGGY";/*Coingecko changed id*/
-INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("PIGGY", "B", "Piggycoin", "PIGGY", 1433894400, NULL, NULL, "PIGGY", "PIGGY"); INSERT INTO common_asset_details(asset_id, forked) VALUES("PIGGY", NULL);
+INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("XEP", "W", "Electra Protocol", "XEP", 1609894800, NULL, "electra-protocol", "", "XEP"); INSERT INTO common_asset_details(asset_id, forked) VALUES("XEP", NULL);
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xbc4171f45EF0EF66E76F979dF021a34B46DCc81d", 18, NULL); INSERT INTO assets(identifier, type, name, symbol,started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xbc4171f45EF0EF66E76F979dF021a34B46DCc81d", "C", "Dorayaki", "DORA", 1616166848, NULL, "dora-factory", "DORA", "0xbc4171f45EF0EF66E76F979dF021a34B46DCc81d");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x6149C26Cd2f7b5CCdb32029aF817123F6E37Df5B", 18, NULL); INSERT INTO assets(identifier, type, name, symbol,started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x6149C26Cd2f7b5CCdb32029aF817123F6E37Df5B", "C", "Launchpool token", "LPOOL", 1613128796, NULL, "launchpool", "LPOOL", "0x6149C26Cd2f7b5CCdb32029aF817123F6E37Df5B");
+*
+INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("ETHO", "W", "Etho Protocol", "ETHO", 1609894800, NULL, "ether-1", "ETHO", "ETHO"); INSERT INTO common_asset_details(asset_id, forked) VALUES("ETHO", NULL);
+*

@@ -40,3 +40,7 @@ INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x6149C26Cd2f7b
 *
 INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("ETHO", "W", "Etho Protocol", "ETHO", 1609894800, NULL, "ether-1", "ETHO", "ETHO"); INSERT INTO common_asset_details(asset_id, forked) VALUES("ETHO", NULL);
 *
+UPDATE assets SET cryptocompare="HYVE" where identifier="_ceth_0xd794DD1CAda4cf79C9EebaAb8327a1B0507ef7d4";
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xd794DD1CAda4cf79C9EebaAb8327a1B0507ef7d4", 18, NULL); INSERT INTO assets(identifier, type, name, symbol,started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xd794DD1CAda4cf79C9EebaAb8327a1B0507ef7d4", "C", "HYVE", "HYVE", 1602545820, NULL, "hyve", "HYVE", "0xd794DD1CAda4cf79C9EebaAb8327a1B0507ef7d4");
+UPDATE assets SET cryptocompare="OUSD" where identifier="_ceth_0x2A8e1E676Ec238d8A992307B495b45B3fEAa5e86";
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x2A8e1E676Ec238d8A992307B495b45B3fEAa5e86", 18, NULL); INSERT INTO assets(identifier, type, name, symbol,started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x2A8e1E676Ec238d8A992307B495b45B3fEAa5e86", "C", "Origin Dollar", "OUSD", 1600410737, NULL, "origin-dollar", "OUSD", "0x2A8e1E676Ec238d8A992307B495b45B3fEAa5e86");

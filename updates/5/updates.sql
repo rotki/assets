@@ -36,16 +36,14 @@ INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x21381e026Ad6d
 *
 INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xf4CD3d3Fda8d7Fd6C5a500203e38640A70Bf9577", 18, NULL); INSERT INTO assets(identifier, type, name, symbol,started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xf4CD3d3Fda8d7Fd6C5a500203e38640A70Bf9577", "C", "YfDAI.finance", "Yf-DAI", 1599024013, NULL, "yfdai-finance", "YFDAI", "0xf4CD3d3Fda8d7Fd6C5a500203e38640A70Bf9577");
 *
-INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("CQT", "X", "Covalent", "CQT", 1614214958, NULL, "covalent", "", "CQT"); INSERT INTO common_asset_details(asset_id, forked) VALUES("CQT", NULL);
-*
 UPDATE assets SET cryptocompare="VEED" where identifier="VEED";
 INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("VEED", "W", "VEED", "VEED", 1622439185, NULL, "veed", "VEED", "VEED"); INSERT INTO common_asset_details(asset_id, forked) VALUES("VEED", NULL);
-UPDATE assets SET coingecko="stk" where identifier="_ceth_0xaE73B38d1c9A8b274127ec30160a4927C4d71824";
-INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xaE73B38d1c9A8b274127ec30160a4927C4d71824", 18, NULL); INSERT INTO assets(identifier, type, name, symbol,started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xaE73B38d1c9A8b274127ec30160a4927C4d71824", "C", "STK", "STK", 1506470400, NULL, "stk", "", "0xaE73B38d1c9A8b274127ec30160a4927C4d71824");
+UPDATE assets SET coingecko="stk", cryptocompare="STK" where identifier="_ceth_0xaE73B38d1c9A8b274127ec30160a4927C4d71824";
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xaE73B38d1c9A8b274127ec30160a4927C4d71824", 18, NULL); INSERT INTO assets(identifier, type, name, symbol,started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xaE73B38d1c9A8b274127ec30160a4927C4d71824", "C", "STK", "STK", 1506470400, NULL, "stk", "STK", "0xaE73B38d1c9A8b274127ec30160a4927C4d71824");
 INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xc1f976B91217E240885536aF8b63bc8b5269a9BE", 18, NULL); INSERT INTO assets(identifier, type, name, symbol,started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xc1f976B91217E240885536aF8b63bc8b5269a9BE", "C", "Public Index Network", "PIN", 1616281845, NULL, "public-index-network", "", "0xc1f976B91217E240885536aF8b63bc8b5269a9BE");
 *
-UPDATE assets SET swapped_for="_ceth_0xc1f976B91217E240885536aF8b63bc8b5269a9BE" where identifier="FLO";
-INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("FLO", "B", "FLO", "FLO", 1371427200, "_ceth_0xc1f976B91217E240885536aF8b63bc8b5269a9BE", NULL, "", "FLO"); INSERT INTO common_asset_details(asset_id, forked) VALUES("FLO", NULL);
+UPDATE assets SET swapped_for="_ceth_0xc1f976B91217E240885536aF8b63bc8b5269a9BE", coingecko="public-index-network" where identifier="FLO";
+INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("FLO", "B", "FLO", "FLO", 1371427200, "_ceth_0xc1f976B91217E240885536aF8b63bc8b5269a9BE", "public-index-network", "", "FLO"); INSERT INTO common_asset_details(asset_id, forked) VALUES("FLO", NULL);
 INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xEfaB7248D36585e2340E5d25F8a8D243E6e3193F", 18, NULL); INSERT INTO assets(identifier, type, name, symbol,started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xEfaB7248D36585e2340E5d25F8a8D243E6e3193F", "C", "DACXI", "DACXI", 1605719556, NULL, "dacxi", "", "0xEfaB7248D36585e2340E5d25F8a8D243E6e3193F");
 *
 INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("MIMO", "W", "Mimosa", "MIMO", 1614560400, NULL, "mimosa", "", "MIMO"); INSERT INTO common_asset_details(asset_id, forked) VALUES("MIMO", NULL);

@@ -3,6 +3,7 @@ Code extracted from the rotki's updater for version 1.16.0
 https://github.com/rotki/rotki/blob/8f41fcba4732fba4af563c45c34ad9ad288906a2/rotkehlchen/globaldb/updates.py
 """
 
+import logging
 import re
 from typing import NamedTuple, NewType, Optional, Tuple, Union
 from eth_utils import is_checksum_formatted_address
@@ -206,8 +207,10 @@ class UpdateChecker:
             if insert:
                 assert asset_data.cryptocompare not in seen_elements, f'Duplicate cryptocompare {asset_data.cryptocompare}'
                 assert asset_data.coingecko not in seen_elements, f'Duplicate coingecko {asset_data.coingecko}'
-                assert asset_data.name not in seen_elements, f'Duplicate name {asset_data.name}'
-                assert asset_data.symbol not in seen_elements, f'Duplicate symbol {asset_data.symbol}'
+                if asset_data.name in seen_elements:
+                    logging.warning(f'Duplicate name {asset_data.name}')
+                if asset_data.symbol in seen_elements:
+                    logging.warning(f'Duplicate symbol {asset_data.symbol}')
 
             # For ethereum address, make a checksum of addresses
             if asset_data.ethereum_address is not None:

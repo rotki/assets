@@ -51,6 +51,47 @@ class AssetData(NamedTuple):
     protocol: Optional[str]
     decimals: Optional[int]
 
+# In V2 anyone can create a vault and there are some that are endorsed by yearn once they 
+# are battle tested. The information seen here comes from the yearn v2 graph that tracks every 
+# yearn v2 vault, even the ones that are not endorsed. All the vaults in yearn v2 were
+# extracted from the yearn v2 graph.
+DUPLICATED_NAMES = (
+    'Curve Y Pool yVault',
+    'ALCX yVault',
+    'eCRV yVault',
+    'USDC yVault',
+    'LINK yVault',
+    'USDT yVault',
+    'RAI yVault',
+    'WETH yVault',
+    'sUSD yVault',
+    'UNI yVault',
+    'WBTC yVault',
+    'HBTC yVault',
+    'AAVE yVault',
+    'DAI yVault',
+    'crvRenWBTC yVault',
+    'SNX yVault'
+)
+
+DUPLICATED_SYMBOLS = (
+    'yUSD',
+    'yvALCX',
+    'yveCRV',
+    'yvUSDC',
+    'yvLINK',
+    'yvUSDT',
+    'yvRAI',
+    'yvWETH',
+    'yvsUSD', 
+    'yvUNI',
+    'yvWBTC',
+    'yvAAVE',
+    'yvDAI',
+    'yvcrvRenWBTC',
+    'yvHBTC',
+    'yvSNX'
+)
 
 class UpdateChecker:
 
@@ -207,10 +248,10 @@ class UpdateChecker:
             if insert:
                 assert asset_data.cryptocompare not in seen_elements, f'Duplicate cryptocompare {asset_data.cryptocompare}'
                 assert asset_data.coingecko not in seen_elements, f'Duplicate coingecko {asset_data.coingecko}'
-                if asset_data.name in seen_elements:
-                    logging.warning(f'Duplicate name {asset_data.name}')
-                if asset_data.symbol in seen_elements:
-                    logging.warning(f'Duplicate symbol {asset_data.symbol}')
+                if asset_data.name not in DUPLICATED_NAMES:
+                    assert asset_data.name not in seen_elements, f'Duplicate name {asset_data.name}'
+                if asset_data.symbol not in DUPLICATED_SYMBOLS:
+                    assert asset_data.symbol not in seen_elements, f'Duplicate symbol {asset_data.symbol}'
 
             # For ethereum address, make a checksum of addresses
             if asset_data.ethereum_address is not None:

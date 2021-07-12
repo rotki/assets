@@ -71,7 +71,9 @@ DUPLICATED_NAMES = (
     'AAVE yVault',
     'DAI yVault',
     'crvRenWBTC yVault',
-    'SNX yVault'
+    'SNX yVault',
+    # Compund cWBTC-2
+    'Compound Wrapped BTC',
 )
 
 DUPLICATED_SYMBOLS = (
@@ -90,7 +92,9 @@ DUPLICATED_SYMBOLS = (
     'yvDAI',
     'yvcrvRenWBTC',
     'yvHBTC',
-    'yvSNX'
+    'yvSNX',
+    # Compund cWBTC-2
+    'cWBTC',
 )
 
 class UpdateChecker:

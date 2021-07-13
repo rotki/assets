@@ -462,3 +462,13 @@ INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingec
 *
 INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x9695e0114e12C0d3A3636fAb5A18e6b737529023", 18, NULL); INSERT INTO assets(identifier, type, name, symbol,started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x9695e0114e12C0d3A3636fAb5A18e6b737529023", "C", "DFYN Token", "DFYN", 1620371946, NULL, "dfyn-network", "DFYN", "0x9695e0114e12C0d3A3636fAb5A18e6b737529023");
 *
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x2fdF40C484b1BD6F1c214ACAC737FEDc8b03E5a8", 18, NULL); INSERT INTO assets(identifier, type, name, symbol,started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x2fdF40C484b1BD6F1c214ACAC737FEDc8b03E5a8", "C", "MCS", "MCS", 1623309370, NULL, "yggdrash", "YEED", "0x2fdF40C484b1BD6F1c214ACAC737FEDc8b03E5a8");
+*
+UPDATE assets SET swapped_for="_ceth_0x2fdF40C484b1BD6F1c214ACAC737FEDc8b03E5a8", cryptocompare="YEED" WHERE identifier="_ceth_0xcA2796F9F61dc7b238Aab043971e49c6164DF375";/*Introduce YEED token swap*/
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xcA2796F9F61dc7b238Aab043971e49c6164DF375", 18, NULL); INSERT INTO assets(identifier, type, name, symbol,started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xcA2796F9F61dc7b238Aab043971e49c6164DF375", "C", "YGGDRASH", "YEED", 1532414987, "_ceth_0x2fdF40C484b1BD6F1c214ACAC737FEDc8b03E5a8", "yggdrash", "YEED", "0xcA2796F9F61dc7b238Aab043971e49c6164DF375");
+UPDATE assets SET coingecko="ethup" WHERE identifier="ETHUP";
+INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("ETHUP", "B", "Binance leveraged token ETHUP", "ETHUP", 1594771200, NULL, "ethup", "", "ETHUP"); INSERT INTO common_asset_details(asset_id, forked) VALUES("ETHUP", NULL);
+UPDATE assets SET coingecko="ethdown" WHERE identifier="ETHDOWN";
+INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("ETHDOWN", "B", "Binance leveraged token ETHDOWN", "ETHDOWN", 1594771200, NULL, "ethdown", "", "ETHDOWN"); INSERT INTO common_asset_details(asset_id, forked) VALUES("ETHDOWN", NULL);
+UPDATE assets SET coingecko="hempcoin-thc" WHERE identifier="THC";
+INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("THC", "B", "HempCoin", "THC", 1394323200, NULL, "hempcoin-thc", "", "THC"); INSERT INTO common_asset_details(asset_id, forked) VALUES("THC", NULL);

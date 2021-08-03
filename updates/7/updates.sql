@@ -32,7 +32,7 @@ INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x16ECCfDbb4eE1
 *
 INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x33f391F4c4fE802b70B77AE37670037A92114A7c", 18, NULL); INSERT INTO assets(identifier, type, name, symbol,started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x33f391F4c4fE802b70B77AE37670037A92114A7c", "C", "Burp", "BURP", 1621352971, NULL, "coinburp", "BURP", "0x33f391F4c4fE802b70B77AE37670037A92114A7c");
 *
-INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("DPET", "S", "My DeFi Pet Token", "DPET", 1619437689, NULL, "my-defi-pet", "", ""); INSERT INTO common_asset_details(asset_id, forked) VALUES("DPET", NULL);
+INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("DPET", "S", "My DeFi Pet Token", "DPET", 1619437689, NULL, "my-defi-pet", "", "DPET"); INSERT INTO common_asset_details(asset_id, forked) VALUES("DPET", NULL);
 *
 INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x1796ae0b0fa4862485106a0de9b654eFE301D0b2", 18, NULL); INSERT INTO assets(identifier, type, name, symbol,started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x1796ae0b0fa4862485106a0de9b654eFE301D0b2", "C", "Polkamon", "PMON", 1616790642, NULL, "polychain-monsters", "PMON", "0x1796ae0b0fa4862485106a0de9b654eFE301D0b2");
 *
@@ -56,3 +56,5 @@ INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x5B7533812759B
 *
 UPDATE assets SET swapped_for="_ceth_0x5B7533812759B45C2B44C19e320ba2cD2681b542", cryptocompare="AGIX" WHERE identifier="_ceth_0x8eB24319393716668D768dCEC29356ae9CfFe285";
 INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x8eB24319393716668D768dCEC29356ae9CfFe285", 8, NULL); INSERT INTO assets(identifier, type, name, symbol,started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x8eB24319393716668D768dCEC29356ae9CfFe285", "C", "SingularityNET Token", "AGI", 1513296000, NULL, "singularitynet", "AGIX", "0x8eB24319393716668D768dCEC29356ae9CfFe285");
+INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("ERG", "B", "Ergo", "ERG", 1517533200, NULL, "ergo", "ERG", "ERG"); INSERT INTO common_asset_details(asset_id, forked) VALUES("ERG", NULL);
+*

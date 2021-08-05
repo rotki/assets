@@ -58,5 +58,3 @@ UPDATE assets SET swapped_for="_ceth_0x5B7533812759B45C2B44C19e320ba2cD2681b542"
 INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x8eB24319393716668D768dCEC29356ae9CfFe285", 8, NULL); INSERT INTO assets(identifier, type, name, symbol,started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x8eB24319393716668D768dCEC29356ae9CfFe285", "C", "SingularityNET Token", "AGI", 1513296000, NULL, "singularitynet", "AGIX", "0x8eB24319393716668D768dCEC29356ae9CfFe285");
 INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("ERG", "B", "Ergo", "ERG", 1517533200, NULL, "ergo", "ERG", "ERG"); INSERT INTO common_asset_details(asset_id, forked) VALUES("ERG", NULL);
 *
-UPDATE ethereum_tokens SET decimals=18 WHERE protocol=="balancer";
-*

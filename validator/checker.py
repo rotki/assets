@@ -6,7 +6,6 @@ https://github.com/rotki/rotki/blob/8f41fcba4732fba4af563c45c34ad9ad288906a2/rot
 import logging
 import re
 from typing import NamedTuple, NewType, Optional, Tuple, Union
-
 from eth_utils import is_checksum_formatted_address
 
 T_Timestamp = int
@@ -241,9 +240,6 @@ class UpdateChecker:
             if full_insert == '*':
                 full_insert = action
                 insert = True
-
-            if 'UPDATE ethereum_tokens SET decimals=18 WHERE protocol' in action:
-                continue  # skip
 
             # Use the same regex as in the rotki servers to obtain the assets
             asset_data = self._parse_full_insert(full_insert)

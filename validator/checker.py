@@ -70,6 +70,8 @@ DUPLICATED_NAMES = (
     'HBTC yVault',
     'AAVE yVault',
     'DAI yVault',
+    'SUSHI yVault',
+    'COMP yVault',
     'crvRenWBTC yVault',
     'SNX yVault',
     # Compund cWBTC-2
@@ -92,6 +94,8 @@ DUPLICATED_SYMBOLS = (
     'yvWBTC',
     'yvAAVE',
     'yvDAI',
+    'yvSUSHI',
+    'yvCOMP',
     'yvcrvRenWBTC',
     'yvHBTC',
     'yvSNX',

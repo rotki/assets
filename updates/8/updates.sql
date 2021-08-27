@@ -152,3 +152,11 @@ INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xe516D78d784C7
 *
 INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("CRTS", "B", "Cratos", "CRTS", 1627318945, NULL, "cratos", "CRTS", "CRTS"); INSERT INTO common_asset_details(asset_id, forked) VALUES("CRTS", NULL);
 *
+UPDATE assets SET coingecko="caave" WHERE identifier="_ceth_0xe65cdB6479BaC1e22340E4E755fAE7E509EcD06c";
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xe65cdB6479BaC1e22340E4E755fAE7E509EcD06c", 8, "compound"); INSERT INTO assets(identifier, type, name, symbol,started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xe65cdB6479BaC1e22340E4E755fAE7E509EcD06c", "C", "Compound Aave Token", "cAAVE", 1626578345, NULL, "caave", "", "0xe65cdB6479BaC1e22340E4E755fAE7E509EcD06c");
+UPDATE assets SET coingecko="synthetify-token" WHERE identifier="SNY";
+INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("SNY", "Y", "Synthetify Token", "SNY", 1625829480, NULL, "synthetify-token", "", "SNY"); INSERT INTO common_asset_details(asset_id, forked) VALUES("SNY", NULL);
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x4123a133ae3c521FD134D7b13A2dEC35b56c2463", 8, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x4123a133ae3c521FD134D7b13A2dEC35b56c2463", "C", "Qredo Token", "QRDO", 1624287774, NULL, "qredo", "QRDO", "0x4123a133ae3c521FD134D7b13A2dEC35b56c2463");
+*
+INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("LUMI", "P", "LUMI Credits", "LUMI", 1624449600, NULL, "lumi-credits", "", "LUMI"); INSERT INTO common_asset_details(asset_id, forked) VALUES("LUMI", NULL);
+*

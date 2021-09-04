@@ -1,0 +1,2 @@
+INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("DKK", "A", "Danish krone", "DKK", NULL, NULL, NULL, "", "DKK"); INSERT INTO common_asset_details(asset_id, forked) VALUES("DKK", NULL);
+*

@@ -1,3 +1,17 @@
+UPDATE assets SET cryptocompare="POOL" where identifier="_ceth_0x0cEC1A9154Ff802e7934Fc916Ed7Ca50bDE6844e"; 
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x0cEC1A9154Ff802e7934Fc916Ed7Ca50bDE6844e", 18, NULL); INSERT INTO assets(identifier, type, name, symbol,started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x0cEC1A9154Ff802e7934Fc916Ed7Ca50bDE6844e", "C", "PoolTogether", "POOL", 1613508749, NULL, "pooltogether", "POOL", "0x0cEC1A9154Ff802e7934Fc916Ed7Ca50bDE6844e");
+UPDATE assets SET cryptocompare="EDEN" where identifier="_ceth_0x1559FA1b8F28238FD5D76D9f434ad86FD20D1559"; 
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x1559FA1b8F28238FD5D76D9f434ad86FD20D1559", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x1559FA1b8F28238FD5D76D9f434ad86FD20D1559", "C", "Eden", "EDEN", 1627515109, NULL, "eden", "EDEN", "0x1559FA1b8F28238FD5D76D9f434ad86FD20D1559");
+UPDATE assets SET cryptocompare="PNG" where identifier="PNG";
+INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("PNG", "X", "Pangolin", "PNG", 1613750451, NULL, "pangolin", "PNG", "PNG"); INSERT INTO common_asset_details(asset_id, forked) VALUES("PNG", NULL);
+UPDATE assets SET cryptocompare="SNY" where identifier="SNY";
+INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("SNY", "Y", "Synthetify Token", "SNY", 1625829480, NULL, "synthetify-token", "SNY", "SNY"); INSERT INTO common_asset_details(asset_id, forked) VALUES("SNY", NULL);
+UPDATE assets SET cryptocompare="DPET" where identifier="DPET";
+INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("DPET", "S", "My DeFi Pet Token", "DPET", 1619437689, NULL, "my-defi-pet", "", "DPET"); INSERT INTO common_asset_details(asset_id, forked) VALUES("DPET", NULL);
+UPDATE assets SET coingecko="gapcoin" where identifier="GAP";
+INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("GAP", "B", "Gapcoin", "GAP", 1413849600, NULL, "gapcoin", "", "GAP"); INSERT INTO common_asset_details(asset_id, forked) VALUES("GAP", NULL);
+UPDATE assets SET coingecko="fluttercoin" where identifier="FLT";
+INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("FLT", "B", "FlutterCoin", "FLT", 1393804800, NULL, "fluttercoin", "", "FLT"); INSERT INTO common_asset_details(asset_id, forked) VALUES("FLT", NULL);
 INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("DKK", "A", "Danish krone", "DKK", NULL, NULL, NULL, "", "DKK"); INSERT INTO common_asset_details(asset_id, forked) VALUES("DKK", NULL);
 *
 INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x92D6C1e31e14520e676a687F0a93788B716BEff5", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x92D6C1e31e14520e676a687F0a93788B716BEff5", "C", "dYdX", "DYDX", 1626053832, NULL, "dydx", "", "0x92D6C1e31e14520e676a687F0a93788B716BEff5");

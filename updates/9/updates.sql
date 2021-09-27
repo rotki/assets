@@ -66,3 +66,23 @@ INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingec
 *
 INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("BP", "B", "BunnyPark", "BP", 1618814346, NULL, "bunnypark", "BP", "BP"); INSERT INTO common_asset_details(asset_id, forked) VALUES("BP", NULL);
 *
+INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("CITY", "W", "Manchester City Fan Token", "CITY", 1621908000, NULL, "manchester-city-fan-token", "CITY", "CITY"); INSERT INTO common_asset_details(asset_id, forked) VALUES("CITY", NULL);
+*
+INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("INTER", "W", "Inter Milan Fan Token", "INTER", 1631620931, NULL, "inter-milan-fan-token", "", "INTER"); INSERT INTO common_asset_details(asset_id, forked) VALUES("INTER", NULL);
+*
+INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("GAL", "W", "Galatasaray Fan Token", "GAL", 1591322400, NULL, "galatasaray-fan-token", "GAL", "GAL"); INSERT INTO common_asset_details(asset_id, forked) VALUES("GAL", NULL);
+*
+INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("DINO", "W", "DinoSwap", "DINO", 1626067575, NULL, "dinoswap", "DINO", "DINO"); INSERT INTO common_asset_details(asset_id, forked) VALUES("DINO", NULL);
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x2d94AA3e47d9D5024503Ca8491fcE9A2fB4DA198", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x2d94AA3e47d9D5024503Ca8491fcE9A2fB4DA198", "C", "Bankless Token", "BANK", 1620099970, NULL, "bankless-dao", "", "0x2d94AA3e47d9D5024503Ca8491fcE9A2fB4DA198");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x799ebfABE77a6E34311eeEe9825190B9ECe32824", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x799ebfABE77a6E34311eeEe9825190B9ECe32824", "C", "BTRST", "BTRST", 1628607475, NULL, "braintrust", "BTRST", "0x799ebfABE77a6E34311eeEe9825190B9ECe32824");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xf203Ca1769ca8e9e8FE1DA9D147DB68B6c919817", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xf203Ca1769ca8e9e8FE1DA9D147DB68B6c919817", "C", "Wrapped NCG", "WNCG", 1628244716, NULL, "wrapped-ncg", "WNCG", "0xf203Ca1769ca8e9e8FE1DA9D147DB68B6c919817");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x51cB253744189f11241becb29BeDd3F1b5384fdB", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x51cB253744189f11241becb29BeDd3F1b5384fdB", "C", "Dimitra Token", "DMTR", 1627672955, NULL, "dimitra", "", "0x51cB253744189f11241becb29BeDd3F1b5384fdB");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x6fC13EACE26590B80cCCAB1ba5d51890577D83B2", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x6fC13EACE26590B80cCCAB1ba5d51890577D83B2", "C", "Umbrella", "UMB", 1612796905, NULL, "umbrella-network", "UMB", "0x6fC13EACE26590B80cCCAB1ba5d51890577D83B2");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x80D55c03180349Fff4a229102F62328220A96444", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x80D55c03180349Fff4a229102F62328220A96444", "C", "OpulousToken", "OPUL", 1627428986, NULL, "opulous", "", "0x80D55c03180349Fff4a229102F62328220A96444");
+*

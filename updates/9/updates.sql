@@ -106,3 +106,7 @@ INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x01b23286FF60a
 *
 INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x3b58c52C03ca5Eb619EBa171091c86C34d603e5f", 9, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x3b58c52C03ca5Eb619EBa171091c86C34d603e5f", "C", "MCI Coin", "MCI", 1597353959, NULL, "", "", "0x3b58c52C03ca5Eb619EBa171091c86C34d603e5f");
 *
+UPDATE assets SET coingecko="kava-lend", name="Kava Lend" where identifier="HARD";
+INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("HARD", "B", "Kava Lend", "HARD", 1604620800, NULL, "kava-lend", "", "HARD"); INSERT INTO common_asset_details(asset_id, forked) VALUES("HARD", NULL);
+INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("BMON", "S", "Binamon", "BMON", 1623722400, NULL, "binamon", "BMON", "BMON"); INSERT INTO common_asset_details(asset_id, forked) VALUES("BMON", NULL);
+*

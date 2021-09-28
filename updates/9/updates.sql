@@ -102,3 +102,7 @@ INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x84c722e6F1363
 *
 INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("OXY", "Y", "Oxygen", "OXY", 1615856400, NULL, "oxygen", "OXY", "OXY"); INSERT INTO common_asset_details(asset_id, forked) VALUES("OXY", NULL);
 *
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x01b23286FF60a543ec29366aE8D6B6274cA20541", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x01b23286FF60a543ec29366aE8D6B6274cA20541", "C", "Brother Music Platform", "BMP", 1604889187, NULL, "brother-music-platform", "BMP", "0x01b23286FF60a543ec29366aE8D6B6274cA20541");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x3b58c52C03ca5Eb619EBa171091c86C34d603e5f", 9, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x3b58c52C03ca5Eb619EBa171091c86C34d603e5f", "C", "MCI Coin", "MCI", 1597353959, NULL, "", "", "0x3b58c52C03ca5Eb619EBa171091c86C34d603e5f");
+*

@@ -94,15 +94,11 @@ INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingec
 *
 INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xc07A150ECAdF2cc352f5586396e344A6b17625EB", 9, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xc07A150ECAdF2cc352f5586396e344A6b17625EB", "C", "BioPassport Coin", "BIOT", 1602676679, NULL, "biopassport", "BIOT", "0xc07A150ECAdF2cc352f5586396e344A6b17625EB");
 *
-INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x4824A7b64E3966B0133f4f4FFB1b9D6bEb75FFF7", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x4824A7b64E3966B0133f4f4FFB1b9D6bEb75FFF7", "C", "TokenClub Token", "TCT", 1514041138, NULL, "tokenclub", "TCT", "0x4824A7b64E3966B0133f4f4FFB1b9D6bEb75FFF7");
-*
 INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xa6610Ed604047e7B76C1DA288172D15BcdA57596", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xa6610Ed604047e7B76C1DA288172D15BcdA57596", "C", "SACKS", "SACKS", 1622142991, NULL, "sacks", "", "0xa6610Ed604047e7B76C1DA288172D15BcdA57596");
 *
 INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xc67B12049c2D0CF6e476BC64c7F82fc6C63cFFc5", 8, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xc67B12049c2D0CF6e476BC64c7F82fc6C63cFFc5", "C", "GDT", "GDT", 1619667360, NULL, "globe-derivative-exchange", "GDT", "0xc67B12049c2D0CF6e476BC64c7F82fc6C63cFFc5");
 *
 INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x84c722e6F1363E8D5C6dB3eA600bEF9a006Da824", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x84c722e6F1363E8D5C6dB3eA600bEF9a006Da824", "C", "MISBLOC", "MSB", 1598074394, NULL, "misbloc", "MSB", "0x84c722e6F1363E8D5C6dB3eA600bEF9a006Da824");
-*
-INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("RAY", "Y", "Raydium", "RAY", 1613869200, NULL, "raydium", "RAY", "RAY"); INSERT INTO common_asset_details(asset_id, forked) VALUES("RAY", NULL);
 *
 INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("OXY", "Y", "Oxygen", "OXY", 1615856400, NULL, "oxygen", "OXY", "OXY"); INSERT INTO common_asset_details(asset_id, forked) VALUES("OXY", NULL);
 *

@@ -112,3 +112,7 @@ INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingec
 *
 INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x656C00e1BcD96f256F224AD9112FF426Ef053733", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x656C00e1BcD96f256F224AD9112FF426Ef053733", "C", "Efinity Token", "EFI", 1619885194, NULL, "efinity", "EFI", "0x656C00e1BcD96f256F224AD9112FF426Ef053733");
 *
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xe76C6c83af64e4C60245D8C7dE953DF673a7A33D", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xe76C6c83af64e4C60245D8C7dE953DF673a7A33D", "C", "Rail", "RAIL", 1625318205, NULL, "railgun", "RAIL", "0xe76C6c83af64e4C60245D8C7dE953DF673a7A33D");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x62B9c7356A2Dc64a1969e19C23e4f579F9810Aa7", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x62B9c7356A2Dc64a1969e19C23e4f579F9810Aa7", "C", "Convex CRV", "cvxCRV", 1621242935, NULL, "convex-crv", "CVXCRV", "0x62B9c7356A2Dc64a1969e19C23e4f579F9810Aa7");
+*

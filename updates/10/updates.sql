@@ -1,0 +1,2 @@
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x090185f2135308BaD17527004364eBcC2D37e5F6", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x090185f2135308BaD17527004364eBcC2D37e5F6", "C", "Spell Token", "SPELL", 1621289435, NULL, "spell-token", "SPELL", "0x090185f2135308BaD17527004364eBcC2D37e5F6");
+*

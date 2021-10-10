@@ -1,2 +1,6 @@
 INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x090185f2135308BaD17527004364eBcC2D37e5F6", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x090185f2135308BaD17527004364eBcC2D37e5F6", "C", "Spell Token", "SPELL", 1621289435, NULL, "spell-token", "SPELL", "0x090185f2135308BaD17527004364eBcC2D37e5F6");
 *
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xb05097849BCA421A3f51B249BA6CCa4aF4b97cb9", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xb05097849BCA421A3f51B249BA6CCa4aF4b97cb9", "C", "Float Protocol: FLOAT", "FLOAT", 1620265872, NULL, "float-protocol-float", "FLOAT", "0xb05097849BCA421A3f51B249BA6CCa4aF4b97cb9");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x24A6A37576377F63f194Caa5F518a60f45b42921", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x24A6A37576377F63f194Caa5F518a60f45b42921", "C", "Float Bank", "BANK", 1612549573, NULL, "float-protocol", "BANK", "0x24A6A37576377F63f194Caa5F518a60f45b42921");
+*

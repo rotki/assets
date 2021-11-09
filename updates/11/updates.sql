@@ -110,5 +110,5 @@ INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xc91B523A59ACC
 *
 INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("LAZIO", "S", "Lazio Fan Token", "LAZIO", 1633925647, NULL, "lazio-fan-token", "LAZIO", "LAZIO"); INSERT INTO common_asset_details(asset_id, forked) VALUES("LAZIO", NULL);
 *
-INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x334cBb5858417Aee161B53Ee0D5349cCF54514CF", 18, NULL); INSERT INTO assets(identifier,type, name, symbol,started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x334cBb5858417Aee161B53Ee0D5349cCF54514CF", "C", "PoolTogether Dai Ticket", "PcDAI", NULL, "DAI", NULL, NULL, "0x334cBb5858417Aee161B53Ee0D5349cCF54514CF");
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x334cBb5858417Aee161B53Ee0D5349cCF54514CF", 18, NULL); INSERT INTO assets(identifier,type, name, symbol,started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x334cBb5858417Aee161B53Ee0D5349cCF54514CF", "C", "PoolTogether Dai Ticket", "PcDAI", NULL, "DAI", "", "", "0x334cBb5858417Aee161B53Ee0D5349cCF54514CF");
 *

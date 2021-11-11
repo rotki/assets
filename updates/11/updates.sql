@@ -122,3 +122,9 @@ INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingec
 *
 INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("TIME", "X", "Wonderland", "TIME", 1630606431, NULL, "wonderland", "", "TIME"); INSERT INTO common_asset_details(asset_id, forked) VALUES("TIME", NULL);
 *
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xf8E9F10c22840b613cdA05A0c5Fdb59A4d6cd7eF", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xf8E9F10c22840b613cdA05A0c5Fdb59A4d6cd7eF", "C", "Dogs Of Elon", "DOE", 1634281114, NULL, "dogsofelon", "", "0xf8E9F10c22840b613cdA05A0c5Fdb59A4d6cd7eF");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x7D29A64504629172a429e64183D6673b9dAcbFCe", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x7D29A64504629172a429e64183D6673b9dAcbFCe", "C", "VectorspaceAI", "VXV", 1533415353, NULL, "vectorspace", "VXV", "0x7D29A64504629172a429e64183D6673b9dAcbFCe");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xf3AE5d769e153Ef72b4e3591aC004E89F48107a1", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xf3AE5d769e153Ef72b4e3591aC004E89F48107a1", "C", "Deeper Network", "DPR", 1617156701, NULL, "deeper-network", "DPR", "0xf3AE5d769e153Ef72b4e3591aC004E89F48107a1");
+*

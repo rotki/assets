@@ -118,3 +118,7 @@ INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x73374Ea518De7
 *
 INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x9e6C59321CEB205d5d3BC6c539c017aF6159B16c", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x9e6C59321CEB205d5d3BC6c539c017aF6159B16c", "C", "MindCell", "MDC", 1616313290, NULL, "mindcell", "", "0x9e6C59321CEB205d5d3BC6c539c017aF6159B16c");
 *
+INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("KLIMA", "W", "Klima DAO", "KLIMA", 1633375647, NULL, "klima-dao", "", "KLIMA"); INSERT INTO common_asset_details(asset_id, forked) VALUES("KLIMA", NULL);
+*
+INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("TIME", "X", "Wonderland", "TIME", 1630606431, NULL, "wonderland", "", "TIME"); INSERT INTO common_asset_details(asset_id, forked) VALUES("TIME", NULL);
+*

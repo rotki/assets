@@ -2,5 +2,5 @@ INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xcAfE001067cDE
 *
 INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xf1Dc500FdE233A4055e25e5BbF516372BC4F6871", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xf1Dc500FdE233A4055e25e5BbF516372BC4F6871", "C", "Saddle DAO", "SDL", 1637043563, NULL, "saddle-finance", "", "0xf1Dc500FdE233A4055e25e5BbF516372BC4F6871");
 *
-INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("BSQ", "W", "BSQ", "Bisq DAO Token", 1555286400, NULL, "", "", "BSQ"); INSERT INTO common_asset_details(asset_id, forked) VALUES("BSQ", NULL);
+INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("BSQ", "W", "Bisq DAO Token", "BSQ", 1555286400, NULL, "", "", "BSQ"); INSERT INTO common_asset_details(asset_id, forked) VALUES("BSQ", NULL);
 *

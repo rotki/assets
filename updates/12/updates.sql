@@ -338,3 +338,11 @@ INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x900dB999074d9
 *
 UPDATE assets SET coingecko="ethlend" WHERE identifier="_ceth_0x7D2D3688Df45Ce7C552E19c27e007673da9204B8";
 INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x7D2D3688Df45Ce7C552E19c27e007673da9204B8", 18, "aave"); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x7D2D3688Df45Ce7C552E19c27e007673da9204B8", "C", "Aave Interest bearing LEND", "aLEND", 1578501530, NULL, "ethlend", "LEND", "0x7D2D3688Df45Ce7C552E19c27e007673da9204B8");
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xdacD69347dE42baBfAEcD09dC88958378780FB62", 0, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xdacD69347dE42baBfAEcD09dC88958378780FB62", "C", "AtariToken", "ATRI", 1593979537, NULL, "atari", "ATRI", "0xdacD69347dE42baBfAEcD09dC88958378780FB62");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x4297394c20800E8a38A619A243E9BbE7681Ff24E", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x4297394c20800E8a38A619A243E9BbE7681Ff24E", "C", "Hot Cross Token", "HOTCROSS", 1620977386, NULL, "hot-cross", "HOTCROSS", "0x4297394c20800E8a38A619A243E9BbE7681Ff24E");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x4a1d542b52a95AD01Ddc70C2e7df0c7bBAAdc56f", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x4a1d542b52a95AD01Ddc70C2e7df0c7bBAAdc56f", "C", "Niftify", "NIFT", 1630444045, NULL, "niftify", "", "0x4a1d542b52a95AD01Ddc70C2e7df0c7bBAAdc56f");
+*
+INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("AUST", "W", "AnchorUST", "AUST", 1638331459, NULL, "anchorust", "", "AUST"); INSERT INTO common_asset_details(asset_id, forked) VALUES("AUST", NULL);
+*

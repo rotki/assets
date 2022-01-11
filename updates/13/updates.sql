@@ -1,2 +1,4 @@
 INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("ILS", "A", "Israeli new shekel", "ILS", NULL, NULL, NULL, "", "ILS"); INSERT INTO common_asset_details(asset_id, forked) VALUES("ILS", NULL);
 *
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xC0F9bD5Fa5698B6505F643900FFA515Ea5dF54A9", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xC0F9bD5Fa5698B6505F643900FFA515Ea5dF54A9", "C", "Donut", "DONUT", 1575488683, NULL, "donut", "", "0xC0F9bD5Fa5698B6505F643900FFA515Ea5dF54A9");
+*

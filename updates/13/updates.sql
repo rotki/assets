@@ -208,3 +208,225 @@ UPDATE assets SET cryptocompare="CREDI" where identifier="CREDI";
 INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("CREDI", "B", "Credefi", "CREDI", 1639051360, NULL, "credefi", "CREDI", "CREDI"); INSERT INTO common_asset_details(asset_id, forked) VALUES("CREDI", NULL);
 UPDATE assets SET cryptocompare="PEL" where identifier="PEL";
 INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("PEL", "B", "Propel Token", "PEL", 1638893347, NULL, "propel-token", "PEL", "PEL"); INSERT INTO common_asset_details(asset_id, forked) VALUES("PEL", NULL);
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xBC6DA0FE9aD5f3b0d58160288917AA56653660E9", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xBC6DA0FE9aD5f3b0d58160288917AA56653660E9", "C", "Alchemix USD", "alUSD", 1614400291, NULL, "alchemix-usd", "", "0xBC6DA0FE9aD5f3b0d58160288917AA56653660E9");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x9fcf418B971134625CdF38448B949C8640971671", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x9fcf418B971134625CdF38448B949C8640971671", "C", "Neutrino EUR", "EURN", 1629894059, NULL, "", "EURN", "0x9fcf418B971134625CdF38448B949C8640971671");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x0100546F2cD4C9D97f798fFC9755E47865FF7Ee6", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x0100546F2cD4C9D97f798fFC9755E47865FF7Ee6", "C", "Alchemix ETH", "alETH", 1623421341, NULL, "", "", "0x0100546F2cD4C9D97f798fFC9755E47865FF7Ee6");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x97fe22E7341a0Cd8Db6F6C021A24Dc8f4DAD855F", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x97fe22E7341a0Cd8Db6F6C021A24Dc8f4DAD855F", "C", "Synth sGBP", "sGBP", 1569481458, NULL, "", "", "0x97fe22E7341a0Cd8Db6F6C021A24Dc8f4DAD855F");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x269895a3dF4D73b077Fc823dD6dA1B95f72Aaf9B", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x269895a3dF4D73b077Fc823dD6dA1B95f72Aaf9B", "C", "Synth sKRW", "sKRW", 1616613039, NULL, "", "", "0x269895a3dF4D73b077Fc823dD6dA1B95f72Aaf9B");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xF48e200EAF9906362BB1442fca31e0835773b8B4", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xF48e200EAF9906362BB1442fca31e0835773b8B4", "C", "Synth sAUD", "sAUD", 1569481162, NULL, "saud", "", "0xF48e200EAF9906362BB1442fca31e0835773b8B4");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x853d955aCEf822Db058eb8505911ED77F175b99e", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x853d955aCEf822Db058eb8505911ED77F175b99e", "C", "Frax", "FRAX", 1608140520, NULL, "frax", "FRAX", "0x853d955aCEf822Db058eb8505911ED77F175b99e");
+*
+INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("ALPINE", "S", "ALPINE Fan Token", "ALPINE", 1644906992, NULL, "alpine-f1-team-fan-token", "ALPINE", "ALPINE"); INSERT INTO common_asset_details(asset_id, forked) VALUES("ALPINE", NULL);
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x4d224452801ACEd8B2F0aebE155379bb5D594381", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x4d224452801ACEd8B2F0aebE155379bb5D594381", "C", "ApeCoin", "APE", 1644845135, NULL, "apecoin", "APE", "0x4d224452801ACEd8B2F0aebE155379bb5D594381");
+*
+INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("BSW", "S", "Biswap", "BSW", 1621790166, NULL, "biswap", "BSW", "BSW"); INSERT INTO common_asset_details(asset_id, forked) VALUES("BSW", NULL);
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x65Ef703f5594D2573eb71Aaf55BC0CB548492df4", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x65Ef703f5594D2573eb71Aaf55BC0CB548492df4", "C", "Multichain", "MULTI", 1639557435, NULL, "multichain", "MULTI", "0x65Ef703f5594D2573eb71Aaf55BC0CB548492df4");
+*
+INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("NBT", "S", "NanoByte Token", "NBT", 1642567344, NULL, "nanobyte", "", "NBT"); INSERT INTO common_asset_details(asset_id, forked) VALUES("NBT", NULL);
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x549020a9Cb845220D66d3E9c6D9F9eF61C981102", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x549020a9Cb845220D66d3E9c6D9F9eF61C981102", "C", "SIDUS", "SIDUS", 1637732622, NULL, "sidus", "SIDUS", "0x549020a9Cb845220D66d3E9c6D9F9eF61C981102");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xD23Ac27148aF6A2f339BD82D0e3CFF380b5093de", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xD23Ac27148aF6A2f339BD82D0e3CFF380b5093de", "C", "SIREN", "SI", 1605327961, NULL, "", "SIREN", "0xD23Ac27148aF6A2f339BD82D0e3CFF380b5093de");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x34Be5b8C30eE4fDe069DC878989686aBE9884470", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x34Be5b8C30eE4fDe069DC878989686aBE9884470", "C", "SENATE", "SENATE", 1637732768, NULL, "", "SENATE", "0x34Be5b8C30eE4fDe069DC878989686aBE9884470");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xe0cCa86B254005889aC3a81e737f56a14f4A38F5", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xe0cCa86B254005889aC3a81e737f56a14f4A38F5", "C", "Alta Finance", "ALTA", 1647302599, NULL, "", "", "0xe0cCa86B254005889aC3a81e737f56a14f4A38F5");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x351cAa9045D65107b9d311D922D15887cfd634E4", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x351cAa9045D65107b9d311D922D15887cfd634E4", "C", "Arowana Token", "ARW", 1614914359, NULL, "arowana-token", "", "0x351cAa9045D65107b9d311D922D15887cfd634E4");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xB90cb79B72EB10c39CbDF86e50B1C89F6a235f2e", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xB90cb79B72EB10c39CbDF86e50B1C89F6a235f2e", "C", "Auditchain", "AUDT", 1625320880, NULL, "auditchain", "", "0xB90cb79B72EB10c39CbDF86e50B1C89F6a235f2e");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xDE075D9ADbD0240b4462F124af926452Ad0BAC91", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xDE075D9ADbD0240b4462F124af926452Ad0BAC91", "C", "Bubblefong", "BBF", 1641798425, NULL, "bubblefong", "", "0xDE075D9ADbD0240b4462F124af926452Ad0BAC91");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xf256f3ac4176126F55af7c6E25fA5F3Cdf518b38", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xf256f3ac4176126F55af7c6E25fA5F3Cdf518b38", "C", "CEDARS", "CEDS", 1593750518, NULL, "cedars", "", "0xf256f3ac4176126F55af7c6E25fA5F3Cdf518b38");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xfC1Cb4920dC1110fD61AfaB75Cf085C1f871b8C6", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xfC1Cb4920dC1110fD61AfaB75Cf085C1f871b8C6", "C", "Edenloop Token", "ELT", 1631157477, NULL, "edenloop", "", "0xfC1Cb4920dC1110fD61AfaB75Cf085C1f871b8C6");
+*
+INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("ELV", "S", "Elvantis", "ELV", 1643062964, NULL, "elvantis", "ELV", "ELV"); INSERT INTO common_asset_details(asset_id, forked) VALUES("ELV", NULL);
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xE80C0cd204D654CEbe8dd64A4857cAb6Be8345a3", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xE80C0cd204D654CEbe8dd64A4857cAb6Be8345a3", "C", "JPEG’d Governance Token", "JPEG", 1636758505, NULL, "jpeg-d", "", "0xE80C0cd204D654CEbe8dd64A4857cAb6Be8345a3");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x9d71CE49ab8A0E6D2a1e7BFB89374C9392FD6804", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x9d71CE49ab8A0E6D2a1e7BFB89374C9392FD6804", "C", "NvirWorld", "Nvir", 1636105166, NULL, "nvirworld", "NVIR", "0x9d71CE49ab8A0E6D2a1e7BFB89374C9392FD6804");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x525A8F6F3Ba4752868cde25164382BfbaE3990e1", 6, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x525A8F6F3Ba4752868cde25164382BfbaE3990e1", "C", "NYM", "NYM", 1643838281, NULL, "nym", "NYM", "0x525A8F6F3Ba4752868cde25164382BfbaE3990e1");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x1E4EDE388cbc9F4b5c79681B7f94d36a11ABEBC9", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x1E4EDE388cbc9F4b5c79681B7f94d36a11ABEBC9", "C", "X2Y2Token", "X2Y2", 1644811256, NULL, "x2y2", "X2Y2", "0x1E4EDE388cbc9F4b5c79681B7f94d36a11ABEBC9");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x3392D8A60B77F8d3eAa4FB58F09d835bD31ADD29", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x3392D8A60B77F8d3eAa4FB58F09d835bD31ADD29", "C", "IndiGG", "INDI", 1646301802, NULL, "indigg", "", "0x3392D8A60B77F8d3eAa4FB58F09d835bD31ADD29");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xAf5191B0De278C7286d6C7CC6ab6BB8A73bA2Cd6", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xAf5191B0De278C7286d6C7CC6ab6BB8A73bA2Cd6", "C", "StargateToken", "STG", 1647504559, NULL, "stargate-finance", "STG", "0xAf5191B0De278C7286d6C7CC6ab6BB8A73bA2Cd6");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x5c147e74D63B1D31AA3Fd78Eb229B65161983B2b", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x5c147e74D63B1D31AA3Fd78Eb229B65161983B2b", "C", "Wrapped Flow", "WFLOW", 1638237348, NULL, "wrapped-flow", "FLOW", "0x5c147e74D63B1D31AA3Fd78Eb229B65161983B2b");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x1c7E83f8C581a967940DBfa7984744646AE46b29", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x1c7E83f8C581a967940DBfa7984744646AE46b29", "C", "random", "RND", 1643171780, NULL, "the-randomdao", "", "0x1c7E83f8C581a967940DBfa7984744646AE46b29");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xf0f9D895aCa5c8678f706FB8216fa22957685A13", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xf0f9D895aCa5c8678f706FB8216fa22957685A13", "C", "Cult DAO", "CULT", 1643367655, NULL, "cult-dao", "", "0xf0f9D895aCa5c8678f706FB8216fa22957685A13");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x3A8cCCB969a61532d1E6005e2CE12C200caeCe87", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x3A8cCCB969a61532d1E6005e2CE12C200caeCe87", "C", "TitanSwap", "Titan", 1597482425, NULL, "titanswap", "TITAN", "0x3A8cCCB969a61532d1E6005e2CE12C200caeCe87");
+*
+INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("LQDR", "W", "Liquid Driver", "LQDR", 1620486477, NULL, "liquiddriver", "", "LQDR"); INSERT INTO common_asset_details(asset_id, forked) VALUES("LQDR", NULL);
+*
+INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("SPIRIT", "W", "SpiritSwap Token", "SPIRIT", 1619273671, NULL, "spiritswap", "", "SPIRIT"); INSERT INTO common_asset_details(asset_id, forked) VALUES("SPIRIT", NULL);
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x6431FA4B812a2DCC062A38CB55cc7D18135AdEAd", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x6431FA4B812a2DCC062A38CB55cc7D18135AdEAd", "C", "RankerDAO", "RANKER", 1642075571, NULL, "rankerdao", "RANKER", "0x6431FA4B812a2DCC062A38CB55cc7D18135AdEAd");
+*
+INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("LAVAX", "S", "LavaX Labs", "LAVAX", 1634894974, NULL, "lavax-labs", "LAVAX", "LAVAX"); INSERT INTO common_asset_details(asset_id, forked) VALUES("LAVAX", NULL);
+*
+INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("WAL", "S", "WastedLands", "WAL", 1646296360, NULL, "the-wasted-lands", "", "WAL"); INSERT INTO common_asset_details(asset_id, forked) VALUES("WAL", NULL);
+*
+INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("SON", "S", "Souni Token", "SON", 1646037834, NULL, "souni-token", "", "SON"); INSERT INTO common_asset_details(asset_id, forked) VALUES("SON", NULL);
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x1afb69DBC9f54d08DAB1bD3436F8Da1af819E647", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x1afb69DBC9f54d08DAB1bD3436F8Da1af819E647", "C", "MELOS", "MELOS", 1645509503, NULL, "melos-studio", "", "0x1afb69DBC9f54d08DAB1bD3436F8Da1af819E647");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x4b1D0b9F081468D780Ca1d5d79132b64301085d1", 8, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x4b1D0b9F081468D780Ca1d5d79132b64301085d1", "C", "Lumerin", "LMR", 1634152595, NULL, "lumerin", "LMR", "0x4b1D0b9F081468D780Ca1d5d79132b64301085d1");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xc6DdDB5bc6E61e0841C54f3e723Ae1f3A807260b", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xc6DdDB5bc6E61e0841C54f3e723Ae1f3A807260b", "C", "Aurox Token", "URUS", 1644728723, NULL, "urus-token", "URUS", "0xc6DdDB5bc6E61e0841C54f3e723Ae1f3A807260b");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xa23C1194d421F252b4e6D5edcc3205F7650a4eBE", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xa23C1194d421F252b4e6D5edcc3205F7650a4eBE", "C", "Launch Block", "LBP", 1634306167, NULL, "launchblock", "", "0xa23C1194d421F252b4e6D5edcc3205F7650a4eBE");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xEd025A9Fe4b30bcd68460BCA42583090c2266468", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xEd025A9Fe4b30bcd68460BCA42583090c2266468", "C", "Ripio Coin", "RPC", 1631720685, NULL, "ripio-coin", "RPC", "0xEd025A9Fe4b30bcd68460BCA42583090c2266468");
+*
+INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("NHCT", "X", "Hurricane NFT Token", "NHCT", 1649228117, NULL, "hurricane-nft", "", "NHCT"); INSERT INTO common_asset_details(asset_id, forked) VALUES("NHCT", NULL);
+*
+INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("WOOP", "S", "Woonkly Power", "WOOP", 1606259844, NULL, "woonkly-power", "WOOP", "WOOP"); INSERT INTO common_asset_details(asset_id, forked) VALUES("WOOP", NULL);
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xfB5c6815cA3AC72Ce9F5006869AE67f18bF77006", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xfB5c6815cA3AC72Ce9F5006869AE67f18bF77006", "C", "pSTAKE Finance", "PSTAKE", 1641937945, NULL, "pstake-finance", "PSTAKE", "0xfB5c6815cA3AC72Ce9F5006869AE67f18bF77006");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xbc6E06778708177a18210181b073DA747C88490a", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xbc6E06778708177a18210181b073DA747C88490a", "C", "Syndicate Token", "SYNR", 1642489479, NULL, "syndicate-2", "", "0xbc6E06778708177a18210181b073DA747C88490a");
+*
+UPDATE assets SET coingecko="purpose" WHERE identifier="_ceth_0xE40C374d8805b1dD58CDcEFf998A2F6920Cb52FD";
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xE40C374d8805b1dD58CDcEFf998A2F6920Cb52FD", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xE40C374d8805b1dD58CDcEFf998A2F6920Cb52FD", "C", "Purpose", "PRPS", 1517011200, NULL, "purpose", "", "0xE40C374d8805b1dD58CDcEFf998A2F6920Cb52FD");
+UPDATE assets SET coingecko="compound-chainlink-token" WHERE identifier="_ceth_0xFAce851a4921ce59e912d19329929CE6da6EB0c7";
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xFAce851a4921ce59e912d19329929CE6da6EB0c7", 8, "compound"); INSERT INTO assets(identifier, type, name, symbol,started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xFAce851a4921ce59e912d19329929CE6da6EB0c7", "C", "Compound ChainLink Token", "cLINK", 1619041102, NULL, "compound-chainlink-token", "", "0xFAce851a4921ce59e912d19329929CE6da6EB0c7");
+UPDATE assets SET coingecko="burp" WHERE identifier="_ceth_0x33f391F4c4fE802b70B77AE37670037A92114A7c";
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x33f391F4c4fE802b70B77AE37670037A92114A7c", 18, NULL); INSERT INTO assets(identifier, type, name, symbol,started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x33f391F4c4fE802b70B77AE37670037A92114A7c", "C", "Burp", "BURP", 1621352971, NULL, "burp", "BURP", "0x33f391F4c4fE802b70B77AE37670037A92114A7c");
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x4086E77C5E993FDB90a406285d00111a974F877a", 4, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x4086E77C5E993FDB90a406285d00111a974F877a", "C", "Blockchain Brawlers Token", "BRWL", 1644473966, NULL, "blockchain-brawlers", "BRWL", "0x4086E77C5E993FDB90a406285d00111a974F877a");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xb4EBc2C371182DeEa04B2264B9ff5AC4F0159C69", 18, "pickle_jar"); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xb4EBc2C371182DeEa04B2264B9ff5AC4F0159C69", "C", "pickling LooksRare Token", "pLOOKS", 1642484467, NULL, "", "", "0xb4EBc2C371182DeEa04B2264B9ff5AC4F0159C69");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x506748d736b77f51c5b490e4aC6c26B8c3975b14", 18, "pickle_jar"); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x506748d736b77f51c5b490e4aC6c26B8c3975b14", "C", "pickling Uni v3 RBN/ETH", "pUniV3", 1635369769, NULL, "", "", "0x506748d736b77f51c5b490e4aC6c26B8c3975b14");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x68d14d66B2B0d6E157c06Dc8Fefa3D8ba0e66a89", 18, "pickle_jar"); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x68d14d66B2B0d6E157c06Dc8Fefa3D8ba0e66a89", "C", "pickling Curve.fi DAI/USDC/USDT/sUSD", "pcrvPlain3andSUSD", 1601425554, NULL, "", "", "0x68d14d66B2B0d6E157c06Dc8Fefa3D8ba0e66a89");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x2E35392F4c36EBa7eCAFE4de34199b2373Af22ec", 18, "pickle_jar"); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x2E35392F4c36EBa7eCAFE4de34199b2373Af22ec", "C", "pickling Curve.fi renBTC/wBTC", "pcrvRenWBTC", 1602105204, NULL, "", "", "0x2E35392F4c36EBa7eCAFE4de34199b2373Af22ec");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x1BB74b5DdC1f4fC91D6f9E7906cf68bc93538e33", 18, "pickle_jar"); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x1BB74b5DdC1f4fC91D6f9E7906cf68bc93538e33", "C", "pickling Curve.fi DAI/USDC/USDT", "p3Crv", 1602105027, NULL, "", "", "0x1BB74b5DdC1f4fC91D6f9E7906cf68bc93538e33");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x77C8A58D940a322Aea02dBc8EE4A30350D4239AD", 18, "pickle_jar"); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x77C8A58D940a322Aea02dBc8EE4A30350D4239AD", "C", "pickling Curve.fi ETH/stETH", "psteCRV", 1611767447, NULL, "", "", "0x77C8A58D940a322Aea02dBc8EE4A30350D4239AD");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xCffA068F1E44D98D3753966eBd58D4CFe3BB5162", 18, "pickle_jar"); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xCffA068F1E44D98D3753966eBd58D4CFe3BB5162", "C", "pickling Uniswap V2", "pUNI-V2", 1601425645, NULL, "", "", "0xCffA068F1E44D98D3753966eBd58D4CFe3BB5162");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x53Bf2E62fA20e2b4522f05de3597890Ec1b352C6", 18, "pickle_jar"); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x53Bf2E62fA20e2b4522f05de3597890Ec1b352C6", "C", "pickling Uniswap V2", "pUNI-V2", 1601425800, NULL, "", "", "0x53Bf2E62fA20e2b4522f05de3597890Ec1b352C6");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x09FC573c502037B149ba87782ACC81cF093EC6ef", 18, "pickle_jar"); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x09FC573c502037B149ba87782ACC81cF093EC6ef", "C", "pickling Uniswap V2", "pUNI-V2", 1601426036, NULL, "", "", "0x09FC573c502037B149ba87782ACC81cF093EC6ef");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xc80090AA05374d336875907372EE4ee636CBC562", 18, "pickle_jar"); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xc80090AA05374d336875907372EE4ee636CBC562", "C", "pickling Uniswap V2", "pUNI-V2", 1602105244, NULL, "", "", "0xc80090AA05374d336875907372EE4ee636CBC562");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x6949Bb624E8e8A90F87cD2058139fcd77D2F3F87", 18, "pickle_jar"); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x6949Bb624E8e8A90F87cD2058139fcd77D2F3F87", "C", "pickling Dai Stablecoin", "pDAI", 1602551622, NULL, "", "", "0x6949Bb624E8e8A90F87cD2058139fcd77D2F3F87");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xCbA1FE4Fdbd90531EFD929F1A1831F38e91cff1e", 18, "pickle_jar"); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xCbA1FE4Fdbd90531EFD929F1A1831F38e91cff1e", "C", "pickling Saddle WETH/alETH/sETH", "psaddlealETH", 1624895633, NULL, "", "", "0xCbA1FE4Fdbd90531EFD929F1A1831F38e91cff1e");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x65B2532474f717D5A8ba38078B78106D56118bbb", 18, "pickle_jar"); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x65B2532474f717D5A8ba38078B78106D56118bbb", "C", "pickling LQTY", "pLQTY", 1623894903, NULL, "", "", "0x65B2532474f717D5A8ba38078B78106D56118bbb");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x55282dA27a3a02ffe599f6D11314D239dAC89135", 18, "pickle_jar"); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x55282dA27a3a02ffe599f6D11314D239dAC89135", "C", "pickling SushiSwap LP Token", "pSLP", 1608218377, NULL, "", "", "0x55282dA27a3a02ffe599f6D11314D239dAC89135");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x8c2D16B7F6D3F989eb4878EcF13D695A7d504E43", 18, "pickle_jar"); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x8c2D16B7F6D3F989eb4878EcF13D695A7d504E43", "C", "pickling SushiSwap LP Token", "pSLP", 1608257267, NULL, "", "", "0x8c2D16B7F6D3F989eb4878EcF13D695A7d504E43");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xa7a37aE5Cb163a3147DE83F15e15D8E5f94D6bCE", 18, "pickle_jar"); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xa7a37aE5Cb163a3147DE83F15e15D8E5f94D6bCE", "C", "pickling SushiSwap LP Token", "pSLP", 1608257382, NULL, "", "", "0xa7a37aE5Cb163a3147DE83F15e15D8E5f94D6bCE");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xde74b6c547bd574c3527316a2eE30cd8F6041525", 18, "pickle_jar"); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xde74b6c547bd574c3527316a2eE30cd8F6041525", "C", "pickling SushiSwap LP Token", "pSLP", 1608258109, NULL, "", "", "0xde74b6c547bd574c3527316a2eE30cd8F6041525");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x3261D9408604CC8607b687980D40135aFA26FfED", 18, "pickle_jar"); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x3261D9408604CC8607b687980D40135aFA26FfED", "C", "pickling SushiSwap LP Token", "pSLP", 1608316293, NULL, "", "", "0x3261D9408604CC8607b687980D40135aFA26FfED");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x4Cac56929B98d4C52dDfDF998329622013Fed2a5", 18, "pickle_jar"); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x4Cac56929B98d4C52dDfDF998329622013Fed2a5", "C", "pickling Uniswap V2", "pUNI-V2", 1618605475, NULL, "", "", "0x4Cac56929B98d4C52dDfDF998329622013Fed2a5");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xC66583Dd4E25b3cfc8D881F6DbaD8288C7f5Fd30", 18, "pickle_jar"); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xC66583Dd4E25b3cfc8D881F6DbaD8288C7f5Fd30", "C", "pickling SushiSwap LP Token", "pSLP", 1610147510, NULL, "", "", "0xC66583Dd4E25b3cfc8D881F6DbaD8288C7f5Fd30");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x0FAA189afE8aE97dE1d2F01E471297678842146d", 18, "pickle_jar"); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x0FAA189afE8aE97dE1d2F01E471297678842146d", "C", "pickling SushiSwap LP Token", "pSLP", 1611684776, NULL, "", "", "0x0FAA189afE8aE97dE1d2F01E471297678842146d");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x5Eff6d166D66BacBC1BF52E2C54dD391AE6b1f48", 18, "pickle_jar"); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x5Eff6d166D66BacBC1BF52E2C54dD391AE6b1f48", "C", "pickling SushiSwap LP Token", "pSLP", 1612639016, NULL, "", "", "0x5Eff6d166D66BacBC1BF52E2C54dD391AE6b1f48");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xcF45563514a24b10563aC0c9fECCd3476b00DF45", 18, "pickle_jar"); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xcF45563514a24b10563aC0c9fECCd3476b00DF45", "C", "pickling Uniswap V2", "0", 1618606654, NULL, "", "", "0xcF45563514a24b10563aC0c9fECCd3476b00DF45");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x3Bcd97dCA7b1CED292687c97702725F37af01CaC", 18, "pickle_jar"); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x3Bcd97dCA7b1CED292687c97702725F37af01CaC", "C", "pickling Uniswap V2", "pUNI-V2", 1613756570, NULL, "", "", "0x3Bcd97dCA7b1CED292687c97702725F37af01CaC");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xaFB2FE266c215B5aAe9c4a9DaDC325cC7a497230", 18, "pickle_jar"); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xaFB2FE266c215B5aAe9c4a9DaDC325cC7a497230", "C", "pickling Uniswap V2", "pUNI-V2", 1615951358, NULL, "", "", "0xaFB2FE266c215B5aAe9c4a9DaDC325cC7a497230");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xF303B35D5bCb4d9ED20fB122F5E268211dEc0EBd", 18, "pickle_jar"); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xF303B35D5bCb4d9ED20fB122F5E268211dEc0EBd", "C", "pickling Uniswap V2", "pUNI-V2", 1615975665, NULL, "", "", "0xF303B35D5bCb4d9ED20fB122F5E268211dEc0EBd");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x7C8de3eE2244207A54b57f45286c9eE1465fee9f", 18, "pickle_jar"); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x7C8de3eE2244207A54b57f45286c9eE1465fee9f", "C", "pickling Uniswap V2", "pUNI-V2", 1615976367, NULL, "", "", "0x7C8de3eE2244207A54b57f45286c9eE1465fee9f");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x1ed1fD33b62bEa268e527A622108fe0eE0104C07", 18, "pickle_jar"); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x1ed1fD33b62bEa268e527A622108fe0eE0104C07", "C", "pickling Uniswap V2", "pUNI-V2", 1615976742, NULL, "", "", "0x1ed1fD33b62bEa268e527A622108fe0eE0104C07");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x1CF137F651D8f0A4009deD168B442ea2E870323A", 18, "pickle_jar"); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x1CF137F651D8f0A4009deD168B442ea2E870323A", "C", "pickling Uniswap V2", "pUNI-V2", 1615982410, NULL, "", "", "0x1CF137F651D8f0A4009deD168B442ea2E870323A");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xECb520217DccC712448338B0BB9b08Ce75AD61AE", 18, "pickle_jar"); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xECb520217DccC712448338B0BB9b08Ce75AD61AE", "C", "pickling SushiSwap LP Token", "pSLP", 1616668282, NULL, "", "", "0xECb520217DccC712448338B0BB9b08Ce75AD61AE");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xC1513C1b0B359Bc5aCF7b772100061217838768B", 18, "pickle_jar"); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xC1513C1b0B359Bc5aCF7b772100061217838768B", "C", "pickling Uniswap V2", "pUNI-V2", 1617700288, NULL, "", "", "0xC1513C1b0B359Bc5aCF7b772100061217838768B");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x927e3bCBD329e89A8765B52950861482f0B227c4", 18, "pickle_jar"); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x927e3bCBD329e89A8765B52950861482f0B227c4", "C", "pickling Uniswap V2", "pUNI-V2", 1618619523, NULL, "", "", "0x927e3bCBD329e89A8765B52950861482f0B227c4");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x9eb0aAd5Bb943D3b2F7603Deb772faa35f60aDF9", 18, "pickle_jar"); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x9eb0aAd5Bb943D3b2F7603Deb772faa35f60aDF9", "C", "pickling SushiSwap LP Token", "pSLP", 1619148398, NULL, "", "", "0x9eb0aAd5Bb943D3b2F7603Deb772faa35f60aDF9");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xCeD67a187b923F0E5ebcc77C7f2F7da20099e378", 18, "pickle_jar"); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xCeD67a187b923F0E5ebcc77C7f2F7da20099e378", "C", "pickling SushiSwap LP Token", "pSLP", 1617974124, NULL, "", "", "0xCeD67a187b923F0E5ebcc77C7f2F7da20099e378");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xDCfAE44244B3fABb5b351b01Dc9f050E589cF24F", 18, "pickle_jar"); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xDCfAE44244B3fABb5b351b01Dc9f050E589cF24F", "C", "pickling SushiSwap LP Token", "pSLP", 1623266739, NULL, "", "", "0xDCfAE44244B3fABb5b351b01Dc9f050E589cF24F");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x0989a227E7c50311f7De61e5e61F7c28Df8936f0", 18, "pickle_jar"); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x0989a227E7c50311f7De61e5e61F7c28Df8936f0", "C", "pickling Uniswap V2", "pUNI-V2", 1631822890, NULL, "", "", "0x0989a227E7c50311f7De61e5e61F7c28Df8936f0");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xEB801AB73E9A2A482aA48CaCA13B1954028F4c94", 6, "pickle_jar"); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xEB801AB73E9A2A482aA48CaCA13B1954028F4c94", "C", "pickling USD Coin", "pUSDC", 1620425186, NULL, "", "", "0xEB801AB73E9A2A482aA48CaCA13B1954028F4c94");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x4fFe73Cf2EEf5E8C8E0E10160bCe440a029166D2", 18, "pickle_jar"); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x4fFe73Cf2EEf5E8C8E0E10160bCe440a029166D2", "C", "pickling Curve.fi Factory USD Metapool: Liquity", "pLUSD3CRV-f", 1620422355, NULL, "", "", "0x4fFe73Cf2EEf5E8C8E0E10160bCe440a029166D2");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x729C6248f9B1Ce62B3d5e31D4eE7EE95cAB32dfD", 18, "pickle_jar"); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x729C6248f9B1Ce62B3d5e31D4eE7EE95cAB32dfD", "C", "pickling Curve.fi Factory USD Metapool: Frax", "pFRAX3CRV-f", 1625209472, NULL, "", "", "0x729C6248f9B1Ce62B3d5e31D4eE7EE95cAB32dfD");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x4E9806345fb39FFebd70A01f177A675805019ba8", 18, "pickle_jar"); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x4E9806345fb39FFebd70A01f177A675805019ba8", "C", "pickling Curve.fi cyDAI/cyUSDC/cyUSDT", "pib3CRV", 1629200722, NULL, "", "", "0x4E9806345fb39FFebd70A01f177A675805019ba8");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x1Bf62aCb8603Ef7F3A0DFAF79b25202fe1FAEE06", 18, "pickle_jar"); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x1Bf62aCb8603Ef7F3A0DFAF79b25202fe1FAEE06", "C", "pickling Curve.fi Factory USD Metapool: Magic Inte...", "pMIM-3LP3CRV-f", 1626969516, NULL, "", "", "0x1Bf62aCb8603Ef7F3A0DFAF79b25202fe1FAEE06");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xeb8174F94FDAcCB099422d9A816B8E17d5e393E3", 18, "pickle_jar"); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xeb8174F94FDAcCB099422d9A816B8E17d5e393E3", "C", "pickling Uniswap V2", "pUNI-V2", 1628004374, NULL, "", "", "0xeb8174F94FDAcCB099422d9A816B8E17d5e393E3");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xF1478A8387C449c55708a3ec11c143c35daf5E74", 18, "pickle_jar"); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xF1478A8387C449c55708a3ec11c143c35daf5E74", "C", "pickling Curve.fi Factory Plain Pool: cvxCRV", "pcvxcrv-f", 1633633543, NULL, "", "", "0xF1478A8387C449c55708a3ec11c143c35daf5E74");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xB245280Fd1795f5068DEf8E8f32DB7846b030b2B", 18, "pickle_jar"); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xB245280Fd1795f5068DEf8E8f32DB7846b030b2B", "C", "pickling Convex CRV", "pcvxCRV", 1634076523, NULL, "", "", "0xB245280Fd1795f5068DEf8E8f32DB7846b030b2B");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x1d92e1702D7054f74eAC3a9569AeB87FC93e101D", 18, "pickle_jar"); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x1d92e1702D7054f74eAC3a9569AeB87FC93e101D", "C", "pickling SushiSwap LP Token", "pSLP", 1628210804, NULL, "", "", "0x1d92e1702D7054f74eAC3a9569AeB87FC93e101D");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xBc57294Fc20bD23983dB598fa6B3f306aA1a414f", 18, "pickle_jar"); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xBc57294Fc20bD23983dB598fa6B3f306aA1a414f", "C", "pickling SushiSwap LP Token", "pSLP", 1641791985, NULL, "", "", "0xBc57294Fc20bD23983dB598fa6B3f306aA1a414f");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x69CC22B240bdcDf4A33c7B3D04a660D4cF714370", 18, "pickle_jar"); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x69CC22B240bdcDf4A33c7B3D04a660D4cF714370", "C", "pickling Uniswap V2", "pUNI-V2", 1641977334, NULL, "", "", "0x69CC22B240bdcDf4A33c7B3D04a660D4cF714370");
+*
+INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("SAMO", "Y", "Samoyedcoin", "SAMO", 1651111200, NULL, "samoyedcoin", "SAMO", "SAMO"); INSERT INTO common_asset_details(asset_id, forked) VALUES("SAMO", NULL);
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xB0c7a3Ba49C7a6EaBa6cD4a96C55a1391070Ac9A", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xB0c7a3Ba49C7a6EaBa6cD4a96C55a1391070Ac9A", "C", "MAGIC", "MAGIC", 1630989984, NULL, "magic", "MAGIC", "0xB0c7a3Ba49C7a6EaBa6cD4a96C55a1391070Ac9A");
+*
+INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("GEIST", "W", "Geist Finance", "GEIST", 1633483847, NULL, "geist-finance", "", "GEIST"); INSERT INTO common_asset_details(asset_id, forked) VALUES("GEIST", NULL);
+*
+INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("FRA", "B", "Findora", "FRA", 1618018247, NULL, "findora", "FRA", "FRA"); INSERT INTO common_asset_details(asset_id, forked) VALUES("FRA", NULL);
+*
+INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("PLATO", "S", "Plato Game", "PLATO", 1647505158, NULL, "plato-game", "", "PLATO"); INSERT INTO common_asset_details(asset_id, forked) VALUES("PLATO", NULL);
+*
+INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("ZBC", "Y", "Zebec Protocol", "ZBC", 1647428607, NULL, "zebec-protocol", "", "ZBC"); INSERT INTO common_asset_details(asset_id, forked) VALUES("ZBC", NULL);
+*
+INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("VISION", "Y", "VisionGame", "VISION", 1649937827, NULL, "visiongame", "VISION", "VISION"); INSERT INTO common_asset_details(asset_id, forked) VALUES("VISION", NULL);
+*
+INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("ARN", "B", "Arenum", "ARN", 1649765535, NULL, "arenum", "", "ARN"); INSERT INTO common_asset_details(asset_id, forked) VALUES("ARN", NULL);
+*
+INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("SLCL", "Y", "Solcial", "SLCL", 1648224182, NULL, "solcial", "", "SLCL"); INSERT INTO common_asset_details(asset_id, forked) VALUES("SLCL", NULL);
+*
+INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("TAUM", "S", "Orbitau Taureum", "TAUM", 1645071758, NULL, "orbitau-taureum", "", "TAUM"); INSERT INTO common_asset_details(asset_id, forked) VALUES("TAUM", NULL);
+*
+INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("XWG", "S", "XWG", "XWG", 1615228942, NULL, "x-world-games", "XWG", "XWG"); INSERT INTO common_asset_details(asset_id, forked) VALUES("XWG", NULL);
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xCdF7028ceAB81fA0C6971208e83fa7872994beE5", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xCdF7028ceAB81fA0C6971208e83fa7872994beE5", "C", "Threshold Network Token", "T", 1640944196, NULL, "threshold-network-token", "T", "0xCdF7028ceAB81fA0C6971208e83fa7872994beE5");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x23894DC9da6c94ECb439911cAF7d337746575A72", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x23894DC9da6c94ECb439911cAF7d337746575A72", "C", "Geojam", "JAM", 1638298391, NULL, "geojam", "", "0x23894DC9da6c94ECb439911cAF7d337746575A72");
+*

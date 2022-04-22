@@ -78,6 +78,8 @@ DUPLICATED_NAMES = (
     'Compound Wrapped BTC',
     # Tricrypto got upgraded with the same name
     'Curve.fi USD-BTC-ETH',
+    'pickling Uniswap V2',
+    'pickling SushiSwap LP Token',
 )
 
 DUPLICATED_SYMBOLS = (
@@ -101,6 +103,8 @@ DUPLICATED_SYMBOLS = (
     'yvSNX',
     # Compund cWBTC-2
     'cWBTC',
+    'pUNI-V2',
+    'pSLP',
 )
 
 class UpdateChecker:

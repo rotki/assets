@@ -494,3 +494,5 @@ INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x2FC52C61fB0C0
 *
 INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x314022E24ceD941781DC295682634B37Bd0d9cFc", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x314022E24ceD941781DC295682634B37Bd0d9cFc", "C", "xXTK-Mgmt", "xXTKa", 1626188933, NULL, "", "", "0x314022E24ceD941781DC295682634B37Bd0d9cFc");
 *
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x5c6D51ecBA4D8E4F20373e3ce96a62342B125D6d", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x5c6D51ecBA4D8E4F20373e3ce96a62342B125D6d", "C", "Element Finance", "ELFI", 1642012745, NULL, "element-finance", "", "0x5c6D51ecBA4D8E4F20373e3ce96a62342B125D6d");
+*

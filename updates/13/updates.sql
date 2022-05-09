@@ -532,3 +532,29 @@ INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingec
 *
 INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xc2544A32872A91F4A553b404C6950e89De901fdb", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xc2544A32872A91F4A553b404C6950e89De901fdb", "C", "Frax Price Index Share", "FPIS", 1648578483, NULL, "frax-price-index-share", "", "0xc2544A32872A91F4A553b404C6950e89De901fdb");
 *
+INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("PLN", "A", "Polish Zloty", "PLN", NULL, NULL, NULL, "", "PLN"); INSERT INTO common_asset_details(asset_id, forked) VALUES("PLN", NULL);
+*
+INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("AUSD", "S", "Alpaca USD", "AUSD", 1638423984, NULL, "alpaca-usd", "", "AUSD"); INSERT INTO common_asset_details(asset_id, forked) VALUES("AUSD", NULL);
+*
+INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("FITFI", "X", "STEP.APP", "FITFI", 1649709154, NULL, "step-app-fitfi", "", "FITFI"); INSERT INTO common_asset_details(asset_id, forked) VALUES("FITFI", NULL);
+*
+INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("H2O", "S", "H2O DAO", "H2O", 1646014832, NULL, "h2o-dao", "H2O", "H2O"); INSERT INTO common_asset_details(asset_id, forked) VALUES("H2O", NULL);
+*
+INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("GMM", "S", "Gamium", "GMM", 1648437422, NULL, "gamium", "", "GMM"); INSERT INTO common_asset_details(asset_id, forked) VALUES("GMM", NULL);
+*
+INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("REI", "B", "REI Network", "REI", 1650971081, NULL, "rei-network", "", "REI"); INSERT INTO common_asset_details(asset_id, forked) VALUES("REI", NULL);
+*
+INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("USDD", "P", "USDD", "USDD", 1651464107, NULL, "usdd", "", "USDD"); INSERT INTO common_asset_details(asset_id, forked) VALUES("USDD", NULL);
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x1982b2F5814301d4e9a8b0201555376e62F82428", 18, "aave-v2"); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x1982b2F5814301d4e9a8b0201555376e62F82428", "C", "Aave interest bearing STETH", "aSTETH", 1645978932, NULL, "aave-interest-bearing-steth", "", "0x1982b2F5814301d4e9a8b0201555376e62F82428");
+*
+UPDATE assets SET cryptocompare="PPAY" WHERE identifier="_ceth_0x0316EB71485b0Ab14103307bf65a021042c6d380";
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x0316EB71485b0Ab14103307bf65a021042c6d380", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x0316EB71485b0Ab14103307bf65a021042c6d380", "C", "Huobi BTC", "HBTC", 1575874126, NULL, "huobi-btc", "HBTC", "0x0316EB71485b0Ab14103307bf65a021042c6d380");
+UPDATE assets SET cryptocompare="HOLY" WHERE identifier="HOLY";
+INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("HOLY", "Y", "Holy Trinity", "HOLY", 1609894800, NULL, "holy-trinity", "HOLY", "HOLY"); INSERT INTO common_asset_details(asset_id, forked) VALUES("HOLY", NULL);
+UPDATE assets SET cryptocompare="WNDR" WHERE identifier="WNDR";
+INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("WNDR", "W", "WonderFi Tokenized Stock", "WNDR", 1637823671, NULL, "wonderfi-tokenized-stock", "", "WNDR"); INSERT INTO common_asset_details(asset_id, forked) VALUES("WNDR", NULL);
+INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("EPX", "S", "Ellipsis X", "EPX", 1648669404, NULL, "ellipsis-x", "", "EPX"); INSERT INTO common_asset_details(asset_id, forked) VALUES("EPX", NULL);
+*
+INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("PLY", "P", "Aurigami", "PLY", 1649241804, NULL, "aurigami", "", "USDD"); INSERT INTO common_asset_details(asset_id, forked) VALUES("PLY", NULL);
+*

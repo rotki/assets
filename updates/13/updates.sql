@@ -556,5 +556,67 @@ UPDATE assets SET cryptocompare="WNDR" WHERE identifier="WNDR";
 INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("WNDR", "W", "WonderFi Tokenized Stock", "WNDR", 1637823671, NULL, "wonderfi-tokenized-stock", "", "WNDR"); INSERT INTO common_asset_details(asset_id, forked) VALUES("WNDR", NULL);
 INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("EPX", "S", "Ellipsis X", "EPX", 1648669404, NULL, "ellipsis-x", "", "EPX"); INSERT INTO common_asset_details(asset_id, forked) VALUES("EPX", NULL);
 *
+UPDATE assets SET coingecko="ducato-finance" WHERE identifier="_ceth_0xa117ea1c0c85CEf648df2b6f40e50bb5475C228d";
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xa117ea1c0c85CEf648df2b6f40e50bb5475C228d", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xa117ea1c0c85CEf648df2b6f40e50bb5475C228d", "C", "DUCATO Protocol Token", "DUCATO", 1595831020, NULL, "ducato-finance", "", "0xa117ea1c0c85CEf648df2b6f40e50bb5475C228d");
+UPDATE assets SET coingecko="kok" WHERE identifier="_ceth_0x7BD6a4E7DB3A34c485A8DD02b30B6565e3bbC633";
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x7BD6a4E7DB3A34c485A8DD02b30B6565e3bbC633", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x7BD6a4E7DB3A34c485A8DD02b30B6565e3bbC633", "C", "KOK Coin", "KOK", 1578456549, NULL, "kok", "", "0x7BD6a4E7DB3A34c485A8DD02b30B6565e3bbC633");
 INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("PLY", "P", "Aurigami", "PLY", 1649241804, NULL, "aurigami", "", "USDD"); INSERT INTO common_asset_details(asset_id, forked) VALUES("PLY", NULL);
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x629c759D1E83eFbF63d84eb3868B564d9521C129", 18, "yearn-v1"); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x629c759D1E83eFbF63d84eb3868B564d9521C129", "C", "yearn Curve.fi cDAI/cUSDC", "yvcDAI+cUSDC", 1604758201, NULL, "", "", "0x629c759D1E83eFbF63d84eb3868B564d9521C129");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x0FCDAeDFb8A7DfDa2e9838564c5A1665d856AFDF", 18, "yearn-v1"); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x0FCDAeDFb8A7DfDa2e9838564c5A1665d856AFDF", "C", "yearn Curve.fi MUSD/3Crv", "yvmusd3CRV", 1607160847, NULL, "", "", "0x0FCDAeDFb8A7DfDa2e9838564c5A1665d856AFDF");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xcC7E70A958917cCe67B4B87a8C30E6297451aE98", 18, "yearn-v1"); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xcC7E70A958917cCe67B4B87a8C30E6297451aE98", "C", "yearn Curve.fi GUSD/3Crv", "yvgusd3CRV", 1607237689, NULL, "", "", "0xcC7E70A958917cCe67B4B87a8C30E6297451aE98");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xE0db48B4F71752C4bEf16De1DBD042B82976b8C7", 18, "yearn-v1"); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xE0db48B4F71752C4bEf16De1DBD042B82976b8C7", "C", "yearn mStable USD", "yvmUSD", 1609441345, NULL, "", "", "0xE0db48B4F71752C4bEf16De1DBD042B82976b8C7");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x5334e150B938dd2b6bd040D9c4a03Cff0cED3765", 18, "yearn-v1"); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x5334e150B938dd2b6bd040D9c4a03Cff0cED3765", "C", "yearn Curve.fi renBTC/wBTC", "yvcrvRenWBTC", 1611583752, NULL, "", "", "0x5334e150B938dd2b6bd040D9c4a03Cff0cED3765");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xFe39Ce91437C76178665D64d7a2694B0f6f17fE3", 18, "yearn-v1"); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xFe39Ce91437C76178665D64d7a2694B0f6f17fE3", "C", "yearn Curve.fi USDN/3Crv", "yvusdn3CRV", 1611451016, NULL, "", "", "0xFe39Ce91437C76178665D64d7a2694B0f6f17fE3");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xF6C9E9AF314982A4b38366f4AbfAa00595C5A6fC", 18, "yearn-v1"); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xF6C9E9AF314982A4b38366f4AbfAa00595C5A6fC", "C", "yearn Curve.fi UST/3Crv", "yvust3CRV", 1611444747, NULL, "", "", "0xF6C9E9AF314982A4b38366f4AbfAa00595C5A6fC");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xA8B1Cb4ed612ee179BDeA16CCa6Ba596321AE52D", 18, "yearn-v1"); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xA8B1Cb4ed612ee179BDeA16CCa6Ba596321AE52D", "C", "yearn Curve.fi bBTC/sbtcCRV", "yvbBTC/sbtcCRV", 1611443166, NULL, "", "", "0xA8B1Cb4ed612ee179BDeA16CCa6Ba596321AE52D");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x07FB4756f67bD46B748b16119E802F1f880fb2CC", 18, "yearn-v1"); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x07FB4756f67bD46B748b16119E802F1f880fb2CC", "C", "yearn Curve.fi tBTC/sbtcCrv", "yvtbtc/sbtcCrv", 1611641883, NULL, "", "", "0x07FB4756f67bD46B748b16119E802F1f880fb2CC");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x7F83935EcFe4729c4Ea592Ab2bC1A32588409797", 18, "yearn-v1"); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x7F83935EcFe4729c4Ea592Ab2bC1A32588409797", "C", "yearn Curve.fi oBTC/sbtcCRV", "yvoBTC/sbtcCRV", 1611698586, NULL, "", "", "0x7F83935EcFe4729c4Ea592Ab2bC1A32588409797");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x46AFc2dfBd1ea0c0760CAD8262A5838e803A37e5", 18, "yearn-v1"); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x46AFc2dfBd1ea0c0760CAD8262A5838e803A37e5", "C", "yearn Curve.fi hBTC/wBTC", "yvhCRV", 1611973890, NULL, "", "", "0x46AFc2dfBd1ea0c0760CAD8262A5838e803A37e5");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x5533ed0a3b83F70c3c4a1f69Ef5546D3D4713E44", 18, "yearn-v1"); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x5533ed0a3b83F70c3c4a1f69Ef5546D3D4713E44", "C", "yearn Curve.fi DAI/USDC/USDT/sUSD", "yvcrvPlain3andSUSD", 1611704712, NULL, "", "", "0x5533ed0a3b83F70c3c4a1f69Ef5546D3D4713E44");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x39546945695DCb1c037C836925B355262f551f55", 18, "yearn-v1"); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x39546945695DCb1c037C836925B355262f551f55", "C", "yearn Curve.fi HUSD/3Crv", "yvhusd3CRV", 1611973890, NULL, "", "", "0x39546945695DCb1c037C836925B355262f551f55");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x8e6741b456a074F0Bc45B8b82A755d4aF7E965dF", 18, "yearn-v1"); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x8e6741b456a074F0Bc45B8b82A755d4aF7E965dF", "C", "yearn Curve.fi DUSD/3Crv", "yvdusd3CRV", 1611973890, NULL, "", "", "0x8e6741b456a074F0Bc45B8b82A755d4aF7E965dF");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x03403154afc09Ce8e44C3B185C82C6aD5f86b9ab", 18, "yearn-v1"); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x03403154afc09Ce8e44C3B185C82C6aD5f86b9ab", "C", "yearn Curve.fi aDAI/aUSDC/aUSDT", "yva3CRV", 1612192629, NULL, "", "", "0x03403154afc09Ce8e44C3B185C82C6aD5f86b9ab");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xE625F5923303f1CE7A43ACFEFd11fd12f30DbcA4", 18, "yearn-v1"); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xE625F5923303f1CE7A43ACFEFd11fd12f30DbcA4", "C", "yearn Curve.fi ETH/aETH", "yvankrCRV", 1613091218, NULL, "", "", "0xE625F5923303f1CE7A43ACFEFd11fd12f30DbcA4");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xBacB69571323575C6a5A3b4F9EEde1DC7D31FBc1", 18, "yearn-v1"); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xBacB69571323575C6a5A3b4F9EEde1DC7D31FBc1", "C", "yearn Curve.fi aDAI/aSUSD", "yvsaCRV", 1613888556, NULL, "", "", "0xBacB69571323575C6a5A3b4F9EEde1DC7D31FBc1");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x1B5eb1173D2Bf770e50F10410C9a96F7a8eB6e75", 18, "yearn-v1"); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x1B5eb1173D2Bf770e50F10410C9a96F7a8eB6e75", "C", "yearn Curve.fi USDP/3Crv", "yvusdp3CRV", 1614835272, NULL, "", "", "0x1B5eb1173D2Bf770e50F10410C9a96F7a8eB6e75");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xbD17B1ce622d73bD438b9E658acA5996dc394b0d", 18, "yearn-v1"); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xbD17B1ce622d73bD438b9E658acA5996dc394b0d", "C", "yearn pSLP", "yvpSLP", 1599694464, NULL, "", "", "0xbD17B1ce622d73bD438b9E658acA5996dc394b0d");
+*
+INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("KARA", "S", "KaraStar KARA", "KARA", 1636213822, NULL, "karastar-kara", "", "KARA"); INSERT INTO common_asset_details(asset_id, forked) VALUES("KARA", NULL);
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x67B6D479c7bB412C54e03dCA8E1Bc6740ce6b99C", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x67B6D479c7bB412C54e03dCA8E1Bc6740ce6b99C", "C", "Kylin Network", "KYL", 1614483398, NULL, "kylin-network", "KYL", "0x67B6D479c7bB412C54e03dCA8E1Bc6740ce6b99C");
+*
+INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("IHC", "S", "Inflation Hedging Coin", "IHC", 1631195199, NULL, "inflation-hedging-coin", "", "IHC"); INSERT INTO common_asset_details(asset_id, forked) VALUES("IHC", NULL);
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x31ea0de8119307aA264Bb4b38727aAb4E36b074f", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x31ea0de8119307aA264Bb4b38727aAb4E36b074f", "C", "Bit Store Coin", "STORE", 1637069270, NULL, "bit-store-coin", "STORE", "0x31ea0de8119307aA264Bb4b38727aAb4E36b074f");
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0xb31eF9e52d94D4120eb44Fe1ddfDe5B4654A6515", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0xb31eF9e52d94D4120eb44Fe1ddfDe5B4654A6515", "C", "DOSE", "DOSE", 1632813626, NULL, "dose-token", "DOSE", "0xb31eF9e52d94D4120eb44Fe1ddfDe5B4654A6515");
+*
+INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("CELT", "W", "Celestial", "CELT", 1633053600, NULL, "celestial", "CELT", "CELT"); INSERT INTO common_asset_details(asset_id, forked) VALUES("CELT", NULL);
+*
+INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("MLS", "W", "Pikaster", "MLS", 1651776411, NULL, "pikaster", "", "MLS"); INSERT INTO common_asset_details(asset_id, forked) VALUES("MLS", NULL);
+*
+INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("AFK", "W", "AFKDAO", "AFK", 1653397388, NULL, "afkdao", "AFK", "AFK"); INSERT INTO common_asset_details(asset_id, forked) VALUES("AFK", NULL);
+*
+INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("TEDDY", "X", "TEDDY", "TEDDY", 1629989893, NULL, "teddy", "TEDDY", "TEDDY"); INSERT INTO common_asset_details(asset_id, forked) VALUES("TEDDY", NULL);
+*
+INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x98B058b2CBacF5E99bC7012DF757ea7CFEbd35BC", 18, 'yearn-v1'); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x98B058b2CBacF5E99bC7012DF757ea7CFEbd35BC", "C", "yearn Curve.fi EURS/sEUR", "yveursCRV", 1610435041, NULL, "", "", "0x98B058b2CBacF5E99bC7012DF757ea7CFEbd35BC");
 *

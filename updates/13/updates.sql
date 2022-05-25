@@ -548,7 +548,7 @@ INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingec
 *
 INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x1982b2F5814301d4e9a8b0201555376e62F82428", 18, "aave-v2"); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x1982b2F5814301d4e9a8b0201555376e62F82428", "C", "Aave interest bearing STETH", "aSTETH", 1645978932, NULL, "aave-interest-bearing-steth", "", "0x1982b2F5814301d4e9a8b0201555376e62F82428");
 *
-UPDATE assets SET cryptocompare="PPAY" WHERE identifier="_ceth_0x0316EB71485b0Ab14103307bf65a021042c6d380";
+UPDATE assets SET cryptocompare="HBTC" WHERE identifier="_ceth_0x0316EB71485b0Ab14103307bf65a021042c6d380";
 INSERT INTO ethereum_tokens(address, decimals, protocol) VALUES("0x0316EB71485b0Ab14103307bf65a021042c6d380", 18, NULL); INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("_ceth_0x0316EB71485b0Ab14103307bf65a021042c6d380", "C", "Huobi BTC", "HBTC", 1575874126, NULL, "huobi-btc", "HBTC", "0x0316EB71485b0Ab14103307bf65a021042c6d380");
 UPDATE assets SET cryptocompare="HOLY" WHERE identifier="HOLY";
 INSERT INTO assets(identifier, type, name, symbol, started, swapped_for, coingecko, cryptocompare, details_reference) VALUES("HOLY", "Y", "Holy Trinity", "HOLY", 1609894800, NULL, "holy-trinity", "HOLY", "HOLY"); INSERT INTO common_asset_details(asset_id, forked) VALUES("HOLY", NULL);

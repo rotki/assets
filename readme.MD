@@ -83,4 +83,4 @@ To detect some errors we have a test that checks every entry:
 
 To generate a list of changes for a specific version use
 
-    python -m tools.generate_changelog 1
+    python -m tools.generate_changelog -v 1

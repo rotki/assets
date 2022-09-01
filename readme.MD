@@ -31,7 +31,7 @@ Only the last one needs to be done manually. The rest can be taken care of by ru
 ### Adding evm tokens
 
 ```
-INSERT INTO assets(identifier,type, started, swapped_for) VALUES("eip155:1/erc20:0xC2FEC534c461c45533e142f724d0e3930650929c", "C", 123, NULL); INSERT INTO evm_tokens(identifier, token_kind, chain, address, decimals, protocol) VALUES("eip155:1/erc20:0xC2FEC534c461c45533e142f724d0e3930650929c", "A", "A", "0xC2FEC534c461c45533e142f724d0e3930650929c", 18, NULL); INSERT INTO common_asset_details(identifier, name, symbol, coingecko, cryptocompare, forked) VALUES("eip155:1/erc20:0xC2FEC534c461c45533e142f724d0e3930650929c", "AKB token", "AKB", NULL, "AIDU", NULL);
+INSERT INTO assets(identifier,type, started, swapped_for) VALUES("eip155:1/erc20:0x422866a8F0b032c5cf1DfBDEf31A20F4509562b0", "C", 123, NULL); INSERT INTO evm_tokens(identifier, token_kind, chain, address, decimals, protocol) VALUES("eip155:1/erc20:0xC2FEC534c461c45533e142f724d0e3930650929c", "A", "A", "0xC2FEC534c461c45533e142f724d0e3930650929c", 18, NULL); INSERT INTO common_asset_details(identifier, name, symbol, coingecko, cryptocompare, forked) VALUES("eip155:1/erc20:0x422866a8F0b032c5cf1DfBDEf31A20F4509562b0", "Adshares", "ADST", "adshares", "ADS", NULL);
 ```
 
 An evm token addition needs to look like the above. First an insertion into the `assets` table:

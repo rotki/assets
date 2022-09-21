@@ -1,0 +1,4 @@
+INSERT INTO assets(identifier, name, type) VALUES("ETHW", "Ethereum PoW", "B"); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES("ETHW", "ETHW", "ethereum-pow-iou", "ETHW", "ETH", 1663224179, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES("eip155:1/erc20:0xBe9895146f7AF43049ca1c1AE358B0541Ea49704", "Coinbase Wrapped Staked ETH", "C"); INSERT INTO evm_tokens(identifier, token_kind, chain, address, decimals, protocol) VALUES("eip155:1/erc20:0xBe9895146f7AF43049ca1c1AE358B0541Ea49704", "A", "A", "0xBe9895146f7AF43049ca1c1AE358B0541Ea49704", 18, NULL); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES("eip155:1/erc20:0xBe9895146f7AF43049ca1c1AE358B0541Ea49704", "cbETH", "coinbase-wrapped-staked-eth", "CBETH", NULL, 1643901537, NULL);
+*

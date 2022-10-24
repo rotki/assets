@@ -3,7 +3,6 @@ Code extracted from the rotki's updater for version 1.16.0
 https://github.com/rotki/rotki/blob/8f41fcba4732fba4af563c45c34ad9ad288906a2/rotkehlchen/globaldb/updates.py
 """
 
-import logging
 import re
 from typing import NamedTuple, NewType, Optional, Tuple, Union
 from eth_utils import is_checksum_formatted_address
@@ -50,6 +49,8 @@ class AssetData(NamedTuple):
     ethereum_address: Optional[str]
     protocol: Optional[str]
     decimals: Optional[int]
+    chain: Optional[int]
+    token_kind: Optional[str]
 
 # In V2 anyone can create a vault and there are some that are endorsed by yearn once they 
 # are battle tested. The information seen here comes from the yearn v2 graph that tracks every 
@@ -115,6 +116,11 @@ class UpdateChecker:
                 "assets_re": re.compile(r'.*INSERT +INTO +assets\( *identifier *, *type *, *name *, *symbol *, *started *, *swapped_for *, *coingecko *, *cryptocompare *, *details_reference *\) +VALUES\((.*?),(.*?),(.*?),(.*?),(.*?),(.*?),(.*?),(.*?),(.*?)\).*?'),
                 "ethereum_tokens_re": re.compile(r'.*INSERT +INTO +ethereum_tokens\( *address *, *decimals *, *protocol *\) +VALUES\((.*?),(.*?),(.*?)\).*'),
                 "common_asset_details_re": re.compile(r'.*INSERT +INTO +common_asset_details\( *asset_id *, *forked *\) +VALUES\((.*?),(.*?)\).*')
+            },
+            3: {
+                "assets_re": re.compile(r'.*INSERT +INTO +assets\( *identifier *, *name *, *type *\) +VALUES\(([^\)]*?),([^\)]*?),([^\)]*?)\).*?'),
+                "ethereum_tokens_re": re.compile(r'.*INSERT +INTO +evm_tokens\( *identifier *, *token_kind *, *chain *, *address *, *decimals *, *protocol *\) +VALUES\(([^\)]*?),([^\)]*?),([^\)]*?),([^\)]*?),([^\)]*?),([^\)]*?)\).*'),
+                "common_asset_details_re": re.compile(r'.*INSERT +INTO +common_asset_details\( *identifier *, *symbol *, *coingecko *, *cryptocompare *, *forked *, *started *, *swapped_for *\) +VALUES\((.*?),(.*?),(.*?),(.*?),(.*?),([^\)]*?),([^\)]*?)\).*')
             }
         }
         self.string_re = re.compile(r'.*"(.*?)".*')
@@ -158,52 +164,77 @@ class UpdateChecker:
             )
         return result
 
-    def _parse_asset_data(self, insert_text: str) -> ParsedAssetData:
-        match = self.versions[self.test_version]['assets_re'].match(insert_text)
+    def _parse_asset_data(self, insert_text: str, schema_version: int) -> ParsedAssetData:
+        match = self.versions[schema_version]['assets_re'].match(insert_text)
         if match is None:
             raise DeserializationError(
                 f'At asset DB update could not parse asset data out of {insert_text}',
             )
-        if len(match.groups()) != 9:
-            raise DeserializationError(
-                f'At asset DB update could not parse asset data out of {insert_text}',
-            )
+        if schema_version == 2:
+            if len(match.groups()) != 9:
+                raise DeserializationError(
+                    f'At asset DB update could not parse asset data out of {insert_text}',
+                )
 
-        raw_type = self._parse_str(match.group(2), 'asset type', insert_text)
-        asset_type = raw_type
-        raw_started = self._parse_optional_int(match.group(5), 'started', insert_text)
-        started = Timestamp(raw_started) if raw_started else None
-        return ParsedAssetData(
-            identifier=self._parse_str(match.group(1), 'identifier', insert_text),
-            asset_type=asset_type,
-            name=self._parse_str(match.group(3), 'name', insert_text),
-            symbol=self._parse_str(match.group(4), 'symbol', insert_text),
-            started=started,
-            swapped_for=self._parse_optional_str(match.group(6), 'swapped_for', insert_text),
-            coingecko=self._parse_optional_str(match.group(7), 'coingecko', insert_text),
-            cryptocompare=self._parse_optional_str(match.group(8), 'cryptocompare', insert_text),
-        )
+            raw_type = self._parse_str(match.group(2), 'asset type', insert_text)
+            asset_type = raw_type
+            raw_started = self._parse_optional_int(match.group(5), 'started', insert_text)
+            started = Timestamp(raw_started) if raw_started else None
+            return {
+                'identifier': self._parse_str(match.group(1), 'identifier', insert_text),
+                'asset_type': asset_type,
+                'name': self._parse_str(match.group(3), 'name', insert_text),
+                'symbol': self._parse_str(match.group(4), 'symbol', insert_text),
+                'started': started,
+                'swapped_for': self._parse_optional_str(match.group(6), 'swapped_for', insert_text),
+                'coingecko': self._parse_optional_str(match.group(7), 'coingecko', insert_text),
+                'cryptocompare': self._parse_optional_str(match.group(8), 'cryptocompare', insert_text),
+            }
+        else:
+            if len(match.groups()) != 3:
+                raise DeserializationError(
+                    f'At asset DB update could not parse asset data out of {insert_text}',
+                )
+            return {
+                'identifier': self._parse_str(match.group(1), 'identifier', insert_text),
+                'name': self._parse_str(match.group(2), 'name', insert_text),
+                'asset_type': self._parse_str(match.group(3), 'asset type', insert_text),
+            }
 
-    def _parse_ethereum_token_data(self, insert_text: str) -> Tuple[str, Optional[int], Optional[str]]:  # noqa: E501
-        match = self.versions[self.test_version]['ethereum_tokens_re'].match(insert_text)
+    def _parse_ethereum_token_data(self, insert_text: str, schema_version: int) -> Tuple[str, Optional[int], Optional[str]]:  # noqa: E501
+        match = self.versions[schema_version]['ethereum_tokens_re'].match(insert_text)
         if match is None:
             raise DeserializationError(
                 f'At asset DB update could not parse ethereum token data out '
                 f'of {insert_text}',
             )
 
-        if len(match.groups()) != 3:
+        if schema_version == 2:
+            if len(match.groups()) != 3:
+                raise DeserializationError(
+                    f'At asset DB update could not parse ethereum token data out of {insert_text}',
+                )
+
+            return {
+                'address': self._parse_str(match.group(1), 'address', insert_text),
+                'decimals': self._parse_optional_int(match.group(2), 'decimals', insert_text),
+                'protocol': self._parse_optional_str(match.group(3), 'protocol', insert_text),
+            }
+        # else
+        if len(match.groups()) != 6:
             raise DeserializationError(
                 f'At asset DB update could not parse ethereum token data out of {insert_text}',
             )
 
-        return (
-            self._parse_str(match.group(1), 'address', insert_text),
-            self._parse_optional_int(match.group(2), 'decimals', insert_text),
-            self._parse_optional_str(match.group(3), 'protocol', insert_text),
-        )
+        return {
+            'token_kind': self._parse_str(match.group(2), 'token_kind', insert_text),
+            'chain': self._parse_optional_int(match.group(3), 'chain', insert_text),
+            'address': self._parse_str(match.group(4), 'address', insert_text),
+            'decimals': self._parse_optional_int(match.group(5), 'decimals', insert_text),
+            'protocol': self._parse_optional_str(match.group(6), 'protocol', insert_text),
+        }
 
-    def _parse_full_insert(self, insert_text: str) -> AssetData:
+    def _parse_full_insert(self, insert_text: str, schema_version: int) -> AssetData:
         """Parses the full insert line for an asset to give information for the conflict to the user
 
         Note: In the future this needs to be different for each version
@@ -211,37 +242,70 @@ class UpdateChecker:
         - DeserializationError if the appropriate data is not found or if it can't
         be properly parsed.
         """
-        asset_data = self._parse_asset_data(insert_text)
-        forked = address = decimals = protocol = None
-        if asset_data.asset_type == 'C':
-            address, decimals, protocol = self._parse_ethereum_token_data(insert_text)
-        else:
-            match = self.versions[self.test_version]['common_asset_details_re'].match(insert_text)
+        asset_data = self._parse_asset_data(insert_text, schema_version)
+        evm_data = {
+            'foked': None,
+            'address': None,
+            'decimals': None,
+            'protocol': None,
+            'chain': None,
+            'token_kind': None,
+        }
+        if asset_data['asset_type'] == 'C':
+            evm_data |= self._parse_ethereum_token_data(insert_text, schema_version)
+
+        if schema_version == 2 and asset_data['asset_type'] != 'C':
+            match = self.versions[schema_version]['common_asset_details_re'].match(insert_text)
+            common_details = {
+                'forked': self._parse_optional_str(match.group(2), 'forked', insert_text),
+            }
             if match is None:
                 raise DeserializationError(
                     f'At asset DB update could not parse common asset '
                     f'details data out of {insert_text}',
                 )
-            forked = self._parse_optional_str(match.group(2), 'forked', insert_text)
+        elif schema_version == 2:
+            common_details = {'forked': None}
+        elif schema_version == 3:
+            match = self.versions[schema_version]['common_asset_details_re'].match(insert_text)
+            if match is None:
+                raise DeserializationError(
+                    f'At asset DB update could not parse common asset '
+                    f'details data out of {insert_text}',
+                )
+            common_details = {
+                'symbol': self._parse_optional_str(match.group(2), 'symbol', insert_text),
+                'coingecko': self._parse_optional_str(match.group(3), 'coingecko', insert_text),
+                'cryptocompare': self._parse_optional_str(match.group(4), 'cryptocompare', insert_text),
+                'forked': self._parse_optional_str(match.group(5), 'forked', insert_text),
+                'started': self._parse_optional_int(match.group(6), 'started', insert_text),
+                'swapped_for': self._parse_optional_str(match.group(7), 'swapped_for', insert_text),
+            }
+
+        asset_data |= evm_data
+        asset_data |= common_details
 
         return AssetData(  # types are not really proper here (except for asset_type)
-            identifier=asset_data.identifier,
-            name=asset_data.name,
-            symbol=asset_data.symbol,
-            asset_type=asset_data.asset_type,
-            started=asset_data.started,
-            forked=forked,
-            swapped_for=asset_data.swapped_for,
-            ethereum_address=address,
-            decimals=decimals,
-            cryptocompare=asset_data.cryptocompare,
-            coingecko=asset_data.coingecko,
-            protocol=protocol,
+            identifier=asset_data['identifier'],
+            name=asset_data['name'],
+            symbol=asset_data['symbol'],
+            asset_type=asset_data['asset_type'],
+            started=asset_data['started'],
+            forked=asset_data['forked'],
+            swapped_for=asset_data['swapped_for'],
+            ethereum_address=asset_data['address'],
+            decimals=asset_data['decimals'],
+            cryptocompare=asset_data['cryptocompare'],
+            coingecko=asset_data['coingecko'],
+            protocol=asset_data['protocol'],
+            token_kind=asset_data['token_kind'],
+            chain=asset_data['chain'],
         )
 
     def check_single_version_update(
             self,
             text: str,
+            schema_version: int
     ) -> None:
         lines = text.splitlines()
         seen_elements = set()
@@ -252,14 +316,14 @@ class UpdateChecker:
                 insert = True
 
             # Use the same regex as in the rotki servers to obtain the assets
-            asset_data = self._parse_full_insert(full_insert)
+            asset_data = self._parse_full_insert(full_insert, schema_version)
 
             assert asset_data.cryptocompare is not None or asset_data.coingecko is not None
             assert len(asset_data.name) != 0
             assert len(asset_data.symbol) != 0
 
-            # Check agains duplicate information
-            if insert:
+            # Check agains duplicate information. Before schema version 3 we couldn't have duplicates
+            if insert and schema_version == 2:
                 assert asset_data.cryptocompare not in seen_elements, f'Duplicate cryptocompare {asset_data.cryptocompare}'
                 assert asset_data.coingecko not in seen_elements, f'Duplicate coingecko {asset_data.coingecko}'
                 if asset_data.name not in DUPLICATED_NAMES:
@@ -272,8 +336,8 @@ class UpdateChecker:
                 assert is_checksum_formatted_address(asset_data.ethereum_address)
                 assert asset_data.ethereum_address in action
                 if insert:
-                    assert asset_data.ethereum_address not in seen_elements, f'Duplicate address {asset_data.ethereum_address}'
-                    seen_elements.add(asset_data.ethereum_address)
+                    assert (asset_data.ethereum_address, asset_data.chain) not in seen_elements, f'Duplicate address {asset_data.ethereum_address}'
+                    seen_elements.add((asset_data.ethereum_address, asset_data.chain))
 
             if insert:
                 seen_elements.update((asset_data.symbol, asset_data.name))

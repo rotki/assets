@@ -6,6 +6,7 @@ https://github.com/rotki/rotki/blob/8f41fcba4732fba4af563c45c34ad9ad288906a2/rot
 import re
 from typing import NamedTuple, NewType, Optional, Tuple, Union
 from eth_utils import is_checksum_formatted_address
+from validator.utils import REGEX_ASSETS_V2, REGEX_ASSETS_V3
 
 T_Timestamp = int
 Timestamp = NewType('Timestamp', T_Timestamp)
@@ -112,16 +113,9 @@ class UpdateChecker:
 
     def __init__(self):
         self.versions = {
-            2: {
-                "assets_re": re.compile(r'.*INSERT +INTO +assets\( *identifier *, *type *, *name *, *symbol *, *started *, *swapped_for *, *coingecko *, *cryptocompare *, *details_reference *\) +VALUES\((.*?),(.*?),(.*?),(.*?),(.*?),(.*?),(.*?),(.*?),(.*?)\).*?'),
-                "ethereum_tokens_re": re.compile(r'.*INSERT +INTO +ethereum_tokens\( *address *, *decimals *, *protocol *\) +VALUES\((.*?),(.*?),(.*?)\).*'),
-                "common_asset_details_re": re.compile(r'.*INSERT +INTO +common_asset_details\( *asset_id *, *forked *\) +VALUES\((.*?),(.*?)\).*')
-            },
-            3: {
-                "assets_re": re.compile(r'.*INSERT +INTO +assets\( *identifier *, *name *, *type *\) +VALUES\(([^\)]*?),([^\)]*?),([^\)]*?)\).*?'),
-                "ethereum_tokens_re": re.compile(r'.*INSERT +INTO +evm_tokens\( *identifier *, *token_kind *, *chain *, *address *, *decimals *, *protocol *\) +VALUES\(([^\)]*?),([^\)]*?),([^\)]*?),([^\)]*?),([^\)]*?),([^\)]*?)\).*'),
-                "common_asset_details_re": re.compile(r'.*INSERT +INTO +common_asset_details\( *identifier *, *symbol *, *coingecko *, *cryptocompare *, *forked *, *started *, *swapped_for *\) +VALUES\((.*?),(.*?),(.*?),(.*?),(.*?),([^\)]*?),([^\)]*?)\).*')
-            }
+            2: REGEX_ASSETS_V2,
+            3: REGEX_ASSETS_V3,
+            4: REGEX_ASSETS_V3,
         }
         self.string_re = re.compile(r'.*"(.*?)".*')
         self.test_version = 2
@@ -266,7 +260,7 @@ class UpdateChecker:
                 )
         elif schema_version == 2:
             common_details = {'forked': None}
-        elif schema_version == 3:
+        elif schema_version >= 3:
             match = self.versions[schema_version]['common_asset_details_re'].match(insert_text)
             if match is None:
                 raise DeserializationError(

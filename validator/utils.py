@@ -1,5 +1,6 @@
 import json
 from pathlib import Path
+import re
 
 
 def get_latest_version():
@@ -9,3 +10,16 @@ def get_latest_version():
     with open(infojson) as f:
         data = json.load(f)
     return data['latest']
+
+
+REGEX_ASSETS_V2 = {
+    "assets_re": re.compile(r'.*INSERT +INTO +assets\( *identifier *, *type *, *name *, *symbol *, *started *, *swapped_for *, *coingecko *, *cryptocompare *, *details_reference *\) +VALUES\((.*?),(.*?),(.*?),(.*?),(.*?),(.*?),(.*?),(.*?),(.*?)\).*?'),
+    "ethereum_tokens_re": re.compile(r'.*INSERT +INTO +ethereum_tokens\( *address *, *decimals *, *protocol *\) +VALUES\((.*?),(.*?),(.*?)\).*'),
+    "common_asset_details_re": re.compile(r'.*INSERT +INTO +common_asset_details\( *asset_id *, *forked *\) +VALUES\((.*?),(.*?)\).*')
+}
+
+REGEX_ASSETS_V3 = {
+    "assets_re": re.compile(r'.*INSERT +INTO +assets\( *identifier *, *name *, *type *\) +VALUES\(([^\)]*?),([^\)]*?),([^\)]*?)\).*?'),
+    "ethereum_tokens_re": re.compile(r'.*INSERT +INTO +evm_tokens\( *identifier *, *token_kind *, *chain *, *address *, *decimals *, *protocol *\) +VALUES\(([^\)]*?),([^\)]*?),([^\)]*?),([^\)]*?),([^\)]*?),([^\)]*?)\).*'),
+    "common_asset_details_re": re.compile(r'.*INSERT +INTO +common_asset_details\( *identifier *, *symbol *, *coingecko *, *cryptocompare *, *forked *, *started *, *swapped_for *\) +VALUES\((.*?),(.*?),(.*?),(.*?),(.*?),([^\)]*?),([^\)]*?)\).*')
+}

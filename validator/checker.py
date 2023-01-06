@@ -330,7 +330,7 @@ class UpdateChecker:
                 assert is_checksum_formatted_address(asset_data.ethereum_address)
                 assert asset_data.ethereum_address in action
                 if insert:
-                    assert (asset_data.ethereum_address, asset_data.chain) not in seen_elements, f'Duplicate address {asset_data.ethereum_address}'
+                    assert (asset_data.ethereum_address, asset_data.chain) not in seen_elements, f'Duplicate address {asset_data.ethereum_address}-{asset_data.chain}'
                     seen_elements.add((asset_data.ethereum_address, asset_data.chain))
 
             if insert:

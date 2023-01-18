@@ -17,3 +17,4 @@ INSERT INTO asset_collections(id, name, symbol) VALUES (212, "PRIMAL Token", "PR
 INSERT INTO asset_collections(id, name, symbol) VALUES (213, "Fodl", "FODL");
 *
 INSERT INTO asset_collections(id, name, symbol) VALUES (214, "TERRAN", "TRR");
+*

@@ -116,6 +116,7 @@ class UpdateChecker:
             2: REGEX_ASSETS_V2,
             3: REGEX_ASSETS_V3,
             4: REGEX_ASSETS_V3,
+            5: REGEX_ASSETS_V3,
         }
         self.string_re = re.compile(r'.*"(.*?)".*')
         self.test_version = 2

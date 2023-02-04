@@ -382,4 +382,5 @@ class UpdateChecker:
             else:
                 updated_assets.append(msg)
 
+
         return CHANGELOG_MSG.format('\n'.join(new_assets), '\n'.join(updated_assets))

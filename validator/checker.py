@@ -53,6 +53,18 @@ class AssetData(NamedTuple):
     chain: Optional[int]
     token_kind: Optional[str]
 
+CHAIN_ID_TO_NAME = {
+    1: 'ethereum',
+    10: 'optimism',
+    56: 'binance',
+    100: 'gnosis',
+    137: 'matic',
+    250: 'fantom',
+    42161: 'arbitrum',
+    43114: 'avalanche',
+    42220: 'celo',
+}
+
 # In V2 anyone can create a vault and there are some that are endorsed by yearn once they 
 # are battle tested. The information seen here comes from the yearn v2 graph that tracks every 
 # yearn v2 vault, even the ones that are not endorsed. All the vaults in yearn v2 were
@@ -353,13 +365,18 @@ class UpdateChecker:
             if full_insert == '*':
                 full_insert = action
                 is_new = True
-            asset_data = self._parse_full_insert(full_insert)
+            asset_data = self._parse_full_insert(full_insert, schema_version=max(self.versions.keys()))
             if asset_data.coingecko is not None:
                 msg = f'- [{asset_data.name} ({asset_data.symbol})](https://www.coingecko.com/en/coins/{asset_data.coingecko})'
             elif asset_data.cryptocompare is not None:
                 msg = f'- [{asset_data.name} ({asset_data.symbol})](https://www.cryptocompare.com/coins/{asset_data.cryptocompare}/overview/)'
             else:
                 msg = f'- {asset_data.name} ({asset_data.symbol})'
+
+            if asset_data.chain is not None:
+                assert asset_data.chain in CHAIN_ID_TO_NAME, f'Chain {asset_data.chain} is missing in the mapping of chains'
+                msg += f' on {CHAIN_ID_TO_NAME[asset_data.chain]}'
+
             if is_new:
                 new_assets.append(msg)
             else:

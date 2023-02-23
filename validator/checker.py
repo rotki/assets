@@ -5,7 +5,7 @@ https://github.com/rotki/rotki/blob/8f41fcba4732fba4af563c45c34ad9ad288906a2/rot
 
 import re
 from typing import NamedTuple, NewType, Optional, Tuple, Union
-from eth_utils import is_checksum_formatted_address
+from eth_utils import is_checksum_address
 from validator.utils import REGEX_ASSETS_V2, REGEX_ASSETS_V3
 
 T_Timestamp = int
@@ -326,7 +326,7 @@ class UpdateChecker:
             asset_data = self._parse_full_insert(full_insert, schema_version)
 
             assert asset_data.cryptocompare is not None or asset_data.coingecko is not None
-            assert len(asset_data.name) != 0
+            assert len(asset_data.name) != 0, f'Empty name in {asset_data}'
             assert len(asset_data.symbol) != 0
 
             # Check agains duplicate information. Before schema version 3 we couldn't have duplicates
@@ -340,7 +340,7 @@ class UpdateChecker:
 
             # For ethereum address, make a checksum of addresses
             if asset_data.ethereum_address is not None:
-                assert is_checksum_formatted_address(asset_data.ethereum_address)
+                assert is_checksum_address(asset_data.ethereum_address), f'Address not checksummed in {asset_data}, {asset_data.ethereum_address}'
                 assert asset_data.ethereum_address in action
                 if insert:
                     assert (asset_data.ethereum_address, asset_data.chain) not in seen_elements, f'Duplicate address {asset_data.ethereum_address}-{asset_data.chain}'

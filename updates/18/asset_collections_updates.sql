@@ -8,3 +8,5 @@ INSERT INTO asset_collections(id, name, symbol) VALUES (219, "Staked Frax Ether"
 *
 INSERT INTO asset_collections(id, name, symbol) VALUES (220, "Dimo", "DIMO");
 *
+INSERT INTO asset_collections(id, name, symbol) VALUES (221, "Pendle", "PENDLE");
+*

@@ -1,0 +1,2 @@
+INSERT INTO multiasset_mappings(collection_id, asset) VALUES (52, "eip155:137/erc20:0x0000000000000000000000000000000000001010");
+*

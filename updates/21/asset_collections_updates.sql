@@ -6,3 +6,5 @@ INSERT INTO asset_collections(id, name, symbol) VALUES (236, "Rai.Finance", "SOF
 *
 INSERT INTO asset_collections(id, name, symbol) VALUES (237, "VVS", "VVS");
 *
+INSERT INTO asset_collections(id, name, symbol) VALUES (238, "FER", "FER");
+*

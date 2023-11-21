@@ -1,8 +1,8 @@
-import argparse
 import json
 from pathlib import Path
 
 import pytest
+from eth_utils.address import to_checksum_address
 
 from validator.checker import UpdateChecker
 from validator.utils import get_latest_version
@@ -31,3 +31,22 @@ def test_valid_sql_sentences(version, schema_versions):
     with open(upgrade) as f:
         data = f.read()
         updater.check_single_version_update(data, schema_versions[version])
+
+
+@pytest.mark.parametrize('version', range(1, get_latest_version() + 1))
+def test_valid_identifiers_mappings(version, schema_versions):
+    """Test that identifiers have checksummed addresses in multiassets mappings"""
+    root_dir = Path(__file__).parents[1]
+    upgrade = root_dir / 'updates' / str(version) / 'asset_collections_mappings_updates.sql'
+
+    if upgrade.exists() is False:
+        return
+
+    with open(upgrade) as f:
+        for line in f.readlines():
+            if '*' in line:
+                continue
+            print('---', line)
+            eip_pos = line.index('eip155')
+            address = line[eip_pos:].split(':')[-1].strip().replace('");', '')
+            assert to_checksum_address(address) == address

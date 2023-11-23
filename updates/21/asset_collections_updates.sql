@@ -8,3 +8,5 @@ INSERT INTO asset_collections(id, name, symbol) VALUES (237, "VVS", "VVS");
 *
 INSERT INTO asset_collections(id, name, symbol) VALUES (238, "FER", "FER");
 *
+INSERT INTO asset_collections(id, name, symbol) VALUES (239, "Alchemix USD", "alUSD");
+*

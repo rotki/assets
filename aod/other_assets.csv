@@ -1,0 +1,896 @@
+identifier,name,symbol,type,coingecko,cryptocompare,started
+1CR,1 credit,1CR,own_chain,,,1398556800
+2GIVE,2GIVE,2GIVE,own_chain,2give,,1460937600
+ABBC,ABBC Coin,ABBC,own_chain,alibabacoin,,1520208000
+ABY,ArtByte,ABY,own_chain,artbyte,,1398902400
+AC,AsiaCoin,AC,own_chain,affil-coin,,1397952000
+ACC,AdCoin,ACC,own_chain,,,1500336000
+ADA,Cardano,ADA,own_chain,cardano,,1506643200
+ADADOWN,Binance leveraged token ADADOWN,ADADOWN,own_chain,,,1594771200
+ADAUP,Binance leveraged token ADAUP,ADAUP,own_chain,,,1594771200
+ADK,Aidos Kuneen,ADK,own_chain,aidos-kuneen,,1537401600
+ADN,Aiden,ADN,own_chain,aladdin,,1397520000
+AE,Aeternity,AE,own_chain,aeternity,,1482969600
+AEON,Aeon,AEON,own_chain,aeon,,1402012800
+AM,AeroME,AM,own_chain,,,1420934400
+AERO,Aerocoin,AERO,own_chain,,,1403395200
+AION,Aion,AION,own_chain,aion,,1506556800
+AIR-2,Air coin,AIR,own_chain,,AIR*,1395273600
+AKT,Akash Network,AKT,own_chain,akash-network,akt,1601042400
+ALGO,Algorand,ALGO,own_chain,algorand,,1560902400
+ALQO,ALQO,ALQO,own_chain,alqo,XLQ,1509321600
+ANK,AlphaLink,ANK,tron_token,alphalink,,1599004800
+ANY,Anyswap,ANY,own_chain,anyswap,,1598400000
+APH,Aphelion,APH,neo_token,,,1510693460
+APX,APX,APX,ubiq_token,appics,,1492646400
+AR,Arweave,AR,own_chain,arweave,,1590545046
+ARB-2,ARbit,ARB,own_chain,arbit,ARB,1431043200
+ARC,Advanced Technology Coin,ARC,own_chain,arcticcoin,,1406160000
+ARCH,Archcoin,ARCH,own_chain,,,1412553600
+ARDR,Ardor,ARDR,own_chain,ardor,,1469284805
+ARK,Ark,ARK,own_chain,ark,,1476489600
+ASR,AS Roma Fan Token,ASR,own_chain,as-roma-fan-token,,1592784000
+ATOM,Cosmos,ATOM,own_chain,cosmos,,1552596249
+ATX-2,Artex Coin,ATX,own_chain,artex-coin,ATX,1470096000
+AUD,Australian Dollar,AUD,fiat,,,
+NZD,New Zealand Dollar,NZD,fiat,,,
+AUR,Auroracoin,AUR,own_chain,auroracoin,,1393479207
+AVA,Travala.com,AVA,neo_token,concierge-io,AVALA,1527536681
+AVAX,Avalanche,AVAX,own_chain,avalanche-2,,1600646400
+BAN,Avalanche,BAN,own_chain,banano,,1538352000
+BAY,BitBay,BAY,own_chain,bitbay,,1415318400
+BBK-2,Bitblocks,BBK,own_chain,bitblocks-project,BBK,1517788800
+BBR,Boolberry,BBR,own_chain,boolberry,,1400284800
+BCD,Bitcoin Diamond,BCD,own_chain,bitcoin-diamond,,1511481600
+BCH,Bitcoin Cash,BCH,own_chain,bitcoin-cash,,1501593374
+BCN,Bytecoin,BCN,own_chain,bytecoin,,1341360000
+BCY,BitCrystals,BCY,counterparty_token,bitcrystals,,1433203200
+BEAM,Beam,BEAM,own_chain,beam,,1521072000
+BET-2,BetaCoin,BET,own_chain,,BET,1382572800
+BIDR,Binance IDR Stable Coin,BIDR,binance_token,binanceidr,,1593475200
+BITB,Bean Cash,BITB,own_chain,bitcoin-bull,BEAN,1423785600
+BITCNY,bitCNY,BITCNY,bitshares_token,bitcny,,1411446262
+BITS,Bitstar,BITS,own_chain,bitstar,,1397692800
+BITS-2,Bitswift,BITS,ardor_token,bitswift,BITSW,1411948800
+BITUSD,bitUSD,BITUSD,bitshares_token,,,1411446262
+BKRW,Binance KRW,BKRW,binance_token,binance-krw,,1580947200
+BLK,BlackCoin,BLK,own_chain,blackcoin,,1393200000
+BLOC-2,BLOC.MONEY,BLOC,own_chain,bloc-money,BLOCM,1539736469
+BLOCK,Blocknet,BLOCK,own_chain,blocknet,,1413763200
+BLU,BlueCoin,BLU,own_chain,bluecoin,,1398124800
+BNBDOWN,Binance leveraged token BNBDOWN,BNBDOWN,own_chain,,,1596585600
+BNBUP,Binance leveraged token BNBUP,BNBUP,own_chain,,,1596585600
+BOST,BoostCoin,BOST,own_chain,bostte,,1400112000
+BRK,Breakout,BRK,own_chain,,,1425513600
+BRL,Brazilian Real,BRL,fiat,,,
+BRX,Breakout Stake,BRX,own_chain,,,1465776000
+BSD,BitSend,BSD,own_chain,bitsend,,1402099200
+BSV,Bitcoin Satoshi's Vision,BSV,own_chain,bitcoin-cash-sv,,1542300000
+BTC,Bitcoin,BTC,own_chain,bitcoin,,1231006505
+BTCD,BitcoinDark,BTCD,own_chain,,,1405468800
+BTCDOWN,Binance leveraged token BTCDOWN,BTCDOWN,own_chain,,,1595367054
+BTCS,Bitcoin Scrypt,BTCS,own_chain,bitcoin-silver,,1378598400
+BTCUP,Binance leveraged token BTCUP,BTCUP,own_chain,,,1595367054
+BTG,Bitcoin Gold,BTG,own_chain,bitcoin-gold,,1508716800
+BTG-2,Bitgem,BTG,own_chain,bitgem,,1368403200
+BTM,Bitmark,BTM,own_chain,bitmark,BTMK,1408449563
+BTM-2,Bytom,BTM,own_chain,bytom,BTM,1497916800
+BTS,BitShares,BTS,own_chain,bitshares,,1405728000
+BTT,BitTorrent,BTT,tron_token,bittorrent,,1548633600
+BTXCRD,Bittrex Credits,BTXCRD,own_chain,,,1571616000
+BURST,Burst,BURST,own_chain,signum,SIGNA,1402531200
+BVND,Binance VND,BVND,binance_token,binance-vnd,,1608508800
+BYC,Bytecent,BYC,own_chain,bytecent,,1414800000
+C2,Coin2.1,C2,own_chain,,,1399334400
+CACH,CacheCoin,CACH,own_chain,cachecoin,,1388880000
+CAD,Canadian Dollar,CAD,fiat,,,
+CAIX,Caishen,CAIX,own_chain,,,1397520000
+CANN,CannabisCoin,CANN,own_chain,cannabiscoin,,1399334400
+CBC-2,Cashbery Coin,CBC,own_chain,cashbery-coin,,1534976069
+CCN-2,CannaCoin,CCN,own_chain,,CCN,1390348800
+CELO,Celo,CELO,own_chain,celo,,1590115455
+CUSD,Celo USD,CUSD,own_chain,celo-dollar,CELOUSD,1601337600
+CGA,Cryptographic Anomaly,CGA,own_chain,,,1392940800
+CGLD,Celo Gold,CGLD,own_chain,,,1590115455
+CHAT,ChatCoin,CHAT,own_chain,chatcoin,,1489449600
+CHF,Swiss Franc,CHF,fiat,,,
+CINNI,Cinnicoin,CINNI,own_chain,,,1398211200
+CKB,Nervos Network,CKB,own_chain,nervos-network,,1562112000
+CLAM,Clams,CLAM,own_chain,clams,,1399852800
+CLOAK,CloakCoin,CLOAK,own_chain,cloakcoin,,1399161600
+CMT,CyberMiles,CMT,own_chain,cybermiles,,1509494400
+CMT-2,Comet,CMT,own_chain,,CMTC,1463529600
+CNL,ConcealCoin,CNL,own_chain,,,1405900800
+CNMT,Coinomat,CNMT,nxt_token,,,1409875200
+CNS,Centric,CNS,tron_token,centric-cash,,1595980800
+CNY,Chinese Yuan,CNY,fiat,,,
+COMM,CommunityCoin,COMM,own_chain,,,1397520000
+CORN,Corn,CORN,tron_token,corn,,1599264000
+COS,Contentos,COS,binance_token,contentos,CONT,1561074552
+COTI,COTI,COTI,own_chain,coti,,1518393600
+COVAL,Circuits of Value,COVAL,counterparty_token,circuits-of-value,,1415923200
+CPC-2,Capricoin,CPC,own_chain,capricoin,CPC,1437350400
+CRC-2,CrowdCoin,CRC,own_chain,,CRC,1509580800
+CRT,Carrot finance,CRT,tron_token,carr-finance,,1600041600
+CRW,Crown,CRW,own_chain,crown,,1413244800
+CRYPT,CryptCoin,CRYPT,own_chain,cryptcoin,,1401062400
+CTK,Certik,CTK,own_chain,certik,,1603756800
+CTX,Centauri,CTX,own_chain,centauri-coin,,1547682877
+CURE,Curecoin,CURE,own_chain,curecoin,,1398988800
+CYC,ConspiracyCoin,CYC,own_chain,,,1404518400
+DASH,Dash,DASH,own_chain,dash,,1390095618
+DCR,Decred,DCR,own_chain,decred,,1450137600
+DCT,DECENT,DCT,own_chain,decent,,1467244800
+DFI,DeFiChain,DFI,own_chain,defichain,,1593561600
+DGB,DigiByte,DGB,own_chain,digibyte,,1389312000
+DIEM,CarpeDiemCoin,DIEM,own_chain,,,1398643200
+DIME,Dimecoin,DIME,own_chain,dimecoin,,1387756800
+DIVI,Divi Exchange Token,DIVI,own_chain,divi,DIVX,1549065600
+DMD,Diamond,DMD,own_chain,diamond,,1373673600
+DOGE,Dogecoin,DOGE,own_chain,dogecoin,,1386325540
+DOPE,DopeCoin,DOPE,own_chain,dopecoin,,1390262400
+DOT,Polkadot,DOT,own_chain,polkadot,,1590451200
+DOTDOWN,Binance leveraged token DOTDOWN,DOTDOWN,own_chain,,,1599696000
+DOTUP,Binance leveraged token DOTUP,DOTUP,own_chain,,,1599696000
+DRKC,DarkCash,DRKC,own_chain,,,1406592000
+DRM,Dreamcoin,DRM,own_chain,dreamcoin,,1399420800
+DSH,Dashcoin,DSH,own_chain,,,1404518400
+DTB,Databits,DTB,counterparty_token,,,1484784000
+DYN,Dynamic,DYN,own_chain,dynamic,,1490547284
+EAC,EarthCoin,EAC,own_chain,earthcoin,,1387497600
+EBST,eBoost,EBST,own_chain,eboost,,1475107200
+ECC,ECCoin,ECC,own_chain,ecc,,1395292195
+EDG-2,Edgeware,EDG,own_chain,edgeware,edgew,1581897600
+EDR-2,E-Dinar Coin,EDR,own_chain,,,1472226274
+EFL,e-Gulden,EFL,own_chain,electronicgulden,,1395187200
+EGC,EverGreenCoin,EGC,own_chain,evergreencoin,,1448928000
+EGLD,Elrond,EGLD,own_chain,elrond-erd-2,,1599004800
+ELA,Elastos,ELA,own_chain,elastos,,1518134400
+EMC,Emercoin,EMC,own_chain,emercoin,,1386460800
+EMC2,Einsteinium,EMC2,own_chain,einsteinium,,1388707200
+SCRT,Secret,SCRT,own_chain,secret,,1601510400
+ENRG,Energycoin,ENRG,own_chain,energycoin,,1398729600
+EOS,EOS.io,EOS,own_chain,eos,,1494028800
+EOSDOWN,Binance leveraged token EOSDOWN,EOSDOWN,own_chain,,,1599782400
+EOSUP,Binance leveraged token EOSUP,EOSUP,own_chain,,,1599782400
+ERD,Elrond,ERD,binance_token,elrond-erd,,1552694400
+ETC,Ethereum classic,ETC,own_chain,ethereum-classic,,1469020840
+ETH,Ethereum,ETH,own_chain,ethereum,,1438214400
+ETH2,Staked ETH in Phase 0,ETH,own_chain,ethereum,ETH,1602667372
+ETHDOWN,Binance leveraged token ETHDOWN,ETHDOWN,own_chain,ethdown,,1594771200
+ETHUP,Binance leveraged token ETHUP,ETHUP,own_chain,ethup,,1594771200
+EUR,Euro,EUR,fiat,,,915148800
+EXCL,ExclusiveCoin,EXCL,own_chain,exclusivecoin,,1412063661
+EXE,Execoin,EXE,own_chain,8x8-protocol,,1394409600
+EXP,Expanse,EXP,own_chain,expanse,,1442188800
+FAIR,FairCoin,FAIR,own_chain,faircoin,,1393286400
+FCN,Fantomcoin,FCN,own_chain,freelancerchain,,1401926400
+FCT,Factom,FCT,own_chain,firmachain,,1444003200
+FIBRE,Fibrecoin,FIBRE,own_chain,,,1409356800
+FIL,Filecoin,FIL,own_chain,filecoin,,1602773100
+FILDOWN,Binance leveraged token FILDOWN,FILDOWN,own_chain,,,1603152000
+FILUP,Binance leveraged token FILUP,FILUP,own_chain,,,1603152000
+FIO,FIO Protocol,FIO,own_chain,fio-protocol,,1585094400
+FIRO,Firo,FIRO,own_chain,zcoin,,1576368000
+FLAP,FlappyCoin,FLAP,own_chain,,,1393027200
+FLDC,FoldingCoin,FLDC,counterparty_token,foldingcoin,,1405296000
+FLM,Flamingo finance,FLM,neo_token,flamingo-finance,,1601251200
+FLO,FLO,FLO,own_chain,public-index-network,,1371427200
+FLOW,Flow,FLOW,own_chain,flow,,1611619200
+FLT,FlutterCoin,FLT,own_chain,fluttercoin,,1393804800
+FRAC,Fractalcoin,FRAC,own_chain,,,1402790400
+FRK,Franko,FRK,own_chain,,,1367366400
+FTC,Feathercoin,FTC,own_chain,feathercoin,,1366070400
+FUND,Unification,FUND,own_chain,unification,UNIFUND,1592611200
+GAME,GameCredits,GAME,own_chain,gamecredits,,1392739140
+GAP,Gapcoin,GAP,own_chain,gapcoin,,1413849600
+GAS,Gas,GAS,neo_token,gas,,1468540800
+GBG,Golos Gold,GBG,own_chain,,,1476748800
+GBP,Great British Pound,GBP,fiat,,,
+GBX,GoByte,GBX,own_chain,gobyte,,1510790400
+GBYTE,Obyte,GBYTE,own_chain,byteball,,1482624000
+GEMZ,GetGems,GEMZ,counterparty_token,,,1421020800
+GEO,GeoCoin,GEO,ubiq_token,geodb,,1421650800
+GLC,GoldCoin,GLC,own_chain,goldcoin,GLD,1368230400
+GLC-2,GlobalCoin,GLC,own_chain,globalcoin,GLC,1372204800
+GML,GameLeagueCoin,GML,own_chain,,,1404489600
+GNC,Galaxy network,GNC,own_chain,galaxy-network,,1602979200
+GO,GoChain,GO,own_chain,gochain,GO,1526428800
+GOLOS,Golos,GOLOS,own_chain,golos,,1474502400
+GPUC,GPU coin,GPUC,own_chain,gpu-coin,GPU,1395100800
+GRC,GridCoin,GRC,own_chain,gridcoin-research,,1381881600
+GRIN,Grin,GRIN,own_chain,grin,,1547683200
+GRS,Groestlcoin,GRS,own_chain,groestlcoin,,1395446400
+GST,GSTCoin,GST,own_chain,gstcoin,GSTC,1571356800
+GUE,Guerillacoin,GUE,own_chain,,,1403481600
+GXC,GXChain,GXC,own_chain,gxchain,GXS,1488585600
+HAI,Hacken token,HAI,vechain_token,hackenai,HKN,1588118400
+HBAR,Hedera Hashgraph,HBAR,own_chain,hedera-hashgraph,,1568711652
+HBD,Hive dollar,HBD,own_chain,hive_dollar,,1585267200
+HC,HyperCash,HC,own_chain,hshare,,1503240899
+HC-2,Harvest Masternode Coin,HC,own_chain,,HMN,1515974400
+HDAC,Hdac,HDAC,own_chain,hdac,,1533150567
+HIVE,Hive,HIVE,own_chain,hive,,1584662400
+HMC-2,HarmonyCoin,HMC,own_chain,harmonycoin,HMC*,1500921003
+HNS,Handshake ,HNS,own_chain,handshake,,1582326254
+HNT,Helium,HNT,own_chain,helium,,1587168000
+HUC,HunterCoin,HUC,own_chain,,,1391212800
+HUGE,BIGcoin,HUGE,own_chain,,,1429830000
+HVC,Heavycoin,HVC,own_chain,,,1394582400
+HYC,HYCON,HYC,own_chain,hycon,,1519862400
+HYP,HyperStake,HYP,own_chain,hyperstake,,1404604800
+HZ,Horizon,HZ,own_chain,,,1402531200
+ICX,ICON,ICX,own_chain,icon,,1508803200
+IFC,Infinitecoin,IFC,own_chain,infinitecoin,,1370390400
+IGNIS,Ignis,IGNIS,ardor_token,ignis,,1501891200
+INCNT,Incent,INCNT,waves_token,incent,,1473120000
+IOC,I/O Coin,IOC,own_chain,iocoin,,1406073600
+ION,ION,ION,own_chain,ion,,1458432000
+IOP,Internet of People,IOP,own_chain,internet-of-people,,1480418674
+IOTA,IOTA,IOTA,own_chain,iota,MIOTA,1497364209
+IQ,Everipedia,IQ,eos_token,everipedia,,1531512255
+IQ-2,IQ.cash,IQ,own_chain,iq-cash,IQC,1536789557
+IRIS,IRISnet,IRIS,own_chain,iris-network,,1527724800
+IXC,Ixcoin,IXC,own_chain,ixcoin,,1312934400
+JFI,JackPool.finance,JFI,tron_token,jackpool-finance,,1599264000
+JPY,Japanese Yen,JPY,fiat,,,
+JST,JUST,JST,tron_token,just,,1588862054
+JUV,Juventus Fan Token,JUV,own_chain,juventus-fan-token,,1587081600
+KAVA,Kava,KAVA,own_chain,kava,,1571980454
+KDA,Kadena,KDA,own_chain,kadena,,1590931743
+KDC,KlondikeCoin,KDC,own_chain,,,1389225600
+KEY-3,KeyCoin,KEY,own_chain,,KEYC,1405382400
+KFEE,Kraken fees,KFEE,own_chain,,,1377993600
+KLAY,Klaytn,KLAY,own_chain,klay-token,,1570838400
+KLV,Klever,KLV,tron_token,klever,,1598400000
+KMD,Komodo,KMD,own_chain,komodo,,1472688000
+KORE,Kore,KORE,own_chain,kore,,1402790400
+KRT,TerraKRW,KRT,own_chain,terra-krw,,1563494400
+KRW,Korean won,KRW,fiat,,,
+KSM,Kusama,KSM,own_chain,kusama,,1576142353
+LBC,LBRY Credits,LBC,own_chain,lbry-credits,,1467763200
+LEAF,LeafCoin,LEAF,own_chain,leafcoin,,1389398400
+LINKDOWN,Binance leveraged token LINKDOWN,LINKDOWN,own_chain,,,1594771200
+LINKUP,Binance leveraged token LINKUP,LINKUP,own_chain,,,1594771200
+LMC,LoMoCoin,LMC,own_chain,,,1460937600
+LOKI,Loki,LOKI,own_chain,loki-network,,1519516800
+LSK,Lisk,LSK,own_chain,lisk,,1454284800
+LTBC,LTBcoin,LTBC,counterparty_token,,,1406419200
+LTC,Litecoin,LTC,own_chain,litecoin,,1317972665
+LTCDOWN,Binance leveraged token LTCDOWN,LTCDOWN,own_chain,,,1600214400
+LTCUP,Binance leveraged token LTCUP,LTCUP,own_chain,,,1600214400
+LTCX,LitecoinX,LTCX,own_chain,,,1401494400
+LUCY,LUCY,LUCY,own_chain,lucy,,1584393554
+LUNA-2,Terra Luna Classic,LUNC,own_chain,terra-luna,LUNC,1564103351
+MAID,MaidSafeCoin,MAID,omni_token,maidsafecoin,,1398655286
+MARO,Maro,MARO,own_chain,ttc-protocol,,1534377600
+MAX,Maxcoin,MAX,own_chain,max-token,,1391644800
+MAZA,MazaCoin,MAZA,own_chain,maza,MZC,1393200000
+MCN,Monetaverde,MCN,own_chain,moneta-verde,MNV,1402963200
+ME,All.me,ME,own_chain,all-me,,1514332800
+MEC,Megacoin,MEC,own_chain,megacoin,,1369785600
+MED,MediBloc,MED,qtum_token,medibloc,MEDIB,1508284800
+MEME,Memetic / PepeCoin,MEME,own_chain,memetic,,1425513600
+MER,Mercury,MER,waves_token,mercury,,1489536000
+META,Metadium,META,own_chain,metadium,,1534896000
+MIN,Minerals coin,MIN,own_chain,mindol,,1401926400
+MINT,MintCoin,MINT,own_chain,mintcoin,,1391644800
+MMC,Memorycoin,MMC,own_chain,,,1387065600
+MMNXT,MMNXT,MMNXT,own_chain,,,1413936000
+MMXIV,Maieuticoin,MMXIV,own_chain,,,1400889600
+MOB,MobileCoin,MOB,own_chain,mobilecoin,MOB,1607212800
+MOBI,Mobius,MOBI,stellar_token,mobius,,1501632000
+MONA,MonaCoin,MONA,own_chain,monacoin,,1388534400
+MUE,MonetaryUnit,MUE,own_chain,monetaryunit,,1406332800
+MUSIC,Musicoin,MUSIC,own_chain,,,1486944000
+MWC,MimbleWimbleCoin,MWC,own_chain,mimblewimblecoin,,1574121600
+NANO,Nano,XNO,own_chain,nano,,1444003200
+NAS,Nebulas,NAS,own_chain,nebulas,,1503462598
+NAUT,Nautilus coin,NAUT,nxt_token,,,1400112000
+NAV,NavCoin,NAV,own_chain,nav-coin,,1402012800
+NBS,New Bitshare,NBS,own_chain,new-bitshares,,1600473600
+NEAR,Near,NEAR,own_chain,near,,1602633600
+NEBL,Neblio,NEBL,own_chain,neblio,,1485907200
+NEO,NEO,NEO,own_chain,neo,,1473379200
+NEOS,NeosCoin,NEOS,own_chain,,,1408838400
+NIM,Nimiq,NIM,own_chain,nimiq-2,,1496707200
+NKN,New Kind of Network,NKN,neo_token,nkn,,1524182400
+NLC2,NoLimitCoin,NLC2,own_chain,nolimitcoin,,1473704375
+NLG,Munt,MUNT,own_chain,gulden,,1396396800
+NMC,Namecoin,NMC,own_chain,namecoin,,1303007201
+NOAHP,Noah Platinum,NOAHP,own_chain,noah-coin,NOAH,1569888000
+NOBL,NobleCoin,NOBL,own_chain,noblecoin,,1389052800
+NOK,Norwegian krone,NOK,fiat,,,
+NOTE,DNotes,NOTE,own_chain,dnotes,,1392508800
+NRS,Noir shares,NRS,own_chain,,,1397952000
+NSR,NuShares,NSR,nubits_token,nushares,,1411430400
+NXS,Nexus,NXS,own_chain,nexus,,1403136000
+NXT,Nxt,NXT,own_chain,nxt,,1385251200
+NXTI,NXTInspect,NXTI,nxt_token,,,1412812800
+OCC,Octoin Coin,OCC,own_chain,,OCC,1520894060
+OG,OG Fan Token,OG,own_chain,og-fan-token,,1592784000
+OK,OKCash,OK,own_chain,okcash,,1416787200
+OMNI,Omni,OMNI,own_chain,omni,,1375228800
+ONE-2,Harmony,ONE,own_chain,harmony,ONE,1537093791
+ONG,Ontology Gas,ONG,ontology_token,ong,ONGAS,1530316800
+ONT,Ontology,ONT,own_chain,ontology,,1519603200
+OPAL,Opal,OPAL,own_chain,opal,,1410480000
+PAI,Project Pai,PAI,own_chain,project-pai,PPAI,1509408000
+PART,Particl,PART,own_chain,particl,,1490054400
+PASC,Pascal Coin,PASC,own_chain,pascalcoin,,1470873600
+PEARL,Pearl Finance,PEARL,tron_token,pearl-finance,,1599004800
+PHB,Red Pulse Phoenix Binance,PHB,binance_token,red-pulse,PHX,1558497600
+PHX,Red Pulse Phoenix,PHX,neo_token,red-pulse,,1507420800
+PIGGY,Piggycoin,PIGGY,own_chain,,,1433894400
+PINK,PinkCoin,PINK,own_chain,pinkcoin,,1398988800
+PIRL,Pirl,PIRL,own_chain,pirl,,1503619200
+PIVX,PIVX,PIVX,own_chain,pivx,,1448409600
+PLA,Plair,PLA,vechain_token,plair,PLAI,1527206400
+POA,POA Network,POA,own_chain,poa-network,,1500508800
+POP,PopularCoin,POP,own_chain,popularcoin,,1390867200
+POT,PotCoin,POT,own_chain,potcoin,,1390262400
+PPC,Peercoin,PPC,own_chain,philips-pay-coin,,1345334400
+PRC,ProsperCoin,PRC,own_chain,partner,,1390953600
+PSG,Paris Saint-Germain Fan Token,PSG,own_chain,paris-saint-germain-fan-token,,1592006400
+PTC,Pesetacoin,PTC,own_chain,propertycoin,,1389052800
+Q2C,QubitCoin,Q2C,own_chain,,,1389484800
+QBK,Qibuck Asset,QBK,burst_token,,,1407628800
+QCN,QuazarCoin,QCN,own_chain,,,1399507200
+QLC,QLC Chain,QLC,neo_token,qlink,,1510444800
+QORA,Qora,QORA,own_chain,,,1395187200
+QTL,Quatloo,QTL,own_chain,,,1403827200
+QWARK,Qwark,QWARK,ubiq_token,,,1460937600
+RADS,Validity,VAL,own_chain,radium,RADS,1453075200
+RBY,Rubycoin,RBY,own_chain,rubycoin,,1393200000
+RCN-2,Rcoin,RCN,own_chain,rcoinchain,RCOIN,1472688000
+RDD,ReddCoin,RDD,own_chain,reddcoin,,1390176000
+RIC,Riecoin,RIC,own_chain,riecoin,,1392076800
+RISE,Rise,RISE,own_chain,rise,,1466726400
+RUB,Russian Ruble,RUB,fiat,,,
+RUNE,THORChain,RUNE,own_chain,thorchain,,1563914649
+RVC,Ravencoin Classic,RVC,own_chain,ravencoin-classic,,1591747200
+RVN,Ravencoin,RVN,own_chain,ravencoin,,1514937600
+RVR,RevolutionVR,RVR,own_chain,,,1446508800
+RZR,RazorCoin,RZR,own_chain,,,1403308800
+SAL,Salmon,SAL,tron_token,salmon,SALMON,1599177600
+SBD,Steem Dollars,SBD,own_chain,steem-dollars,,1464998400
+SC,Siacoin,SC,own_chain,siacoin,,1426550400
+SDC,ShadowCash,SDC,own_chain,,,1403049600
+SDT,Terra SDT,SDT,own_chain,terra-sdt,,1569456000
+SEQ,Sequence,SEQ,own_chain,sequence,,1474754073
+SHIFT,Shift,SHIFT,own_chain,shift,,1441460968
+SIB,SIBCoin,SIB,own_chain,sibcoin,,1431129600
+SILK,SilkCoin,SILK,own_chain,silkchain,,1399766400
+SIX,SIX,SIX,stellar_token,six-network,,1522368000
+SJCX,Storjcoin X,SJCX,counterparty_token,storj,,1405641600
+SKY,Skycoin,SKY,own_chain,skycoin,,1387670400
+SLR,SolarCoin,SLR,own_chain,solarcoin,,1389484800
+SLS,SaluS,SLS,own_chain,salus,,1452038400
+SLT,Smartlands,SLT,stellar_token,smartlands,SLST,1504742400
+SMART,SmartCash,SMART,own_chain,smartcash,,1499731200
+SMC,SmartCoin,SMC,own_chain,smartcoin,,1388966400
+SOL-2,Solana,SOL,own_chain,solana,SOL,1586494758
+SOUL,Phantasma,SOUL,neo_token,phantasma,,1527536682
+SPA,SpainCoin,SPA,own_chain,,SPAIN,1394668800
+SPC,SpaceChain,SPC,qtum_token,spacechain-erc-20,APCC,1516147466
+SPD-2,Stipend,SPD,own_chain,stipend,SPD,1522170861
+SPHR,Sphere,SPHR,own_chain,sphere,,1430581765
+SQL,Squallcoin,SQL,own_chain,,,1409356800
+SSD,Sonic,SSD,own_chain,,,1407542400
+STEEM,Steem,STEEM,own_chain,steem,,1458777600
+STRAT,Stratis,STRAT,own_chain,stratis,,1465862400
+STX-2,Blockstack,STX,own_chain,blockstack,STX,1572048000
+SUN,Sun Token,SUN,tron_token,sun-token,,1599696000
+SWARM,SwarmCoin,SWARM,own_chain,,,1403568000
+SXC,Sexcoin,SXC,own_chain,sxc,,1369699200
+SYNC,SyncCoin,SYNC,own_chain,sync,,1400371200
+SYNX,Syndicate,SYNX,own_chain,syndicate,,1465862400
+SYS,Syscoin,SYS,own_chain,syscoin,,1398556800
+TAI,tBridge Token,TAI,tron_token,tai,,1599004800
+TFUEL,Theta Fuel,TFUEL,own_chain,theta-fuel,,1542931200
+THC,HempCoin,THC,own_chain,hempcoin-thc,,1394323200
+TKS,Tokes,TKS,waves_token,tokes,TKS,1480723200
+TOR,Torcoin,TOR,own_chain,torex,,1404432000
+TRIG,Triggers,TRIG,counterparty_token,,,1476057600
+TROY,Troy,TROY,own_chain,troy,,1571097600
+TRUST,TrustPlus,TRUST,own_chain,trustdao,,1403308800
+TRXDOWN,Binance leveraged token TRXDOWN,TRXDOWN,own_chain,,,1599696000
+TRXUP,Binance leveraged token TRXUP,TRXUP,own_chain,,,1599696000
+TRY,Turkish Lyra,TRY,fiat,trias,,
+TUBE,BitTube,TUBE,own_chain,bittube,,1517356800
+TX,TransferCoin,TX,own_chain,transfercoin,,1439251200
+UBQ,Ubiq,UBQ,own_chain,ubiq,,1410125962
+UIS,Unitus,UIS,own_chain,unitus,,1419120000
+ULTC,Umbrella-LTC,ULTC,own_chain,,,1405123200
+UNITY,SuperNET,UNITY,nxt_token,,,1409356800
+URO,Uro,URO,own_chain,,,1399593600
+USD,United States Dollar,USD,fiat,,,
+USDE,USDe,USDE,own_chain,,,1389484800
+USDJ,USDJ,USDJ,tron_token,just-stablecoin,,1585872000
+USDN,Neutrino Dollar,USDN,waves_token,neutrino,,1580515200
+USNBT,NuBits,USNBT,own_chain,nubits,NBT,1411430400
+UST,TerraClassicUSD,USTC,own_chain,terrausd,USTC,1599350400
+UTC,UltraCoin,UTC,own_chain,,,1391212800
+UTI,Unicorn Technology International,UTI,own_chain,,,1588291200
+UTIL,Utility coin,UTIL,own_chain,,,1411689600
+VBK,VeriBlock,VBK,own_chain,veriblock,,1554490449
+VET,VeChain,VET,own_chain,vechain,,1533254400
+VIA,Viacoin,VIA,own_chain,viacoin,,1405641600
+VLX,Velas,VLX,own_chain,velas,VELAS,1570070048
+VOOT,VootCoin,VOOT,own_chain,,,1401753600
+VRC,VeriCoin,VRC,own_chain,vericoin,,1399680000
+VRM,VeriumReserve,VRM,own_chain,veriumreserve,,1473984000
+VTC,Vertcoin,VTC,own_chain,vertcoin,,1389139200
+VTHO,VeChainThor,VTHO,vechain_token,vethor-token,,1533254400
+WAN,Wanchain,WAN,own_chain,wanchain,,1503360000
+WAVES,Waves,WAVES,own_chain,waves,,1460419200
+WDC,WorldCoin,WDC,own_chain,worldcoin,,1368489600
+WEB-2,Webchain,WEB,own_chain,,WEBC,1531047649
+WICC,WaykiChain,WICC,own_chain,waykichain,,1514592000
+WING,Wing Finance,WING,ontology_token,wing-finance,,1600214400
+WOLF,Insanity Coin,WOLF,own_chain,,,1407974400
+XAI,Sapience AIFX,XAI,own_chain,,,1416355200
+XBC,Bitcoin Plus,XBC,own_chain,bitcoin-plus,,1396137600
+XCN,Cryptonite,XCN,own_chain,cryptonite,,1388620800
+XCP,Counterparty,XCP,own_chain,counterparty,,1392472776
+XCR,Crypti,XCR,own_chain,,,1407369600
+XDC,XinFin,XDC,own_chain,xdce-crowd-sale,,1585699200
+XDN,DigitalNote,XDN,own_chain,digitalnote,,1401408000
+XDP,Dogeparty,XDP,own_chain,,,1406160000
+XEL,XEL,XEL,own_chain,elastic,,1496880000
+XEM,NEM,XEM,own_chain,nem,,1402012800
+XHV,Haven Protocol,XHV,own_chain,haven,,1519171200
+XLB,LibertyCoin,XLB,own_chain,,,1399593600
+XLM,Stellar Lumens,XLM,own_chain,stellar,,1374192000
+XMG,Magi,XMG,own_chain,magi,,1407801600
+XMR,Monero,XMR,own_chain,monero,,1397818194
+XMY,MyriadCoin,XMY,own_chain,myriadcoin,,1393113600
+XPB,Pebblecoin,XPB,own_chain,,,1420070400
+XPM,Primecoin,XPM,own_chain,primecoin,,1373155200
+XRP,Ripple,XRP,own_chain,ripple,,1364774400
+XRPDOWN,Binance leveraged token XRPDOWN,XRPDOWN,own_chain,,,1599696000
+XRPUP,Binance leveraged token XRPUP,XRPUP,own_chain,,,1599696000
+XSI,Stability shares,XSI,own_chain,,,1398211200
+XST,StealthCoin,XST,own_chain,stealthcoin,,1403568000
+XTZDOWN,Binance leveraged token XTZDOWN,XTZDOWN,own_chain,,,1596585600
+XTZUP,Binance leveraged token XTZUP,XTZUP,own_chain,,,1596585600
+XTZ,Tezos,XTZ,own_chain,tezos,,1498867200
+XVC,Vcash,XVC,own_chain,vcash-token,,1425600000
+XVG,Verge,XVG,own_chain,verge,,1412816400
+XWC,WhiteCoin,XWC,own_chain,whitecoin,,1397347200
+XZC,Zcoin,XZC,own_chain,zcoin,,1474848000
+YACC,YaCcoin,YACC,own_chain,yacoin,YAC,1367712000
+YFIDOWN,Binance leveraged token YFIDOWN,YFIDOWN,own_chain,,,1603152000
+YFIUP,Binance leveraged token YFIUP,YFIUP,own_chain,,,1603152000
+ZAR,South African Rand,ZAR,fiat,,,
+ZCL,ZClassic,ZCL,own_chain,zclassic,,1478390400
+ZEC,Zcash,ZEC,own_chain,zcash,,1477671596
+ZEN,Horizen,ZEN,own_chain,zencash,,1489017600
+BCHA,Bitcoin ABC,BCHA,own_chain,bitcoin-cash-abc-2,,1605474360
+BCHDOWN,Binance leveraged token BCHDOWN,BCHDOWN,own_chain,,,1603843200
+BCHUP,Binance leveraged token BCHUP,BCHUP,own_chain,,,1603843200
+HARD,Kava Lend,HARD,own_chain,kava-lend,,1604620800
+ROSE,Oasis Network,ROSE,own_chain,oasis-network,,1605744000
+STRAX,Stratis,STRAX,own_chain,stratis,,1603278000
+UNFI,Unifi Protocol DAO,UNFI,own_chain,unifi-protocol-dao,,1605744000
+AKN,Akoin,AKN,own_chain,akoin,,1605052800
+GLEEC,Gleec Coin,GLEEC,own_chain,gleec-coin,,1578614400
+NVT,NerveNetwork,NVT,own_chain,nervenetwork,,1595458800
+CLO,Callisto Network,CLO,own_chain,callisto,,1575590400
+ETP,Metaverse ETP,ETP,own_chain,metaverse-etp,,1513209600
+EOSDT,EOSDT,EOSDT,own_chain,equilibrium-eosdt,,1606089600
+RRT,Recovery Right Token,RRT,own_chain,recovery-right-token,,1513209600
+DAPP,LiquidApps,DAPP,own_chain,dapp,,1602979200
+VSYS,V.SYSTEMS,VSYS,own_chain,v-systems,,1551916800
+RIF,RIF Token,RIF,own_chain,rif-token,,1516147200
+NUT,Native Utility Token,NUT,own_chain,native-utility-token,,1581033600
+BTCST,BTC Standard Hashrate Token,BTCST,own_chain,btc-standard-hashrate-token,,1608698335
+XSN,Stakenet,XSN,own_chain,stakenet,,1522281600
+BTCV,BitcoinV,BTCV,own_chain,bitcoinv,,1581897600
+TWD,New Taiwan Dollar,TWD,fiat,,,
+MCH,Meaconcash,MCH,own_chain,meconcash,,1603065600
+SGD,Singapore Dollar,SGD,fiat,,,
+SEK,Swedish Krona,SEK,fiat,,,
+TRTL,TurtleCoin,TRTL,own_chain,turtlecoin,,1519257600
+NIX,NIX,NIX,own_chain,nix-platform,,1530748800
+TT,ThunderCore,TT,own_chain,thunder-token,,1557964800
+WXT,Wirex,WXT,stellar_token,wirex,,1560988800
+FORESTPLUS,The Forbidden Forest,FORESTPLUS,own_chain,the-forbidden-forest,,1590019200
+BOLT,Bolt,BOLT,binance_token,bolt,,1562803200
+SERO,SERO,SERO,own_chain,super-zero,,1566432000
+EOSC,EOSForce,EOSC,own_chain,eosforce,,1574294400
+DERO,Dero,DERO,own_chain,dero,,1575590400
+ENQ,Enecuum,ENQ,own_chain,enq-enecuum,,1561161600
+LOL,EMOGI Network,LOL,own_chain,emogi-network,,1565827200
+MXW,Maxonrow,MXW,own_chain,maxonrow,,1590019200
+POL,Proof Of Liquidity,POL,tron_token,proof-of-liquidity,,1599264000
+NWC,Newscrypto Coin,NWC,stellar_token,newscrypto-coin,,1582156800
+XNS,Insolar,XNS,own_chain,,,1584576000
+ROAD,ROAD,ROAD,own_chain,road,,1575504000
+ZEL,Zel,ZEL,own_chain,zelcash,,1523491200
+AXE,Axe,AXE,own_chain,axe,,1585180800
+EWT,Energy Web Token,EWT,own_chain,energy-web-token,,1585180800
+WEST,Waves Enterprise,WEST,own_chain,waves-enterprise,,1597276800
+MLK,MiL.k,MLK,luniverse_token,milk-alliance,MLK,1595462400
+SHA,Safe Haven,SHA,vechain_token,safe-haven,,1608508800
+EFX,Effect.AI,EFX,eos_token,effect-network,EFX,1531785600
+UBX,UBIX Network,UBX,own_chain,ubix-network,,1636675200
+BUX,BUX Token,BUX,binance_token,buxcoin,,1643932800
+HTR,Hathor,HTR,own_chain,hathor,,1641513600
+HYDRA,Hydra,HYDRA,own_chain,hydra,,1642118400
+ACAT,Alphacat,ACAT,neo_token,alphacat,,1521072000
+ACT,Achain,ACT,own_chain,achain,,1538006400
+BU,BUMO,BU,own_chain,bumo,,1533168000
+DAG,Constellation,DAG,own_chain,constellation-labs,,1534377600
+DBC,DeepBrain Chain,DBC,neo_token,deepbrain-chain,,1518912000
+ETN,Electroneum,ETN,own_chain,electroneum,,1518048000
+MCT,Master Contract Token,MCT,neo_token,master-contract-token,,1532563200
+ONION,DeepOnion,ONION,own_chain,deeponion,,1518912000
+TKY,THEKEY,TKY,neo_token,thekey,,1518912000
+ACM,AC Milan Fan Token,ACM,own_chain,ac-milan-fan-token,,1613046600
+SBT,SOLBIT,SBT,own_chain,solbit,SBT,1572825600
+TFC,TheFutbolCoin,TFC,stellar_token,thefutbolcoin,,1609113600
+BRG,Bridge Oracle,BRG,tron_token,bridge-oracle,,1612310400
+COPE,Cope,COPE,solana_token,cope,COPE,1617077337
+CRON,Cryptocean,CRON,own_chain,cryptocean,CRON,1557885600
+FIDA,Bonfida,FIDA,solana_token,bonfida,FIDA,1608598800
+HOLY,Holy Trinity,HOLY,solana_token,holy-trinity,HOLY,1609894800
+RAY,Raydium,RAY,solana_token,raydium,RAY,1613927088
+CFX,Conflux Token,CFX,own_chain,conflux-token,CFX,1604970000
+WAXP,WAX,WAXP,own_chain,wax,WAXP,1528419600
+DON,Donnie Finance,DON,own_chain,donnie-finance,,1615954083
+XYM,Symbol,XYM,own_chain,symbol,XYM,1616131249
+PCX,ChainX,PCX,own_chain,chainx,PCX,1564624800
+FLUX,Flux,FLUX,own_chain,zelcash,FLUX,1564624800
+ADAHALF,0.5X Long Cardano Token,ADAHALF,other,0-5x-long-cardano-token,ADAHALF,1602986400
+ADAHEDGE,1X Short Cardano Token,ADAHEDGE,other,1x-short-cardano-token,ADAHEDGE,1596852000
+ALGOHALF,0.5X Long Algorand Token,ALGOHALF,other,0-5x-long-algorand-token,ALGOHALF,1597740237
+ALTHALF,0.5X Long Altcoin Index Token,ALTHALF,other,0-5x-long-altcoin-index-token,ALTHALF,1603332000
+ATOMHALF,0.5X Long Cosmos Token,ATOMHALF,other,0-5x-long-cosmos-token,ATOMHALF,1597024824
+ATOMHEDGE,1X Short Cosmos Token,ATOMHEDGE,other,1x-short-cosmos-token,ATOMHEDGE,1597024824
+BALBEAR,3X Short Balancer Token,BALBEAR,other,3x-short-balancer-token,BALBEAR,1618510059
+BALBULL,3X Long Balancer Token ,BALBULL,other,3x-long-balancer-token,BALBULL,1596679200
+BALHALF,0.5X Long Balancer Token,BALHALF,other,0-5x-long-balancer-token,BALHALF,1604451600
+BALHEDGE,1X Short Balancer Token,BALHEDGE,other,,BALHEDGE,1616000400
+BCHHALF,0.5X Long Bitcoin Cash Token,BCHHALF,other,0-5x-long-bitcoin-cash-token,BCHHALF,1596722400
+BNBHALF,0.5X Long BNB Token,BNBHALF,other,,BNBHALF,1616000400
+BSVHALF,0.5X Long Bitcoin SV Token,BSVHALF,other,0-5x-long-bitcoin-sv-token,BSVHALF,1596679200
+BSVHEDGE,1X Short Bitcoin SV Token,BSVHEDGE,other,,BSVHEDGE,1558089174
+COMPBEAR,3X Short Compound Token Token,COMPBEAR,other,3x-short-compound-token-token,COMPBEAR,1596679200
+COMPBULL,3X Long Compound Token Token,COMPBULL,other,3x-long-compound-token-token,COMPBULL,1596679200
+COMPHALF,0.5X Long Compound Token Token,COMPHALF,other,,COMPHALF,1616997600
+COMPHEDGE,1X Short Compound Token Token,COMPHEDGE,other,1x-short-compound-token-token,COMPHEDGE,1597111200
+CUSDTBEAR,3X Short Compound USDT Token,CUSDTBEAR,other,3x-short-compound-usdt-token,CUSDTBEAR,1597370400
+CUSDTBULL,3X Long Compound USDT Token,CUSDTBULL,other,3x-long-compound-usdt-token,CUSDTBULL,1596852000
+CUSDTHALF,0.5X Long Compound USDT Token,CUSDTHALF,other,,CUSDTHALF,1616000400
+CUSDTHEDGE,1X Short Compound USDT Token,CUSDTHEDGE,other,1x-short-compound-usdt-token,CUSDTHEDGE,1604451600
+DEFIBEAR,3X Short DeFi Index Token,DEFIBEAR,other,3x-short-defi-index-token,DEFIBEAR,1596679200
+DEFIBULL,3X Long DeFi Index Token,DEFIBULL,other,3x-long-defi-index-token,DEFIBULL,1596679200
+DEFIHALF,0.5X Long DeFi Index Token,DEFIHALF,other,0-5x-long-defi-index-token,DEFIHALF,1597111200
+DEFIHEDGE,1X Short DeFi Index Token,DEFIHEDGE,other,1x-short-defi-index-token,DEFIHEDGE,1597111200
+DOGEHALF,0.5X Long Dogecoin Token,DOGEHALF,other,0-5x-long-dogecoin-token,DOGEHALF,1604451600
+DOGEHEDGE,1X Short Dogecoin Token,DOGEHEDGE,other,1x-short-dogecoin-token,DOGEHEDGE,1597111200
+DRGNHALF,0.5X Long Dragon Index Token,DRGNHALF,other,0-5x-long-dragon-index-token,DRGNHALF,1604451600
+DRGNHEDGE,1X Short Dragon Index Token,DRGNHEDGE,other,,DRGNHEDGE,1604451600
+EOSHALF,0.5X Long EOS Token,EOSHALF,other,0-5x-long-eos-token,EOSHALF,1597370400
+ETCHALF,0.5X Long Ethereum Classic Token,ETCHALF,other,0-5x-long-ethereum-classic-token,ETCHALF,1596679200
+ETCHEDGE,1X Short Ethereum Classic Token,ETCHEDGE,other,,ETCHEDGE,1592787600
+ETHHALF,0.5X Long Ethereum Token,ETHHALF,other,0-5x-long-ethereum-token,ETHHALF,1596765600
+EXCHHALF,0.5X Long Exchange Token Index Token,EXCHHALF,other,0-5x-long-echange-token-index-token,EXCHHALF,1596765600
+HALF,0.5X Long Bitcoin Token,HALF,other,0-5x-long-bitcoin-token,HALF,1596765600
+HALFSHIT,0.5X Long Shitcoin Index Token,HALFSHIT,other,0-5x-long-shitcoin-index-token,HALFSHIT,1597975200
+HTHALF,0.5X Long Huobi Token Token,HTHALF,other,,HTHALF,1592791200
+KNCBEAR,3X Short Kyber Network Token,KNCBEAR,other,3x-short-kyber-network-token,KNCBEAR,1650062944
+KNCBULL,3X Long Kyber Network Token,KNCBULL,other,3x-long-kyber-network-token,KNCBULL,1596722400
+KNCHALF,0.5X Long Kyber Network Token,KNCHALF,other,0-5x-long-kyber-network-token,KNCHALF,1596722400
+KNCHEDGE,1X Short Kyber Network Token,KNCHEDGE,other,,KNCHEDGE,1592186400
+LEOHALF,0.5X Long LEO Token,LEOHALF,other,,LEOHALF,1590372000
+LEOHEDGE,1X Short LEO Token,LEOHEDGE,other,,LEOHEDGE,1564963200
+LINKHALF,0.5X Long Chainlink Token,LINKHALF,other,0-5x-long-chainlink-token,LINKHALF,1598234400
+LINKHEDGE,1X Short Chainlink Token,LINKHEDGE,other,1x-short-chainlink-token,LINKHEDGE,1596852000
+LTCHALF,0.5X Long Litecoin Token,LTCHALF,other,,LTCHALF,1589767200
+MATICHALF,0.5X Long Matic Token,MATICHALF,other,0-5x-long-matic-token,MATICHALF,1597716000
+MATICHEDGE,1X Short Matic Token,MATICHEDGE,other,1x-short-matic-token,MATICHEDGE,1597111200
+MIDHALF,0.5X Long Midcap Index Token,MIDHALF,other,0-5x-long-midcap-index-token,MIDHALF,1597308232
+MIDHEDGE,1X Short Midcap Index Token,MIDHEDGE,other,,MIDHEDGE,1592791200
+MKRBEAR,3X Short Maker Token,MKRBEAR,other,3x-short-maker-token,MKRBEAR,1597024800
+MKRBULL,3X Long Maker Token,MKRBULL,other,3x-long-maker-token,MKRBULL,1596765600
+OKBHALF,0.5X Long OKB Token,OKBHALF,other,0-5x-long-okb-token,OKBHALF,1596765600
+PAXGHALF,0.5X Long PAX Gold Token,PAXGHALF,other,0-5x-long-pax-gold-token,PAXGHALF,1599616800
+PAXGHEDGE,1X Short PAX Gold Token,PAXGHEDGE,other,,PAXGHEDGE,1589767200
+PRIVBEAR,3X Short Privacy Index Token,PRIVBEAR,other,3x-short-privacy-index-token,PRIVBEAR,1596679200
+PRIVBULL,3X Long Privacy Index Token,PRIVBULL,other,3x-long-privacy-index-token,PRIVBULL,1618536783
+PRIVHALF,0.5X Long Privacy Index Token,PRIVHALF,other,0-5x-long-privacy-index-token,PRIVHALF,1603332000
+PRIVHEDGE,1X Short Privacy Index Token,PRIVHEDGE,other,1x-short-privacy-index-token,PRIVHEDGE,1603332000
+SUSHIBEAR,3X Short Sushi Token,SUSHIBEAR,other,3x-short-sushi-token,SUSHIBEAR,1600221600
+SUSHIBULL,3X Long Sushi Token,SUSHIBULL,other,3x-long-sushi-token,SUSHIBULL,1600308000
+SXPBEAR,3X Short Swipe Token,SXPBEAR,other,3x-short-swipe-token,SXPBEAR,1596679200
+SXPBULL,3X Long Swipe Token,SXPBULL,other,3x-long-swipe-token,SXPBULL,1596852000
+SXPHALF,0.5X Long Swipe Token,SXPHALF,other,0-5x-long-swipe-token,SXPHALF,1596852000
+SXPHEDGE,1X Short Swipe Token,SXPHEDGE,other,1x-short-swipe-token,SXPHEDGE,1597111200
+THETABEAR,3X Short Theta Network Token,THETABEAR,other,3x-short-theta-network-token,THETABEAR,1596679200
+THETABULL,3X Long Theta Network Token,THETABULL,other,3x-long-theta-network-token,THETABULL,1596679200
+THETAHALF,0.5X Long Theta Network Token,THETAHALF,other,0-5x-long-theta-network-token,THETAHALF,1596679200
+THETAHEDGE,1X Short Theta Network Token,THETAHEDGE,other,1x-short-theta-network-token,THETAHEDGE,1597024800
+TOMOHALF,0.5X Long TomoChain Token,TOMOHALF,other,,TOMOHALF,1597024800
+TOMOHEDGE,1X Short TomoChain Token,TOMOHEDGE,other,1x-short-tomochain-token,TOMOHEDGE,1596765600
+TRXHALF,0.5X Long TRX Token,TRXHALF,other,,TRXHALF,1590372000
+TRYBHALF,0.5X Long BiLira Token,TRYBHALF,other,,TRYBHALF,1592816322
+TRYBHEDGE,1X Short BiLira Token,TRYBHEDGE,other,,TRYBHEDGE,1592816322
+UNISWAPBEAR,3X Short Uniswap Index Token,UNISWAPBEAR,other,,UNISWAPBEAR,1601888322
+UNISWAPBULL,3X Long Uniswap Index Token,UNISWAPBULL,other,,UNISWAPBULL,1601888322
+USDTHALF,0.5X Long Tether Token,USDTHALF,other,,USDTHALF,1591014296
+USDTHEDGE,1X Short Tether Token,USDTHEDGE,other,,USDTHEDGE,1606134296
+VETBEAR,3X Short VeChain Token,VETBEAR,other,3x-short-vechain-token,VETBEAR,1596679200
+VETBULL,3X Long VeChain Token,VETBULL,other,3x-long-vechain-token,VETBULL,1596679200
+VETHEDGE,1X Short VeChain Token,VETHEDGE,other,1x-short-vechain-token,VETHEDGE,1597148696
+XAUTHALF,0.5X Long Tether Gold Token,XAUTHALF,other,0-5x-long-tether-gold-token,XAUTHALF,1599660000
+XAUTHEDGE,1X Short Tether Gold Token,XAUTHEDGE,other,,XAUTHEDGE,1593439200
+XRPHALF,0.5X Long XRP Token,XRPHALF,other,0-5x-long-xrp-token,XRPHALF,1596679200
+XTZHALF,0.5X Long Tezos Token,XTZHALF,other,0-5x-long-tezos-token,XTZHALF,1596679200
+XTZHEDGE,1X Short Tezos Token,XTZHEDGE,other,1x-short-tezos-token,XTZHEDGE,1596679200
+BTMXHALF,0.5X Long BitMax Token Token,BTMXHALF,other,,BTMXHALF,1586736000
+BTMXHEDGE,1X Short BitMax Token Token,BTMXHEDGE,other,,BTMXHEDGE,1571616000
+WIN-3,WINk,WIN,tron_token,wink,WIN,1562532570
+MTC-3,Metacoin,MTC,own_chain,metacoin,METAC,1559692800
+BAR,FC Barcelona Fan Token,BAR,other,fc-barcelona-fan-token,BAR,1557885600
+ICP,Internet Computer,ICP,other,internet-computer,ICP,1620673391
+BAG,Baguette,BAG,other,baguette,,1618757419
+MHC,#MetaHash,MHC,other,metahash,MHC,1550624400
+ANC,Anchor Protocol,ANC,other,anchor-protocol,ANC,1615986013
+MEDIA,Media Network,MEDIA,solana_token,media-network,MEDIA,1619799163
+STEP,Step Finance,STEP,solana_token,step-finance,STEP,1619335055
+LNCHX,LaunchX,LNCHX,binance_token,launchx,,1620720017
+POLX,Polylastic,POLX,binance_token,polylastic,POLX,1619730927
+NDAU,Ndau,NDAU,other,ndau,XND,1569891600
+MINA,Mina Protocol,MINA,other,mina-protocol,MINA,1622513694
+APL,Apollo,APL,other,apollo,APL,1533607200
+VEED,VEED,VEED,other,veed,VEED,1622439185
+NFT,APENFT,NFT,tron_token,apenft,NFT,1620923193
+MIMO,Mimosa,MIMO,other,mimosa,,1614560400
+SLRS,Solrise Finance,SLRS,other,solrise-finance,SLRS,1625583749
+SNY,Synthetify Token,SNY,solana_token,synthetify-token,SNY,1625829480
+ARRR,Pirate Chain,ARRR,other,pirate-chain,ARRR,1549760400
+CEUR,Celo Euro,CEUR,other,celo-euro,CEUR,1624957291
+DEXA,DEXA COIN,DEXA,other,dexa-coin,DEXA,1571364000
+ICA,Icarus,ICA,binance_token,icarus-finance,ICA,1571364000
+SIGNA,Signum,SIGNA,own_chain,signum,SIGNA,1402531200
+INR,Indian Rupee,INR,fiat,,,
+UNIDOWN,UNIDOWN,UNIDOWN,other,,UNIDOWN,1603785600
+UNIUP,UNIUP,UNIUP,other,,UNIUP,1603785600
+COIN,Coinbase Tokenized Stock on FTX,COIN,other,coinbase-stock,COIN,1618394685
+COIN-2,Coinbase Tokenized Stock on Bittrex,COIN-2,other,coinbase-stock-bittrex,,1618913796
+SSX,SOMESING,SSX,own_chain,somesing,SSX,1575939600
+AAVEUP,AAVEUP,AAVEUP,other,,AAVEUP,1606374000
+AAVEDOWN,AAVEDOWN,AAVEDOWN,other,,AAVEDOWN,1606374000
+KAR,Karura,KAR,own_chain,karura,KAR,1626793207
+ERG,Ergo,ERG,own_chain,ergo,ERG,1517533200
+XEC,eCash,XEC,own_chain,ecash,XEC,1625230984
+MNGO,Mango,MNGO,solana_token,mango-markets,MNGO,1628748149
+XRD,Radix,XRD,own_chain,radix,EXRD,1629739294
+XCH,Chia,XCH,own_chain,chia,XCH,1620093600
+MER-2,Mercurial,MER,solana_token,mercurial,MER,1621548000
+CRTS,Cratos,CRTS,own_chain,cratos,CRTS,1627318945
+LUMI,LUMI Credits,LUMI,tron_token,lumi-credits,LUMI,1624449600
+DKK,Danish krone,DKK,fiat,,,
+MOVR,Moonriver,MOVR,own_chain,moonriver,MOVR,1630065629
+ATLAS,Star Atlas,ATLAS,solana_token,star-atlas,ATLAS,1630598516
+POLIS,Star Atlas DAO,POLIS,solana_token,star-atlas-dao,,1630598516
+TULIP,SolFarm,TULIP,solana_token,solfarm,,1621821600
+SDN,Shiden Network,SDN,own_chain,shiden,SDN,1630306937
+XPRT,Persistence,XPRT,own_chain,persistence,XPRT,1617242400
+BP,BunnyPark,BP,own_chain,bunnypark,BP,1618814346
+CITY,Manchester City Fan Token,CITY,other,manchester-city-fan-token,CITY,1621908000
+INTER,Inter Milan Fan Token,INTER,other,inter-milan-fan-token,INTER,1631620931
+GAL,Galatasaray Fan Token,GAL,other,galatasaray-fan-token,GAL,1591322400
+DVPN,Sentinel,DVPN,other,sentinel,DVPN,1618884000
+SKU,Sakura,SKU,other,sakura,SKU,1629388862
+SLIM,Solanium,SLIM,solana_token,solanium,SLIM,1622512800
+OXY,Oxygen,OXY,solana_token,oxygen,OXY,1615856400
+SOLR,SolRazr,SOLR,solana_token,solrazr,SOLR,1633705444
+SIENNA,Sienna,SIENNA,own_chain,sienna,,1631055999
+YCE,MYCE,YCE,own_chain,myce,YCE,1519696800
+RTM,Raptoreum,RTM,own_chain,raptoreum,RTM,1615942800
+AURY,Aurory,AURY,solana_token,aurory,AURY,1635102002
+BNC,Bifrost Native Coin,BNC,other,bifrost-native-coin,,1635102002
+MSOL,Marinade staked SOL,MSOL,solana_token,msol,MSOL,1629183679
+STSOL,Lido Staked SOL,STSOL,solana_token,lido-staked-sol,STSOL,1631682230
+SHX,Stronghold Token,SHX,other,stronghold-token,SHX,1634726627
+RMRK,RMRK,RMRK,other,rmrk,RMRK,1631714166
+PORT,Port Finance,PORT,solana_token,port-finance,PORT,1628647200
+SLND,Solend,SLND,solana_token,solend,SLND,1635956701
+STARS,StarLaunch,STARS,solana_token,starlaunch,,1636567511
+BSQ,Bisq DAO Token,BSQ,other,,,1555286400
+KMA,Calamari Network,KMA,other,calamari-network,KMA,1638187453
+ILA,Infinite Launch,ILA,other,infinite-launch,ILA,1637845387
+CDEX,Codex,CDEX,other,codex,,1631030452
+HTML,HTMLCOIN,HTML,other,htmlcoin,HTML,1529110800
+KILT,KILT Protocol,KILT,own_chain,kilt-protocol,KILT,1638327727
+OSMO,Osmosis,OSMO,other,osmosis,OSMO,1624240800
+DESO,Decentralized Social,DESO,other,bitclout,DESO,1638678011
+DFL,DeFi Land,DFL,solana_token,defi-land,,1637733724
+MBS,MonkeyBall,MBS,solana_token,monkeyball,MBS,1640142002
+GENE,Genopets,GENE,solana_token,genopets,GENE,1637244019
+PRISM,Prism,PRISM,solana_token,prism,PRISM,1640235916
+WNDR,WonderFi Tokenized Stock,WNDR,other,wonderfi-tokenized-stock,WNDR,1637823671
+XTAG,xHashtag,XTAG,solana_token,xhashtag,XTAG,1638270194
+MNET,MINE Network,MNET,other,mine-network,MNET,1638356494
+HEART,Humans.ai,HEART,other,humans-ai,HEART,1639404115
+FORWARD,Forward,FORWARD,other,forward,,1639404115
+RACEFI,RaceFi,RACEFI,solana_token,racefi,RACEFI,1640214002
+BITCI,Bitcicoin,BITCI,own_chain,bitcicoin,BITCI,1611968400
+SGB,Songbird,SGB,own_chain,songbird,SGB,1632790800
+KRRX,Kyrrex,KRRX,tron_token,kyrrex,KRRX,1631088136
+CREDI,Credefi,CREDI,own_chain,credefi,CREDI,1639051360
+PEL,Propel Token,PEL,own_chain,propel-token,PEL,1638893347
+VI,Vybit,VI,solana_token,vybit,VI,1600048800
+AUST,AnchorUST,AUST,other,anchorust,,1638331459
+ILS,Israeli new shekel,ILS,fiat,,,
+GLMR,Moonbeam,GLMR,other,moonbeam,GLMR,1641866631
+ACA,Acala,ACA,other,acala,ACA,1643104930
+HBB,Hubble,HBB,solana_token,hubble,HBB,1643375871
+GARI,Gari Network,GARI,solana_token,gari-network,GARI,1642518168
+KINT,Kintsugi,KINT,other,kintsugi,KINT,1641206425
+ORCA,Orca,ORCA,solana_token,orca,ORCA,1597024800
+PSY,PsyOptions,PSY,solana_token,psyoptions,PSY,1597024800
+LOKA,League of Kingdoms,LOKA,own_chain,league-of-kingdoms,LOKA,1642694549
+CCD,Concordium,CCD,own_chain,concordium,CCD,1644494465
+CHNG,Chainge Finance,CHNG,own_chain,chainge-finance,CHNG,1624327200
+MNFT,Mongol NFT,MNFT,other,mongol-nft,,1645167602
+R1,Recast1,R1,other,recast1,R1,1640804937
+STX,Stacks,STX,own_chain,blockstack,STX,1572055200
+AIR,Altair,AIR,other,altair,,1644429687
+KIN,Kin,KIN,solana_token,kin,KIN,1495670400
+BTTOLD,BitTorrent [OLD],BTTOLD,tron_token,bittorrent-old,BTTOLD,1548633600
+ASTR,Astar,ASTR,own_chain,astar,ASTR,1642431678
+SBR,Saber,SBR,solana_token,saber,SBR,1626746400
+REVU,Revuto,REVU,other,revuto,REVU,1641886550
+FCON,SpaceFalcon,FCON,own_chain,spacefalcon,FCON,1643116271
+MJT,MojitoSwap,MJT,other,mojitoswap,MJT,1641878361
+WMT,World Mobile Token,WMT,other,world-mobile-token,WMT,1640304791
+LQDR,Liquid Driver,LQDR,other,liquiddriver,LQDR,1620486477
+SPIRIT,SpiritSwap Token,SPIRIT,other,spiritswap,SPIRIT,1619273671
+SAMO,Samoyedcoin,SAMO,solana_token,samoyedcoin,SAMO,1651111200
+GEIST,Geist Finance,GEIST,other,geist-finance,GEIST,1633483847
+FRA,Findora,FRA,own_chain,findora,FRA,1618018247
+ZBC,Zebec Protocol,ZBC,solana_token,zebec-protocol,,1647428607
+VISION,VisionGame,VISION,solana_token,visiongame,VISION,1649937827
+ARN,Arenum,ARN,own_chain,arenum,,1649765535
+SLCL,Solcial,SLCL,solana_token,solcial,,1648224182
+HAWK,Hawksight,HAWK,solana_token,hawksight,HAWK,1650546182
+AKTIO,Aktio,AKTIO,own_chain,aktio,AKTIO,1649937718
+DVK,Devikins,DVK,tron_token,devikins,,1649427466
+MINE,SpaceMine,MINE,own_chain,spacemine,,1649923386
+MTSP,Metasphere,MTSP,own_chain,metasphere,,1649476807
+POPK,POPKON,POPK,own_chain,popkon,POPK,1649484203
+WEMIX,WEMIX Token,WEMIX,own_chain,wemix-token,WEMIX,1604192400
+GMT,STEPN,GMT,solana_token,stepn,GMT,1646834530
+CFG,Centrifuge,CFG,own_chain,centrifuge,CFG,1616896800
+GST-2,Green Satoshi Token,GST,solana_token,green-satoshi-token,,1640048400
+PLD,Plutonian DAO,PLD,solana_token,plutonian-dao,PLD,1651325061
+COOHA,CoolMining,COOHA,other,coolmining,,1651325061
+PLN,Polish Zloty,PLN,fiat,,,
+REI,REI Network,REI,own_chain,rei-network,REI,1650971081
+USDD,USDD,USDD,tron_token,usdd,USDD,1651464107
+PLY,Aurigami,PLY,tron_token,aurigami,,1649241804
+CELT,Celestial,CELT,other,celestial,CELT,1633053600
+MLS,Pikaster,MLS,other,pikaster,,1651776411
+AFK,AFKDAO,AFK,other,afkdao,AFK,1653397388
+TEDDY,TEDDY,TEDDY,avalanche_token,teddy,TEDDY,1629989893
+LUNA-3,Terra,LUNA,own_chain,terra-luna-2,LUNA,1653739398
+AED,Emirati Dirham,AED,fiat,,,
+WELL,Moonwell Artemis,WELL,other,moonwell-artemis,,1652303490
+GBPT,British Pound Sterling Tether,GBPT,other,british-pound-sterling-tether,,1657598401
+IP3,Cripco,IP3,solana_token,cripco,IP3,1657594998
+CSPR,Casper Network,CSPR,own_chain,casper-network,CSPR,1620784800
+SRBS,Super Rare Ball Shares,SRBS,own_chain,super-rare-ball-shares,,1654081769
+NPT,Neopin,NPT,own_chain,neopin,NPT,1646010000
+INTR,Interlay,INTR,other,interlay,INTR,1657688550
+TEER,Integritee,TEER,other,integritee,TEER,1638320400
+CSC,Casinocoin,CSC,other,casinocoin,CSC,1516150800
+KUB,Bitkub Coin,KUB,own_chain,bitkub-coin,KUB,1621821600
+USDH,USDH,USDH,solana_token,usdh,USDH,1644022800
+WLKN,Walken,WLKN,solana_token,walken,WLKN,1657810920
+FB,Fibitpro Exchange,FB,own_chain,fibitpro-exchange,,1652094233
+ETHW,Ethereum PoW,ETHW,own_chain,ethereum-pow-iou,ETHW,1663224179
+ETHS,Ethereum PoS Fork IOU,ETHS,own_chain,ethereum-pos-iou,,1663224179
+ETHF,EthereumFair,ETHF,own_chain,ethereumfair,ETHF,1663224179
+MPLX,Metaplex,MPLX,solana_token,metaplex,MPLX,1663646540
+CMP,Caduceus,CMP,own_chain,caduceus,,1658811653
+NEER,Metaverse.Network Pioneer,NEER,other,metaverse-network-pioneer,NEER,1662976997
+NODL,Nodle Network,NODL,other,nodle-network,NODL,1661490029
+BSX,Basilisk,BSX,other,basilisk,,1660273211
+JUNO,JUNO,JUNO,other,juno-network,JUNO,1634781611
+FDM,Fandom,FDM,other,fandom,FDM,1658502062
+KLEVA,Kleva,KLEVA,other,kleva,,1663053708
+KUSD,Kolibri USD,KUSD,other,kolibri-usd,,1635300000
+MOR,Moreal,MOR,other,moreal,,1663135530
+UZRS,UZUROCKS,UZRS,other,uzurocks,,1664262004
+APT,Aptos,APT,own_chain,aptos,APT,1666148633
+POKT,Pocket Network,POKT,own_chain,pocket-network,POKT,1641949200
+XPLA,XPLA,XPLA,own_chain,xpla,XPLA,1666375343
+PARA,Parallel Finance,PARA,other,parallel-finance,PARALL,1662624033
+SWP,Kava Swap,SWP,other,kava-swap,SWP,1630548000
+SMR,Shimmer,MUNT,own_chain,shimmer,SMR,1664474634
+POLYX,Polymesh,POLYX,other,polymesh,POLYX,1653530400
+AFC,Arsenal Fan Token,AFC,other,arsenal-fan-token,AFC,1635300000
+TOKKI,CRYPTOKKI,TOKKI,other,cryptokki,TOKKI,1660960800
+MNDE,Marinade,MNDE,solana_token,marinade,MNDE,1633572000
+AZERO,Aleph Zero,AZERO,own_chain,aleph-zero,AZERO,1643331600
+BEAT,MetaBeat,$BEAT,own_chain,metabeat,,1668556860
+FPFT,Peruvian National Football Team Fan Token,FPFT,other,peruvian-national-football-team-fan-token,,1655085600
+ARG,Argentine Football Association Fan Token,ARG,other,argentine-football-association-fan-token,,1625796000
+FLR,Flare,FLR,own_chain,flare-networks,FLR,1673326926
+RON,Ronin,RON,own_chain,ronin,RONIN,1643245200
+ALT,AptosLaunch Token,ALT,own_chain,aptos-launch-token,,1669964410
+OAS,Oasys,OAS,own_chain,oasys,,1669964410
+BDX,Beldex,BDX,own_chain,beldex,BDX,1542070800
+DOGA,Dogami,DOGA,other,dogami,DOGA,1647910800
+PLEX,PLEX,PLEX,own_chain,plex,PLEX,1608080400
+TUP,Tenup,TUP,own_chain,tenup,TUP,1543885200
+PCI,Paycoin,PCI,own_chain,pay-coin,PCI,1566352800
+STC,StarChain,STC,own_chain,starchain,,1516669200
+MENGO,Flamengo Fan Token,MENGO,other,flamengo-fan-token,MENGO,1635213600
+TAKI,Taki,TAKI,solana_token,taki,TAKI,1651111200
+TRA,Trabzonspor Fan Token,TRA,other,trabzonspor-fan-token,TRA,1604714400
+LING,Lingose,LING,other,lingose,LING,1663034400
+CHE,CherrySwap,CHE,other,cherryswap,CHE,1628042400
+KCAL,KCAL,KCAL,other,kcal,,1665972000
+BHP,Blockchain of Hash Power,BHP,own_chain,blockchain-of-hash-power,BHP,1548468000
+SNFT,Spain National Football Team Fan Token,SNFT,other,spain-national-fan-token,SNFT,1637200800
+OKT,OKC,OKT,own_chain,oec-token,OKT,1611021600
+ZYRO,Zyro,ZYRO,other,zyro,ZYRO,1599962400
+KCASH,Kcash,KCASH,other,kcash,KCASH,1516759200
+WACME,Wrapped Accumulate,WACME,other,wrapped-accumulate,,1516759200
+BONK,Bonk,BONK,solana_token,bonk,BONK,1672279200
+POR,Portugal National Team Fan Token,POR,other,portugal-national-team-fan-token,POR,1632362400
+UT,Ulord,UT,own_chain,ulord,UT,1537063200
+OKDOT1,OKX Staked DOT1,OKDOT1,own_chain,okx-staked-dot1,,1660701600
+OKDOT2,OKX Staked DOT2,OKDOT2,own_chain,okx-staked-dot2,,1660788000
+CGS,Crypto Gladiator Shards,CGS,other,crypto-gladiator-shards,CGS,1629683683
+WGRT,WaykiChain Governance Coin,WGRT,other,waykichain-governance-coin,WGRT,1597284000
+LAT,PlatON Network,LAT,own_chain,platon-network,LAT,1620784800
+TRUE,TrueChain,TRUE,own_chain,true-chain,TRUE,1516759200
+ORB,Orbcity,ORB,other,klaycity-orb,ORB,1647828000
+ACS,Access Protocol,ACS,solana_token,access-protocol,,1676487717
+HDX,HydraDX,HDX,other,hydradx,,1612918800
+KON,KonPay,KON,own_chain,konpay,,1657591200
+CARMIN,Carmin,CARMIN,own_chain,carmin,,1676437326
+NXRA,AllianceBlock Nexera,NXRA,own_chain,allianceblock-nexera,,1677171832
+SUI,Sui,SUI,own_chain,sui,SUI,1683126000
+CETUS,Cetus Protocol,CETUS,other,cetus-protocol,,1683126000
+MYRIA,Myria,MYRIA,other,myria,,1680782512
+CAPY,Capybara,CAPY,solana_token,capybara,,1680782512
+NOM,Onomy Protocol,NOM,other,onomy-protocol,,1678881712
+HMND,Humanode,HMND,other,humanode,,1680260512
+OTK,Octokn,OTK,solana_token,octo-gaming,,1681383712
+ZPAY,ZoidPay,ZPAY,other,zoid-pay,ZPAY,1625104800
+SUIP,SuiPad,SUIP,other,suipad,,1683867600
+CORE,Coreum,CORE,other,coreum,CORE,1646787600
+KSP,KlaySwap Protocol,KSP,other,klayswap-protocol,KSP,1624496400
+KING,KING,KING,solana_token,king-2,,1683608400
+CID,CORE ID,CID,other,core-id,,1682143440
+KAS,Kaspa,KAS,other,kaspa,KAS,1682143440
+SHDW,Shadow Token,SHDW,solana_token,genesysgo-shadow,,1682143440
+NGN,Naira,NGN,fiat,,,
+LUKSO,LUKSO,LUKSO,own_chain,lukso-token-2,LYXE,1684858812
+SSWP,Suiswap,SSWP,own_chain,suiswap,LYXE,1686639600
+XPLL,ParallelChain,XPLL,own_chain,parallelchain,,1686319200
+OXBT,OXBT,OXBT,other,oxbt,,1683789300
+SOLO,Sologenic,SOLO,other,solo-coin,,1583456400
+PIP,PIP,PIP,solana_token,pip,,1677546000
+OMN,OmegaNetwork,OMN,own_chain,omega-network,,1687136400
+ORDI,ORDI,ORDI,other,ordinals,,1683507600
+IRON,Iron Fish,IRON,own_chain,iron-fish,,1682388000
+DGLD,SPDR Gold Shares Defichain,DGLD,other,gld-tokenized-stock-defichain,DGLD,1647396000
+ATM,Atletico Madrid Fan Token,ATM,other,atletico-madrid,ATM,1592791200
+ECS,eCredits,ECS,own_chain,ecredits,,1686276000
+FNSA,FINSCHIA,FNSA,own_chain,link,,1539828000
+VMPX,VMPX,VMPX,other,vmpx,,1683597600
+XDAI,XDAI,XDAI,own_chain,xdai,,1539024185
+SEI,Sei,SEI,own_chain,sei-network,SEI,1692111611
+ISLM,Islamic Coin,ISLM,own_chain,islamic-coin,,1697191211
+NTRN,Neutron,NTRN,own_chain,neutron-3,,1688522400
+TIA,Celestia,TIA,own_chain,celestia,TIA,1698771611
+WSTUSDT,Wrapped Staked Tether,WSTUSDT,tron_token,wrapped-staked-usdt,,1691028011
+SPURS,Tottenham Hotspur FC Fan Token,SPURS,other,tottenham-hotspur-fc-fan-token,,1698327431

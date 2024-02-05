@@ -12,3 +12,7 @@ INSERT INTO asset_collections(id, name, symbol) VALUES (245, "CyberConnect", "CY
 *
 INSERT INTO asset_collections(id, name, symbol) VALUES (246, "Bonk", "Bonk");
 *
+INSERT INTO asset_collections(id, name, symbol) VALUES (247, "Connext", "NEXT");
+*
+INSERT INTO asset_collections(id, name, symbol) VALUES (248, "Aura", "AURA");
+*

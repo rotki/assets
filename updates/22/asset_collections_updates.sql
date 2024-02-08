@@ -16,3 +16,17 @@ INSERT INTO asset_collections(id, name, symbol) VALUES (247, "Connext", "NEXT");
 *
 INSERT INTO asset_collections(id, name, symbol) VALUES (248, "Aura", "AURA");
 *
+INSERT INTO asset_collections(id, name, symbol) VALUES (250, "Beam", "BEAM");
+*
+INSERT INTO asset_collections(id, name, symbol) VALUES (251, "VANRY", "VANRY");
+*
+INSERT INTO asset_collections(id, name, symbol) VALUES (252, "Qmall Token", "QMALL");
+*
+INSERT INTO asset_collections(id, name, symbol) VALUES (253, "ZigCoin", "ZIG");
+*
+INSERT INTO asset_collections(id, name, symbol) VALUES (254, "ApeX Token", "APEX");
+*
+INSERT INTO asset_collections(id, name, symbol) VALUES (255, "SHRAPToken", "SHRAP");
+*
+INSERT INTO asset_collections(id, name, symbol) VALUES (256, "Zeta", "ZETA");
+*

@@ -36,3 +36,5 @@ INSERT INTO asset_collections(id, name, symbol) VALUES (258, "MUBI", "MUBI");
 *
 INSERT INTO asset_collections(id, name, symbol) VALUES (259, "Artificial Liquid Intelligence Token", "ALI");
 *
+INSERT INTO asset_collections(id, name, symbol) VALUES (260, "Moon App", "APP");
+*

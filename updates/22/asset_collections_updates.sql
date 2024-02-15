@@ -30,3 +30,9 @@ INSERT INTO asset_collections(id, name, symbol) VALUES (255, "SHRAPToken", "SHRA
 *
 INSERT INTO asset_collections(id, name, symbol) VALUES (256, "Zeta", "ZETA");
 *
+INSERT INTO asset_collections(id, name, symbol) VALUES (257, "NetVRk", "NETVR");
+*
+INSERT INTO asset_collections(id, name, symbol) VALUES (258, "MUBI", "MUBI");
+*
+INSERT INTO asset_collections(id, name, symbol) VALUES (259, "Artificial Liquid Intelligence Token", "ALI");
+*

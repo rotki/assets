@@ -1,0 +1,4 @@
+INSERT INTO assets(identifier, name, type) VALUES("eip155:1/erc20:0xCa14007Eff0dB1f8135f4C25B34De49AB0d42766", "Starknet Token", "C"); INSERT INTO evm_tokens(identifier, token_kind, chain, address, decimals, protocol) VALUES("eip155:1/erc20:0xCa14007Eff0dB1f8135f4C25B34De49AB0d42766", "A", 1, "0xCa14007Eff0dB1f8135f4C25B34De49AB0d42766", 18, NULL); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES("eip155:1/erc20:0xCa14007Eff0dB1f8135f4C25B34De49AB0d42766", "STRK", "starknet", "", NULL, 1668610211, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES("STRK", "Starknet", "W"); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES("STRK", "STRK", "starknet", "", NULL, 1668610211, NULL);
+*

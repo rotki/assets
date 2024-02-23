@@ -3,6 +3,7 @@ from pathlib import Path
 
 import pytest
 from eth_utils.address import to_checksum_address
+import warnings
 
 from validator.checker import UpdateChecker
 from validator.utils import get_latest_version
@@ -47,6 +48,11 @@ def test_valid_identifiers_mappings(version, schema_versions):
             if '*' in line:
                 continue
             print('---', line)
-            eip_pos = line.index('eip155')
+            try:
+                eip_pos = line.index('eip155')
+            except ValueError:
+                warnings.warn(f'Non evm mapping: {line}')
+                continue
+
             address = line[eip_pos:].split(':')[-1].strip().replace('");', '')
             assert to_checksum_address(address) == address

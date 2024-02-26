@@ -43,4 +43,4 @@ for child in (root_dir / 'updates').iterdir():
 
 infojson_data['latest'] = latest
 with open(infojson, 'w') as f:
-    json.dump(infojson_data, f)
+    json.dump(infojson_data, f, indent=4)

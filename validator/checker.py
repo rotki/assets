@@ -5,7 +5,9 @@ https://github.com/rotki/rotki/blob/8f41fcba4732fba4af563c45c34ad9ad288906a2/rot
 
 import re
 from typing import NamedTuple, NewType, Optional, Tuple, Union
+
 from eth_utils import is_checksum_address
+
 from validator.utils import REGEX_ASSETS_V2, REGEX_ASSETS_V3
 
 T_Timestamp = int
@@ -252,7 +254,7 @@ class UpdateChecker:
         """
         asset_data = self._parse_asset_data(insert_text, schema_version)
         evm_data = {
-            'foked': None,
+            'forked': None,
             'address': None,
             'decimals': None,
             'protocol': None,

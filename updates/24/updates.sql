@@ -1,0 +1,2 @@
+INSERT INTO assets(identifier, name, type) VALUES('eip155:1/erc20:0x3429d03c6F7521AeC737a0BBF2E5ddcef2C3Ae31', 'PIXEL', 'C');INSERT INTO evm_tokens(identifier, token_kind, chain, address, decimals, protocol) VALUES('eip155:1/erc20:0x3429d03c6F7521AeC737a0BBF2E5ddcef2C3Ae31', 'A', 1, '0x3429d03c6F7521AeC737a0BBF2E5ddcef2C3Ae31', 18, NULL);INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('eip155:1/erc20:0x3429d03c6F7521AeC737a0BBF2E5ddcef2C3Ae31', 'PIXEL', 'pixels', '', NULL, 1704937007, NULL);
+*

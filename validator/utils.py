@@ -18,7 +18,7 @@ REGEX_ASSETS_V2 = {
     "common_asset_details_re": re.compile(r'.*INSERT +INTO +common_asset_details\( *asset_id *, *forked *\) *VALUES\((.*?),(.*?)\).*')
 }
 
-REGEX_ASSETS_V3 = {
+REGEX_ASSETS_V3 = {  # Keep these in sync with the main repo ones
     "assets_re": re.compile(r'.*INSERT +INTO +assets\( *identifier *, *name *, *type *\) *VALUES\(([^,]*?),([^,]*?),([^,]*?)\).*?'),
     "ethereum_tokens_re": re.compile(r'.*INSERT +INTO +evm_tokens\( *identifier *, *token_kind *, *chain *, *address *, *decimals *, *protocol *\) *VALUES\(([^,]*?),([^,]*?),([^,]*?),([^,]*?),([^,]*?),([^,]*?)\).*'),
     "common_asset_details_re": re.compile(r'.*INSERT +INTO +common_asset_details\( *identifier *, *symbol *, *coingecko *, *cryptocompare *, *forked *, *started *, *swapped_for *\) *VALUES\((.*?),(.*?),(.*?),(.*?),(.*?),([^,]*?),([^,]*?)\).*')

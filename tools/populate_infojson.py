@@ -43,4 +43,9 @@ for child in (root_dir / 'updates').iterdir():
 
 infojson_data['latest'] = latest
 with open(infojson, 'w') as f:
-    json.dump(infojson_data, f, indent=4)
+    json.dump(infojson_data, f)
+
+# this file is to only check the diff and is always equal to infojson
+pretty_infojson = root_dir / 'updates' / 'pretty_info.json'
+with open(pretty_infojson, 'w') as f:
+    json.dump(infojson_data, f, indent=2)

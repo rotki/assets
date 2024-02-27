@@ -211,7 +211,7 @@ class UpdateChecker:
                 'asset_type': self._parse_str(match.group(3), 'asset type', insert_text),
             }
 
-    def _parse_ethereum_token_data(self, insert_text: str, schema_version: int) -> Tuple[str, Optional[int], Optional[str]]:  # noqa: E501
+    def _parse_evm_token_data(self, insert_text: str, schema_version: int) -> Tuple[str, Optional[int], Optional[str]]:  # noqa: E501
         match = self.versions[schema_version]['ethereum_tokens_re'].match(insert_text)
         if match is None:
             raise DeserializationError(
@@ -262,7 +262,7 @@ class UpdateChecker:
             'token_kind': None,
         }
         if asset_data['asset_type'] == 'C':
-            evm_data |= self._parse_ethereum_token_data(insert_text, schema_version)
+            evm_data |= self._parse_evm_token_data(insert_text, schema_version)
 
         if schema_version == 2 and asset_data['asset_type'] != 'C':
             match = self.versions[schema_version]['common_asset_details_re'].match(insert_text)
@@ -325,7 +325,7 @@ class UpdateChecker:
                 full_insert = action
                 insert = True
 
-            # Use the same regex as in the rotki servers to obtain the assets
+            # Use the same regex as in the rotki repo to obtain the assets
             asset_data = self._parse_full_insert(full_insert, schema_version)
 
             assert asset_data.cryptocompare is not None or asset_data.coingecko is not None

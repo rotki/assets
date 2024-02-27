@@ -25,3 +25,7 @@ def test_valid_infojson():
         with open(update_file) as f:
             changes = sum(1 for line in f) / 2
         assert changes == update_data['changes']
+
+    infojson_indented = root_dir / 'updates' / 'pretty_info.json'
+    with open(infojson_indented) as f:
+        assert data == json.load(f)

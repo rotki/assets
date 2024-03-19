@@ -67,8 +67,8 @@ CHAIN_ID_TO_NAME = {
     42220: 'celo',
 }
 
-# In V2 anyone can create a vault and there are some that are endorsed by yearn once they 
-# are battle tested. The information seen here comes from the yearn v2 graph that tracks every 
+# In V2 anyone can create a vault and there are some that are endorsed by yearn once they
+# are battle tested. The information seen here comes from the yearn v2 graph that tracks every
 # yearn v2 vault, even the ones that are not endorsed. All the vaults in yearn v2 were
 # extracted from the yearn v2 graph.
 DUPLICATED_NAMES = (
@@ -107,7 +107,7 @@ DUPLICATED_SYMBOLS = (
     'yvUSDT',
     'yvRAI',
     'yvWETH',
-    'yvsUSD', 
+    'yvsUSD',
     'yvUNI',
     'yvWBTC',
     'yvAAVE',
@@ -264,6 +264,12 @@ class UpdateChecker:
         }
         if asset_data['asset_type'] == 'C':
             evm_data |= self._parse_evm_token_data(insert_text, schema_version)
+
+        if len(asset_data['asset_type']) != 1:
+            raise DeserializationError(
+                f'At asset DB update could not parse asset type '
+                f'details data out of {insert_text}',
+            )
 
         if schema_version == 2 and asset_data['asset_type'] != 'C':
             match = self.versions[schema_version]['common_asset_details_re'].match(insert_text)

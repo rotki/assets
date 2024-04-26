@@ -32,3 +32,13 @@ INSERT INTO asset_collections(id, name, symbol) VALUES (277, "Brawl Token", "BRA
 *
 INSERT INTO asset_collections(id, name, symbol) VALUES (278, "LightLink", "LL");
 *
+INSERT INTO asset_collections(id, name, symbol) VALUES (279, "Wrapped eETH", "weETH");
+*
+INSERT INTO asset_collections(id, name, symbol) VALUES (280, "MAGA", "TRUMP");
+*
+INSERT INTO asset_collections(id, name, symbol) VALUES (281, "DizzyHavoc", "DZHV");
+*
+INSERT INTO asset_collections(id, name, symbol) VALUES (282, "Ice", "ICE");
+*
+INSERT INTO asset_collections(id, name, symbol) VALUES (283, "Independence Token", "RFKJ");
+*

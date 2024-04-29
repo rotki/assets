@@ -42,3 +42,31 @@ INSERT INTO asset_collections(id, name, symbol) VALUES (282, "Ice", "ICE");
 *
 INSERT INTO asset_collections(id, name, symbol) VALUES (283, "Independence Token", "RFKJ");
 *
+INSERT INTO asset_collections(id, name, symbol) VALUES (284, "Aave stable debt bearing DAI v2", "stableDebtDAI");
+*
+INSERT INTO asset_collections(id, name, symbol) VALUES (285, "Aave variable debt bearing DAI v2", "variableDebtDAI");
+*
+INSERT INTO asset_collections(id, name, symbol) VALUES (286, "Aave stable debt bearing USDC v2", "stableDebtUSDC");
+*
+INSERT INTO asset_collections(id, name, symbol) VALUES (287, "Aave variable debt bearing USDC v2", "variableDebtUSDC");
+*
+INSERT INTO asset_collections(id, name, symbol) VALUES (288, "Aave stable debt bearing USDT v2", "stableDebtUSDT");
+*
+INSERT INTO asset_collections(id, name, symbol) VALUES (289, "Aave variable debt bearing USDT v2", "variableDebtUSDT");
+*
+INSERT INTO asset_collections(id, name, symbol) VALUES (290, "Aave stable debt bearing WBTC v2", "stableDebtWBTC");
+*
+INSERT INTO asset_collections(id, name, symbol) VALUES (291, "Aave variable debt bearing WBTC v2", "variableDebtWBTC");
+*
+INSERT INTO asset_collections(id, name, symbol) VALUES (292, "Aave interest bearing WETH v2", "aWETH");
+*
+INSERT INTO asset_collections(id, name, symbol) VALUES (293, "Aave stable debt bearing WETH v2", "stableDebtWETH");
+*
+INSERT INTO asset_collections(id, name, symbol) VALUES (294, "Aave variable debt bearing WETH v2", "variableDebtWETH");
+*
+INSERT INTO asset_collections(id, name, symbol) VALUES (295, "Aave interest bearing AAVE v2", "aAAVE");
+*
+INSERT INTO asset_collections(id, name, symbol) VALUES (296, "Aave stable debt bearing AAVE v2", "stableDebtAAVE");
+*
+INSERT INTO asset_collections(id, name, symbol) VALUES (297, "Aave variable debt bearing AAVE v2", "variableDebtAAVE");
+*

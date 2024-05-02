@@ -70,3 +70,11 @@ INSERT INTO asset_collections(id, name, symbol) VALUES (296, "Aave stable debt b
 *
 INSERT INTO asset_collections(id, name, symbol) VALUES (297, "Aave variable debt bearing AAVE v2", "variableDebtAAVE");
 *
+INSERT INTO asset_collections(id, name, symbol) VALUES (298, "Safe Token", "SAFE");
+*
+INSERT INTO asset_collections(id, name, symbol) VALUES (299, "izumi Token", "iZi");
+*
+INSERT INTO asset_collections(id, name, symbol) VALUES (300, "Kyber Network Crystal v2", "KNC");
+*
+INSERT INTO asset_collections(id, name, symbol) VALUES (301, "PancakeSwap Token", "CAKE");
+*

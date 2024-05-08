@@ -238,6 +238,7 @@ class UpdateChecker:
             )
 
         return {
+            'identifier': self._parse_str(match.group(1), 'identifier', insert_text),
             'token_kind': self._parse_str(match.group(2), 'token_kind', insert_text),
             'chain': self._parse_optional_int(match.group(3), 'chain', insert_text),
             'address': self._parse_str(match.group(4), 'address', insert_text),
@@ -255,6 +256,7 @@ class UpdateChecker:
         """
         asset_data = self._parse_asset_data(insert_text, schema_version)
         evm_data = {
+            'identifier': None,
             'forked': None,
             'address': None,
             'decimals': None,
@@ -290,6 +292,9 @@ class UpdateChecker:
                     f'At asset DB update could not parse common asset '
                     f'details data out of {insert_text}',
                 )
+            assert self._parse_str(match.group(1), 'identifier', insert_text) == asset_data['identifier'], f'Identifiers of assets {asset_data["identifier"]} and common_asset_details {match.group(1)} are not same'
+            if asset_data['asset_type'] == 'C':
+                assert evm_data['identifier'] == asset_data['identifier'], f'Identifiers of assets {asset_data["identifier"]} and evm_token {evm_data["identifier"]} are not same'
             common_details = {
                 'symbol': self._parse_optional_str(match.group(2), 'symbol', insert_text),
                 'coingecko': self._parse_optional_str(match.group(3), 'coingecko', insert_text),
@@ -338,8 +343,10 @@ class UpdateChecker:
             assert asset_data.cryptocompare is not None or asset_data.coingecko is not None
             assert len(asset_data.name) != 0, f'Empty name in {asset_data}'
             assert len(asset_data.symbol) != 0
+            if asset_data.asset_type == 'C' and schema_version > 2:
+                assert asset_data.identifier == f'eip155:{asset_data.chain}/erc20:{asset_data.ethereum_address}', f'Mismatch in identifier, chain id, and/or address for {asset_data.identifier}'
 
-            # Check agains duplicate information. Before schema version 3 we couldn't have duplicates
+            # Check against duplicate information. Before schema version 3 we couldn't have duplicates
             if insert and schema_version == 2:
                 assert asset_data.cryptocompare not in seen_elements, f'Duplicate cryptocompare {asset_data.cryptocompare}'
                 assert asset_data.coingecko not in seen_elements, f'Duplicate coingecko {asset_data.coingecko}'

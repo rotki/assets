@@ -77,11 +77,12 @@ def test_asset_collections_updates(version, schema_versions):
         return
 
     with open(upgrade) as f:
-        for line in f.readlines():
-            if '*' in line:
-                continue
+        lines = [x.strip() for x in f.readlines() if x.strip() != '']
+        for action, full_insert in zip(*[iter(lines)] * 2, strict=True):
+            if '*' == full_insert:
+                full_insert = action
 
-            collections_match = assets_collection_re.match(line)
+            collections_match = assets_collection_re.match(full_insert)
             assert collections_match is not None
             groups = collections_match.groups()
             assert len(groups) == 3

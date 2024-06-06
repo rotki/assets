@@ -40,3 +40,27 @@ INSERT INTO assets(identifier, name, type) VALUES("eip155:10/erc20:0x73302b63Ad4
 *
 INSERT INTO assets(identifier, name, type) VALUES("eip155:10/erc20:0x704c4C9F0d29257E5b0E526b20b48EfFC8f758b2", "Farming of WETH v3", "C"); INSERT INTO evm_tokens(identifier, token_kind, chain, address, decimals, protocol) VALUES("eip155:10/erc20:0x704c4C9F0d29257E5b0E526b20b48EfFC8f758b2", "A", 10, "0x704c4C9F0d29257E5b0E526b20b48EfFC8f758b2", 18, "gearbox"); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES("eip155:10/erc20:0x704c4C9F0d29257E5b0E526b20b48EfFC8f758b2", "farmdWETHV3", "", "", NULL, 1712427929, NULL); INSERT INTO underlying_tokens_list(identifier, weight, parent_token_entry) VALUES("eip155:10/erc20:0x4200000000000000000000000000000000000006", "1", "eip155:10/erc20:0x704c4C9F0d29257E5b0E526b20b48EfFC8f758b2");
 *
+INSERT INTO assets(identifier, name, type) VALUES("DRIFT", "Drift Protocol", "Y"); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES("DRIFT", "DRIFT", "drift-protocol", "DRIFT", NULL, 1715861051, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES("BB", "BounceBit", "B"); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES("BB", "BB", "bouncebit", "BB", NULL, 1715605451, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES("NOT", "Notcoin", "W"); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES("NOT", "NOT", "notcoin", "NOT", NULL, 1715871725, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES("eip155:56/erc20:0x8789337a176e6e7223Ff115F1CD85C993D42C25c", "Copiosa Coin", "C"); INSERT INTO evm_tokens(identifier, token_kind, chain, address, decimals, protocol) VALUES("eip155:56/erc20:0x8789337a176e6e7223Ff115F1CD85C993D42C25c", "A", 56, "0x8789337a176e6e7223Ff115F1CD85C993D42C25c", 18, ""); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES("eip155:56/erc20:0x8789337a176e6e7223Ff115F1CD85C993D42C25c", "COP", "copiosa", "", NULL, 1717689522, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES("eip155:56/erc20:0xFAaA87943bFca6D97434bE3d26C589647FEA4375", "ACEToken", "C"); INSERT INTO evm_tokens(identifier, token_kind, chain, address, decimals, protocol) VALUES("eip155:56/erc20:0xFAaA87943bFca6D97434bE3d26C589647FEA4375", "A", 56, "0xFAaA87943bFca6D97434bE3d26C589647FEA4375", 18, ""); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES("eip155:56/erc20:0xFAaA87943bFca6D97434bE3d26C589647FEA4375", "ACE", "acetoken", "", NULL, 1717503566, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES("BFIC", "BFIC Coin", "B"); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES("BFIC", "BFIC", "bficoin", "BFIC", NULL, 1618884000, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES("MOTHER", "Mother Iggy", "Y"); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES("MOTHER", "MOTHER", "mother-iggy", "", NULL, 1716962460, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES("OPOS", "Only Possible On Solana", "Y"); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES("OPOS", "OPOS", "only-possible-on-solana", "", NULL, 1696557600, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES("PENG", "Peng", "Y"); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES("PENG", "PENG", "peng", "PENG", NULL, 1709773200, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES("TREMP", "Doland Tremp", "Y"); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES("TREMP", "TREMP", "donald-tremp", "TREMP", NULL, 1709982070, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES("ZEUS", "Zeus Network", "Y"); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES("ZEUS", "ZEUS", "zeus-network", "ZEUS", NULL, 1712297110, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES("NOS", "Nosana", "Y"); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES("NOS", "NOS", "nosana", "NOS", NULL, 1642381200, NULL);
+*

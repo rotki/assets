@@ -14,3 +14,5 @@ INSERT INTO asset_collections(id, name, symbol) VALUES (308, "CreoEngine", "CREO
 *
 INSERT INTO asset_collections(id, name, symbol) VALUES (309, "iMe Lab", "LIME");
 *
+INSERT INTO asset_collections(id, name, symbol) VALUES (310, "OmniCat", "OMNI");
+*

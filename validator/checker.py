@@ -62,6 +62,7 @@ CHAIN_ID_TO_NAME = {
     100: 'gnosis',
     137: 'matic',
     250: 'fantom',
+    324: 'zksync',
     42161: 'arbitrum',
     43114: 'avalanche',
     42220: 'celo',

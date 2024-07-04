@@ -58,3 +58,5 @@ INSERT INTO asset_collections(id, name, symbol) VALUES (330, "Cobak Token", "CBK
 *
 INSERT INTO asset_collections(id, name, symbol) VALUES (331, "MetaGaming Guild", "MGG");
 *
+INSERT INTO asset_collections(id, name, symbol) VALUES (332, "TRON", "TRX");
+*

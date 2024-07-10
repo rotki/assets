@@ -182,3 +182,5 @@ INSERT INTO multiasset_mappings(collection_id, asset) VALUES (332, "eip155:56/er
 *
 INSERT INTO multiasset_mappings(collection_id, asset) VALUES (332, "eip155:1/erc20:0xf230b790E05390FC8295F4d3F60332c93BEd42e2");
 *
+INSERT INTO multiasset_mappings(collection_id, asset) VALUES (38, "eip155:8453/erc20:0x4200000000000000000000000000000000000006");
+*

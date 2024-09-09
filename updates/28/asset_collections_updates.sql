@@ -4,3 +4,5 @@ INSERT INTO asset_collections(id, name, symbol) VALUES (333, "Extra Finance", "E
 *
 INSERT INTO asset_collections(id, name, symbol) VALUES (334, "Moonwell", "WELL");
 *
+INSERT INTO asset_collections(id, name, symbol) VALUES (333, "Monerium GBPe", "GBPe");
+*

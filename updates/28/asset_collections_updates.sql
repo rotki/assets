@@ -4,7 +4,7 @@ INSERT INTO asset_collections(id, name, symbol) VALUES (333, "Extra Finance", "E
 *
 INSERT INTO asset_collections(id, name, symbol) VALUES (334, "Moonwell", "WELL");
 *
-INSERT INTO asset_collections(id, name, symbol) VALUES (333, "Monerium GBPe", "GBPe");
+INSERT INTO asset_collections(id, name, symbol) VALUES (335, "Monerium GBPe", "GBPe");
 *
-INSERT INTO asset_collections(id, name, symbol) VALUES (334, "Coinbase Wrapped BTC", "cbBTC");
+INSERT INTO asset_collections(id, name, symbol) VALUES (336, "Coinbase Wrapped BTC", "cbBTC");
 *

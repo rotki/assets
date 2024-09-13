@@ -102,7 +102,7 @@
       "min_schema_version": 6
     },
     "28": {
-      "changes": 20,
+      "changes": 26,
       "max_schema_version": 9,
       "min_schema_version": 6
     },

@@ -8,3 +8,9 @@ INSERT INTO asset_collections(id, name, symbol) VALUES (335, "Monerium GBPe", "G
 *
 INSERT INTO asset_collections(id, name, symbol) VALUES (336, "Coinbase Wrapped BTC", "cbBTC");
 *
+INSERT INTO asset_collections(id, name, symbol) VALUES (337, "Glo Dollar", "USDGLO");
+*
+UPDATE asset_collections SET name='POL', symbol='POL' WHERE id=52;
+INSERT INTO asset_collections(id, name, symbol) VALUES (52, 'POL', 'POL');
+INSERT INTO asset_collections(id, name, symbol) VALUES (338, "CoW Protocol Token", "COW");
+*

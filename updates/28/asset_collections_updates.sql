@@ -14,5 +14,3 @@ UPDATE asset_collections SET name='POL', symbol='POL' WHERE id=52;
 INSERT INTO asset_collections(id, name, symbol) VALUES (52, 'POL', 'POL');
 INSERT INTO asset_collections(id, name, symbol) VALUES (338, "CoW Protocol Token", "COW");
 *
-INSERT INTO asset_collections(id, name, symbol) VALUES (339, "Super OETH", "superOETHb");
-*

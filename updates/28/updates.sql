@@ -72,3 +72,21 @@ INSERT INTO assets(identifier, name, type) VALUES("eip155:8453/erc20:0xCb327b99f
 *
 INSERT INTO assets(identifier, name, type) VALUES("eip155:100/erc20:0x5Cb9073902F2035222B9749F8fB0c9BFe5527108", "Monerium GBPe", "C"); INSERT INTO evm_tokens(identifier, token_kind, chain, address, decimals, protocol) VALUES("eip155:100/erc20:0x5Cb9073902F2035222B9749F8fB0c9BFe5527108", "A", 100, "0x5Cb9073902F2035222B9749F8fB0c9BFe5527108", 18, ""); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES("eip155:100/erc20:0x5Cb9073902F2035222B9749F8fB0c9BFe5527108", "GBPe", "monerium-gbp-emoney", "", NULL, 1669766840, NULL);
 *
+UPDATE common_asset_details SET cryptocompare="LINK" WHERE identifier="eip155:100/erc20:0xE2e73A1c69ecF83F464EFCE6A5be353a37cA09b2";
+*
+UPDATE common_asset_details SET cryptocompare="LINK" WHERE identifier="eip155:10/erc20:0x350a791Bfc2C21F9Ed5d10980Dad2e2638ffa7f6";
+*
+UPDATE common_asset_details SET cryptocompare="LINK" WHERE identifier="eip155:137/erc20:0x53E0bca35eC356BD5ddDFebbD1Fc0fD03FaBad39";
+*
+UPDATE common_asset_details SET cryptocompare="LINK" WHERE identifier="eip155:42161/erc20:0xf97f4df75117a78c1A5a0DBb814Af92458539FB4";
+*
+UPDATE common_asset_details SET cryptocompare="LINK" WHERE identifier="eip155:43114/erc20:0x5947BB275c521040051D82396192181b413227A3";
+*
+UPDATE common_asset_details SET cryptocompare="USDC" WHERE identifier="eip155:43114/erc20:0xB97EF9Ef8734C71904D8002F8b6Bc66Dd9c48a6E";
+*
+UPDATE common_asset_details SET cryptocompare="USDC" WHERE identifier="eip155:8453/erc20:0xd9aAEc86B65D86f6A7B5B1b0c42FFA531710b6CA";
+*
+UPDATE common_asset_details SET cryptocompare="USDC" WHERE identifier="eip155:534352/erc20:0x06eFdBFf2a14a7c8E15944D1F4A48F9F95F663A4";
+*
+DELETE FROM multiasset_mappings WHERE collection_id=155 AND asset="eip155:137/erc20:0x24834BBEc7E39ef42f4a75EAF8E5B6486d3F0e57";
+*

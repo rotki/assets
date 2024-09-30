@@ -49,6 +49,8 @@ def test_asset_collection_mappings(version, schema_versions):
         for line in f.readlines():
             if '*' in line:
                 continue
+            if line.startswith(('DELETE', 'UPDATE')):
+                continue
 
             mappings_match = multiasset_mappings_re.match(line)
             assert mappings_match is not None

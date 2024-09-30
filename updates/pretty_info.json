@@ -104,7 +104,7 @@
     "28": {
       "changes": 45,
       "max_schema_version": 9,
-      "min_schema_version": 6
+      "min_schema_version": 9
     },
     "3": {
       "changes": 64,

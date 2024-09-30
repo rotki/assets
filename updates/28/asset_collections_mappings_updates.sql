@@ -56,3 +56,5 @@ INSERT INTO multiasset_mappings(collection_id, asset) VALUES (338, "eip155:100/e
 *
 INSERT INTO multiasset_mappings(collection_id, asset) VALUES (84, "eip155:10/erc20:0x871f2F2ff935FD1eD867842FF2a7bfD051A5E527");
 *
+DELETE FROM multiasset_mappings WHERE collection_id=155 AND asset="eip155:137/erc20:0x24834BBEc7E39ef42f4a75EAF8E5B6486d3F0e57";
+*

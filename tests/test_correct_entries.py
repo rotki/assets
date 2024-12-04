@@ -40,7 +40,14 @@ def test_asset_collection_mappings(version, schema_versions):
     root_dir = Path(__file__).parents[1]
     upgrade = root_dir / 'updates' / str(version) / 'asset_collections_mappings_updates.sql'
     # keep this re in sync with the one in the main repo
-    multiasset_mappings_re = re.compile(r'.*INSERT +INTO +multiasset_mappings\( *collection_id *, *asset *\) *VALUES +\(([^,]*?), *"([^,]+?)"\).*?')  # noqa: E501
+    if version > 30:
+        pattern = '.*(?:INSERT OR REPLACE|INSERT OR IGNORE|INSERT) +INTO +multiasset_mappings\( *collection_id *, *asset *, *is_main_asset *\) *VALUES +\(([^,]*?), *"([^"]+?)" *, *([0-1])\).*?'  # noqa: E501
+        expected_groups = 3
+    else:
+        pattern = r'.*INSERT +INTO +multiasset_mappings\( *collection_id *, *asset *\) *VALUES +\(([^,]*?), *"([^,]+?)"\).*?'  # noqa: E501
+        expected_groups = 2
+
+    multiasset_mappings_re = re.compile(pattern)  # noqa: E501
 
     if upgrade.exists() is False:
         return
@@ -55,7 +62,7 @@ def test_asset_collection_mappings(version, schema_versions):
             mappings_match = multiasset_mappings_re.match(line)
             assert mappings_match is not None
             groups = mappings_match.groups()
-            assert len(groups) == 2
+            assert len(groups) == expected_groups
 
             lineid = int(groups[0])
             assert lineid >= 0

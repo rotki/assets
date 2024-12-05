@@ -8,8 +8,8 @@
     },
     "31": {
       "changes": 4,
-      "max_schema_version": 9,
-      "min_schema_version": 9
+      "max_schema_version": 10,
+      "min_schema_version": 10
     },
     "10": {
       "changes": 30,

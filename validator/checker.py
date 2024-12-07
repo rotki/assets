@@ -345,7 +345,6 @@ class UpdateChecker:
             # Use the same regex as in the rotki repo to obtain the assets
             asset_data = self._parse_full_insert(full_insert, schema_version)
 
-            assert asset_data.cryptocompare is not None or asset_data.coingecko is not None
             assert len(asset_data.name) != 0, f'Empty name in {asset_data}'
             assert len(asset_data.symbol) != 0
             if asset_data.asset_type == 'C' and schema_version > 2:

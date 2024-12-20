@@ -104,3 +104,5 @@ INSERT INTO assets(identifier, name, type) VALUES("FARTCOIN", "Fartcoin", "Y"); 
 *
 INSERT INTO assets(identifier, name, type) VALUES("PNUT", "Peanut the Squirrel", "Y"); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES("PNUT", "PNUT", "peanut-the-squirrel", "PNUT", NULL, NULL, NULL);
 *
+INSERT INTO assets(identifier, name, type) VALUES("eip155:8453/erc20:0xca73ed1815e5915489570014e024b7EbE65dE679", "Odos Token", "C"); INSERT INTO evm_tokens(identifier, token_kind, chain, address, decimals, protocol) VALUES("eip155:8453/erc20:0xca73ed1815e5915489570014e024b7EbE65dE679", "A", 8453, "0xca73ed1815e5915489570014e024b7EbE65dE679", 18, NULL); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES("eip155:8453/erc20:0xca73ed1815e5915489570014e024b7EbE65dE679", "ODOS", "odos", NULL, NULL, 1733096721, NULL);
+*

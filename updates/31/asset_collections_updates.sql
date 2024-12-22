@@ -8,3 +8,5 @@ INSERT INTO asset_collections(id, name, symbol) VALUES (345, "Spiko US T-Bills M
 *
 INSERT INTO asset_collections(id, name, symbol) VALUES (346, "BLOCKLORDS", "LRDS");
 *
+INSERT INTO asset_collections(id, name, symbol) VALUES (347, "Gitcoin", "GTC");
+*

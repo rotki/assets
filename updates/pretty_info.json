@@ -7,7 +7,7 @@
       "min_schema_version": 2
     },
     "31": {
-      "changes": 58,
+      "changes": 60,
       "max_schema_version": 9,
       "min_schema_version": 9
     },

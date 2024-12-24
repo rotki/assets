@@ -1,6 +1,11 @@
 {
-  "latest": 31,
+  "latest": 32,
   "updates": {
+    "32": {
+      "changes": 2,
+      "max_schema_version": 9,
+      "min_schema_version": 9
+    },
     "1": {
       "changes": 249,
       "max_schema_version": 2,

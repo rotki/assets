@@ -73,7 +73,10 @@ def test_asset_collections_updates(version, schema_versions):
     root_dir = Path(__file__).parents[1]
     upgrade = root_dir / 'updates' / str(version) / 'asset_collections_updates.sql'
     # keep this re in sync with the one in the main repo
-    assets_collection_re = re.compile(r'.*INSERT +INTO +asset_collections\( *id *, *name *, *symbol *\) *VALUES +\(([^,]*?),([^,]*?),([^,]*?)\).*?')  # noqa: E501
+    if has_main_asset := (version >= 33):
+        assets_collection_re = re.compile(r'.*INSERT +INTO +asset_collections\( *id *, *name *, *symbol *, *main_asset *\) *VALUES +\(([^,]*?),([^,]*?),([^,]*?),([^,]*?)\).*?')  # noqa: E501
+    else:
+        assets_collection_re = re.compile(r'.*INSERT +INTO +asset_collections\( *id *, *name *, *symbol *\) *VALUES +\(([^,]*?),([^,]*?),([^,]*?)\).*?')  # noqa: E501
 
     if upgrade.exists() is False:
         return
@@ -87,9 +90,11 @@ def test_asset_collections_updates(version, schema_versions):
             collections_match = assets_collection_re.match(full_insert)
             assert collections_match is not None
             groups = collections_match.groups()
-            assert len(groups) == 3
+            assert len(groups) == 4 if has_main_asset else 3
 
             lineid = int(groups[0])
             assert lineid >= 0
             assert isinstance(groups[1], str)  # collection name
             assert isinstance(groups[2], str)  # collection symbol
+            if has_main_asset:
+                assert isinstance(groups[3], str)  # collection main_asset

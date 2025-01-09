@@ -1,2 +1,4 @@
+INSERT INTO assets(identifier, name, type) VALUES("BBSOL", "Bybit Staked SOL", "Y"); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES("BBSOL", "BBSOL", "bybit-staked-sol", "BBSOL", NULL, 1724275638, NULL);
+*
 INSERT INTO assets(identifier, name, type) VALUES("eip155:1/erc20:0x3c3a81e81dc49A522A592e7622A7E711c06bf354", "Mantle", "C"); INSERT INTO evm_tokens(identifier, token_kind, chain, address, decimals, protocol) VALUES("eip155:1/erc20:0x3c3a81e81dc49A522A592e7622A7E711c06bf354", "A", 1, "0x3c3a81e81dc49A522A592e7622A7E711c06bf354", 18, NULL); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES("eip155:1/erc20:0x3c3a81e81dc49A522A592e7622A7E711c06bf354", "MNT", "mantle", "MANTLE", NULL, 1687252995, NULL);
 *

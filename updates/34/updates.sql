@@ -1,0 +1,10 @@
+INSERT INTO assets(identifier, name, type) VALUES("SONIC", "Sonic", "B"); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES("SONIC", "S", "sonic-3", "S", NULL, 1701432000, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES("CORE-2", "Core", "B"); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES("CORE-2", "CORE", "coredaoorg", "CORE", NULL, 1693570800, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES("eip155:8453/erc20:0x4F9Fd6Be4a90f2620860d680c0d4d5Fb53d1A825", "aixbt by Virtuals", "C"); INSERT INTO evm_tokens(identifier, token_kind, chain, address, decimals, protocol) VALUES("eip155:8453/erc20:0x4F9Fd6Be4a90f2620860d680c0d4d5Fb53d1A825", "A", 8453, "0x4F9Fd6Be4a90f2620860d680c0d4d5Fb53d1A825", 18, NULL); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES("eip155:8453/erc20:0x4F9Fd6Be4a90f2620860d680c0d4d5Fb53d1A825", "AIXBT", "aixbt", "AIXBT", NULL, 1730525195, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES("AI16Z", "ai16z", "Y"); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES("AI16Z", "AI16Z", "ai16z", "AI16Z", NULL, 1729820679, NULL);
+*
+UPDATE common_asset_details SET swapped_for="SONIC" WHERE identifier="eip155:137/erc20:0xC9c1c1c20B3658F8787CC2FD702267791f224Ce1";
+INSERT INTO assets(identifier, name, type) VALUES("eip155:137/erc20:0xC9c1c1c20B3658F8787CC2FD702267791f224Ce1", "Fantom", "C"); INSERT INTO evm_tokens(identifier, token_kind, chain, address, decimals, protocol) VALUES("eip155:137/erc20:0xC9c1c1c20B3658F8787CC2FD702267791f224Ce1", "A", 137, "0xC9c1c1c20B3658F8787CC2FD702267791f224Ce1", 18, NULL); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES("eip155:137/erc20:0xC9c1c1c20B3658F8787CC2FD702267791f224Ce1", "FTM", "fantom", "FTM", NULL, 1528934400, "SONIC");

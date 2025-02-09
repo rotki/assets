@@ -141,13 +141,13 @@ class UpdateChecker:
             10: REGEX_ASSETS_V3,
             11: REGEX_ASSETS_V3,
         }
-        self.string_re = re.compile(r'.*["\'](.*?)["\'].*')
+        self.string_re = re.compile(r'.*([\'"])(.*?)\1.*')
         self.test_version = 2
 
     def _parse_value(self, value: str) -> Optional[Union[str, int]]:
         match = self.string_re.match(value)
         if match is not None:
-            return match.group(1)
+            return match.group(2)
 
         value = value.strip()
         if value == 'NULL':

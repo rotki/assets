@@ -40,7 +40,10 @@ def test_asset_collection_mappings(version, schema_versions):
     root_dir = Path(__file__).parents[1]
     upgrade = root_dir / 'updates' / str(version) / 'asset_collections_mappings_updates.sql'
     # keep this re in sync with the one in the main repo
-    multiasset_mappings_re = re.compile(r'.*INSERT +INTO +multiasset_mappings\( *collection_id *, *asset *\) *VALUES +\(([^,]*?), *"([^,]+?)"\).*?')  # noqa: E501
+    if version >= 35:
+        multiasset_mappings_re = re.compile(r".*INSERT +INTO +multiasset_mappings\( *collection_id *, *asset *\) *VALUES +\(([^,]*?), *'([^,]+?)'\).*?")  # noqa: E501
+    else:
+        multiasset_mappings_re = re.compile(r'.*INSERT +INTO +multiasset_mappings\( *collection_id *, *asset *\) *VALUES +\(([^,]*?), *"([^,]+?)"\).*?')  # noqa: E501
 
     if upgrade.exists() is False:
         return

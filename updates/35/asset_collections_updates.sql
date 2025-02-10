@@ -10,3 +10,7 @@ INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (353, 'Polyhe
 *
 INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (354, 'LIF3', 'LIF3', 'eip155:1/erc20:0x7138Eb0d563f3F6722500936A11DcAe99D738A2c');
 *
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (355, 'SynFutures', 'F', 'eip155:1/erc20:0x6e15A54B5EcAc17e58daDedDbe8506a7560252F9');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (356, 'Wrapped TON Coin', 'TONCOIN', 'eip155:1/erc20:0x582d872A1B094FC48F5DE31D3B73F2D9bE47def1');
+*

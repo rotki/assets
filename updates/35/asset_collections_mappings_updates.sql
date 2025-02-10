@@ -31,3 +31,11 @@ INSERT INTO multiasset_mappings(collection_id, asset) VALUES (354, 'eip155:1/erc
 INSERT INTO multiasset_mappings(collection_id, asset) VALUES (354, 'eip155:56/erc20:0x336f374198c872Ba760e85af9c6331C3c5A535d3');
 *
 INSERT INTO multiasset_mappings(collection_id, asset) VALUES (354, 'eip155:137/erc20:0x110B25D2B21eE73eB401F3aE7833f7072912A0Bf');
+*
+INSERT INTO multiasset_mappings(collection_id, asset) VALUES (355, 'eip155:1/erc20:0x6e15A54B5EcAc17e58daDedDbe8506a7560252F9');
+*
+INSERT INTO multiasset_mappings(collection_id, asset) VALUES (355, 'eip155:8453/erc20:0x2C24497D4086490e7EaD87CC12597fb50c2E6eD6');
+*
+INSERT INTO multiasset_mappings(collection_id, asset) VALUES (356, 'eip155:1/erc20:0x582d872A1B094FC48F5DE31D3B73F2D9bE47def1');
+*
+INSERT INTO multiasset_mappings(collection_id, asset) VALUES (356, 'eip155:56/erc20:0x76A797A59Ba2C17726896976B7B3747BfD1d220f');

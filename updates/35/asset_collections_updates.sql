@@ -8,3 +8,5 @@ INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (352, 'Animec
 *
 INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (353, 'Polyhedra Network', 'ZKJ', 'eip155:1/erc20:0xC71B5F631354BE6853eFe9C3Ab6b9590F8302e81');
 *
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (354, 'LIF3', 'LIF3', 'eip155:1/erc20:0x7138Eb0d563f3F6722500936A11DcAe99D738A2c');
+*

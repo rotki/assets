@@ -14,3 +14,17 @@ INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (355, 'SynFut
 *
 INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (356, 'Wrapped TON Coin', 'TONCOIN', 'eip155:1/erc20:0x582d872A1B094FC48F5DE31D3B73F2D9bE47def1');
 *
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (357, 'Lido DAO Token', 'LDO', 'eip155:1/erc20:0x5A98FcBEA516Cf06857215779Fd812CA3beF1B32');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (358, 'Avail', 'AVAIL', 'eip155:1/erc20:0xEeB4d8400AEefafC1B2953e0094134A887C76Bd8');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (358, 'Bella', 'BEL', 'eip155:1/erc20:0xA91ac63D040dEB1b7A5E4d4134aD23eb0ba07e14');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (360, 'BRZ Token', 'BRZ', 'eip155:1/erc20:0x01d33FD36ec67c6Ada32cf36b31e88EE190B1839');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (361, 'Capsule Coin', 'CAPS', 'eip155:1/erc20:0x03Be5C903c727Ee2C8C4e9bc0AcC860Cca4715e2');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (362, 'CARV', 'CARV', 'eip155:1/erc20:0xc08Cd26474722cE93F4D0c34D16201461c10AA8C');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (363, 'choise.com Token', 'CHO', 'eip155:1/erc20:0xBBa39Fd2935d5769116ce38d46a71bde9cf03099');
+*

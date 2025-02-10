@@ -28,3 +28,23 @@ INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (362, 'CARV',
 *
 INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (363, 'choise.com Token', 'CHO', 'eip155:1/erc20:0xBBa39Fd2935d5769116ce38d46a71bde9cf03099');
 *
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (364, 'CosplayToken', 'COT', 'eip155:1/erc20:0x5CAc718A3AE330d361e39244BF9e67AB17514CE8');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (365, 'DAR Open Network', 'D', 'eip155:1/erc20:0x33b481CbBF3c24f2B3184Ee7Cb02dAAD1C4F49A8');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (366, 'Department Of Government Efficiency', 'DOGE', 'eip155:1/erc20:0x1121AcC14c63f3C872BFcA497d10926A6098AAc5');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (367, 'Eigenpie', 'EGP', 'eip155:42161/erc20:0x7E7a7C916c19a45769f6BDAF91087f93c6C12F78');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (368, 'Everyworld', 'EVERY', 'eip155:1/erc20:0x9aFa9999e45484Adf5d8EED8D9Dfe0693BACd838');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (369, 'EYWA', 'EYWA', 'eip155:1/erc20:0x8cb8C4263EB26b2349d74ea2cB1B27bc40709e12');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (370, 'FARCANA', 'FAR', 'eip155:1/erc20:0xf9Fa60EF4F23F00CCE403cc4d2c11Baf4880A0d6');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (371, 'Fluid', 'FLUID', 'eip155:1/erc20:0x6f40d4A6237C257fff2dB00FA0510DeEECd303eb');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (372, 'Fame AI', 'FMC', 'eip155:1/erc20:0x6bfDB6f4E65Ead27118592A41eB927cEa6956198');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (373, 'GALAXIS Token', 'GALAXIS', 'eip155:1/erc20:0x423071774C43c0Aaf4210b439E7CDA8c797e2F26');
+*

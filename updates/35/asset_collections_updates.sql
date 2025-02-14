@@ -84,3 +84,17 @@ INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (390, 'OMNIA 
 *
 INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (391, 'Orderly Network', 'ORDER', 'eip155:1/erc20:0xABD4C63d2616A5201454168269031355f4764337');
 *
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (392, 'Pentagon', 'PEN', 'eip155:1/erc20:0x5Ee3188A3f8aDee1D736EdD4AE85000105C88f66');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (393, 'RWA Inc', 'RWA', 'eip155:8453/erc20:0xE2B1dc2D4A3b4E59FDF0c47B71A7A86391a8B35a');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (394, 'Phavercoin', 'SOCIAL', 'eip155:1/erc20:0xD3C68968137317a57a9bAbeacC7707Ec433548B4');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (395, 'StarHeroes', 'STAR', 'eip155:1/erc20:0xB299751B088336E165dA313c33e3195B8c6663A6');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (396, 'Unio Coin', 'UNIO', 'eip155:1/erc20:0x01aaC2b594F7bdBeC740F0F1AA22910EbB4B74Ab');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (397, 'VANRY', 'VANRY', 'eip155:1/erc20:0x8DE5B80a0C1B02Fe4976851D030B36122dbb8624');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (398, 'XYRO', 'XYRO', 'eip155:1/erc20:0x4eDDb15A0abfa2c349e8065aF9214E942d9A6D36');
+*

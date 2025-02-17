@@ -54,37 +54,39 @@ INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (375, 'HarryP
 *
 INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (376, 'Ithaca Protocol', 'ITHACA', 'eip155:1/erc20:0x1095AE55B62174D9EA3Bc6A4136acacaD461d7ce');
 *
-INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (378, 'KmonCoin', 'KMON', 'eip155:1/erc20:0xc4170fd71ECed3C80baDca77f4e12E8AaC1e3436');
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (377, 'KmonCoin', 'KMON', 'eip155:1/erc20:0xc4170fd71ECed3C80baDca77f4e12E8AaC1e3436');
 *
-INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (379, 'LayerAI Token', 'LAI', 'eip155:1/erc20:0x168e209D7b2F58f1f24b8Ae7B7d35E662bBF11Cc');
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (378, 'LayerAI Token', 'LAI', 'eip155:1/erc20:0x168e209D7b2F58f1f24b8Ae7B7d35E662bBF11Cc');
 *
-INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (380, 'Axelar Wrapped LAVA', 'LAVA', 'eip155:42161/erc20:0x11e969e9B3f89cB16D686a03Cd8508C9fC0361AF');
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (379, 'Axelar Wrapped LAVA', 'LAVA', 'eip155:42161/erc20:0x11e969e9B3f89cB16D686a03Cd8508C9fC0361AF');
 *
-INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (381, 'LogX Network', 'LOGX', 'eip155:1/erc20:0xa3F4341C3fEf5963AB04135D2014AC7d68222E19');
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (380, 'LogX Network', 'LOGX', 'eip155:1/erc20:0xa3F4341C3fEf5963AB04135D2014AC7d68222E19');
 *
-INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (382, 'Lumia Token', 'LUMIA', 'eip155:1/erc20:0xD9343a049D5DBd89CD19DC6BcA8c48fB3a0a42a7');
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (381, 'Lumia Token', 'LUMIA', 'eip155:1/erc20:0xD9343a049D5DBd89CD19DC6BcA8c48fB3a0a42a7');
 *
-INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (383, 'MixMarvel Token', 'MIX', 'eip155:1/erc20:0x5d285F735998F36631F678FF41fb56A10A4d0429');
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (382, 'MixMarvel Token', 'MIX', 'eip155:1/erc20:0x5d285F735998F36631F678FF41fb56A10A4d0429');
 *
-INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (384, 'Planet Mojo', 'MOJO', 'eip155:1/erc20:0xeD2d13A70acbD61074fC56bd0d0845e35f793e5E');
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (383, 'Planet Mojo', 'MOJO', 'eip155:1/erc20:0xeD2d13A70acbD61074fC56bd0d0845e35f793e5E');
 *
-INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (385, 'Orbiter Token', 'OBT', 'eip155:42161/erc20:0x1CD9a56c8C2eA913c70319A44Da75e99255aa46f');
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (384, 'Orbiter Token', 'OBT', 'eip155:42161/erc20:0x1CD9a56c8C2eA913c70319A44Da75e99255aa46f');
 *
-INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (386, 'OpenBlox Token', 'OBX', 'eip155:1/erc20:0x188fb5f5Ae5BBE4154d5778F2bbb2Fb985c94d25');
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (385, 'OpenBlox Token', 'OBX', 'eip155:1/erc20:0x188fb5f5Ae5BBE4154d5778F2bbb2Fb985c94d25');
 *
-INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (387, 'OMNIA Protocol', 'OMNIA', 'eip155:1/erc20:0x2E7e487D84B5BAbA5878A9833fb394bC89633Fd7');
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (386, 'OMNIA Protocol', 'OMNIA', 'eip155:1/erc20:0x2E7e487D84B5BAbA5878A9833fb394bC89633Fd7');
 *
-INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (388, 'Orderly Network', 'ORDER', 'eip155:1/erc20:0xABD4C63d2616A5201454168269031355f4764337');
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (387, 'Orderly Network', 'ORDER', 'eip155:1/erc20:0xABD4C63d2616A5201454168269031355f4764337');
 *
-INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (389, 'Pentagon', 'PEN', 'eip155:1/erc20:0x5Ee3188A3f8aDee1D736EdD4AE85000105C88f66');
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (388, 'Pentagon', 'PEN', 'eip155:1/erc20:0x5Ee3188A3f8aDee1D736EdD4AE85000105C88f66');
 *
-INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (390, 'RWA Inc', 'RWA', 'eip155:8453/erc20:0xE2B1dc2D4A3b4E59FDF0c47B71A7A86391a8B35a');
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (389, 'RWA Inc', 'RWA', 'eip155:8453/erc20:0xE2B1dc2D4A3b4E59FDF0c47B71A7A86391a8B35a');
 *
-INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (391, 'Phavercoin', 'SOCIAL', 'eip155:1/erc20:0xD3C68968137317a57a9bAbeacC7707Ec433548B4');
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (390, 'Phavercoin', 'SOCIAL', 'eip155:1/erc20:0xD3C68968137317a57a9bAbeacC7707Ec433548B4');
 *
-INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (392, 'StarHeroes', 'STAR', 'eip155:1/erc20:0xB299751B088336E165dA313c33e3195B8c6663A6');
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (391, 'StarHeroes', 'STAR', 'eip155:1/erc20:0xB299751B088336E165dA313c33e3195B8c6663A6');
 *
-INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (393, 'Unio Coin', 'UNIO', 'eip155:1/erc20:0x01aaC2b594F7bdBeC740F0F1AA22910EbB4B74Ab');
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (392, 'Unio Coin', 'UNIO', 'eip155:1/erc20:0x01aaC2b594F7bdBeC740F0F1AA22910EbB4B74Ab');
 *
-INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (394, 'XYRO', 'XYRO', 'eip155:1/erc20:0x4eDDb15A0abfa2c349e8065aF9214E942d9A6D36');
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (393, 'XYRO', 'XYRO', 'eip155:1/erc20:0x4eDDb15A0abfa2c349e8065aF9214E942d9A6D36');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (394, 'Shieldeum', 'SDM', 'eip155:56/erc20:0x516f8a1fB458EBdcFd0F544fF85c69C1c0Ebc31d');
 *

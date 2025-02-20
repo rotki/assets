@@ -102,3 +102,5 @@ INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (435, 'Tornad
 *
 INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (436, 'Rivalz Token', 'RIZ', 'eip155:1/erc20:0x058d411ab9911F90c74f471bDC9d2Bb4Cf9B309C');
 *
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (437, 'Derive', 'DRV', 'eip155:1/erc20:0xB1D1eae60EEA9525032a6DCb4c1CE336a1dE71BE');
+*

@@ -90,3 +90,17 @@ INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (393, 'XYRO',
 *
 INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (394, 'Shieldeum', 'SDM', 'eip155:56/erc20:0x516f8a1fB458EBdcFd0F544fF85c69C1c0Ebc31d');
 *
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (431, 'SOVRUN', 'SOVRN', 'eip155:1/erc20:0x031B8d752d73d7Fe9678ACEf26e818280D0646b4');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (432, 'AVL', 'AVL', 'eip155:1/erc20:0x5c8D0C48810FD37A0A824D074ee290E64f7A8Fa2');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (433, 'BENJI', 'BENJI', 'eip155:1/erc20:0xCA5b0AE1d104030a9B8F879523508EFd86c14483');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (434, 'WorldMobileToken', 'WMTX', 'eip155:1/erc20:0xDBB5Cf12408a3Ac17d668037Ce289f9eA75439D7');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (435, 'TornadoCash', 'TORN', 'eip155:1/erc20:0x77777FeDdddFfC19Ff86DB637967013e6C6A116C');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (436, 'Rivalz Token', 'RIZ', 'eip155:1/erc20:0x058d411ab9911F90c74f471bDC9d2Bb4Cf9B309C');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (437, 'Derive', 'DRV', 'eip155:1/erc20:0xB1D1eae60EEA9525032a6DCb4c1CE336a1dE71BE');
+*

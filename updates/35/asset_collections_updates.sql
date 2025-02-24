@@ -230,3 +230,5 @@ INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (463, 'Rivalz
 *
 INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (464, 'Derive', 'DRV', 'eip155:1/erc20:0xB1D1eae60EEA9525032a6DCb4c1CE336a1dE71BE');
 *
+UPDATE asset_collections SET name='Everclear', symbol='CLEAR', main_asset='eip155:1/erc20:0x58b9cB810A68a7f3e1E4f8Cb45D1B9B3c79705E8' WHERE id=247;
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (247, 'Everclear', 'CLEAR', 'eip155:1/erc20:0x58b9cB810A68a7f3e1E4f8Cb45D1B9B3c79705E8');

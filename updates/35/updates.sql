@@ -654,7 +654,7 @@ INSERT INTO assets(identifier, name, type) VALUES('STRX', 'Staked TRX', 'P'); IN
 *
 INSERT INTO assets(identifier, name, type) VALUES('SUNWUKONG', 'SunWukong', 'P'); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('SUNWUKONG', 'SUNWUKONG', 'sunwukong', 'SUNWUKONG', NULL, 1723770573, NULL);
 *
-INSERT INTO assets(identifier, name, type) VALUES('ACT', 'Act I The AI Prophecy', 'Y'); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('ACT', 'ACT', 'act-i-the-ai-prophecy', 'ACT', NULL, 1729337229, NULL);
+INSERT INTO assets(identifier, name, type) VALUES('ACTSOL', 'Act I The AI Prophecy', 'Y'); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('ACTSOL', 'ACT', 'act-i-the-ai-prophecy', 'ACT', NULL, 1729337229, NULL);
 *
 INSERT INTO assets(identifier, name, type) VALUES('DEGENAI', 'Degen Spartan AI', 'Y'); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('DEGENAI', 'DEGENAI', 'degen-spartan-ai', 'DEGENAI', NULL, 1729478112, NULL);
 *

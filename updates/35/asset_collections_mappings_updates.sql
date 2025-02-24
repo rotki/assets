@@ -680,3 +680,7 @@ INSERT INTO multiasset_mappings(collection_id, asset) VALUES (464, 'eip155:8453/
 *
 INSERT INTO multiasset_mappings(collection_id, asset) VALUES (246, 'BONK');
 *
+DELETE FROM multiasset_mappings WHERE asset='eip155:1/erc20:0xFE67A4450907459c3e1FFf623aA927dD4e28c67a' AND collection_id='247';
+*
+INSERT INTO multiasset_mappings(collection_id, asset) VALUES (247, 'eip155:1/erc20:0x58b9cB810A68a7f3e1E4f8Cb45D1B9B3c79705E8');
+*

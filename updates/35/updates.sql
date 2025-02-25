@@ -64,6 +64,14 @@ INSERT INTO assets(identifier, name, type) VALUES("eip155:56/erc20:0x0c4ac8952c2
 *
 INSERT INTO assets(identifier, name, type) VALUES("eip155:56/erc20:0x76B560b628F74BF192bE09F0449abef8e456BE79", "BabyCate", "C"); INSERT INTO evm_tokens(identifier, token_kind, chain, address, decimals, protocol) VALUES("eip155:56/erc20:0x76B560b628F74BF192bE09F0449abef8e456BE79", "A", 56, "0x76B560b628F74BF192bE09F0449abef8e456BE79", 9, NULL); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES("eip155:56/erc20:0x76B560b628F74BF192bE09F0449abef8e456BE79", "BABYCATE", "babycate", "BABYCATE", NULL, 1726557366, NULL);
 *
+INSERT INTO assets(identifier, name, type) VALUES("eip155:1/erc20:0xfcaF0e4498E78d65526a507360F755178b804Ba8", "NicCageWaluigiElmo42069Inu", "C"); INSERT INTO evm_tokens(identifier, token_kind, chain, address, decimals, protocol) VALUES("eip155:1/erc20:0xfcaF0e4498E78d65526a507360F755178b804Ba8", "A", 1, "0xfcaF0e4498E78d65526a507360F755178b804Ba8", 18, NULL); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES("eip155:1/erc20:0xfcaF0e4498E78d65526a507360F755178b804Ba8", "SHIB", "niccagewaluigielmo42069inu", "", NULL, 1691186315, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES('SYDNEY', 'Sydney', 'Y'); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('SYDNEY', 'SYDNEY', 'sydney', '', NULL, 1729135196, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES('SBTF', 'SunButterfly', 'P'); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('SBTF', 'SBTF', '', '', NULL, 1724218260, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES('TRUMPWIFHAT', 'Trump WIf Hat', 'P'); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('TRUMPWIFHAT', 'TRUMPWIFHAT', '', '', NULL, 1709426445, NULL);
+*
 INSERT INTO assets(identifier, name, type) VALUES('MINI', 'Mini', 'Y'); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('MINI', 'MINI', 'minimini', '', NULL, 1714438658, NULL);
 *
 INSERT INTO assets(identifier, name, type) VALUES('BAZINGA', 'Bazinga', 'Y'); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('BAZINGA', 'BAZINGA', 'bazinga-2', '', NULL, 1714438658, NULL);

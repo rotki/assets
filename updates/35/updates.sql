@@ -534,6 +534,98 @@ INSERT INTO assets(identifier, name, type) VALUES('eip155:1/erc20:0xde6AcEAF7F2d
 *
 INSERT INTO assets(identifier, name, type) VALUES('JELLYJELLY', 'Jelly-My-Jelly', 'Y'); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('JELLYJELLY', 'JELLYJELLY', 'jelly-my-jelly', 'JELLYJELLY', NULL, 1738193350, NULL);
 *
+INSERT INTO assets(identifier, name, type) VALUES('HODLSOL', 'HODL (HODL)', 'Y'); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('HODLSOL', 'HODL', '', '', NULL, 1706734577, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES('NVDA', 'NVIDIA', 'Y'); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('NVDA', 'NVDA', '', '', NULL, 1708545623, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES('eip155:1/erc20:0x903ff0ba636E32De1767A4B5eEb55c155763D8B7', 'None Trading', 'C'); INSERT INTO evm_tokens(identifier, token_kind, chain, address, decimals, protocol) VALUES('eip155:1/erc20:0x903ff0ba636E32De1767A4B5eEb55c155763D8B7', 'A', 1, '0x903ff0ba636E32De1767A4B5eEb55c155763D8B7', 18, NULL); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('eip155:1/erc20:0x903ff0ba636E32De1767A4B5eEb55c155763D8B7', 'NONE', '', 'NONE', NULL, 1690834487, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES('eip155:8453/erc20:0x7F12d13B34F5F4f0a9449c16Bcd42f0da47AF200', 'Normie', 'C'); INSERT INTO evm_tokens(identifier, token_kind, chain, address, decimals, protocol) VALUES('eip155:8453/erc20:0x7F12d13B34F5F4f0a9449c16Bcd42f0da47AF200', 'A', 8453, '0x7F12d13B34F5F4f0a9449c16Bcd42f0da47AF200', 9, NULL); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('eip155:8453/erc20:0x7F12d13B34F5F4f0a9449c16Bcd42f0da47AF200', 'NORMIE', '', '', NULL, 1709763017, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES('eip155:8453/erc20:0x47b464eDB8Dc9BC67b5CD4C9310BB87b773845bD', 'Normie', 'C'); INSERT INTO evm_tokens(identifier, token_kind, chain, address, decimals, protocol) VALUES('eip155:8453/erc20:0x47b464eDB8Dc9BC67b5CD4C9310BB87b773845bD', 'A', 8453, '0x47b464eDB8Dc9BC67b5CD4C9310BB87b773845bD', 9, NULL); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('eip155:8453/erc20:0x47b464eDB8Dc9BC67b5CD4C9310BB87b773845bD', 'NORMIE', 'normie-2', '', NULL, 1717696661, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES('NOHAT', 'DogWifNoHat', 'Y'); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('NOHAT', 'NOHAT', 'dogwifnohat', 'NOHAT', NULL, 1715321897, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES('eip155:8453/erc20:0x13741C5dF9aB03E7Aa9Fb3Bf1f714551dD5A5F8a', 'Noggles', 'C'); INSERT INTO evm_tokens(identifier, token_kind, chain, address, decimals, protocol) VALUES('eip155:8453/erc20:0x13741C5dF9aB03E7Aa9Fb3Bf1f714551dD5A5F8a', 'A', 8453, '0x13741C5dF9aB03E7Aa9Fb3Bf1f714551dD5A5F8a', 18, NULL); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('eip155:8453/erc20:0x13741C5dF9aB03E7Aa9Fb3Bf1f714551dD5A5F8a', 'NOGS', 'noggles', 'NOGS', NULL, 1692642385, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES('NIHAO', 'NIHAO', 'P'); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('NIHAO', 'NIHAO', '', '', NULL, 1724188486, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES('NIGI', 'Nigi', 'Y'); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('NIGI', 'NIGI', '', 'NIGI', NULL, 1716007620, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES('eip155:137/erc20:0xD33fd95fC17bc808b35e98458e078330F35Dbfa3', 'Midnight', 'C'); INSERT INTO evm_tokens(identifier, token_kind, chain, address, decimals, protocol) VALUES('eip155:137/erc20:0xD33fd95fC17bc808b35e98458e078330F35Dbfa3', 'A', 137, '0xD33fd95fC17bc808b35e98458e078330F35Dbfa3', 9, NULL); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('eip155:137/erc20:0xD33fd95fC17bc808b35e98458e078330F35Dbfa3', 'NIGHT', 'midnight', '', NULL, 1716243562, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES('eip155:1/erc20:0x12652C6d93FDB6F4f37d48A8687783C782BB0d10', 'Entangle', 'C'); INSERT INTO evm_tokens(identifier, token_kind, chain, address, decimals, protocol) VALUES('eip155:1/erc20:0x12652C6d93FDB6F4f37d48A8687783C782BB0d10', 'A', 1, '0x12652C6d93FDB6F4f37d48A8687783C782BB0d10', 18, NULL); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('eip155:1/erc20:0x12652C6d93FDB6F4f37d48A8687783C782BB0d10', 'NGL', 'entangle', 'NGL', NULL, 1709846639, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES('eip155:1/erc20:0x3D1C949a761C11E4CC50c3aE6BdB0F24fD7A39DA', 'Neurahub', 'C'); INSERT INTO evm_tokens(identifier, token_kind, chain, address, decimals, protocol) VALUES('eip155:1/erc20:0x3D1C949a761C11E4CC50c3aE6BdB0F24fD7A39DA', 'A', 1, '0x3D1C949a761C11E4CC50c3aE6BdB0F24fD7A39DA', 18, NULL); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('eip155:1/erc20:0x3D1C949a761C11E4CC50c3aE6BdB0F24fD7A39DA', 'NEURA', 'neurahub', 'NEURA', NULL, 1711221635, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES('eip155:1/erc20:0x0B9aE6b1D4f0EEeD904D1CEF68b9bd47499f3fFF', 'IlluminatiCoin', 'C'); INSERT INTO evm_tokens(identifier, token_kind, chain, address, decimals, protocol) VALUES('eip155:1/erc20:0x0B9aE6b1D4f0EEeD904D1CEF68b9bd47499f3fFF', 'A', 1, '0x0B9aE6b1D4f0EEeD904D1CEF68b9bd47499f3fFF', 18, NULL); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('eip155:1/erc20:0x0B9aE6b1D4f0EEeD904D1CEF68b9bd47499f3fFF', 'NATI', 'illuminaticoin', 'NATI', NULL, 1697246291, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES('$NAP', 'SNAP', 'Y'); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('$NAP', '$NAP', 'snap-kero', '', NULL, 1710538572, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES('NAMI', 'Thief Cat', 'Y'); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('NAMI', 'NAMI', 'thief', '', NULL, 1715927079, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES('MWD', 'MEW WOOF DAO', 'P'); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('MWD', 'MWD', 'mew-woof-dao', 'MWD', NULL, 1724046429, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES('eip155:1/erc20:0xf827f77422d6DFf7b4E1bc87fec88606082B2199', 'Concerning', 'C'); INSERT INTO evm_tokens(identifier, token_kind, chain, address, decimals, protocol) VALUES('eip155:1/erc20:0xf827f77422d6DFf7b4E1bc87fec88606082B2199', 'A', 1, '0xf827f77422d6DFf7b4E1bc87fec88606082B2199', 18, NULL); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('eip155:1/erc20:0xf827f77422d6DFf7b4E1bc87fec88606082B2199', 'MuskX', '', '', NULL, 1702988723, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES('eip155:1/erc20:0x620aA20875Ec1144126ea47FB27ecfe6e10d0c56', 'MOYA', 'C'); INSERT INTO evm_tokens(identifier, token_kind, chain, address, decimals, protocol) VALUES('eip155:1/erc20:0x620aA20875Ec1144126ea47FB27ecfe6e10d0c56', 'A', 1, '0x620aA20875Ec1144126ea47FB27ecfe6e10d0c56', 18, NULL); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('eip155:1/erc20:0x620aA20875Ec1144126ea47FB27ecfe6e10d0c56', 'MOYA', '', 'MOYA', NULL, 1722420671, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES('MOTH', 'MOTH', 'Y'); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('MOTH', 'MØTH', 'moth', '', NULL, 1717089784, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES('eip155:1/erc20:0xAb85fc558d722A2b7c040FfB77dB676Bd9e7D322', 'MOROS NET', 'C'); INSERT INTO evm_tokens(identifier, token_kind, chain, address, decimals, protocol) VALUES('eip155:1/erc20:0xAb85fc558d722A2b7c040FfB77dB676Bd9e7D322', 'A', 1, '0xAb85fc558d722A2b7c040FfB77dB676Bd9e7D322', 18, NULL); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('eip155:1/erc20:0xAb85fc558d722A2b7c040FfB77dB676Bd9e7D322', 'MOROS', 'moros-net', 'MOROS', NULL, 1700233487, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES('MOONDOG', 'Moon Dog', 'P'); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('MOONDOG', 'MOONDOG', '', '', NULL, 1724316693, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES('MOOCAT', 'MooCat [OLD]', 'Y'); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('MOOCAT', 'MOOCAT', 'moocat', 'MOOCAT', NULL, 1714749826, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES('eip155:1/erc20:0xb624960AAaD05d433075a5C9E760aDEc26036934', 'Monke coin', 'C'); INSERT INTO evm_tokens(identifier, token_kind, chain, address, decimals, protocol) VALUES('eip155:1/erc20:0xb624960AAaD05d433075a5C9E760aDEc26036934', 'A', 1, '0xb624960AAaD05d433075a5C9E760aDEc26036934', 9, NULL); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('eip155:1/erc20:0xb624960AAaD05d433075a5C9E760aDEc26036934', 'MONKE', 'monke-coin-eth', '', NULL, 1714291655, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES('eip155:1/erc20:0x8B95Fe1C06E58C269f1267e0f0093b7b26b85481', 'MOJO The Gorilla', 'C'); INSERT INTO evm_tokens(identifier, token_kind, chain, address, decimals, protocol) VALUES('eip155:1/erc20:0x8B95Fe1C06E58C269f1267e0f0093b7b26b85481', 'A', 1, '0x8B95Fe1C06E58C269f1267e0f0093b7b26b85481', 18, NULL); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('eip155:1/erc20:0x8B95Fe1C06E58C269f1267e0f0093b7b26b85481', 'MOJO', 'mojo-the-gorilla', '', NULL, 1716929639, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES('MOGGO', 'MOGGO', 'Y'); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('MOGGO', 'MOGGO', 'moggo', 'MOGGO', NULL, 1711640962, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES('MOBY', 'Moby AI', 'Y'); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('MOBY', 'MOBY', 'moby-ai', '', NULL, 1736794957, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES('eip155:1/erc20:0x40a7dF3dF8b56147B781353D379cB960120211D7', 'MobyToken', 'C'); INSERT INTO evm_tokens(identifier, token_kind, chain, address, decimals, protocol) VALUES('eip155:1/erc20:0x40a7dF3dF8b56147B781353D379cB960120211D7', 'A', 1, '0x40a7dF3dF8b56147B781353D379cB960120211D7', 18, NULL); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('eip155:1/erc20:0x40a7dF3dF8b56147B781353D379cB960120211D7', 'MOBY', 'moby', 'MOBY', NULL, 1706760227, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES('eip155:56/erc20:0xe4e11e02AA14c7f24DB749421986EAEc1369e8C9', 'Minati', 'C'); INSERT INTO evm_tokens(identifier, token_kind, chain, address, decimals, protocol) VALUES('eip155:56/erc20:0xe4e11e02AA14c7f24DB749421986EAEc1369e8C9', 'A', 56, '0xe4e11e02AA14c7f24DB749421986EAEc1369e8C9', 18, NULL); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('eip155:56/erc20:0xe4e11e02AA14c7f24DB749421986EAEc1369e8C9', 'MNTC', 'minativerse', '', NULL, 1683698064, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES('MLG', '360noscope420blazeit', 'Y'); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('MLG', 'MLG', '360noscope420blazeit', 'MLG', NULL, 1713654014, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES('MIST', 'MIST', 'Y'); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('MIST', '霞', 'mist-2', '', NULL, 1731379130, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES('MINI', 'mini', 'Y'); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('MINI', 'MINI', 'minimini', 'MINI', NULL, 1714448258, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES('MIKI', 'MIKI', 'Y'); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('MIKI', 'MIKI', 'miki', '', NULL, 1715128245, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES('MIA', 'Made In America', 'Y'); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('MIA', 'MIA', 'made-in-america', '', NULL, 1737393565, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES('MEOWKA', 'Meowka Neko', 'P'); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('MEOWKA', 'MEOWKA', 'meowka-neko', '', NULL, 1724749110, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES('eip155:1/erc20:0xA75AD62a1b6b78eEA6c54C22Eb697Ca0b125f97a', 'meow', 'C'); INSERT INTO evm_tokens(identifier, token_kind, chain, address, decimals, protocol) VALUES('eip155:1/erc20:0xA75AD62a1b6b78eEA6c54C22Eb697Ca0b125f97a', 'A', 1, '0xA75AD62a1b6b78eEA6c54C22Eb697Ca0b125f97a', 18, NULL); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('eip155:1/erc20:0xA75AD62a1b6b78eEA6c54C22Eb697Ca0b125f97a', 'MEOW', '', '', NULL, 1719558323, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES('MEMESOL', 'MOST ELEGANT MONKEY EVER', 'Y'); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('MEMESOL', 'MEMESOL', 'most-elegant-monkey-ever', '', NULL, 1725402427, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES('MEMESAI', 'Memes AI', 'Y'); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('MEMESAI', 'MEMESAI', 'memes-ai', 'MEMESAI', NULL, 1728857020, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES('MEGA', 'MEGATRON', 'P'); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('MEGA', 'MEGA', '', '', NULL, 1723821408, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES('MEDUSA', 'MEDUSA', 'Y'); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('MEDUSA', 'MEDUSA', 'medusa-2', 'MEDUSA', NULL, 1728906808, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES('MAXSOL', 'MAXSOL', 'Y'); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('MAXSOL', 'MAXSOL', 'max-2', '', NULL, 1733061608, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES('MARU', 'Maru Dog', 'Y'); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('MARU', 'MARU', 'maru-dog', 'MARU', NULL, 1714112307, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES('MAIL', 'SolMail', 'Y'); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('MAIL', 'MAIL', 'solmail', '', NULL, 1710812438, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES('MAGA', 'MAGA', 'Y'); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('MAGA', 'MAGA', '', '', NULL, 1716723085, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES('MAGAPEPE', 'MAGA PEPE', 'Y'); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('MAGAPEPE', 'MAGAPEPE', 'maga-pepe', 'MAGAPEPE', NULL, 1716628125, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES('MACHO', 'macho', 'Y'); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('MACHO', 'MACHO', '', 'MACHO', NULL, 1717357463, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES('LYTE', 'Lyte Finance', 'Y'); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('LYTE', 'LYTE', '', '', NULL, 1712009569, NULL);
+*
 INSERT INTO assets(identifier, name, type) VALUES('eip155:43114/erc20:0xD5D053D5B769383e860d1520Da7a908E00919F36', 'JUICE', 'C'); INSERT INTO evm_tokens(identifier, token_kind, chain, address, decimals, protocol) VALUES('eip155:43114/erc20:0xD5D053D5B769383e860d1520Da7a908E00919F36', 'A', 43114, '0xD5D053D5B769383e860d1520Da7a908E00919F36', 18, NULL); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('eip155:43114/erc20:0xD5D053D5B769383e860d1520Da7a908E00919F36', 'JUICE', 'juice-2', '', NULL, 1709026581, NULL);
 *
 INSERT INTO assets(identifier, name, type) VALUES('eip155:137/erc20:0x235737dBb56e8517391473f7c964DB31fA6ef280', 'KastaToken', 'C'); INSERT INTO evm_tokens(identifier, token_kind, chain, address, decimals, protocol) VALUES('eip155:137/erc20:0x235737dBb56e8517391473f7c964DB31fA6ef280', 'A', 137, '0x235737dBb56e8517391473f7c964DB31fA6ef280', 18, NULL); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('eip155:137/erc20:0x235737dBb56e8517391473f7c964DB31fA6ef280', 'KASTA', 'kasta', 'KASTA', NULL, 1639574595, NULL);

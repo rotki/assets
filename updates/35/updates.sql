@@ -130,6 +130,14 @@ INSERT INTO assets(identifier, name, type) VALUES('UFD', 'Unicorn Fart Dust', 'Y
 *
 INSERT INTO assets(identifier, name, type) VALUES('SUNEO', 'SUNEO', 'P'); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('SUNEO', 'SUNEO', '', '', NULL, 1724142207, NULL);
 *
+INSERT INTO assets(identifier, name, type) VALUES('TRISG', 'TRI SIGMA', 'Y'); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('TRISG', 'TRISG', 'tri-sigma', '', NULL, 1732132623, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES('TESTSOL', 'Test', 'Y'); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('TESTSOL', 'TESTSOL', '', '', NULL, 1705237032, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES('ODUNG', 'Odung', 'P'); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('ODUNG', 'ODUNG', '', '', NULL, 1723980492, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES("eip155:56/erc20:0x062ca2d2F1aF8C203FA3Ad5298FD6fAa4E44E897", "OrangeDX", "C"); INSERT INTO evm_tokens(identifier, token_kind, chain, address, decimals, protocol) VALUES("eip155:56/erc20:0x062ca2d2F1aF8C203FA3Ad5298FD6fAa4E44E897", "A", 56, "0x062ca2d2F1aF8C203FA3Ad5298FD6fAa4E44E897", 18, NULL); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES("eip155:56/erc20:0x062ca2d2F1aF8C203FA3Ad5298FD6fAa4E44E897", "O4DX", "orangedx", "", NULL, 1709537600, NULL);
+*
 INSERT INTO assets(identifier, name, type) VALUES('SSE', 'Solana Social Explorer', 'Y'); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('SSE', 'SSE', 'solana-social-explorer', '', NULL, 1738732412, NULL);
 *
 INSERT INTO assets(identifier, name, type) VALUES('SSB', 'Solana Street Bets', 'Y'); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('SSB', 'SSB', 'solana-street-bets', 'SOLBETS', NULL, 1706475283, NULL);

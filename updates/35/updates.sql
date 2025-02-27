@@ -244,6 +244,10 @@ INSERT INTO assets(identifier, name, type) VALUES("eip155:1/erc20:0x08c32b0726C5
 *
 INSERT INTO assets(identifier, name, type) VALUES("eip155:250/erc20:0x0cE12ae7c899eBF2bcDa7AA570C5af98b6688C95", "Speedy", "C"); INSERT INTO evm_tokens(identifier, token_kind, chain, address, decimals, protocol) VALUES("eip155:250/erc20:0x0cE12ae7c899eBF2bcDa7AA570C5af98b6688C95", "A", 250, "0x0cE12ae7c899eBF2bcDa7AA570C5af98b6688C95", 9, NULL); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES("eip155:250/erc20:0x0cE12ae7c899eBF2bcDa7AA570C5af98b6688C95", "SPEEDY", "speedy", "SPEEDY", NULL, 1712886407, NULL);
 *
+INSERT INTO assets(identifier, name, type) VALUES("eip155:1/erc20:0x12eF10A4fc6e1Ea44B4ca9508760fF51c647BB71", "Restake Finance", "C"); INSERT INTO evm_tokens(identifier, token_kind, chain, address, decimals, protocol) VALUES("eip155:1/erc20:0x12eF10A4fc6e1Ea44B4ca9508760fF51c647BB71", "A", 1, "0x12eF10A4fc6e1Ea44B4ca9508760fF51c647BB71", 18, NULL); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES("eip155:1/erc20:0x12eF10A4fc6e1Ea44B4ca9508760fF51c647BB71", "RSTK", "restake-finance", "RSTK", NULL, 1702647947, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES('ROSS', 'ROSS ULBRICHT FUND', 'Y'); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('ROSS', 'ROSS', '', '', NULL, 1737524970, NULL);
+*
 INSERT INTO assets(identifier, name, type) VALUES('SELFIE', 'SelfieDogCoin', 'Y'); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('SELFIE', 'SELFIE', 'selfiedogcoin', 'SELFIE', NULL, 1715492387, NULL);
 *
 INSERT INTO assets(identifier, name, type) VALUES('SDOGE', 'S.D.O.G.E', 'Y'); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('SDOGE', 'SDOGE', 'soldoge', '', NULL, NULL, NULL);

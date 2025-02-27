@@ -684,3 +684,9 @@ DELETE FROM multiasset_mappings WHERE asset='eip155:1/erc20:0xFE67A4450907459c3e
 *
 INSERT INTO multiasset_mappings(collection_id, asset) VALUES (247, 'eip155:1/erc20:0x58b9cB810A68a7f3e1E4f8Cb45D1B9B3c79705E8');
 *
+INSERT INTO multiasset_mappings(collection_id, asset) VALUES (339, 'eip155:42161/erc20:0x064F8B858C2A603e1b106a2039f5446D32dc81c1');
+*
+INSERT INTO multiasset_mappings(collection_id, asset) VALUES (339, 'eip155:10/erc20:0xFC2E6e6BCbd49ccf3A5f029c79984372DcBFE527');
+*
+INSERT INTO multiasset_mappings(collection_id, asset) VALUES (339, 'eip155:8453/erc20:0x54330d28ca3357F294334BDC454a032e7f353416');
+*

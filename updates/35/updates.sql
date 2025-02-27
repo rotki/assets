@@ -2420,3 +2420,7 @@ INSERT INTO assets(identifier, name, type) VALUES('eip155:42161/erc20:0x982239D3
 *
 INSERT INTO assets(identifier, name, type) VALUES('ACOLD', 'AsiaCoin', 'W'); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('ACOLD', 'ACOLD', '', '', NULL, NULL, NULL);
 *
+INSERT INTO assets(identifier, name, type) VALUES('eip155:43114/erc20:0x094bd7B2D99711A1486FB94d4395801C6d0fdDcC', 'TEDDY', 'C'); INSERT INTO evm_tokens(identifier, token_kind, chain, address, decimals, protocol) VALUES('eip155:43114/erc20:0x094bd7B2D99711A1486FB94d4395801C6d0fdDcC', 'A', 43114, '0x094bd7B2D99711A1486FB94d4395801C6d0fdDcC', 18, NULL); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('eip155:43114/erc20:0x094bd7B2D99711A1486FB94d4395801C6d0fdDcC', 'TEDDY', '', '', NULL, 1629989893, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES('eip155:56/erc20:0x0409633A72D846fc5BBe2f98D88564D35987904D', 'Phoenix Global', 'C'); INSERT INTO evm_tokens(identifier, token_kind, chain, address, decimals, protocol) VALUES('eip155:56/erc20:0x0409633A72D846fc5BBe2f98D88564D35987904D', 'A', 56, '0x0409633A72D846fc5BBe2f98D88564D35987904D', 18, NULL); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('eip155:56/erc20:0x0409633A72D846fc5BBe2f98D88564D35987904D', 'PHB', '', '', NULL, 1635416390, NULL);
+*

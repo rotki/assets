@@ -232,3 +232,13 @@ INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (464, 'Derive
 *
 UPDATE asset_collections SET name='Everclear', symbol='CLEAR', main_asset='eip155:1/erc20:0x58b9cB810A68a7f3e1E4f8Cb45D1B9B3c79705E8' WHERE id=247;
 INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (247, 'Everclear', 'CLEAR', 'eip155:1/erc20:0x58b9cB810A68a7f3e1E4f8Cb45D1B9B3c79705E8');
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (465, 'MyShell Token', 'SHELL', 'eip155:1/erc20:0xf2c88757f8d03634671208935974B60a2a28Bdb3')
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (466, 'SubQueryToken', 'SQT', 'eip155:1/erc20:0x09395a2A58DB45db0da254c7EAa5AC469D8bDc85');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (467, 'Aperture', 'APTR', 'eip155:1/erc20:0xBEEF01060047522408756E0000A90ce195A70000');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (468, 'GameSwift', 'GSWIFT', 'eip155:1/erc20:0x580E933D90091b9cE380740E3a4A39c67eB85B4c');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (469, 'SAIL Token', 'SAIL', 'eip155:1/erc20:0xd8F1460044925d2D5c723C7054cd9247027415B7');
+*

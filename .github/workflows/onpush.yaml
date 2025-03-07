@@ -6,17 +6,17 @@ jobs:
   verify-files:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v4
     - name: Set up python
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v5
       with:
-        python-version: '3.11.7'
+        python-version: '3.11.9'
     - name: Install dependencies
       run: |
         python3 -m pip install --upgrade pip setuptools wheel
         pip3 install -r requirements.txt
     - name: Store python cache
-      uses: actions/cache@v2
+      uses: actions/cache@v4
       with:
         path: ~/.cache/pip
         key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}

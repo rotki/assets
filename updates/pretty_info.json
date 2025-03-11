@@ -13,22 +13,22 @@
     },
     "34": {
       "changes": 5,
-      "max_schema_version": 11,
+      "max_schema_version": 12,
       "min_schema_version": 10
     },
     "35": {
       "changes": 1214,
-      "max_schema_version": 11,
+      "max_schema_version": 12,
       "min_schema_version": 11
     },
     "36": {
       "changes": 16,
-      "max_schema_version": 11,
+      "max_schema_version": 12,
       "min_schema_version": 11
     },
     "33": {
       "changes": 4,
-      "max_schema_version": 11,
+      "max_schema_version": 12,
       "min_schema_version": 10
     },
     "31": {

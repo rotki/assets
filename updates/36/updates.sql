@@ -104,3 +104,61 @@ INSERT INTO assets(identifier, name, type) VALUES('eip155:1/erc20:0xC08e7E23C235
 *
 INSERT INTO assets(identifier, name, type) VALUES('eip155:56/erc20:0xF81aC2E1A0373ddE1BcE01E2Fe694a9b7E3bfcB9', 'XUSD', 'C'); INSERT INTO evm_tokens(identifier, token_kind, chain, address, decimals, protocol) VALUES('eip155:56/erc20:0xF81aC2E1A0373ddE1BcE01E2Fe694a9b7E3bfcB9', 'A', 56, '0xF81aC2E1A0373ddE1BcE01E2Fe694a9b7E3bfcB9', 6, NULL); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('eip155:56/erc20:0xF81aC2E1A0373ddE1BcE01E2Fe694a9b7E3bfcB9', 'XUSD', 'straitsx-xusd', '', NULL, 1723012897, NULL);
 *
+INSERT INTO assets(identifier, name, type) VALUES('0xc1fb593aeffbeb02f85e0308e9956a90', 'Purr', 'W'); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('0xc1fb593aeffbeb02f85e0308e9956a90', 'PURR', 'purr-2', '', NULL, NULL, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES('0xbaf265ef389da684513d98d68edf4eae', 'Hypurr Fun', 'W'); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('0xbaf265ef389da684513d98d68edf4eae', 'HFUN', 'hypurr-fun', '', NULL, NULL, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES('0xfcf28885456bf7e7cbe5b7a25407c5bc', 'Jeff', 'W'); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('0xfcf28885456bf7e7cbe5b7a25407c5bc', 'JEFF', 'jeff-3', '', NULL, NULL, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES('0x4978f3f49f30776d9d7397b873223c2d', 'RUGMAN', 'W'); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('0x4978f3f49f30776d9d7397b873223c2d', 'RUG', 'rugman', '', NULL, NULL, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES('0x3b5ff6cb91f71032578b53960090adfb', 'CZ on Hyperliquid', 'W'); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('0x3b5ff6cb91f71032578b53960090adfb', 'CZ', 'cz-on-hyperliquid', '', NULL, NULL, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES('0xb693d596cd02f5f38e532e647bb43b69', 'Vegas', 'W'); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('0xb693d596cd02f5f38e532e647bb43b69', 'VEGAS', 'vegas', '', NULL, NULL, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES('0xdb5190bea4b6ab178da0162420c93a73', 'Vapor', 'W'); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('0xdb5190bea4b6ab178da0162420c93a73', 'VAPOR', 'vapor', '', NULL, NULL, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES('0x7631702302e6c7fbf69d369e0bcf45d6', 'Liquid Cat', 'W'); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('0x7631702302e6c7fbf69d369e0bcf45d6', 'CAT', 'cat-2', '', NULL, NULL, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES('0x58fb407b5fce2b90348cdf090d6dd3d4', 'FRACTRADE', 'W'); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('0x58fb407b5fce2b90348cdf090d6dd3d4', 'FRAC', 'fractrade', '', NULL, NULL, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES('0xbebb35d03b83a302a2aa06dbaa67dd9f', 'ATEHUN', 'W'); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('0xbebb35d03b83a302a2aa06dbaa67dd9f', 'ATEHUN', 'atehun', '', NULL, NULL, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES('0x38348c17e1a18559bbda232d22007695', 'Catbal', 'W'); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('0x38348c17e1a18559bbda232d22007695', 'CATBAL', 'catbal', '', NULL, NULL, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES('0xa82aa458b2c146e97733d0c05374aa0e', 'Hyperlauncher', 'W'); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('0xa82aa458b2c146e97733d0c05374aa0e', 'LAUNCH', 'hyperlauncher', '', NULL, NULL, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES('0x288553d859333b90ede88640b4279598', 'Vault Overflow', 'W'); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('0x288553d859333b90ede88640b4279598', 'VAULT', 'vault-overflow', '', NULL, NULL, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES('0x52a110041682dbf38277c80a72eecba6', 'H', 'W'); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('0x52a110041682dbf38277c80a72eecba6', 'H', 'h', '', NULL, NULL, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES('0xe85f43e1f91e3c8cdf3acbd7e0855b8e', 'PiP', 'W'); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('0xe85f43e1f91e3c8cdf3acbd7e0855b8e', 'PIP', 'pip-3', '', NULL, NULL, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES('0x2150c49b1b981b88349dae535d607ce2', 'YEETI 液体', 'W'); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('0x2150c49b1b981b88349dae535d607ce2', 'YEETI', 'yeeti', '', NULL, NULL, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES('0x0dd6980f71e51e6f218a9b7d53c837f6', 'Liquina', 'W'); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('0x0dd6980f71e51e6f218a9b7d53c837f6', 'LQNA', 'liquina', '', NULL, NULL, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES('0xb3d30d38259b99d4a6daaf72ded7bf34', 'FRUDO', 'W'); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('0xb3d30d38259b99d4a6daaf72ded7bf34', 'FRUDO', 'frudo', '', NULL, NULL, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES('0x7b659352508b25500406b4cd7fdc4f8c', 'Autist', 'W'); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('0x7b659352508b25500406b4cd7fdc4f8c', 'AUTIST', 'autist', '', NULL, NULL, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES('0x11c83b5cfeb6419a74a85a5aaba0511d', 'FARM', 'W'); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('0x11c83b5cfeb6419a74a85a5aaba0511d', 'FARM', 'farm-2', '', NULL, NULL, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES('0xc6aef97252f0081eb8246e24f24c5fe7', 'Sovrun', 'W'); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('0xc6aef97252f0081eb8246e24f24c5fe7', 'SOVRN', 'sovrun', '', NULL, NULL, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES('0xf1b242b9725266c3c634909fb575ef10', 'HYENA', 'W'); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('0xf1b242b9725266c3c634909fb575ef10', 'HYENA', 'hyena', '', NULL, NULL, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES('0x934a7e00c1b047c2d27967663f58befe', 'DEPIN', 'W'); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('0x934a7e00c1b047c2d27967663f58befe', 'DEPIN', 'depin', '', NULL, NULL, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES('0xd7a5b9b760fd758d2e3f6f3ecd2ae5bb', 'ORA Coin', 'W'); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('0xd7a5b9b760fd758d2e3f6f3ecd2ae5bb', 'ORA', 'ora-coin', '', NULL, NULL, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES('0xa043053570d42d6f553896820dfd42b6', 'LiquidLaunch', 'W'); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('0xa043053570d42d6f553896820dfd42b6', 'LIQD', 'liquidlaunch', '', NULL, NULL, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES('0x2ceb1907ce5c0c98b86e733d15aea34b', 'Sentiient', 'W'); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('0x2ceb1907ce5c0c98b86e733d15aea34b', 'SENT', 'sentiient', '', NULL, NULL, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES('0x55db85bd0938b111d0f78a98173fd99a', 'HyperFly', 'W'); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('0x55db85bd0938b111d0f78a98173fd99a', 'FLY', 'hyperfly', '', NULL, NULL, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES('0xad426cf28a66dc0c8f3b931018ba9845', 'HedgewaterDAO', 'W'); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('0xad426cf28a66dc0c8f3b931018ba9845', 'HWTR', 'hedgewaterdao', '', NULL, NULL, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES('0xe1edd30daaf5caac3fe63569e24748da', 'Unit Ethereum', 'W'); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('0xe1edd30daaf5caac3fe63569e24748da', 'UETH', 'unit-ethereum', '', NULL, NULL, NULL);
+*

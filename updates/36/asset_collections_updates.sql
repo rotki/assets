@@ -16,3 +16,7 @@ INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (477, 'MindNe
 *
 INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (478, 'Prompt', 'PROMPT', 'eip155:1/erc20:0x28d38dF637dB75533bD3F71426F3410a82041544');
 *
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (479, 'KERNEL', 'KERNEL', 'eip155:1/erc20:0x3f80B1c54Ae920Be41a77f8B902259D48cf24cCf');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (480, 'Balance', 'EPT', 'eip155:56/erc20:0x3Dc8e2d80b6215a1BCcAe4d38715C3520581E77c');
+*

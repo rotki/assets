@@ -8,3 +8,11 @@ INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (473, 'XUSD',
 *
 INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (474, 'PARTI Token', 'PARTI', 'eip155:8453/erc20:0x59264f02D301281f3393e1385c0aEFd446Eb0F00');
 *
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (475, 'PELL Network Token', 'PELL', 'eip155:1/erc20:0xC65d8d96cddDB31328186EFA113a460b0Af9Ec63');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (476, 'Space Nation Oikos', 'OIK', 'eip155:56/erc20:0xB035723D62e0e2ea7499D76355c9D560f13ba404');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (477, 'MindNetwork FHE Token', 'FHE', 'eip155:56/erc20:0xd55C9fB62E176a8Eb6968f32958FeFDD0962727E');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (478, 'Prompt', 'PROMPT', 'eip155:1/erc20:0x28d38dF637dB75533bD3F71426F3410a82041544');
+*

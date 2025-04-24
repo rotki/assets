@@ -20,3 +20,5 @@ INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (479, 'KERNEL
 *
 INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (480, 'Balance', 'EPT', 'eip155:56/erc20:0x3Dc8e2d80b6215a1BCcAe4d38715C3520581E77c');
 *
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (481, 'Hyperlane', 'HYPER', 'eip155:1/erc20:0x93A2Db22B7c736B341C32Ff666307F4a9ED910F5');
+*

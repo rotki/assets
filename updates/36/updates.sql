@@ -252,3 +252,5 @@ INSERT INTO assets(identifier, name, type) VALUES('eip155:8453/erc20:0x3ec2156D4
 *
 INSERT INTO assets(identifier, name, type) VALUES('OIIAOIIA', 'spinning cat', 'Y'); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('OIIAOIIA', 'OIIAOIIA', 'spinning-cat', 'OIIAOIIA', NULL, 1727735379, NULL);
 *
+INSERT INTO assets(identifier, name, type) VALUES('eip155:1/erc20:0x0655977FEb2f289A4aB78af67BAB0d17aAb84367', 'Savings crvUSD', 'C'); INSERT INTO evm_tokens(identifier, token_kind, chain, address, decimals, protocol) VALUES('eip155:1/erc20:0x0655977FEb2f289A4aB78af67BAB0d17aAb84367', 'A', 1, '0x0655977FEb2f289A4aB78af67BAB0d17aAb84367', 18, NULL); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('eip155:1/erc20:0x0655977FEb2f289A4aB78af67BAB0d17aAb84367', 'scrvUSD', 'savings-crvusd', 'SCRVUSD', NULL, 1730404991, NULL); INSERT INTO underlying_tokens_list(identifier, weight, parent_token_entry) VALUES('eip155:1/erc20:0xf939E0A03FB07F59A73314E73794Be0E57ac1b4E', '1.0', 'eip155:1/erc20:0x0655977FEb2f289A4aB78af67BAB0d17aAb84367');
+*

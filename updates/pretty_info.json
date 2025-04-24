@@ -6,35 +6,45 @@
       "max_schema_version": 2,
       "min_schema_version": 2
     },
-    "32": {
-      "changes": 4,
-      "max_schema_version": 9,
-      "min_schema_version": 9
+    "2": {
+      "changes": 27,
+      "max_schema_version": 2,
+      "min_schema_version": 2
     },
-    "34": {
-      "changes": 5,
-      "max_schema_version": 11,
-      "min_schema_version": 10
+    "3": {
+      "changes": 64,
+      "max_schema_version": 2,
+      "min_schema_version": 2
     },
-    "35": {
-      "changes": 1214,
-      "max_schema_version": 11,
-      "min_schema_version": 11
+    "4": {
+      "changes": 23,
+      "max_schema_version": 2,
+      "min_schema_version": 2
     },
-    "36": {
-      "changes": 127,
-      "max_schema_version": 11,
-      "min_schema_version": 11
+    "5": {
+      "changes": 25,
+      "max_schema_version": 2,
+      "min_schema_version": 2
     },
-    "33": {
-      "changes": 4,
-      "max_schema_version": 11,
-      "min_schema_version": 10
+    "6": {
+      "changes": 239,
+      "max_schema_version": 2,
+      "min_schema_version": 2
     },
-    "31": {
-      "changes": 58,
-      "max_schema_version": 9,
-      "min_schema_version": 9
+    "7": {
+      "changes": 34,
+      "max_schema_version": 2,
+      "min_schema_version": 2
+    },
+    "8": {
+      "changes": 81,
+      "max_schema_version": 2,
+      "min_schema_version": 2
+    },
+    "9": {
+      "changes": 59,
+      "max_schema_version": 2,
+      "min_schema_version": 2
     },
     "10": {
       "changes": 30,
@@ -86,11 +96,6 @@
       "max_schema_version": 9,
       "min_schema_version": 4
     },
-    "2": {
-      "changes": 27,
-      "max_schema_version": 2,
-      "min_schema_version": 2
-    },
     "20": {
       "changes": 105,
       "max_schema_version": 9,
@@ -141,45 +146,40 @@
       "max_schema_version": 9,
       "min_schema_version": 9
     },
-    "3": {
-      "changes": 64,
-      "max_schema_version": 2,
-      "min_schema_version": 2
-    },
     "30": {
       "changes": 85,
       "max_schema_version": 9,
       "min_schema_version": 9
     },
-    "4": {
-      "changes": 23,
-      "max_schema_version": 2,
-      "min_schema_version": 2
+    "31": {
+      "changes": 58,
+      "max_schema_version": 9,
+      "min_schema_version": 9
     },
-    "5": {
-      "changes": 25,
-      "max_schema_version": 2,
-      "min_schema_version": 2
+    "32": {
+      "changes": 4,
+      "max_schema_version": 9,
+      "min_schema_version": 9
     },
-    "6": {
-      "changes": 239,
-      "max_schema_version": 2,
-      "min_schema_version": 2
+    "33": {
+      "changes": 4,
+      "max_schema_version": 12,
+      "min_schema_version": 10
     },
-    "7": {
-      "changes": 34,
-      "max_schema_version": 2,
-      "min_schema_version": 2
+    "34": {
+      "changes": 5,
+      "max_schema_version": 12,
+      "min_schema_version": 10
     },
-    "8": {
-      "changes": 81,
-      "max_schema_version": 2,
-      "min_schema_version": 2
+    "35": {
+      "changes": 1214,
+      "max_schema_version": 12,
+      "min_schema_version": 11
     },
-    "9": {
-      "changes": 59,
-      "max_schema_version": 2,
-      "min_schema_version": 2
+    "36": {
+      "changes": 128,
+      "max_schema_version": 12,
+      "min_schema_version": 11
     }
   }
 }

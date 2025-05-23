@@ -26,3 +26,7 @@ INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (482, 'YUSD',
 *
 INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (483, 'World Liberty Financial USD', 'USD1', 'eip155:1/erc20:0x8d0D000Ee44948FC98c9B98A4FA4921476f08B0d');
 *
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (484, 'Giza', 'GIZA', 'eip155:1/erc20:0x590830dFDf9A3F68aFCDdE2694773dEBDF267774');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (485, 'SOPH AI Token', 'SOPH', 'eip155:1/erc20:0x73fBD93bFDa83B111DdC092aa3a4ca77fD30d380');
+*

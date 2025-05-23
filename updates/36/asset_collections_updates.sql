@@ -22,3 +22,7 @@ INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (480, 'Balanc
 *
 INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (481, 'Hyperlane', 'HYPER', 'eip155:1/erc20:0x93A2Db22B7c736B341C32Ff666307F4a9ED910F5');
 *
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (482, 'YUSD', 'YUSD', 'eip155:1/erc20:0x4274cD7277C7bb0806Bd5FE84b9aDAE466a8DA0a');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (483, 'World Liberty Financial USD', 'USD1', 'eip155:1/erc20:0x8d0D000Ee44948FC98c9B98A4FA4921476f08B0d');
+*

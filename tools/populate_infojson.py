@@ -34,7 +34,12 @@ for child in (root_dir / 'updates').iterdir():
 
     latest = max(update, latest)
     if update_key not in infojson_data['updates']:
-        infojson_data['updates'][update] = {'min_schema_version': 2, 'max_schema_version': 2}
+        infojson_data['updates'][update_key] = {'min_schema_version': 0, 'max_schema_version': 0}
+        print(
+            f'Adding new section for update {update_key} with min/max schema versions of 0.\n'
+            f'You must manually set these limits to the correct values.'
+        )
+
     update_file = child / 'updates.sql'
     assert update_file.is_file()
     with open(update_file) as f:

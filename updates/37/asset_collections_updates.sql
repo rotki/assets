@@ -10,3 +10,9 @@ INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (490, 'Sophon
 *
 INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (491, 'Skate', 'SKATE', 'eip155:1/erc20:0x61DBbBb552dc893ab3aAd09F289f811E67cEf285');
 *
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (492, 'Impossible Cloud Network Token', 'ICNT', 'eip155:1/erc20:0xe5e0b73380181273abCfD88695F52C4D0C825661');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (493, 'HeyAnon', 'Anon', 'eip155:1/erc20:0x79bbF4508B1391af3A0F4B30bb5FC4aa9ab0E07C');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (494, 'RDO Token', 'RDO', 'eip155:1/erc20:0x57240C3E140f98abe315CA8E0213c7a77F34A334');
+*

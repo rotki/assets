@@ -49,7 +49,7 @@ class AssetData(NamedTuple):
     coingecko: Optional[str]
     cryptocompare: Optional[str]
     forked: Optional[str]
-    ethereum_address: Optional[str]
+    address: Optional[str]
     protocol: Optional[str]
     decimals: Optional[int]
     chain: Optional[int]
@@ -255,6 +255,28 @@ class UpdateChecker:
             'protocol': self._parse_optional_str(match.group(6), 'protocol', insert_text),
         }
 
+    def _parse_solana_token_data(self, insert_text: str, schema_version: int) -> dict:
+        """Parse solana token data from insert statement"""
+        match = self.versions[schema_version]['solana_tokens_re'].match(insert_text)
+        if match is None:
+            raise DeserializationError(
+                f'At asset DB update could not parse solana token data out '
+                f'of {insert_text}',
+            )
+
+        if len(match.groups()) != 5:
+            raise DeserializationError(
+                f'At asset DB update could not parse solana token data out of {insert_text}',
+            )
+
+        return {
+            'identifier': self._parse_str(match.group(1), 'identifier', insert_text),
+            'token_kind': self._parse_str(match.group(2), 'token_kind', insert_text),
+            'address': self._parse_str(match.group(3), 'address', insert_text),
+            'decimals': self._parse_optional_int(match.group(4), 'decimals', insert_text),
+            'protocol': self._parse_optional_str(match.group(5), 'protocol', insert_text),
+        }
+
     def _parse_full_insert(self, insert_text: str, schema_version: int) -> AssetData:
         """Parses the full insert line for an asset to give information for the conflict to the user
 
@@ -264,7 +286,7 @@ class UpdateChecker:
         be properly parsed.
         """
         asset_data = self._parse_asset_data(insert_text, schema_version)
-        evm_data = {
+        token_data = {
             'identifier': None,
             'forked': None,
             'address': None,
@@ -274,7 +296,11 @@ class UpdateChecker:
             'token_kind': None,
         }
         if asset_data['asset_type'] == 'C':
-            evm_data |= self._parse_evm_token_data(insert_text, schema_version)
+            evm_data = self._parse_evm_token_data(insert_text, schema_version)
+            token_data.update(evm_data)
+        elif asset_data['asset_type'] == 'Y' and schema_version > 36:
+            solana_data = self._parse_solana_token_data(insert_text, schema_version)
+            token_data.update(solana_data)
 
         if len(asset_data['asset_type']) != 1:
             raise DeserializationError(
@@ -302,8 +328,9 @@ class UpdateChecker:
                     f'details data out of {insert_text}',
                 )
             assert self._parse_str(match.group(1), 'identifier', insert_text) == asset_data['identifier'], f'Identifiers of assets {asset_data["identifier"]} and common_asset_details {match.group(1)} are not same'
-            if asset_data['asset_type'] == 'C':
-                assert evm_data['identifier'] == asset_data['identifier'], f'Identifiers of assets {asset_data["identifier"]} and evm_token {evm_data["identifier"]} are not same'
+            if asset_data['asset_type'] == 'C' or (asset_data['asset_type'] == 'Y' and schema_version > 36):
+                assert token_data['identifier'] == asset_data['identifier'], f'Identifiers of assets {asset_data["identifier"]} and token {token_data["identifier"]} are not same'
+
             common_details = {
                 'symbol': self._parse_optional_str(match.group(2), 'symbol', insert_text),
                 'coingecko': self._parse_optional_str(match.group(3), 'coingecko', insert_text),
@@ -313,7 +340,7 @@ class UpdateChecker:
                 'swapped_for': self._parse_optional_str(match.group(7), 'swapped_for', insert_text),
             }
 
-        asset_data |= evm_data
+        asset_data |= token_data
         asset_data |= common_details
 
         return AssetData(  # types are not really proper here (except for asset_type)
@@ -324,7 +351,7 @@ class UpdateChecker:
             started=asset_data['started'],
             forked=asset_data['forked'],
             swapped_for=asset_data['swapped_for'],
-            ethereum_address=asset_data['address'],
+            address=asset_data['address'],
             decimals=asset_data['decimals'],
             cryptocompare=asset_data['cryptocompare'],
             coingecko=asset_data['coingecko'],
@@ -351,8 +378,12 @@ class UpdateChecker:
 
             assert len(asset_data.name) != 0, f'Empty name in {asset_data}'
             assert len(asset_data.symbol) != 0
+
+            # Validate identifier formats for tokens
             if asset_data.asset_type == 'C' and schema_version > 2:
-                assert asset_data.identifier == f'eip155:{asset_data.chain}/erc20:{asset_data.ethereum_address}', f'Mismatch in identifier, chain id, and/or address for {asset_data.identifier}'
+                assert asset_data.identifier == f'eip155:{asset_data.chain}/erc20:{asset_data.address}', f'Mismatch in identifier, chain id, and/or address for {asset_data.identifier}'
+            elif asset_data.asset_type == 'Y' and schema_version > 36:
+                assert asset_data.identifier == f'solana/token:{asset_data.address}', f'Solana token identifier should be solana/token:<address> for {asset_data.identifier}'
 
             # Check against duplicate information. Before schema version 3 we couldn't have duplicates
             if insert and schema_version == 2:
@@ -363,13 +394,22 @@ class UpdateChecker:
                 if asset_data.symbol not in DUPLICATED_SYMBOLS:
                     assert asset_data.symbol not in seen_elements, f'Duplicate symbol {asset_data.symbol}'
 
-            # For ethereum address, make a checksum of addresses
-            if asset_data.ethereum_address is not None:
-                assert is_checksum_address(asset_data.ethereum_address), f'Address not checksummed in {asset_data}, {asset_data.ethereum_address}'
-                assert asset_data.ethereum_address in action
-                if insert:
-                    assert (asset_data.ethereum_address, asset_data.chain) not in seen_elements, f'Duplicate address {asset_data.ethereum_address}-{asset_data.chain}'
-                    seen_elements.add((asset_data.ethereum_address, asset_data.chain))
+            # Check address-related validations
+            address_validations = []
+            if asset_data.address is not None:
+                if asset_data.asset_type == 'C':
+                    assert is_checksum_address(asset_data.address), f'Address not checksummed in {asset_data}, {asset_data.address}'
+                    address_validations.append(('ethereum', (asset_data.address, asset_data.chain)))
+                elif asset_data.asset_type == 'Y' and schema_version > 36:
+                    address_validations.append(('solana', asset_data.address))
+
+                # ensure address appears in the action text
+                assert asset_data.address in action
+
+            if insert:  # check for duplicate addresses if this is an insert
+                for addr_type, addr_key in address_validations:
+                    assert addr_key not in seen_elements, f'Duplicate {addr_type} address {addr_key}'
+                    seen_elements.add(addr_key)
 
             if insert:
                 seen_elements.update((asset_data.symbol, asset_data.name))
@@ -401,6 +441,8 @@ class UpdateChecker:
             if asset_data.chain is not None:
                 assert asset_data.chain in CHAIN_ID_TO_NAME, f'Chain {asset_data.chain} is missing in the mapping of chains'
                 msg += f' on {CHAIN_ID_TO_NAME[asset_data.chain]}'
+            elif asset_data.asset_type == 'Y':
+                msg += ' on solana'
 
             if is_new:
                 new_assets.append(msg)

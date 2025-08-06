@@ -16,3 +16,21 @@ INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (493, 'HeyAno
 *
 INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (494, 'RDO Token', 'RDO', 'eip155:1/erc20:0x57240C3E140f98abe315CA8E0213c7a77F34A334');
 *
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (495, 'BOOP', 'boop', 'solana/token:boopkpWqe68MSxLqBGogs8ZbUDN4GXaLhFwNP7mpP1i');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (496, 'WhiteRock', 'WHITE', 'eip155:1/erc20:0x9cdf242Ef7975D8c68D5C1F5B6905801699b1940');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (497, 'Polka City', 'POLC', 'eip155:1/erc20:0xaA8330FB2B4D5D07ABFE7A72262752a8505C6B37');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (498, 'Play', 'PLAY', 'eip155:8453/erc20:0x853a7c99227499DbA9dB8C3A02aA691aFDeBf841');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (499, 'Chainbase Token', 'C', 'eip155:8453/erc20:0xba12BC7B210E61e5D3110B997A63Ea216e0E18F7');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (500, 'Meta xStock', 'METAx', 'eip155:42161/erc20:0x96702be57Cd9777f835117a809C7124fe4ec989A');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (501, 'Alliance Games', 'COA', 'eip155:56/erc20:0xA992ffb0C9B753307B9704079c61DB4e405DeFfd');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (502, 'Treehouse Token', 'TREE', 'eip155:1/erc20:0x77146784315Ba81904d654466968e3a7c196d1f3');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (503, 'Succinct', 'PROVE', 'eip155:1/erc20:0x6BEF15D938d4E72056AC92Ea4bDD0D76B1C4ad29');
+*

@@ -332,3 +332,7 @@ INSERT INTO assets(identifier, name, type) VALUES('eip155:1/erc20:0x6BEF15D938d4
 *
 INSERT INTO assets(identifier, name, type) VALUES('eip155:56/erc20:0x7DDf164CEcfddd0f992299D033B5a11279A15929', 'Succinct', 'C'); INSERT INTO evm_tokens(identifier, token_kind, chain, address, decimals, protocol) VALUES('eip155:56/erc20:0x7DDf164CEcfddd0f992299D033B5a11279A15929', 'A', 56, '0x7DDf164CEcfddd0f992299D033B5a11279A15929', 18, NULL); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('eip155:56/erc20:0x7DDf164CEcfddd0f992299D033B5a11279A15929', 'PROVE', 'succinct', 'PROVE', NULL, 1753902048, NULL);
 *
+INSERT INTO assets(identifier, name, type) VALUES('eip155:1/erc20:0x00869E8e2e0343EDd11314E6ccb0D78d51547EE5', 'SuperGrok', 'C'); INSERT INTO evm_tokens(identifier, token_kind, chain, address, decimals, protocol) VALUES('eip155:1/erc20:0x00869E8e2e0343EDd11314E6ccb0D78d51547EE5', 'A', 1, '0x00869E8e2e0343EDd11314E6ccb0D78d51547EE5', 18, NULL); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('eip155:1/erc20:0x00869E8e2e0343EDd11314E6ccb0D78d51547EE5', 'SUPERGROK', 'supergrok', 'SUPERGROK', NULL, 1752489467, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES('AO', 'ao Computer', 'W'); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('AO', 'AO', 'ao-computer', 'AO', NULL, 1742342400, NULL);
+*

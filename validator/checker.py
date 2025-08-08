@@ -68,6 +68,7 @@ CHAIN_ID_TO_NAME = {
     42220: 'celo',
     8453: 'base',
     534352: 'scroll',
+    146: 'sonic',
 }
 
 # In V2 anyone can create a vault and there are some that are endorsed by yearn once they

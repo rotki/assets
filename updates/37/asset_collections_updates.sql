@@ -34,3 +34,11 @@ INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (502, 'Treeho
 *
 INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (503, 'Succinct', 'PROVE', 'eip155:1/erc20:0x6BEF15D938d4E72056AC92Ea4bDD0D76B1C4ad29');
 *
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (504, 'RCADE', 'RCADE', 'eip155:42161/erc20:0x077574441C4F8763a37a2cFeE2ECb444aA60A15e');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (505, 'Caldera', 'ERA', 'eip155:1/erc20:0xE2AD0BF751834f2fbdC62A41014f84d67cA1de2A');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (506, 'Towns', 'TOWNS', 'eip155:1/erc20:0x000000Fa00b200406de700041CFc6b19BbFB4d13');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (507, 'SatLayer', 'SLAY', 'eip155:1/erc20:0x51477A3002ee04B7542aDfe63ccdb50c00Ee5147');
+*

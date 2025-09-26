@@ -1,3 +1,5 @@
 *.pyc
 env/
 .vscode
+.idea
+.token_query_config.json

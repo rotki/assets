@@ -1,3 +1,4 @@
-eth-utils==4.0.0
 pytest==8.0.2
 eth-hash[pycryptodome]==0.6.0
+web3==7.10.0
+requests==2.32.4

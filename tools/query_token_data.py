@@ -35,7 +35,7 @@ EVM_IDENTIFIER = 'eip155:{blockchain}/erc20:{address}'
 SOLANA_IDENTIFIER = 'solana/token:{address}'
 
 # SQL Query Templates
-ASSETS_QUERY = "INSERT INTO assets(identifier, name, type) VALUES('{identifier}', '{name}', 'C'); "
+ASSETS_QUERY = "INSERT INTO assets(identifier, name, type) VALUES('{identifier}', '{name}', '{asset_type}'); "
 EVM_TOKENS_QUERY = "INSERT INTO evm_tokens(identifier, token_kind, chain, address, decimals, protocol) VALUES('{identifier}', 'A', {blockchain}, '{address}', {decimals}, {protocol}); "
 SOLANA_TOKENS_QUERY = "INSERT INTO solana_tokens(identifier, token_kind, address, decimals, protocol) VALUES('{identifier}', 'D', '{address}', {decimals}, {protocol}); "
 COMMON_ASSET_DETAILS_QUERY = "INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('{identifier}', '{symbol}', '{coingecko}', '{cryptocompare}', NULL, {deployed_at}, NULL);"
@@ -60,6 +60,7 @@ class Chain(Enum):
     ARBITRUM_NOVA = 42170
     CRONOS = 25
     ZKSYNC = 324
+    LINEA = 59144
 
 
 CHAINS_TO_COINGECKO_IDS = {  # id used on coingecko for each chain
@@ -77,6 +78,7 @@ CHAINS_TO_COINGECKO_IDS = {  # id used on coingecko for each chain
     Chain.SCROLL: "scroll",
     Chain.ZKSYNC: "zksync",
     Chain.SOLANA: "solana",
+    Chain.LINEA: "linea",
 }
 RPC_PROVIDERS = {  # RPC endpoints for each supported chain
     Chain.ETHEREUM: "https://eth.llamarpc.com",
@@ -92,6 +94,7 @@ RPC_PROVIDERS = {  # RPC endpoints for each supported chain
     Chain.CRONOS: "https://cronos.drpc.org",
     Chain.SCROLL: "https://scroll.drpc.org",
     Chain.ZKSYNC: "https://1rpc.io/zksync2-era",
+    Chain.LINEA: "https://rpc.linea.build",
 }
 
 
@@ -114,7 +117,7 @@ class TokenInfo:
             return EVM_IDENTIFIER.format(blockchain=self.chain.value, address=self.address)
 
     def get_address(self) -> None:
-        self.address = get_input(prompt='Contract Address', default=(old_address := self.address))
+        self.address = to_checksum_address(get_input(prompt='Contract Address', default=(old_address := self.address)))
         if self.address != old_address:
             try:  # properly checksum the address if EVM and set chain so default is on a likely value when selecting chain next
                 self.address = to_checksum_address(self.address)
@@ -318,6 +321,7 @@ def process_collection(collection: CollectionInfo) -> None:
             "coingecko": collection.coingecko_id,
             "cryptocompare": collection.cryptocompare_id,
             "deployed_at": token.timestamp,
+            "asset_type": 'Y' if token.chain == Chain.SOLANA else 'C',
         }
         main_query_str += ASSETS_QUERY.format(**format_kwargs)
         main_query_str += (SOLANA_TOKENS_QUERY if token.chain == Chain.SOLANA else EVM_TOKENS_QUERY).format(**format_kwargs)

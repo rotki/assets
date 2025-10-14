@@ -6,3 +6,5 @@ INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (510, 'USDS S
 *
 INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (511, 'Solv BTC', 'SolvBTC', 'eip155:1/erc20:0x7A56E1C57C7475CCf742a1832B028F0456652F97');
 *
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (512, 'Solana', 'SOL', 'SOL');
+*

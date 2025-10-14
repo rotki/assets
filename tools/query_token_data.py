@@ -117,13 +117,12 @@ class TokenInfo:
             return EVM_IDENTIFIER.format(blockchain=self.chain.value, address=self.address)
 
     def get_address(self) -> None:
-        self.address = to_checksum_address(get_input(prompt='Contract Address', default=(old_address := self.address)))
-        if self.address != old_address:
-            try:  # properly checksum the address if EVM and set chain so default is on a likely value when selecting chain next
-                self.address = to_checksum_address(self.address)
-                self.chain = Chain.ETHEREUM
-            except ValueError:
-                self.chain = Chain.SOLANA
+        self.address = get_input(prompt='Contract Address', default=self.address)
+        try:  # properly checksum the address if EVM and set chain so default is on a likely value when selecting chain next
+            self.address = to_checksum_address(self.address)
+            self.chain = Chain.ETHEREUM
+        except ValueError:
+            self.chain = Chain.SOLANA
 
     def get_chain(self) -> None:
         self.chain = get_chain_selection(default=self.chain)

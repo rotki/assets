@@ -8,3 +8,5 @@ INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (511, 'Solv B
 *
 INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (512, 'Solana', 'SOL', 'SOL');
 *
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (513, 'World Liberty Financial', 'WLFI', 'eip155:1/erc20:0xdA5e1988097297dCdc1f90D4dFE7909e847CBeF6');
+*

@@ -121,9 +121,12 @@ class TokenInfo:
         self.address = get_input(prompt='Contract Address', default=self.address)
         try:  # properly checksum the address if EVM and set chain so default is on a likely value when selecting chain next
             self.address = to_checksum_address(self.address)
-            self.chain = Chain.ETHEREUM
+            suggested_chain = Chain.ETHEREUM
         except ValueError:
-            self.chain = Chain.SOLANA
+            suggested_chain = Chain.SOLANA
+
+        if self.chain is None:
+            self.chain = suggested_chain
 
     def get_chain(self) -> None:
         self.chain = get_chain_selection(default=self.chain)
@@ -406,7 +409,7 @@ def edit_token_details(
 
     for attr in ('address', 'chain', 'name', 'symbol', 'decimals', 'timestamp', 'protocol', 'underlying_tokens'):
         if edit_existing or (
-            getattr(token_info, attr) is None and  # no existing value
+            ((value := getattr(token_info, attr)) is None or attr == 'timestamp' and value == "NULL") and  # no existing value
             attr not in ('protocol', 'underlying_tokens')  # skip these uncommon attributes unless editing an existing token
         ):
             getattr(token_info, f'get_{attr}')()
@@ -433,9 +436,12 @@ def load_tokens_by_address():
         for _address, _chain, _decimals in token_addresses:
             if _chain != Chain.SOLANA:
                 try:
-                    tokens.append(_token_info := fetch_evm_token_info(address=_address, chain=_chain))
+                    _token_info = fetch_evm_token_info(address=_address, chain=_chain)
+                    if _token_info.timestamp == "NULL":
+                        _token_info = edit_token_details(token_info=_token_info)
                     if _chain == Chain.ETHEREUM:
                         main_asset = _token_info
+                    tokens.append(_token_info)
                     continue
                 except Exception as e:
                     print(f"Error fetching token info for {_address} on {_chain.name}: {e}")

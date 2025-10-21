@@ -189,7 +189,7 @@
     "38": {
       "min_schema_version": 13,
       "max_schema_version": 14,
-      "changes": 24
+      "changes": 48
     }
   }
 }

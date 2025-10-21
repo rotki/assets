@@ -13,6 +13,7 @@ Example config file if you wish to create it manually:
 {"api_key": "your_etherscan_api_key_here"}
 ```
 """
+from contextlib import suppress
 
 from dateutil import parser as dp
 import json
@@ -285,7 +286,10 @@ def query_coingecko_data(address: str, chain: Chain) -> tuple[str, str, str, lis
         tokens, coingecko_to_chain = [], {v: k for k, v in CHAINS_TO_COINGECKO_IDS.items()}
         for platform, details in data.get('detail_platforms', {}).items():
             if (chain := coingecko_to_chain.get(platform)) is not None:
-                tokens.append(((addr := details['contract_address']), chain, details['decimal_place']))
+                addr = details['contract_address']
+                with suppress(ValueError):  # ensure any evm addresses are properly checksumed
+                    addr = to_checksum_address(addr)
+                tokens.append((addr, chain, details['decimal_place']))
                 print(f"Found {chain.name} token: {addr}")
             else:  # we don't have this chain in our chain enum
                 print(f'Skipping unsupported platform: {platform}')

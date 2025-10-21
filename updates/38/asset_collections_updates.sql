@@ -28,3 +28,9 @@ INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (521, 'Open',
 *
 INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (522, 'ZK Coin', 'ZKC', 'eip155:1/erc20:0x000006c2A22ff4A44ff1f5d0F2ed65F781F55555');
 *
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (523, 'Black Mirror', 'MIRROR', 'solana/token:8dmHzuMkdssGeycyiJFDhkmeuViLBn4GNdH8w6qkPp7i');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (524, 'Bless', 'BLESS', 'solana/token:A1t2UviBYwyfYZDJyKY2W6Td8ritgsCriUDuNaAQN49S');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (525, 'Union', 'U', 'eip155:1/erc20:0xba5eD44733953d79717F6269357C77718C8Ba5ed');
+*

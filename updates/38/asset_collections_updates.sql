@@ -48,3 +48,9 @@ INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (531, 'Enso',
 *
 INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (532, 'ZEROBASE', 'ZBT', 'eip155:1/erc20:0xfAB99fCF605fD8f4593EDb70A43bA56542777777');
 *
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (533, 'AUDD', 'AUDD', 'eip155:1/erc20:0x4cCe605eD955295432958d8951D0B176C10720d5');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (534, 'Syndicate', 'SYND', 'eip155:1/erc20:0x1bAB804803159aD84b8854581AA53AC72455614E');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (535, 'XSGD', 'XSGD', 'eip155:1/erc20:0x70e8dE73cE538DA2bEEd35d14187F6959a8ecA96');
+*

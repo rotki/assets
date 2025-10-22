@@ -54,3 +54,7 @@ INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (534, 'Syndic
 *
 INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (535, 'XSGD', 'XSGD', 'eip155:1/erc20:0x70e8dE73cE538DA2bEEd35d14187F6959a8ecA96');
 *
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (536, 'NodeOps', 'NODE', 'eip155:1/erc20:0x2F714d7b9A035d4ce24af8d9b6091c07E37f43Fb');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (537, 'GameBuild', 'GAME', 'eip155:1/erc20:0x825459139C897D769339f295E962396C4F9E4A4D');
+*

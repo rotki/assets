@@ -58,3 +58,18 @@ INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (536, 'NodeOp
 *
 INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (537, 'GameBuild', 'GAME', 'eip155:1/erc20:0x825459139C897D769339f295E962396C4F9E4A4D');
 *
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (538, 'MON', 'MON', 'eip155:1/erc20:0xc555D625828c4527d477e595fF1Dd5801B4a600e');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (539, 'Quack AI Token', 'Q', 'eip155:1/erc20:0xc07e1300dc138601FA6B0b59f8D0FA477e690589');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (540, 'Portal To Bitcoin', 'PTB', 'eip155:1/erc20:0x30a25CC9c9EADe4D4d9e9349BE6e68c3411367D3');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (541, 'Unibase', 'UB', 'eip155:1/erc20:0x6944E1DF6Bf5972305f9Ab25dF47ef10De01bcc8');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (542, 'Velora', 'VLR', 'eip155:1/erc20:0x4e107a0000DB66f0E9Fd2039288Bf811dD1f9c74');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (543, 'NUMINE Token', 'NUMI', 'eip155:1/erc20:0xa29C9a740De8194e4016747E9A04a84946ada0a5');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (544, 'LEGACY TOKEN', 'LGCT', 'eip155:1/erc20:0xD38B305CaC06990c0887032A02C03D6839f770A8');
+*
+

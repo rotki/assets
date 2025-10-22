@@ -34,3 +34,17 @@ INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (524, 'Bless'
 *
 INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (525, 'Union', 'U', 'eip155:1/erc20:0xba5eD44733953d79717F6269357C77718C8Ba5ed');
 *
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (526, 'Anoma', 'XAN', 'eip155:1/erc20:0xCEDbEA37C8872c4171259Cdfd5255CB8923Cf8e7');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (527, 'Lombard Staked Bitcoin', 'LBTC', 'eip155:1/erc20:0x8236a87084f8B84306f72007F36F2618A5634494');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (528, 'WorldShards', 'SHARDS', 'eip155:1/erc20:0x6Efe65C2426b51E9AA0427B96C313E5D8715FD06');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (529, 'Trusta.AI', 'TA', 'eip155:59144/erc20:0x539AE81A166E5E80aEd211731563e549c411b140');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (530, 'UCOIN', 'U', 'eip155:1/erc20:0xe07710cdcD1c9F0FB04bfd013F9854E4552671cE');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (531, 'Enso', 'ENSO', 'eip155:1/erc20:0x699F088b5DddcAFB7c4824db5B10B57B37cB0C66');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (532, 'ZEROBASE', 'ZBT', 'eip155:1/erc20:0xfAB99fCF605fD8f4593EDb70A43bA56542777777');
+*

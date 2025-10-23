@@ -76,3 +76,5 @@ INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (545, 'USDT0'
 *
 INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (546, 'AUSD', 'AUSD', 'eip155:1/erc20:0x00000000eFE302BEAA2b3e6e1b18d08D69a9012a');
 *
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (547, 'MXNB', 'MXNB', 'eip155:1/erc20:0xF197FFC28c23E0309B5559e7a166f2c6164C80aA');
+*

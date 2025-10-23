@@ -300,7 +300,7 @@ class UpdateChecker:
         if asset_data['asset_type'] == 'C':
             evm_data = self._parse_evm_token_data(insert_text, schema_version)
             token_data.update(evm_data)
-        elif asset_data['asset_type'] == 'Y' and schema_version > 36:
+        elif asset_data['asset_type'] == 'Y' and schema_version > 12:
             solana_data = self._parse_solana_token_data(insert_text, schema_version)
             token_data.update(solana_data)
 
@@ -330,7 +330,7 @@ class UpdateChecker:
                     f'details data out of {insert_text}',
                 )
             assert self._parse_str(match.group(1), 'identifier', insert_text) == asset_data['identifier'], f'Identifiers of assets {asset_data["identifier"]} and common_asset_details {match.group(1)} are not same'
-            if asset_data['asset_type'] == 'C' or (asset_data['asset_type'] == 'Y' and schema_version > 36):
+            if asset_data['asset_type'] == 'C' or (asset_data['asset_type'] == 'Y' and schema_version > 12):
                 assert token_data['identifier'] == asset_data['identifier'], f'Identifiers of assets {asset_data["identifier"]} and token {token_data["identifier"]} are not same'
 
             common_details = {
@@ -384,7 +384,7 @@ class UpdateChecker:
             # Validate identifier formats for tokens
             if asset_data.asset_type == 'C' and schema_version > 2:
                 assert asset_data.identifier == f'eip155:{asset_data.chain}/erc20:{asset_data.address}', f'Mismatch in identifier, chain id, and/or address for {asset_data.identifier}'
-            elif asset_data.asset_type == 'Y' and schema_version > 36:
+            elif asset_data.asset_type == 'Y' and schema_version > 12:
                 assert asset_data.identifier == f'solana/token:{asset_data.address}', f'Solana token identifier should be solana/token:<address> for {asset_data.identifier}'
 
             # Check against duplicate information. Before schema version 3 we couldn't have duplicates
@@ -402,7 +402,7 @@ class UpdateChecker:
                 if asset_data.asset_type == 'C':
                     assert is_checksum_address(asset_data.address), f'Address not checksummed in {asset_data}, {asset_data.address}'
                     address_validations.append(('ethereum', (asset_data.address, asset_data.chain)))
-                elif asset_data.asset_type == 'Y' and schema_version > 36:
+                elif asset_data.asset_type == 'Y' and schema_version > 12:
                     address_validations.append(('solana', asset_data.address))
 
                 # ensure address appears in the action text

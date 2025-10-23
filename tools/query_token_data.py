@@ -39,7 +39,7 @@ SOLANA_IDENTIFIER = 'solana/token:{address}'
 ASSETS_QUERY = "INSERT INTO assets(identifier, name, type) VALUES('{identifier}', '{name}', '{asset_type}'); "
 EVM_TOKENS_QUERY = "INSERT INTO evm_tokens(identifier, token_kind, chain, address, decimals, protocol) VALUES('{identifier}', 'A', {blockchain}, '{address}', {decimals}, {protocol}); "
 SOLANA_TOKENS_QUERY = "INSERT INTO solana_tokens(identifier, token_kind, address, decimals, protocol) VALUES('{identifier}', 'D', '{address}', {decimals}, {protocol}); "
-COMMON_ASSET_DETAILS_QUERY = "INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('{identifier}', '{symbol}', '{coingecko}', '{cryptocompare}', NULL, {deployed_at}, NULL);"
+COMMON_ASSET_DETAILS_QUERY = "INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('{identifier}', '{symbol}', {coingecko}, {cryptocompare}, NULL, {deployed_at}, NULL);"
 UNDERLYING_TOKEN_QUERY = " INSERT INTO underlying_tokens_list(identifier, weight, parent_token_entry) VALUES('{underlying_identifier}', '1', '{parent_identifier}');"
 ASSET_COLLECTION_QUERY = "INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES ({collection}, '{name}', '{symbol}', '{main_asset}');"
 ASSET_MAPPING_QUERY = "INSERT INTO multiasset_mappings(collection_id, asset) VALUES ({collection}, '{identifier}');"
@@ -85,7 +85,7 @@ RPC_PROVIDERS = {  # RPC endpoints for each supported chain
     Chain.ETHEREUM: "https://eth.llamarpc.com",
     Chain.BINANCE: "https://binance.llamarpc.com",
     Chain.POLYGON_POS: "https://polygon.drpc.org",
-    Chain.AVALANCHE: "https://avax.meowrpc.com",
+    Chain.AVALANCHE: "https://api.avax.network/ext/bc/C/rpc",
     Chain.FANTOM: "https://1rpc.io/ftm",
     Chain.OPTIMISM: "https://mainnet.optimism.io",
     Chain.ARBITRUM_ONE: "https://arbitrum.meowrpc.com",
@@ -276,7 +276,7 @@ def fetch_evm_token_info(address: str, chain: Chain) -> TokenInfo:
     )
 
 
-def query_coingecko_data(address: str, chain: Chain) -> tuple[str, str, str, list[tuple[str, Chain, int]]] | None:
+def query_coingecko_data(address: str, chain: Chain) -> tuple[str, str, str, int | None, list[tuple[str, Chain, int]]] | None:
     """Query Coingecko API for token data.
     Returns tuple(coingecko_id, name, symbol, list[address, chain, decimals])
     """
@@ -297,10 +297,38 @@ def query_coingecko_data(address: str, chain: Chain) -> tuple[str, str, str, lis
             else:  # we don't have this chain in our chain enum
                 print(f'Skipping unsupported platform: {platform}')
 
-        return coingecko_id, data['name'], data['symbol'], tokens
+        usd_price = None
+        for ticker in data.get('tickers', []):
+            if ticker.get('target') == 'USDT' and (price := ticker.get('last', 0)) > 0:
+                usd_price = price
+                break
+
+        return coingecko_id, data['name'], data['symbol'].upper(), usd_price, tokens
     except Exception as e:
         print(f"Error querying Coingecko: {e}")
         return None
+
+
+def query_cryptocompare_id(coingecko_symbol: str, coingecko_price: float) -> str | None:
+    """Query the Cryptocompare API for the symbol of a token and see if it matches the coingecko
+    price (allows a difference of 2%). If so, return the symbol, otherwise return None.
+    """
+    print(f"\nQuerying Cryptocompare...")
+    try:
+        maybe_cc_id = coingecko_symbol.upper()
+        cc_response = requests.get(f'https://min-api.cryptocompare.com/data/pricemulti?fsyms={maybe_cc_id}&tsyms=USDT').json()
+        if (cc_price := cc_response.get(maybe_cc_id, {}).get('USDT')) is not None:
+            print(f"Found Cryptocompare symbol '{maybe_cc_id}' with price: ${cc_price}")
+            if abs(coingecko_price - cc_price) <= cc_price * 0.01:
+                return maybe_cc_id
+            if get_yes_no(prompt=f'Price differs from coingecko by >1%. Is this the correct symbol?'):
+                return maybe_cc_id
+        else:
+            print(f"Could not find symbol {maybe_cc_id} on Cryptocompare.")
+    except Exception as e:
+        print(f"Error querying Cryptocompare: {e}")
+
+    return None
 
 
 def process_collection(collection: CollectionInfo) -> None:
@@ -324,8 +352,8 @@ def process_collection(collection: CollectionInfo) -> None:
             "protocol": token.protocol,
             "blockchain": token.chain.value,
             "address": token.address if token.chain == Chain.SOLANA else to_checksum_address(token.address),
-            "coingecko": collection.coingecko_id,
-            "cryptocompare": collection.cryptocompare_id,
+            "coingecko": f"'{collection.coingecko_id}'" if collection.coingecko_id is not None else 'NULL',
+            "cryptocompare": f"'{collection.cryptocompare_id}'" if collection.cryptocompare_id is not None else 'NULL',
             "deployed_at": token.timestamp,
             "asset_type": 'Y' if token.chain == Chain.SOLANA else 'C',
         }
@@ -364,7 +392,9 @@ def process_collection(collection: CollectionInfo) -> None:
 def edit_collection_details(collection: CollectionInfo, edit_existing: bool = False) -> CollectionInfo:
     """Edit the details of a collection. Allows setting the Cryptocompare ID and main asset."""
     if collection.cryptocompare_id is None or edit_existing:
-        collection.cryptocompare_id = get_input(prompt="\nCryptocompare ID", default=collection.cryptocompare_id)
+        input_cc_id = get_input(prompt="\nCryptocompare ID", default=collection.cryptocompare_id)
+        collection.cryptocompare_id = input_cc_id if input_cc_id and input_cc_id != 'NULL' else None
+
     if len(collection.tokens) > 1 and edit_existing:
         default_option = None
         asset_map = {}
@@ -430,8 +460,10 @@ def load_tokens_by_address():
         token_info = edit_token_details(token_info=token_info)
         collection = CollectionInfo(tokens=[token_info], main_asset=token_info)
     else:
-        coingecko_id, token_name, token_symbol, token_addresses = coingecko_data
-        print(f"Found on Coingecko: {token_name} ({token_symbol}) with API ID: {coingecko_id}")
+        coingecko_id, token_name, token_symbol, token_price, token_addresses = coingecko_data
+        print(f"Found Coingecko ID '{coingecko_id}': {token_name} ({token_symbol}) with price: ${token_price}")
+        cc_id = query_cryptocompare_id(coingecko_symbol=token_symbol, coingecko_price=token_price)
+        print('')  # newline
         tokens, main_asset = [], None
         for _address, _chain, _decimals in token_addresses:
             if _chain != Chain.SOLANA:
@@ -457,7 +489,7 @@ def load_tokens_by_address():
         if not main_asset and len(tokens) > 0:
             main_asset = tokens[0]
 
-        collection = CollectionInfo(tokens=tokens, main_asset=main_asset, coingecko_id=coingecko_id)
+        collection = CollectionInfo(tokens=tokens, main_asset=main_asset, coingecko_id=coingecko_id, cryptocompare_id=cc_id)
 
     collection = edit_collection_details(collection)
     while True:

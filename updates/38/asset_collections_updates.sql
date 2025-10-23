@@ -72,4 +72,7 @@ INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (543, 'NUMINE
 *
 INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (544, 'LEGACY TOKEN', 'LGCT', 'eip155:1/erc20:0xD38B305CaC06990c0887032A02C03D6839f770A8');
 *
-
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (545, 'USDT0', 'USDT0', 'eip155:10/erc20:0x01bFF41798a0BcF287b996046Ca68b395DbC1071');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (546, 'AUSD', 'AUSD', 'eip155:1/erc20:0x00000000eFE302BEAA2b3e6e1b18d08D69a9012a');
+*

@@ -4,6 +4,8 @@ INSERT INTO assets(identifier, name, type) VALUES('eip155:137/erc20:0xc7B1807822
 *
 INSERT INTO assets(identifier, name, type) VALUES('XPL', 'Plasma', 'B'); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('XPL', 'XPL', 'plasma', 'XPL', NULL, 1756928217, NULL);
 *
+INSERT INTO assets(identifier, name, type) VALUES("PHP", "Philippine Peso", "A"); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES("PHP", "PHP", NULL, "PHP", NULL, NULL, NULL);
+*
 INSERT INTO assets(identifier, name, type) VALUES('eip155:56/erc20:0x000Ae314E2A2172a039B26378814C252734f556A', 'Aster', 'C'); INSERT INTO evm_tokens(identifier, token_kind, chain, address, decimals, protocol) VALUES('eip155:56/erc20:0x000Ae314E2A2172a039B26378814C252734f556A', 'A', 56, '0x000Ae314E2A2172a039B26378814C252734f556A', 18, NULL); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('eip155:56/erc20:0x000Ae314E2A2172a039B26378814C252734f556A', 'ASTER', "aster-2", "ASTER", NULL, 1756708746, NULL);
 *
 INSERT INTO assets(identifier, name, type) VALUES('eip155:1/erc20:0x01791F726B4103694969820be083196cC7c045fF', 'Yield Basis', 'C'); INSERT INTO evm_tokens(identifier, token_kind, chain, address, decimals, protocol) VALUES('eip155:1/erc20:0x01791F726B4103694969820be083196cC7c045fF', 'A', 1, '0x01791F726B4103694969820be083196cC7c045fF', 18, NULL); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('eip155:1/erc20:0x01791F726B4103694969820be083196cC7c045fF', 'YB', 'yield-basis', '', NULL, 1757968835, NULL);

@@ -5,18 +5,10 @@ Usage:
     python tools/query_token_data.py
 
 This script runs interactively, prompting the user for any needed input. To exit, press Ctrl-C.
-
-An etherscan api key is required. You will be prompted to enter it on the first run, after which
-it will be saved to a config file (`.token_query_config.json`) in the current directory.
-Example config file if you wish to create it manually:
-```
-{"api_key": "your_etherscan_api_key_here"}
-```
 """
 from contextlib import suppress
 
 from dateutil import parser as dp
-import json
 from dataclasses import asdict, dataclass, field
 from enum import Enum
 from typing import Literal
@@ -26,9 +18,7 @@ from web3.middleware import ExtraDataToPOAMiddleware
 import requests
 from eth_utils.address import to_checksum_address
 
-API_KEY = ""  # loaded on run and saved to config file
-CONFIG_FILE = '.token_query_config.json'
-COLLECTION_IDX = 400
+COLLECTION_IDX = 0
 ERC20_ABI = """[{"constant":true,"inputs":[],"name":"name","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_spender","type":"address"},{"name":"_value","type":"uint256"}],"name":"approve","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"totalSupply","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_from","type":"address"},{"name":"_to","type":"address"},{"name":"_value","type":"uint256"}],"name":"transferFrom","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"decimals","outputs":[{"name":"","type":"uint8"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"_owner","type":"address"}],"name":"balanceOf","outputs":[{"name":"balance","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"symbol","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_to","type":"address"},{"name":"_value","type":"uint256"}],"name":"transfer","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"_owner","type":"address"},{"name":"_spender","type":"address"}],"name":"allowance","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"payable":true,"stateMutability":"payable","type":"fallback"},{"anonymous":false,"inputs":[{"indexed":true,"name":"owner","type":"address"},{"indexed":true,"name":"spender","type":"address"},{"indexed":false,"name":"value","type":"uint256"}],"name":"Approval","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"from","type":"address"},{"indexed":true,"name":"to","type":"address"},{"indexed":false,"name":"value","type":"uint256"}],"name":"Transfer","type":"event"}]"""
 
 # Identifier Templates
@@ -242,9 +232,27 @@ def get_chain_selection(default: Chain | None = Chain.ETHEREUM) -> Chain:
 def get_deployed_ts(address: str, chain: Chain) -> int | str:
     """Retrieves the token deployment tx hash and then the timestamp of that tx."""
     try:
-        tx_hash = requests.get(
-            url=f"https://api.etherscan.io/v2/api?chainid={chain.value}&module=contract&action=getcontractcreation&contractaddresses={address}&apikey={API_KEY}",
-        ).json()["result"][0]["txHash"]
+        match chain:
+            case Chain.ETHEREUM:
+                url = 'https://eth.blockscout.com/api'
+            case Chain.OPTIMISM:
+                url = 'https://explorer.optimism.io/api'
+            case Chain.BASE:
+                url = 'https://base.blockscout.com/api'
+            case Chain.ARBITRUM_ONE:
+                url = 'https://arbitrum.blockscout.com/api'
+            case Chain.GNOSIS:
+                url = 'https://gnosis.blockscout.com/api'
+            case Chain.POLYGON_POS:
+                url = 'https://polygon.blockscout.com/api'
+            case Chain.SCROLL:
+                url = 'https://scroll.blockscout.com/api'
+            case _:
+                print(f'No available indexers for {chain.name}. Deployed timestamp must be manually entered.')
+                return "NULL"
+
+        url += f'?module=contract&action=getcontractcreation&contractaddresses={address}'
+        tx_hash = requests.get(url=url).json()["result"][0]["txHash"]
         web3_provider = Web3(HTTPProvider(RPC_PROVIDERS[chain]))
         web3_provider.middleware_onion.inject(ExtraDataToPOAMiddleware, layer=0)
         return web3_provider.eth.get_block(
@@ -530,22 +538,9 @@ def load_tokens_by_address():
 
 if __name__ == "__main__":
     print(
-        "Asset Info Query Tool - Query Coingecko, Etherscan, etc for token data and generate SQL queries.\n"
+        "Asset Info Query Tool - Query Coingecko, RPCs, etc for token data and generate SQL queries.\n"
         "Press Ctrl+C to exit."
     )
-
-    try:  # Load API key
-        with open(CONFIG_FILE, 'r') as f:
-            API_KEY = json.load(f)['api_key']
-            print('\nLoaded Etherscan API key from config file.')
-    except (FileNotFoundError, json.JSONDecodeError, KeyError):
-        while True:
-            if (API_KEY := input("\nEnter your Etherscan API key: ").strip()):
-                with open(CONFIG_FILE, 'w') as f:
-                    json.dump({'api_key': API_KEY}, f)
-                print(f"API key saved to {CONFIG_FILE}")
-                break
-            print("API key cannot be empty.")
 
     try:  # Run main loop
         while True:

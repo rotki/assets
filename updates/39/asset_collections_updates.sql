@@ -14,3 +14,7 @@ INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (553, 'zkPass
 *
 INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (554, 'COMMON', 'COMMON', 'eip155:8453/erc20:0x4c87da04887a1F9F21F777E3A8dD55C3C9f84701');
 *
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (555, 'Allora', 'ALLO', 'eip155:1/erc20:0x8408D45b61f5823298F19a09B53b7339c0280489');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (556, 'aPriori', 'APR', 'eip155:1/erc20:0x5A9610919f5e81183823A2be4Bd1BeB2B4da2a20');
+*

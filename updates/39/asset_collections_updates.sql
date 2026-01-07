@@ -18,3 +18,11 @@ INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (555, 'Allora
 *
 INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (556, 'aPriori', 'APR', 'eip155:1/erc20:0x5A9610919f5e81183823A2be4Bd1BeB2B4da2a20');
 *
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (557, 'Jupiter', 'JUP', 'eip155:1/erc20:0x4B1E80cAC91e2216EEb63e29B957eB91Ae9C2Be8');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (558, 'BOB', 'BOB', 'eip155:1/erc20:0xC9746F73cC33a36c2cD55b8aEFD732586946Cedd');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (559, 'Superfluid Token', 'SUP', 'eip155:1/erc20:0xD05001Db979ff2f1a3B2105875d3454E90dd2961');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (560, 'Theoriq Token', 'THQ', 'eip155:1/erc20:0xafFbe9a60F1F45E057FD9b6DC70004Bb0Ccc8b99');
+*

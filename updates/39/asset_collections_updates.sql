@@ -26,3 +26,9 @@ INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (559, 'Superf
 *
 INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (560, 'Theoriq Token', 'THQ', 'eip155:1/erc20:0xafFbe9a60F1F45E057FD9b6DC70004Bb0Ccc8b99');
 *
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (561, 'Turtle', 'TURTLE', 'eip155:1/erc20:0x66fD8de541c0594b4DccdFc13Bf3a390E50d3Afd');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (562, 'Enso', 'ENSO', 'eip155:1/erc20:0x699F088b5DddcAFB7c4824db5B10B57B37cB0C66');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (563, 'APRO oracle Token', 'AT', 'eip155:1/erc20:0x0581CCdf2d9BcA21baEfF8b32b2551fd49CF70aa');
+*

@@ -24,14 +24,13 @@ def fixture_schema_version():
     return info
 
 
-@pytest.mark.parametrize('version', range(1, get_latest_version() + 1))
-def test_valid_sql_sentences(version, schema_versions):
+def test_valid_sql_sentences(schema_versions):
     root_dir = Path(__file__).parents[1]
-    upgrade = root_dir / 'updates' / str(version) / 'updates.sql'
     updater = UpdateChecker()
-    with open(upgrade) as f:
-        data = f.read()
-        updater.check_single_version_update(data, schema_versions[version])
+    for version in range(1, get_latest_version() + 1):
+        with open(root_dir / 'updates' / str(version) / 'updates.sql') as f:
+            data = f.read()
+            updater.check_single_version_update(data, version, schema_versions[version])
 
 
 @pytest.mark.parametrize('version', range(1, get_latest_version() + 1))

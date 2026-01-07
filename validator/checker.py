@@ -148,6 +148,7 @@ class UpdateChecker:
         }
         self.string_re = re.compile(r'.*([\'"])(.*?)\1.*')
         self.test_version = 2
+        self.seen_elements_all_versions = set()
 
     def _parse_value(self, value: str) -> Optional[Union[str, int]]:
         match = self.string_re.match(value)
@@ -366,6 +367,7 @@ class UpdateChecker:
     def check_single_version_update(
             self,
             text: str,
+            version: int,
             schema_version: int
     ) -> None:
         lines = text.splitlines()
@@ -388,15 +390,6 @@ class UpdateChecker:
             elif asset_data.asset_type == 'Y' and schema_version > 12:
                 assert asset_data.identifier == f'solana/token:{asset_data.address}', f'Solana token identifier should be solana/token:<address> for {asset_data.identifier}'
 
-            # Check against duplicate information. Before schema version 3 we couldn't have duplicates
-            if insert and schema_version == 2:
-                assert asset_data.cryptocompare not in seen_elements, f'Duplicate cryptocompare {asset_data.cryptocompare}'
-                assert asset_data.coingecko not in seen_elements, f'Duplicate coingecko {asset_data.coingecko}'
-                if asset_data.name not in DUPLICATED_NAMES:
-                    assert asset_data.name not in seen_elements, f'Duplicate name {asset_data.name}'
-                if asset_data.symbol not in DUPLICATED_SYMBOLS:
-                    assert asset_data.symbol not in seen_elements, f'Duplicate symbol {asset_data.symbol}'
-
             # Check address-related validations
             address_validations = []
             if asset_data.address is not None:
@@ -409,17 +402,29 @@ class UpdateChecker:
                 # ensure address appears in the action text
                 assert asset_data.address in action
 
-            if insert:  # check for duplicate addresses if this is an insert
+            if insert:  # check for duplicates if this is an insert
+                # Only check for duplicates within a single version prior to 39 since there was no
+                # cross version checking until 39 and the prior upgrades contain duplicates.
+                elements = seen_elements if version < 39 else self.seen_elements_all_versions | seen_elements
                 for addr_type, addr_key in address_validations:
-                    assert addr_key not in seen_elements, f'Duplicate {addr_type} address {addr_key}'
+                    assert addr_key not in elements, f'Duplicate {addr_type} address {addr_key}'
                     seen_elements.add(addr_key)
 
-            if insert:
-                seen_elements.update((asset_data.symbol, asset_data.name))
-                if (asset_data.cryptocompare is not None) and len(asset_data.cryptocompare) != 0:
-                    seen_elements.add(asset_data.cryptocompare)
-                if (asset_data.coingecko is not None) and len(asset_data.coingecko) != 0:
-                    seen_elements.add(asset_data.coingecko)
+                if schema_version == 2:  # version 3 and later have duplicates of these for assets in the same collection
+                    assert asset_data.cryptocompare not in elements, f'Duplicate cryptocompare {asset_data.cryptocompare}'
+                    assert asset_data.coingecko not in elements, f'Duplicate coingecko {asset_data.coingecko}'
+                    if asset_data.name not in DUPLICATED_NAMES:
+                        assert asset_data.name not in elements, f'Duplicate name {asset_data.name}'
+                    if asset_data.symbol not in DUPLICATED_SYMBOLS:
+                        assert asset_data.symbol not in elements, f'Duplicate symbol {asset_data.symbol}'
+
+                    seen_elements.update((asset_data.symbol, asset_data.name))
+                    if (asset_data.cryptocompare is not None) and len(asset_data.cryptocompare) != 0:
+                        seen_elements.add(asset_data.cryptocompare)
+                    if (asset_data.coingecko is not None) and len(asset_data.coingecko) != 0:
+                        seen_elements.add(asset_data.coingecko)
+
+        self.seen_elements_all_versions.update(seen_elements)
 
     def generate_report(
         self,

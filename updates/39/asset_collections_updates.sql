@@ -28,7 +28,11 @@ INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (560, 'Theori
 *
 INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (561, 'Turtle', 'TURTLE', 'eip155:1/erc20:0x66fD8de541c0594b4DccdFc13Bf3a390E50d3Afd');
 *
-INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (562, 'Enso', 'ENSO', 'eip155:1/erc20:0x699F088b5DddcAFB7c4824db5B10B57B37cB0C66');
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (562, 'APRO oracle Token', 'AT', 'eip155:1/erc20:0x0581CCdf2d9BcA21baEfF8b32b2551fd49CF70aa');
 *
-INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (563, 'APRO oracle Token', 'AT', 'eip155:1/erc20:0x0581CCdf2d9BcA21baEfF8b32b2551fd49CF70aa');
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (563, 'BitcoinOS Token', 'BOS', 'eip155:1/erc20:0x13239C268BEDDd88aD0Cb02050D3ff6a9d00de6D');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (564, 'Pundi AI', 'PUNDIAI', 'eip155:1/erc20:0x075F23b9CdfCE2cC0cA466F4eE6cb4bD29d83bef');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (565, 'Folks Finance', 'FOLKS', 'eip155:1/erc20:0xFF7F8F301F7A706E3CfD3D2275f5dc0b9EE8009B');
 *

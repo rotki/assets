@@ -36,3 +36,11 @@ INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (564, 'Pundi 
 *
 INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (565, 'Folks Finance', 'FOLKS', 'eip155:1/erc20:0xFF7F8F301F7A706E3CfD3D2275f5dc0b9EE8009B');
 *
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (566, 'JANCTION', 'JCT', 'eip155:1/erc20:0xC477B6dfd26EC2460b3b92de18837Fd476Ea7549');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (567, 'Cysic Token', 'CYS', 'eip155:56/erc20:0x0C69199C1562233640e0Db5Ce2c399A88eB507C7');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (568, 'Helios Blockchain', 'HLS', 'eip155:1/erc20:0x970a341B4E311A5c7248Dc9c3d8d4f35fEdFA73e');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (569, 'Brevis Token', 'BREV', 'eip155:1/erc20:0x086F405146Ce90135750Bbec9A063a8B20A8bfFb');
+*

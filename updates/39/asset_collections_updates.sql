@@ -44,3 +44,5 @@ INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (568, 'Helios
 *
 INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (569, 'Brevis Token', 'BREV', 'eip155:1/erc20:0x086F405146Ce90135750Bbec9A063a8B20A8bfFb');
 *
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (570, 'Orochi Network Token', 'ON', 'eip155:56/erc20:0x0e4F6209eD984b21EDEA43acE6e09559eD051D48');
+*

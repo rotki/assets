@@ -126,3 +126,7 @@ INSERT INTO multiasset_mappings(collection_id, asset) VALUES (570, 'eip155:56/er
 *
 INSERT INTO multiasset_mappings(collection_id, asset) VALUES (570, 'eip155:1/erc20:0x33f6BE84becfF45ea6aA2952d7eF890B44bFB59d');
 *
+INSERT INTO multiasset_mappings(collection_id, asset) VALUES (37, 'solana/token:Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB');
+*
+INSERT INTO multiasset_mappings(collection_id, asset) VALUES (40, 'solana/token:5XZw2LKTyrfvfiskJ78AMpackRjPcyCif1WhUsPDuVqQ');
+*

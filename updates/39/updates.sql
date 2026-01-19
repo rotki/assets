@@ -272,3 +272,9 @@ INSERT INTO assets(identifier, name, type) VALUES('VELO', 'Velo', 'O'); INSERT I
 *
 UPDATE assets SET type='O' WHERE identifier='SHX';
 INSERT INTO assets(identifier, name, type) VALUES('SHX', 'Stronghold', 'O'); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('SHX', 'SHX', 'stronghold-token', NULL, NULL, 1634726627, NULL);
+INSERT INTO assets(identifier, name, type) VALUES('BMN2', 'Blockstream Mining Note 2', 'W'); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('BMN2', 'BMN2', 'blockstream-mining-note-2', NULL, NULL, 1756872000, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES('eip155:8453/erc20:0x901F1D2BF312e6Fa1716Df603df8F86315bcb355', 'Links', 'C'); INSERT INTO evm_tokens(identifier, token_kind, chain, address, decimals, protocol) VALUES('eip155:8453/erc20:0x901F1D2BF312e6Fa1716Df603df8F86315bcb355', 'A', 8453, '0x901F1D2BF312e6Fa1716Df603df8F86315bcb355', 18, NULL); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('eip155:8453/erc20:0x901F1D2BF312e6Fa1716Df603df8F86315bcb355', 'LINKS', 'links-2', NULL, NULL, 1740503147, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES('eip155:1/erc20:0x081599E4936D12c46Bd48913B2329115Cd26cbdd', 'Macropod', 'C'); INSERT INTO evm_tokens(identifier, token_kind, chain, address, decimals, protocol) VALUES('eip155:1/erc20:0x081599E4936D12c46Bd48913B2329115Cd26cbdd', 'A', 1, '0x081599E4936D12c46Bd48913B2329115Cd26cbdd', 18, NULL); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('eip155:1/erc20:0x081599E4936D12c46Bd48913B2329115Cd26cbdd', 'AUDM', 'macropod', 'AUDM', NULL, 1749780143, NULL);
+*

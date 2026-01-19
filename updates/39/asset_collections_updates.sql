@@ -46,3 +46,11 @@ INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (569, 'Brevis
 *
 INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (570, 'Orochi Network Token', 'ON', 'eip155:56/erc20:0x0e4F6209eD984b21EDEA43acE6e09559eD051D48');
 *
+UPDATE asset_collections SET main_asset='eip155:1/erc20:0x39b8B6385416f4cA36a20319F70D28621895279D' WHERE id=240;
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (240, 'Monerium EUR', 'EURe', 'eip155:1/erc20:0x39b8B6385416f4cA36a20319F70D28621895279D');
+UPDATE asset_collections SET main_asset='eip155:1/erc20:0x78a20B7AF85156B4389a349Aa4c96efC2E509768' WHERE id=335;
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (335, 'Monerium GBPe', 'GBPe', 'eip155:1/erc20:0x78a20B7AF85156B4389a349Aa4c96efC2E509768');
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (571, 'Monerium ISKe', 'ISKe', 'eip155:1/erc20:0x38D22BD604c4549e2cC15e94B8e22E6FE4aE82B4');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (572, 'Monerium USDe', 'USDe', 'eip155:1/erc20:0x05968f40939fdc016AD58F82Cd08dA884825aD55');
+*

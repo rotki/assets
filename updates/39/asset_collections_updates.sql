@@ -68,3 +68,9 @@ INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (578, 'Fronti
 *
 INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (579, 'Checkmate', 'CHECK', 'eip155:1/erc20:0x9126236476eFBA9Ad8aB77855c60eB5BF37586Eb');
 *
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (580, 'ETHGas', 'GWEI', 'eip155:1/erc20:0x2798b1cC5A993085E8A9D46e80499F1B63f42204');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (581, 'ACU', 'ACU', 'eip155:1/erc20:0x216b3643ff8b7BB30d8A48E9F1BD550126202AdD');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (582, 'DeepNode', 'DN', 'eip155:1/erc20:0x9B6a1d4fa5d90E5f2D34130053978D14Cd301d58');
+*

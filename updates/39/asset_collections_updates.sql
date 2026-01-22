@@ -54,3 +54,17 @@ INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (571, 'Moneri
 *
 INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (572, 'Monerium USDe', 'USDe', 'eip155:1/erc20:0x05968f40939fdc016AD58F82Cd08dA884825aD55');
 *
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (573, 'River', 'RIVER', 'eip155:1/erc20:0xdA7AD9dea9397cffdDAE2F8a052B82f1484252B3');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (574, 'Yala Token', 'YALA', 'eip155:1/erc20:0xF970706063b7853877F39515C96932D49d5AC9Cd');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (575, 'Loaded Lions', 'LION', 'eip155:25/erc20:0x9D8c68F185A04314DDC8B8216732455e8dbb7E45');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (576, 'RaveDAO', 'RAVE', 'eip155:1/erc20:0x17205fab260a7a6383a81452cE6315A39370Db97');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (577, 'Aussie Dollar Token', 'AUDX', 'eip155:1/erc20:0xD687759f35bb747A29246a4b9495C8f52C49E00C');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (578, 'Frontier Stable Token', 'FRNT', 'eip155:1/erc20:0x5E817F2AbCCB9095585D26c2a3ce234a440574Fc');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (579, 'Checkmate', 'CHECK', 'eip155:1/erc20:0x9126236476eFBA9Ad8aB77855c60eB5BF37586Eb');
+*

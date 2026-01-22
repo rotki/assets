@@ -162,3 +162,49 @@ INSERT INTO multiasset_mappings(collection_id, asset) VALUES (572, 'eip155:42161
 *
 INSERT INTO multiasset_mappings(collection_id, asset) VALUES (572, 'eip155:534352/erc20:0x673541D0d71Dc324a6c94aCDcd540BcA8C5eA289');
 *
+INSERT INTO multiasset_mappings(collection_id, asset) VALUES (573, 'eip155:1/erc20:0xdA7AD9dea9397cffdDAE2F8a052B82f1484252B3');
+*
+INSERT INTO multiasset_mappings(collection_id, asset) VALUES (573, 'eip155:8453/erc20:0xdA7AD9dea9397cffdDAE2F8a052B82f1484252B3');
+*
+INSERT INTO multiasset_mappings(collection_id, asset) VALUES (573, 'eip155:56/erc20:0xdA7AD9dea9397cffdDAE2F8a052B82f1484252B3');
+*
+INSERT INTO multiasset_mappings(collection_id, asset) VALUES (574, 'eip155:1/erc20:0xF970706063b7853877F39515C96932D49d5AC9Cd');
+*
+INSERT INTO multiasset_mappings(collection_id, asset) VALUES (574, 'eip155:8453/erc20:0xF970706063b7853877F39515C96932D49d5AC9Cd');
+*
+INSERT INTO multiasset_mappings(collection_id, asset) VALUES (574, 'eip155:56/erc20:0xF970706063b7853877F39515C96932D49d5AC9Cd');
+*
+INSERT INTO multiasset_mappings(collection_id, asset) VALUES (575, 'eip155:25/erc20:0x9D8c68F185A04314DDC8B8216732455e8dbb7E45');
+*
+INSERT INTO multiasset_mappings(collection_id, asset) VALUES (575, 'solana/token:7kN5FQMD8ja4bzysEgc5FXmryKd6gCgjiWnhksjHCFb3');
+*
+INSERT INTO multiasset_mappings(collection_id, asset) VALUES (575, 'eip155:42161/erc20:0x527e8D368298deA5a53be257e5300F4DBafb7a97');
+*
+INSERT INTO multiasset_mappings(collection_id, asset) VALUES (576, 'eip155:1/erc20:0x17205fab260a7a6383a81452cE6315A39370Db97');
+*
+INSERT INTO multiasset_mappings(collection_id, asset) VALUES (576, 'eip155:8453/erc20:0x1aA8fD5BCce2231C6100d55Bf8B377cff33Acfc3');
+*
+INSERT INTO multiasset_mappings(collection_id, asset) VALUES (576, 'eip155:56/erc20:0x97693439EA2f0ecdeb9135881E49f354656a911c');
+*
+INSERT INTO multiasset_mappings(collection_id, asset) VALUES (577, 'eip155:1/erc20:0xD687759f35bb747A29246a4b9495C8f52C49E00C');
+*
+INSERT INTO multiasset_mappings(collection_id, asset) VALUES (577, 'eip155:137/erc20:0xD687759f35bb747A29246a4b9495C8f52C49E00C');
+*
+INSERT INTO multiasset_mappings(collection_id, asset) VALUES (578, 'eip155:1/erc20:0x5E817F2AbCCB9095585D26c2a3ce234a440574Fc');
+*
+INSERT INTO multiasset_mappings(collection_id, asset) VALUES (578, 'eip155:43114/erc20:0x5E817F2AbCCB9095585D26c2a3ce234a440574Fc');
+*
+INSERT INTO multiasset_mappings(collection_id, asset) VALUES (578, 'solana/token:FRNTPi9V3Sw9b9U8d5Q3WY7tNANT6Q394d7dYtv7Jdog');
+*
+INSERT INTO multiasset_mappings(collection_id, asset) VALUES (578, 'eip155:8453/erc20:0x5E817F2AbCCB9095585D26c2a3ce234a440574Fc');
+*
+INSERT INTO multiasset_mappings(collection_id, asset) VALUES (578, 'eip155:137/erc20:0x5E817F2AbCCB9095585D26c2a3ce234a440574Fc');
+*
+INSERT INTO multiasset_mappings(collection_id, asset) VALUES (578, 'eip155:42161/erc20:0x5E817F2AbCCB9095585D26c2a3ce234a440574Fc');
+*
+INSERT INTO multiasset_mappings(collection_id, asset) VALUES (578, 'eip155:10/erc20:0x5E817F2AbCCB9095585D26c2a3ce234a440574Fc');
+*
+INSERT INTO multiasset_mappings(collection_id, asset) VALUES (579, 'eip155:1/erc20:0x9126236476eFBA9Ad8aB77855c60eB5BF37586Eb');
+*
+INSERT INTO multiasset_mappings(collection_id, asset) VALUES (579, 'eip155:8453/erc20:0x9126236476eFBA9Ad8aB77855c60eB5BF37586Eb');
+*

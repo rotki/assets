@@ -450,3 +450,5 @@ INSERT INTO assets(identifier, name, type) VALUES('eip155:1/erc20:0x87acFA3fD7A6
 *
 INSERT INTO assets(identifier, name, type) VALUES('BYTENOVA', 'ByteNova', 'W'); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('BYTENOVA', 'BYTE', NULL, NULL, NULL, 1767830400, NULL);
 *
+INSERT INTO assets(identifier, name, type) VALUES('eip155:1/erc20:0xE575cC6EC0B5d176127ac61aD2D3d9d19d1aa4a0', 'Staked $WALLET', 'C'); INSERT INTO evm_tokens(identifier, token_kind, chain, address, decimals, protocol) VALUES('eip155:1/erc20:0xE575cC6EC0B5d176127ac61aD2D3d9d19d1aa4a0', 'A', 1, '0xE575cC6EC0B5d176127ac61aD2D3d9d19d1aa4a0', 18, NULL); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('eip155:1/erc20:0xE575cC6EC0B5d176127ac61aD2D3d9d19d1aa4a0', 'stkWALLET', NULL, NULL, NULL, 1745854823, NULL); INSERT INTO underlying_tokens_list(identifier, weight, parent_token_entry) VALUES('eip155:1/erc20:0x88800092fF476844f74dC2FC427974BBee2794Ae', '1', 'eip155:1/erc20:0xE575cC6EC0B5d176127ac61aD2D3d9d19d1aa4a0');
+*

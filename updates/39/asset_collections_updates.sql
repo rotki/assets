@@ -74,3 +74,5 @@ INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (581, 'ACU', 
 *
 INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (582, 'DeepNode', 'DN', 'eip155:1/erc20:0x9B6a1d4fa5d90E5f2D34130053978D14Cd301d58');
 *
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (583, 'TRIA', 'TRIA', 'eip155:1/erc20:0x228bEC415adE4b61D7CaF0adf8C91EAc587BA369');
+*

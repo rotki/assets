@@ -234,3 +234,11 @@ INSERT INTO multiasset_mappings(collection_id, asset) VALUES (335, 'eip155:8453/
 *
 INSERT INTO multiasset_mappings(collection_id, asset) VALUES (240, 'eip155:8453/erc20:0xbf6e2966A9C3D99C9E4D069E04f7Bdb9C8aa762C');
 *
+INSERT INTO multiasset_mappings(collection_id, asset) VALUES (584, 'eip155:1/erc20:0x031De51F3E8016514Bd0963d0B2AB825A591Db9A');
+*
+INSERT INTO multiasset_mappings(collection_id, asset) VALUES (584, 'eip155:42161/erc20:0x3b8db18e69d6686Ad9371A423aFe3Dd1065C94f1');
+*
+INSERT INTO multiasset_mappings(collection_id, asset) VALUES (585, 'eip155:1/erc20:0xA9E8aCf069C58aEc8825542845Fd754e41a9489A');
+*
+INSERT INTO multiasset_mappings(collection_id, asset) VALUES (585, 'solana/token:EXJvx3KksbWP9QmPmtRr8mkQXD2kZrFRENCJitMs1eZ6');
+*

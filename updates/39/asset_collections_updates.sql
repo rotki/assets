@@ -76,3 +76,7 @@ INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (582, 'DeepNo
 *
 INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (583, 'TRIA', 'TRIA', 'eip155:1/erc20:0x228bEC415adE4b61D7CaF0adf8C91EAc587BA369');
 *
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (584, 'Espresso', 'ESP', 'eip155:1/erc20:0x031De51F3E8016514Bd0963d0B2AB825A591Db9A');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (585, 'pepeCoin', 'pepecoin', 'eip155:1/erc20:0xA9E8aCf069C58aEc8825542845Fd754e41a9489A');
+*

@@ -270,8 +270,8 @@ INSERT INTO assets(identifier, name, type) VALUES('solana/token:Es9vMFrzaCERmJfr
 *
 INSERT INTO assets(identifier, name, type) VALUES('solana/token:5XZw2LKTyrfvfiskJ78AMpackRjPcyCif1WhUsPDuVqQ', 'WBTC', 'Y'); INSERT INTO solana_tokens(identifier, token_kind, address, decimals, protocol) VALUES('solana/token:5XZw2LKTyrfvfiskJ78AMpackRjPcyCif1WhUsPDuVqQ', 'D', '5XZw2LKTyrfvfiskJ78AMpackRjPcyCif1WhUsPDuVqQ', 8, NULL); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('solana/token:5XZw2LKTyrfvfiskJ78AMpackRjPcyCif1WhUsPDuVqQ', 'WBTC', 'wrapped-bitcoin', 'WBTC', NULL, 1745918782, NULL);
 *
-UPDATE common_asset_details SET cryptocompare='VELO' WHERE identifier='VELO';
 INSERT INTO assets(identifier, name, type) VALUES('VELO', 'Velo', 'O'); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('VELO', 'VELO', 'velo', 'VELO', NULL, 1601266688, NULL);
+*
 UPDATE assets SET type='O' WHERE identifier='SHX';
 INSERT INTO assets(identifier, name, type) VALUES('SHX', 'Stronghold', 'O'); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('SHX', 'SHX', 'stronghold-token', NULL, NULL, 1634726627, NULL);
 INSERT INTO assets(identifier, name, type) VALUES('BMN2', 'Blockstream Mining Note 2', 'W'); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('BMN2', 'BMN2', 'blockstream-mining-note-2', NULL, NULL, 1756872000, NULL);

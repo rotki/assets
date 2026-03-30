@@ -1,0 +1,2 @@
+INSERT INTO assets(identifier, name, type) VALUES('eip155:999/erc20:0x5555555555555555555555555555555555555555', 'Wrapped HYPE', 'C'); INSERT INTO evm_tokens(identifier, token_kind, chain, address, decimals, protocol) VALUES('eip155:999/erc20:0x5555555555555555555555555555555555555555', 'A', 999, '0x5555555555555555555555555555555555555555', 18, NULL); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('eip155:999/erc20:0x5555555555555555555555555555555555555555', 'WHYPE', NULL, NULL, NULL, NULL, NULL);
+*

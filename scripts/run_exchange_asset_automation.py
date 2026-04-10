@@ -24,6 +24,7 @@ import sys
 from pathlib import Path
 
 import requests
+from eth_utils import to_checksum_address
 
 COINGECKO_COINS_LIST_URL = "https://api.coingecko.com/api/v3/coins/list?include_platform=true"
 
@@ -95,6 +96,39 @@ def read_certainty_summary(csv_path: Path) -> tuple[int, int, int, int]:
             else:
                 ambiguous += 1
     return total, unique, ambiguous, missing
+
+
+def normalize_sql_file(path: Path) -> tuple[int, int]:
+    if path.exists() is False:
+        return 0, 0
+
+    text = path.read_text()
+    insert_count = text.count("INSERT OR IGNORE INTO")
+    text = text.replace("INSERT OR IGNORE INTO", "INSERT INTO")
+
+    checksummed = 0
+
+    def _replace_address(match: re.Match[str]) -> str:
+        nonlocal checksummed
+        original = match.group(0)
+        fixed = to_checksum_address(original)
+        if fixed != original:
+            checksummed += 1
+        return fixed
+
+    text = re.sub(r"0x[a-fA-F0-9]{40}", _replace_address, text)
+    path.write_text(text)
+    return insert_count, checksummed
+
+
+def normalize_generated_sql_files(paths: list[Path]) -> None:
+    for path in paths:
+        replaced_inserts, checksummed_addresses = normalize_sql_file(path)
+        if replaced_inserts or checksummed_addresses:
+            print(
+                f"  normalized {path}: INSERT OR IGNORE -> INSERT ({replaced_inserts}), "
+                f"checksummed addresses ({checksummed_addresses})",
+            )
 
 
 def main() -> None:
@@ -174,7 +208,6 @@ def main() -> None:
         str(location_sql),
         "--location-mappings-json",
         str(location_json),
-        "--insert-or-ignore",
     ]
     if args.global_db:
         gen_cmd += ["--global-db", args.global_db]
@@ -182,6 +215,14 @@ def main() -> None:
         gen_cmd += ["--no-fetch-missing"]
 
     run_cmd(gen_cmd, dry_run=args.dry_run)
+
+    if not args.dry_run:
+        normalize_generated_sql_files([
+            updates_sql,
+            collections_sql,
+            mappings_sql,
+            location_sql,
+        ])
 
     print("[5/5] Done")
     print(f"  symbols:      {symbols_file}")

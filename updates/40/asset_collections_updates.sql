@@ -10,3 +10,9 @@ INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (590, 'Fabric
 *
 INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (591, 'OneFootball Club', 'OFC', 'eip155:1/erc20:0x9CB7A4EF0cAE65B07362bc679a0B874041E3da53');
 *
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (592, 'Opinion', 'OPN', 'eip155:56/erc20:0x7977BF3e7e0c954D12cdcA3E013ADAf57E0B06E0');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (593, 'Unitas', 'UP', 'eip155:56/erc20:0x000008D2175F9AEAdDb2430c26f8A6f73c5A0000');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (594, 'Based', 'BASED', 'eip155:1/erc20:0x4f2b33840227DDD0e28da8d4185D6fa07ADfed87');
+*

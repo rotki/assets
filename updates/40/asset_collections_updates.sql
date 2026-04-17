@@ -16,3 +16,7 @@ INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (593, 'Unitas
 *
 INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (594, 'Based', 'BASED', 'eip155:1/erc20:0x4f2b33840227DDD0e28da8d4185D6fa07ADfed87');
 *
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (595, 'Block Street', 'BSB', 'eip155:1/erc20:0xDB6Ba5D510F114F9b2eA08BEa7d30e32eEe33411');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (596, 'XAUt0', 'XAUt0', 'eip155:999/erc20:0xf4D9235269a96aaDaFc9aDAe454a0618eBE37949');
+*

@@ -183,22 +183,22 @@
     },
     "37": {
       "min_schema_version": 13,
-      "max_schema_version": 15,
+      "max_schema_version": 16,
       "changes": 230
     },
     "38": {
       "min_schema_version": 13,
-      "max_schema_version": 15,
+      "max_schema_version": 16,
       "changes": 211
     },
     "39": {
       "min_schema_version": 13,
-      "max_schema_version": 15,
+      "max_schema_version": 16,
       "changes": 264
     },
     "40": {
       "min_schema_version": 13,
-      "max_schema_version": 15,
+      "max_schema_version": 16,
       "changes": 2
     }
   }

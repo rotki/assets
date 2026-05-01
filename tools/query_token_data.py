@@ -6,6 +6,7 @@ Usage:
 
 This script runs interactively, prompting the user for any needed input. To exit, press Ctrl-C.
 """
+import argparse
 from contextlib import suppress
 
 from dateutil import parser as dp
@@ -52,6 +53,10 @@ class Chain(Enum):
     CRONOS = 25
     ZKSYNC = 324
     LINEA = 59144
+    MONAD = 143
+    HYPERLIQUID = 999
+    INK = 57073
+    MEGAETH = 4326
 
 
 CHAINS_TO_COINGECKO_IDS = {  # id used on coingecko for each chain
@@ -70,15 +75,19 @@ CHAINS_TO_COINGECKO_IDS = {  # id used on coingecko for each chain
     Chain.ZKSYNC: "zksync",
     Chain.SOLANA: "solana",
     Chain.LINEA: "linea",
+    Chain.MONAD: "monad",
+    Chain.HYPERLIQUID: "hyperevm",
+    Chain.INK: "ink",
+    Chain.MEGAETH: "megaeth",
 }
 RPC_PROVIDERS = {  # RPC endpoints for each supported chain
-    Chain.ETHEREUM: "https://eth.llamarpc.com",
+    Chain.ETHEREUM: "https://eth.blockrazor.xyz",
     Chain.BINANCE: "https://binance.llamarpc.com",
     Chain.POLYGON_POS: "https://polygon.drpc.org",
     Chain.AVALANCHE: "https://api.avax.network/ext/bc/C/rpc",
     Chain.FANTOM: "https://1rpc.io/ftm",
     Chain.OPTIMISM: "https://mainnet.optimism.io",
-    Chain.ARBITRUM_ONE: "https://arbitrum.meowrpc.com",
+    Chain.ARBITRUM_ONE: "https://arb1.arbitrum.io/rpc",
     Chain.GNOSIS: "https://rpc.gnosischain.com",
     Chain.ARBITRUM_NOVA: "https://arbitrum-nova.drpc.org",
     Chain.BASE: "https://base.llamarpc.com",
@@ -86,6 +95,10 @@ RPC_PROVIDERS = {  # RPC endpoints for each supported chain
     Chain.SCROLL: "https://scroll.drpc.org",
     Chain.ZKSYNC: "https://1rpc.io/zksync2-era",
     Chain.LINEA: "https://rpc.linea.build",
+    Chain.MONAD: "https://rpc.monad.xyz",
+    Chain.HYPERLIQUID: "https://rpc.hyperliquid.xyz/evm",
+    Chain.INK: "https://rpc-gel.inkonchain.com",
+    Chain.MEGAETH: "https://mainnet.megaeth.com/rpc",
 }
 
 
@@ -175,6 +188,53 @@ class CollectionInfo:
     cryptocompare_id: str | None = None
 
 
+@dataclass
+class QueryOptions:
+    fill_gaps: bool = False
+    chains: set[Chain] | None = None
+
+
+def parse_chain_names(value: str) -> set[Chain]:
+    """Parse comma-separated chain names into a set of Chain enums."""
+    parsed_chains: set[Chain] = set()
+    invalid_names: list[str] = []
+    for part in value.split(','):
+        chain_name = part.strip().upper()
+        if chain_name == '':
+            continue
+        if chain_name in Chain.__members__:
+            parsed_chains.add(Chain[chain_name])
+        else:
+            invalid_names.append(part.strip())
+
+    if invalid_names:
+        raise ValueError(f"Unknown chain names: {', '.join(invalid_names)}")
+    if not parsed_chains:
+        raise ValueError('At least one valid chain must be provided')
+    return parsed_chains
+
+
+def select_fill_gap_chains(available_chains: list[Chain], preselected_chains: set[Chain] | None) -> set[Chain]:
+    """Select which chains to include during fill-gaps flow."""
+    available_set = set(available_chains)
+    if preselected_chains is not None:
+        selected = preselected_chains & available_set
+        if not selected:
+            print('None of the selected --chains are available for this Coingecko token.')
+        return selected
+
+    default_value = ','.join(chain.name for chain in available_chains)
+    selected_input = get_input(
+        prompt='Select chains to include (comma-separated chain names)',
+        default=default_value,
+    )
+    try:
+        return parse_chain_names(selected_input) & available_set
+    except ValueError as e:
+        print(f'Invalid selection: {e}')
+        return set()
+
+
 def print_header(header: str, level: Literal[0, 1] = 0, space_above: bool = False) -> None:
     separator = "=" * 60 if level == 0 else "-" * 50
     new_line = "\n" if space_above else ""
@@ -247,6 +307,8 @@ def get_deployed_ts(address: str, chain: Chain) -> int | str:
                 url = 'https://polygon.blockscout.com/api'
             case Chain.SCROLL:
                 url = 'https://scroll.blockscout.com/api'
+            case Chain.MEGAETH:
+                url = 'https://megaeth.blockscout.com/api'
             case _:
                 print(f'No available indexers for {chain.name}. Deployed timestamp must be manually entered.')
                 return "NULL"
@@ -264,15 +326,27 @@ def get_deployed_ts(address: str, chain: Chain) -> int | str:
 
 
 def fetch_evm_token_info(address: str, chain: Chain) -> TokenInfo:
-    """Fetch token information from etherscan and web3 RPCs."""
+    """Fetch token information from RPC. Keep partial results when one call fails."""
     print(f"Querying token info for {address} on {chain.name}...")
     address = to_checksum_address(address)
     web3_provider = Web3(HTTPProvider(RPC_PROVIDERS[chain]))
     contract = web3_provider.eth.contract(address=address, abi=ERC20_ABI)
-    name = contract.functions.name().call()
-    decimals = contract.functions.decimals().call()
-    symbol = contract.functions.symbol().call()
-    timestamp = get_deployed_ts(address=address, chain=chain)
+
+    def _safe_call(fn, field_name: str, default=None):
+        try:
+            return fn()
+        except Exception as e:
+            print(f"Failed to query {field_name} for {address} on {chain.name}: {e}")
+            return default
+
+    name = _safe_call(lambda: contract.functions.name().call(), 'name')
+    decimals = _safe_call(lambda: contract.functions.decimals().call(), 'decimals')
+    symbol = _safe_call(lambda: contract.functions.symbol().call(), 'symbol')
+    timestamp = _safe_call(lambda: get_deployed_ts(address=address, chain=chain), 'deployment timestamp', "NULL")
+
+    if name is None and symbol is None and decimals is None:
+        raise RuntimeError('Unable to query ERC20 metadata from RPC')
+
     print(f"Found token: {name} ({symbol}) with {decimals} decimals deployed at {timestamp}")
     return TokenInfo(
         address=address,
@@ -290,18 +364,37 @@ def query_coingecko_data(address: str, chain: Chain) -> tuple[str, str, str, int
     """
     print(f"\nQuerying Coingecko...")
     try:
-        data = requests.get(f"https://api.coingecko.com/api/v3/coins/{CHAINS_TO_COINGECKO_IDS[chain]}/contract/{address}").json()
-        if (coingecko_id := data.get('id')) is None:
+        primary_platform = CHAINS_TO_COINGECKO_IDS[chain]
+        platforms_to_try = [primary_platform]
+        if chain == Chain.HYPERLIQUID and primary_platform != 'hyperliquid':
+            platforms_to_try.append('hyperliquid')
+
+        data = None
+        for platform in platforms_to_try:
+            response = requests.get(f"https://api.coingecko.com/api/v3/coins/{platform}/contract/{address}")
+            data = response.json()
+            if (coingecko_id := data.get('id')) is not None:
+                if platform != primary_platform:
+                    print(f"Coingecko match found via fallback platform '{platform}'.")
+                break
+
+            status_code = response.status_code
+            error_message = data.get('error')
+            if error_message is None:
+                error_message = data.get('status', {}).get('error_message')
+            if error_message:
+                print(f"Coingecko response for platform '{platform}' was {status_code}: {error_message}")
+        else:
             return None
 
         tokens, coingecko_to_chain = [], {v: k for k, v in CHAINS_TO_COINGECKO_IDS.items()}
         for platform, details in data.get('detail_platforms', {}).items():
-            if (chain := coingecko_to_chain.get(platform)) is not None:
+            if (mapped_chain := coingecko_to_chain.get(platform)) is not None:
                 addr = details['contract_address']
                 with suppress(ValueError):  # ensure any evm addresses are properly checksumed
                     addr = to_checksum_address(addr)
-                tokens.append((addr, chain, details['decimal_place']))
-                print(f"Found {chain.name} token: {addr}")
+                tokens.append((addr, mapped_chain, details['decimal_place']))
+                print(f"Found {mapped_chain.name} token: {addr}")
             else:  # we don't have this chain in our chain enum
                 print(f'Skipping unsupported platform: {platform}')
 
@@ -359,12 +452,15 @@ def process_collection(collection: CollectionInfo) -> None:
             "decimals": token.decimals,
             "protocol": token.protocol,
             "blockchain": token.chain.value,
-            "address": token.address if token.chain == Chain.SOLANA else to_checksum_address(token.address),
+            "address": token.address,
             "coingecko": f"'{collection.coingecko_id}'" if collection.coingecko_id is not None else 'NULL',
             "cryptocompare": f"'{collection.cryptocompare_id}'" if collection.cryptocompare_id is not None else 'NULL',
             "deployed_at": token.timestamp,
             "asset_type": 'Y' if token.chain == Chain.SOLANA else 'C',
         }
+        if token.chain != Chain.SOLANA:
+            with suppress(ValueError):
+                format_kwargs["address"] = to_checksum_address(token.address)
         main_query_str += ASSETS_QUERY.format(**format_kwargs)
         main_query_str += (SOLANA_TOKENS_QUERY if token.chain == Chain.SOLANA else EVM_TOKENS_QUERY).format(**format_kwargs)
         main_query_str += COMMON_ASSET_DETAILS_QUERY.format(**format_kwargs)
@@ -444,6 +540,20 @@ def edit_token_details(
         except Exception as e:
             print(f"Failed to query token info for {token_info.address} on {token_info.chain}: {e}")
             print('Please enter token information manually.')
+    elif not edit_existing and token_info.chain != Chain.SOLANA and token_info.address is not None:
+        try:  # attempt to fill missing token details from RPC
+            fetched = fetch_evm_token_info(address=token_info.address, chain=token_info.chain)
+            if token_info.name is None:
+                token_info.name = fetched.name
+            if token_info.symbol is None:
+                token_info.symbol = fetched.symbol
+            if token_info.decimals is None:
+                token_info.decimals = fetched.decimals
+            if token_info.timestamp is None or token_info.timestamp == "NULL":
+                token_info.timestamp = fetched.timestamp
+        except Exception as e:
+            print(f"Failed to query token info for {token_info.address} on {token_info.chain}: {e}")
+            print('Please enter token information manually.')
 
     for attr in ('address', 'chain', 'name', 'symbol', 'decimals', 'timestamp', 'protocol', 'underlying_tokens'):
         if edit_existing or (
@@ -455,7 +565,7 @@ def edit_token_details(
     return token_info
 
 
-def load_tokens_by_address():
+def load_tokens_by_address(options: QueryOptions) -> None:
     """Process tokens starting from a contract address."""
     print_header("New Asset Collection...", space_above=True)
     token_info = TokenInfo()
@@ -472,12 +582,24 @@ def load_tokens_by_address():
         print(f"Found Coingecko ID '{coingecko_id}': {token_name} ({token_symbol}) with price: ${token_price}")
         cc_id = query_cryptocompare_id(coingecko_symbol=token_symbol, coingecko_price=token_price)
         print('')  # newline
+
+        if options.fill_gaps:
+            available_chains = sorted({entry[1] for entry in token_addresses}, key=lambda chain: chain.name)
+            selected_chains = select_fill_gap_chains(
+                available_chains=available_chains,
+                preselected_chains=options.chains,
+            )
+            if not selected_chains:
+                print('No chains selected. Cancelled.')
+                return
+            token_addresses = [entry for entry in token_addresses if entry[1] in selected_chains]
+
         tokens, main_asset = [], None
         for _address, _chain, _decimals in token_addresses:
             if _chain != Chain.SOLANA:
                 try:
                     _token_info = fetch_evm_token_info(address=_address, chain=_chain)
-                    if _token_info.timestamp == "NULL":
+                    if _token_info.timestamp == "NULL" and not options.fill_gaps:
                         _token_info = edit_token_details(token_info=_token_info)
                     if _chain == Chain.ETHEREUM:
                         main_asset = _token_info
@@ -486,18 +608,23 @@ def load_tokens_by_address():
                 except Exception as e:
                     print(f"Error fetching token info for {_address} on {_chain.name}: {e}")
 
-            tokens.append(edit_token_details(token_info=TokenInfo(
+            fallback_info = TokenInfo(
                 address=_address,
                 chain=_chain,
                 decimals=_decimals,
                 name=token_name,
                 symbol=token_symbol,
-            )))
+            )
+            tokens.append(fallback_info if options.fill_gaps else edit_token_details(token_info=fallback_info))
 
         if not main_asset and len(tokens) > 0:
             main_asset = tokens[0]
 
         collection = CollectionInfo(tokens=tokens, main_asset=main_asset, coingecko_id=coingecko_id, cryptocompare_id=cc_id)
+
+    if options.fill_gaps:
+        process_collection(collection)
+        return
 
     collection = edit_collection_details(collection)
     while True:
@@ -536,7 +663,35 @@ def load_tokens_by_address():
             break
 
 
+def parse_cli_args() -> QueryOptions:
+    parser = argparse.ArgumentParser(description='Query token data and generate SQL for asset updates')
+    parser.add_argument(
+        '--fill-gaps',
+        action='store_true',
+        help='Only process selected chains from Coingecko and skip manual started/timestamp prompts for missing indexers.',
+    )
+    parser.add_argument(
+        '--chains',
+        type=str,
+        help='Comma-separated chain names used with --fill-gaps (e.g. MONAD,HYPERLIQUID).',
+    )
+    args = parser.parse_args()
+
+    selected_chains = None
+    if args.chains is not None:
+        try:
+            selected_chains = parse_chain_names(args.chains)
+        except ValueError as e:
+            parser.error(str(e))
+
+    if args.chains is not None and not args.fill_gaps:
+        parser.error('--chains can only be used together with --fill-gaps')
+
+    return QueryOptions(fill_gaps=args.fill_gaps, chains=selected_chains)
+
+
 if __name__ == "__main__":
+    options = parse_cli_args()
     print(
         "Asset Info Query Tool - Query Coingecko, RPCs, etc for token data and generate SQL queries.\n"
         "Press Ctrl+C to exit."
@@ -544,6 +699,6 @@ if __name__ == "__main__":
 
     try:  # Run main loop
         while True:
-            load_tokens_by_address()
+            load_tokens_by_address(options)
     except KeyboardInterrupt:
         print("\nExiting...")

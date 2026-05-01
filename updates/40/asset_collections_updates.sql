@@ -20,3 +20,5 @@ INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (595, 'Block 
 *
 INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (596, 'XAUt0', 'XAUt0', 'eip155:999/erc20:0xf4D9235269a96aaDaFc9aDAe454a0618eBE37949');
 *
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (597, 'apxUSD', 'APXUSD', 'eip155:1/erc20:0x98A878b1Cd98131B271883B390f68D2c90674665');
+*

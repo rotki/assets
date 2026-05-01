@@ -199,7 +199,7 @@
     "40": {
       "min_schema_version": 13,
       "max_schema_version": 16,
-      "changes": 60
+      "changes": 67
     }
   }
 }

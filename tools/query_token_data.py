@@ -56,6 +56,7 @@ class Chain(Enum):
     MONAD = 143
     HYPERLIQUID = 999
     INK = 57073
+    MEGAETH = 4326
 
 
 CHAINS_TO_COINGECKO_IDS = {  # id used on coingecko for each chain
@@ -77,9 +78,10 @@ CHAINS_TO_COINGECKO_IDS = {  # id used on coingecko for each chain
     Chain.MONAD: "monad",
     Chain.HYPERLIQUID: "hyperevm",
     Chain.INK: "ink",
+    Chain.MEGAETH: "megaeth",
 }
 RPC_PROVIDERS = {  # RPC endpoints for each supported chain
-    Chain.ETHEREUM: "https://eth.llamarpc.com",
+    Chain.ETHEREUM: "https://eth.blockrazor.xyz",
     Chain.BINANCE: "https://binance.llamarpc.com",
     Chain.POLYGON_POS: "https://polygon.drpc.org",
     Chain.AVALANCHE: "https://api.avax.network/ext/bc/C/rpc",
@@ -96,6 +98,7 @@ RPC_PROVIDERS = {  # RPC endpoints for each supported chain
     Chain.MONAD: "https://rpc.monad.xyz",
     Chain.HYPERLIQUID: "https://rpc.hyperliquid.xyz/evm",
     Chain.INK: "https://rpc-gel.inkonchain.com",
+    Chain.MEGAETH: "https://mainnet.megaeth.com/rpc",
 }
 
 
@@ -304,6 +307,8 @@ def get_deployed_ts(address: str, chain: Chain) -> int | str:
                 url = 'https://polygon.blockscout.com/api'
             case Chain.SCROLL:
                 url = 'https://scroll.blockscout.com/api'
+            case Chain.MEGAETH:
+                url = 'https://megaeth.blockscout.com/api'
             case _:
                 print(f'No available indexers for {chain.name}. Deployed timestamp must be manually entered.')
                 return "NULL"
@@ -321,15 +326,27 @@ def get_deployed_ts(address: str, chain: Chain) -> int | str:
 
 
 def fetch_evm_token_info(address: str, chain: Chain) -> TokenInfo:
-    """Fetch token information from etherscan and web3 RPCs."""
+    """Fetch token information from RPC. Keep partial results when one call fails."""
     print(f"Querying token info for {address} on {chain.name}...")
     address = to_checksum_address(address)
     web3_provider = Web3(HTTPProvider(RPC_PROVIDERS[chain]))
     contract = web3_provider.eth.contract(address=address, abi=ERC20_ABI)
-    name = contract.functions.name().call()
-    decimals = contract.functions.decimals().call()
-    symbol = contract.functions.symbol().call()
-    timestamp = get_deployed_ts(address=address, chain=chain)
+
+    def _safe_call(fn, field_name: str, default=None):
+        try:
+            return fn()
+        except Exception as e:
+            print(f"Failed to query {field_name} for {address} on {chain.name}: {e}")
+            return default
+
+    name = _safe_call(lambda: contract.functions.name().call(), 'name')
+    decimals = _safe_call(lambda: contract.functions.decimals().call(), 'decimals')
+    symbol = _safe_call(lambda: contract.functions.symbol().call(), 'symbol')
+    timestamp = _safe_call(lambda: get_deployed_ts(address=address, chain=chain), 'deployment timestamp', "NULL")
+
+    if name is None and symbol is None and decimals is None:
+        raise RuntimeError('Unable to query ERC20 metadata from RPC')
+
     print(f"Found token: {name} ({symbol}) with {decimals} decimals deployed at {timestamp}")
     return TokenInfo(
         address=address,
@@ -520,6 +537,20 @@ def edit_token_details(
         token_info.get_chain()
         try:  # attempt to query evm token details if we are creating a new token
             return fetch_evm_token_info(address=token_info.address, chain=token_info.chain)
+        except Exception as e:
+            print(f"Failed to query token info for {token_info.address} on {token_info.chain}: {e}")
+            print('Please enter token information manually.')
+    elif not edit_existing and token_info.chain != Chain.SOLANA and token_info.address is not None:
+        try:  # attempt to fill missing token details from RPC
+            fetched = fetch_evm_token_info(address=token_info.address, chain=token_info.chain)
+            if token_info.name is None:
+                token_info.name = fetched.name
+            if token_info.symbol is None:
+                token_info.symbol = fetched.symbol
+            if token_info.decimals is None:
+                token_info.decimals = fetched.decimals
+            if token_info.timestamp is None or token_info.timestamp == "NULL":
+                token_info.timestamp = fetched.timestamp
         except Exception as e:
             print(f"Failed to query token info for {token_info.address} on {token_info.chain}: {e}")
             print('Please enter token information manually.')

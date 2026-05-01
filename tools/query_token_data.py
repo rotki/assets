@@ -87,7 +87,7 @@ RPC_PROVIDERS = {  # RPC endpoints for each supported chain
     Chain.AVALANCHE: "https://api.avax.network/ext/bc/C/rpc",
     Chain.FANTOM: "https://1rpc.io/ftm",
     Chain.OPTIMISM: "https://mainnet.optimism.io",
-    Chain.ARBITRUM_ONE: "https://arbitrum.meowrpc.com",
+    Chain.ARBITRUM_ONE: "https://arb1.arbitrum.io/rpc",
     Chain.GNOSIS: "https://rpc.gnosischain.com",
     Chain.ARBITRUM_NOVA: "https://arbitrum-nova.drpc.org",
     Chain.BASE: "https://base.llamarpc.com",

@@ -22,3 +22,11 @@ INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (596, 'XAUt0'
 *
 INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (597, 'apxUSD', 'APXUSD', 'eip155:1/erc20:0x98A878b1Cd98131B271883B390f68D2c90674665');
 *
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (598, 'Chip', 'CHIP', 'eip155:1/erc20:0x0C1c1C109FE34733fca54b82d7B46B75CFb71F6e');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (599, 'Fluent', 'BLEND', 'eip155:1/erc20:0xd8A271974E8EdAE9D7b58e3370dc1669427503F4');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (600, 'Superform', 'UP', 'eip155:1/erc20:0x1D926bbE67425C9F507b9A0E8030eEdc7880BF33');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (601, 'USD₮0', 'USD₮0', 'eip155:57073/erc20:0x0200C29006150606B650577BBE7B6248F58470c1');
+*

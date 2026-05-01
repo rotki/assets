@@ -164,3 +164,7 @@ INSERT INTO assets(identifier, name, type) VALUES('eip155:1/erc20:0x99E980265Bf3
 *
 INSERT INTO assets(identifier, name, type) VALUES('eip155:1/erc20:0x70BE40667385500c5da7f108a022E21B606045DD', 'Sentio Token', 'C'); INSERT INTO evm_tokens(identifier, token_kind, chain, address, decimals, protocol) VALUES('eip155:1/erc20:0x70BE40667385500c5da7f108a022E21B606045DD', 'A', 1, '0x70BE40667385500c5da7f108a022E21B606045DD', 18, NULL); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('eip155:1/erc20:0x70BE40667385500c5da7f108a022E21B606045DD', 'ST', 'sentio', NULL, NULL, 1774404443, NULL);
 *
+INSERT INTO assets(identifier, name, type) VALUES('eip155:8453/erc20:0xFbC2051AE2265686a469421b2C5A2D5462FbF5eB', 'OpenGradient', 'C'); INSERT INTO evm_tokens(identifier, token_kind, chain, address, decimals, protocol) VALUES('eip155:8453/erc20:0xFbC2051AE2265686a469421b2C5A2D5462FbF5eB', 'A', 8453, '0xFbC2051AE2265686a469421b2C5A2D5462FbF5eB', 18, NULL); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('eip155:8453/erc20:0xFbC2051AE2265686a469421b2C5A2D5462FbF5eB', 'None', 'opengradient', 'OPG', NULL, 1772738603, NULL);
+*
+INSERT INTO assets(identifier, name, type) VALUES('PROS', 'Pharos', 'B'); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('PROS', 'PROS', 'pharos-network', '', NULL, 1765529313, NULL);
+*

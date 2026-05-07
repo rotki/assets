@@ -197,7 +197,7 @@
       "changes": 264
     },
     "40": {
-      "min_schema_version": 13,
+      "min_schema_version": 16,
       "max_schema_version": 16,
       "changes": 85
     }

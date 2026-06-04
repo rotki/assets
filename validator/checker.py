@@ -2,8 +2,6 @@
 Code extracted from the rotki's updater for version 1.16.0
 https://github.com/rotki/rotki/blob/8f41fcba4732fba4af563c45c34ad9ad288906a2/rotkehlchen/globaldb/updates.py
 """
-import main
-
 import re
 from typing import NamedTuple, NewType, Optional, Tuple, Union
 
@@ -151,6 +149,7 @@ class UpdateChecker:
             14: REGEX_ASSETS_V3,
             15: REGEX_ASSETS_V3,
             16: REGEX_ASSETS_V3,
+            17: REGEX_ASSETS_V3,
         }
         self.string_re = re.compile(r'.*([\'"])(.*?)\1.*')
         self.test_version = 2

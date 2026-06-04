@@ -2,6 +2,7 @@
 Code extracted from the rotki's updater for version 1.16.0
 https://github.com/rotki/rotki/blob/8f41fcba4732fba4af563c45c34ad9ad288906a2/rotkehlchen/globaldb/updates.py
 """
+import main
 
 import re
 from typing import NamedTuple, NewType, Optional, Tuple, Union
@@ -69,6 +70,10 @@ CHAIN_ID_TO_NAME = {
     8453: 'base',
     534352: 'scroll',
     146: 'sonic',
+    999: 'hyperliquid',
+    143: 'monad',
+    57073: 'ink',
+    4326: 'megaETH'
 }
 
 # In V2 anyone can create a vault and there are some that are endorsed by yearn once they

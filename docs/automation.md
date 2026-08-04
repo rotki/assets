@@ -1,5 +1,51 @@
 # Kraken asset automation workflow
 
+## Multi-exchange missing-assets compiler
+
+For warning files containing multiple exchanges, use the cache-first compiler:
+
+```bash
+.venv/bin/python tools/compile_missing_assets.py \
+  --missing missing.txt \
+  --version 41 \
+  --global-db /path/to/rotkehlchen/data/global.db \
+  --refresh
+```
+
+The compiler:
+
+- parses and deduplicates every supported exchange warning;
+- excludes symbols ending in `UP` or `DOWN`;
+- refreshes the large CoinGecko and CryptoCompare catalogues once, then reuses
+  them according to `--cache-max-age-hours`;
+- checks both the global database and pending update SQL before generating rows;
+- accepts unique exact CoinGecko symbol/name matches and leaves unsupported or
+  ambiguous matches unresolved;
+- supports evidence-backed decisions in
+  `updates/<version>/asset_compilation/reviewed_overrides.json`;
+- invokes the SQL generator per exchange and reconciles collection-main asset
+  mappings into SQL, JSON, and the root `mappings.csv`;
+- backfills missing EVM `started` timestamps using Blockscout PRO when
+  configured, then chain explorers and batched archive-RPC lookup, with all
+  successful results stored in a persistent deployment cache;
+- writes the full evidence manifest, resolved CSVs, ignored assets, and
+  unresolved assets under `updates/<version>/asset_compilation/`.
+
+Use `--resolve-only` to rebuild reports without changing SQL or mappings. Use
+`--offline` for a fully cached rerun. If CryptoCompare requires authentication,
+set `CRYPTOCOMPARE_API_KEY` and rerun with `--refresh`; until then, the manifest
+records the missing authentication and CryptoCompare IDs remain null.
+
+For authenticated Blockscout deployment lookups, create an ignored `.env` file
+at the repository root:
+
+```dotenv
+BLOCKSCOUT_API_KEY=your-key
+```
+
+`tools/backfill_started_dates.py` reads this file automatically and never
+writes the credential to generated output or the deployment cache.
+
 This document describes all scripts used in this asset-mapping workflow, the order to run them, and expected outputs.
 
 ## Goal

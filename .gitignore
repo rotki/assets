@@ -3,6 +3,7 @@ env/
 .vscode
 .idea
 .token_query_config.json
+.env
 .coingecko_cache
 global.db
 .DS_Store

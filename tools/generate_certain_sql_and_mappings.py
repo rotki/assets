@@ -16,12 +16,14 @@ import json
 import os
 import re
 import sqlite3
+import time
 from dataclasses import dataclass
 from enum import Enum
 from pathlib import Path
 from typing import Any
 
 import requests
+from eth_utils import is_address, to_checksum_address
 
 COINGECKO_BASE_URL = "https://api.coingecko.com/api/v3"
 
@@ -31,7 +33,7 @@ SOLANA_IDENTIFIER = "solana/token:{address}"
 ASSETS_QUERY = "{insert} assets(identifier, name, type) VALUES('{identifier}', '{name}', '{asset_type}'); "
 EVM_TOKENS_QUERY = "{insert} evm_tokens(identifier, token_kind, chain, address, decimals, protocol) VALUES('{identifier}', 'A', {blockchain}, '{address}', {decimals}, {protocol}); "
 SOLANA_TOKENS_QUERY = "{insert} solana_tokens(identifier, token_kind, address, decimals, protocol) VALUES('{identifier}', 'D', '{address}', {decimals}, {protocol}); "
-COMMON_ASSET_DETAILS_QUERY = "{insert} common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('{identifier}', '{symbol}', {coingecko}, NULL, NULL, {deployed_at}, NULL);"
+COMMON_ASSET_DETAILS_QUERY = "{insert} common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('{identifier}', '{symbol}', {coingecko}, {cryptocompare}, NULL, {deployed_at}, NULL);"
 ASSET_COLLECTION_QUERY = "{insert} asset_collections(id, name, symbol, main_asset) VALUES ({collection}, '{name}', '{symbol}', '{main_asset}');"
 ASSET_MAPPING_QUERY = "{insert} multiasset_mappings(collection_id, asset) VALUES ({collection}, '{identifier}');"
 
@@ -52,6 +54,11 @@ class Chain(Enum):
     CRONOS = 25
     ZKSYNC = 324
     LINEA = 59144
+    MONAD = 143
+    HYPERLIQUID = 999
+    INK = 57073
+    MEGAETH = 4326
+    ROBINHOOD = 4663
 
 
 COINGECKO_PLATFORM_TO_CHAIN = {
@@ -69,6 +76,11 @@ COINGECKO_PLATFORM_TO_CHAIN = {
     "cronos": Chain.CRONOS,
     "zksync": Chain.ZKSYNC,
     "linea": Chain.LINEA,
+    "monad": Chain.MONAD,
+    "hyperevm": Chain.HYPERLIQUID,
+    "ink": Chain.INK,
+    "megaeth": Chain.MEGAETH,
+    "robinhood": Chain.ROBINHOOD,
     "solana": Chain.SOLANA,
 }
 
@@ -125,6 +137,10 @@ RPC_PROVIDERS = {
     Chain.SCROLL: "https://scroll.drpc.org",
     Chain.ZKSYNC: "https://1rpc.io/zksync2-era",
     Chain.LINEA: "https://rpc.linea.build",
+    Chain.MONAD: "https://rpc.monad.xyz",
+    Chain.HYPERLIQUID: "https://rpc.hyperliquid.xyz/evm",
+    Chain.INK: "https://rpc-gel.inkonchain.com",
+    Chain.MEGAETH: "https://mainnet.megaeth.com/rpc",
 }
 
 BLOCKSCOUT_API = {
@@ -135,6 +151,7 @@ BLOCKSCOUT_API = {
     Chain.GNOSIS: "https://gnosis.blockscout.com/api",
     Chain.POLYGON_POS: "https://polygon.blockscout.com/api",
     Chain.SCROLL: "https://scroll.blockscout.com/api",
+    Chain.MEGAETH: "https://megaeth.blockscout.com/api",
 }
 
 ETHERSCAN_CHAIN_ID = {
@@ -160,6 +177,10 @@ class TokenRecord:
     name: str | None
     symbol: str | None
     started: int | str | None = "NULL"
+
+    def __post_init__(self) -> None:
+        if self.chain != Chain.SOLANA and is_address(self.address):
+            self.address = to_checksum_address(self.address)
 
     def identifier(self) -> str:
         if self.chain == Chain.SOLANA:
@@ -244,28 +265,42 @@ def load_existing_location_json_additions(path: Path) -> list[dict[str, str]]:
 
 
 def merge_location_json_additions(existing: list[dict[str, str]], new: list[dict[str, str]]) -> list[dict[str, str]]:
-    merged: list[dict[str, str]] = []
-    seen: set[tuple[str, str, str]] = set()
+    merged: dict[tuple[str, str], dict[str, str]] = {}
     for item in existing + new:
-        key = (item["asset"], item["location"], item["location_symbol"])
-        if key in seen:
-            continue
-        seen.add(key)
-        merged.append(item)
-    return merged
+        key = (item["location"], item["location_symbol"])
+        merged[key] = item
+    return list(merged.values())
 
 
-def parse_certain_rows(csv_path: Path) -> list[tuple[str, str]]:
-    rows: list[tuple[str, str]] = []
+def load_collection_main_by_symbol(path: Path) -> dict[str, str]:
+    if not path.exists():
+        return {}
+    matches = re.findall(
+        r"asset_collections\(id,\s*name,\s*symbol,\s*main_asset\)\s+VALUES\s*\(\d+,\s*'[^']*',\s*'([^']+)',\s*'([^']+)'\)",
+        path.read_text(),
+        re.IGNORECASE,
+    )
+    return {symbol.upper(): main_asset for symbol, main_asset in matches}
+
+
+def parse_certain_rows(csv_path: Path) -> list[tuple[str, str | None, str | None, str | None]]:
+    rows: list[tuple[str, str | None, str | None, str | None]] = []
     with csv_path.open("r", newline="") as f:
         reader = csv.DictReader(f)
         for row in reader:
             symbol = (row.get("symbol") or "").strip().upper()
             ids = (row.get("coingecko_ids") or "").strip()
             count = int((row.get("match_count") or "0").strip())
-            if count != 1 or not ids or not symbol:
+            asset_identifier = (row.get("asset_identifier") or "").strip() or None
+            if count != 1 or (not ids and not asset_identifier) or not symbol:
                 continue
-            rows.append((symbol, ids.split("|")[0]))
+            cryptocompare_id = (row.get("cryptocompare_id") or "").strip() or None
+            rows.append((
+                symbol,
+                ids.split("|")[0] if ids else None,
+                cryptocompare_id,
+                asset_identifier,
+            ))
     return rows
 
 
@@ -305,6 +340,24 @@ def find_existing_identifier_by_coingecko(db_path: Path | None, coin_id: str) ->
 
 
 def resolve_existing_identifier(db_path: Path | None, coin_id: str, tokens: list[TokenRecord]) -> str | None:
+    if db_path is not None and db_path.exists():
+        try:
+            with sqlite3.connect(db_path) as conn:
+                row = conn.execute(
+                    """
+                    SELECT ac.main_asset
+                    FROM common_asset_details cad
+                    JOIN multiasset_mappings mm ON mm.asset = cad.identifier
+                    JOIN asset_collections ac ON ac.id = mm.collection_id
+                    WHERE cad.coingecko = ?
+                    LIMIT 1
+                    """,
+                    (coin_id,),
+                ).fetchone()
+                if row:
+                    return row[0]
+        except sqlite3.Error:
+            pass
     for token in tokens:
         identifier = find_existing_identifier_by_chain_address(db_path, token.chain, token.address)
         if identifier:
@@ -320,9 +373,16 @@ def coingecko_get_json(endpoint: str, api_key: str | None = None) -> dict[str, A
     headers = {}
     if api_key:
         headers["x-cg-demo-api-key"] = api_key
-    r = requests.get(endpoint, headers=headers, timeout=30)
-    r.raise_for_status()
-    return r.json()
+    for attempt in range(6):
+        response = requests.get(endpoint, headers=headers, timeout=30)
+        if response.status_code not in {429, 500, 502, 503, 504}:
+            response.raise_for_status()
+            return response.json()
+        if attempt < 5:
+            retry_after = response.headers.get("Retry-After")
+            time.sleep(float(retry_after) if retry_after and retry_after.isdigit() else 2 ** attempt)
+    response.raise_for_status()
+    raise RuntimeError(f"Unable to fetch {endpoint}")
 
 
 def get_coin_data(coin_id: str, cache_dir: Path, fetch_missing: bool, api_key: str | None) -> dict[str, Any] | None:
@@ -497,7 +557,12 @@ def choose_main_asset(tokens: list[TokenRecord]) -> TokenRecord:
     return tokens[0]
 
 
-def token_sql(token: TokenRecord, coin_id: str, insert_or_ignore: bool) -> str:
+def token_sql(
+        token: TokenRecord,
+        coin_id: str,
+        cryptocompare_id: str | None,
+        insert_or_ignore: bool,
+) -> str:
     insert = insert_prefix(insert_or_ignore)
     identifier = token.identifier()
     decimals = token.decimals if token.decimals is not None else (9 if token.chain == Chain.SOLANA else 18)
@@ -510,6 +575,7 @@ def token_sql(token: TokenRecord, coin_id: str, insert_or_ignore: bool) -> str:
         "asset_type": "Y" if token.chain == Chain.SOLANA else "C",
         "symbol": sql_escape(token.symbol),
         "coingecko": f"'{coin_id}'",
+        "cryptocompare": f"'{sql_escape(cryptocompare_id)}'" if cryptocompare_id else "NULL",
         "blockchain": token.chain.value,
         "address": token.address,
         "decimals": decimals,
@@ -523,7 +589,13 @@ def token_sql(token: TokenRecord, coin_id: str, insert_or_ignore: bool) -> str:
     return sql
 
 
-def placeholder_sql(symbol: str, coin_id: str, coin_name: str, insert_or_ignore: bool) -> str:
+def placeholder_sql(
+        symbol: str,
+        coin_id: str,
+        cryptocompare_id: str | None,
+        coin_name: str,
+        insert_or_ignore: bool,
+) -> str:
     insert = insert_prefix(insert_or_ignore)
     fmt = {
         "insert": insert,
@@ -532,6 +604,7 @@ def placeholder_sql(symbol: str, coin_id: str, coin_name: str, insert_or_ignore:
         "asset_type": "W",
         "symbol": sql_escape(symbol),
         "coingecko": f"'{coin_id}'",
+        "cryptocompare": f"'{sql_escape(cryptocompare_id)}'" if cryptocompare_id else "NULL",
         "deployed_at": "NULL",
     }
     return (
@@ -644,6 +717,7 @@ def main() -> None:
     existing_evm_address_map = load_existing_evm_address_map(updates_sql)
     existing_location_rows = load_existing_location_rows(location_mappings_sql)
     existing_location_json_additions = load_existing_location_json_additions(location_mappings_json)
+    collection_main_by_symbol = load_collection_main_by_symbol(collections_sql)
     next_collection_id = load_next_collection_id(
         collections_sql,
         args.collection_start,
@@ -661,7 +735,26 @@ def main() -> None:
     inserted = 0
     skipped = 0
 
-    for symbol, coin_id in rows:
+    db_char = LOCATION_DB_CHAR[location_key]
+    direct_rows = (row for row in rows if row[3] is not None)
+    for symbol, _coin_id, _cryptocompare_id, direct_identifier in direct_rows:
+        assert direct_identifier is not None
+        row_key = (db_char, symbol, direct_identifier)
+        if row_key not in existing_location_rows:
+            location_sql_chunks.append(
+                f'INSERT INTO location_asset_mappings(location,exchange_symbol,local_id) VALUES ("{db_char}", "{symbol}", "{direct_identifier}");\n*\n'
+            )
+            existing_location_rows.add(row_key)
+        location_json_additions.append({
+            "asset": direct_identifier,
+            "location": location_key,
+            "location_symbol": symbol,
+        })
+        print(f"[direct] {symbol} -> {direct_identifier}")
+
+    generated_rows = (row for row in rows if row[3] is None)
+    for symbol, coin_id, cryptocompare_id, _direct_identifier in generated_rows:
+        assert coin_id is not None
         coin_data = get_coin_data(
             coin_id=coin_id,
             cache_dir=coin_cache_dir,
@@ -687,6 +780,7 @@ def main() -> None:
                     placeholder_sql(
                         symbol=symbol,
                         coin_id=coin_id,
+                        cryptocompare_id=cryptocompare_id,
                         coin_name=coin_data.get("name") or symbol,
                         insert_or_ignore=args.insert_or_ignore,
                     ) + "\n*\n"
@@ -716,7 +810,12 @@ def main() -> None:
                     if update_started_in_updates_sql(updates_sql, identifier, token.started):
                         print(f"[started] updated {identifier} -> {token.started}")
                     continue
-                updates_chunks.append(token_sql(token, coin_id=coin_id, insert_or_ignore=args.insert_or_ignore) + "\n*\n")
+                updates_chunks.append(token_sql(
+                    token,
+                    coin_id=coin_id,
+                    cryptocompare_id=cryptocompare_id,
+                    insert_or_ignore=args.insert_or_ignore,
+                ) + "\n*\n")
                 existing_identifiers.add(identifier)
                 if token.chain != Chain.SOLANA:
                     existing_evm_address_map[(token.chain.value, token.address.lower())] = identifier
@@ -753,8 +852,10 @@ def main() -> None:
                     )
                 next_collection_id += 1
 
+            if collection_main := collection_main_by_symbol.get(symbol):
+                mapped_identifier = collection_main
+
         if mapped_identifier:
-            db_char = LOCATION_DB_CHAR[location_key]
             row_key = (db_char, symbol, mapped_identifier)
             if row_key not in existing_location_rows:
                 location_sql_chunks.append(

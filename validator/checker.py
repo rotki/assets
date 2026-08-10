@@ -134,6 +134,7 @@ class UpdateChecker:
 
     def __init__(self):
         self.versions = {
+            0: REGEX_ASSETS_V3,
             2: REGEX_ASSETS_V2,
             3: REGEX_ASSETS_V3,
             4: REGEX_ASSETS_V3,
@@ -304,10 +305,12 @@ class UpdateChecker:
             'chain': None,
             'token_kind': None,
         }
+        modern_schema = schema_version == 0 or schema_version >= 3
+        supports_solana = schema_version == 0 or schema_version > 12
         if asset_data['asset_type'] == 'C':
             evm_data = self._parse_evm_token_data(insert_text, schema_version)
             token_data.update(evm_data)
-        elif asset_data['asset_type'] == 'Y' and schema_version > 12:
+        elif asset_data['asset_type'] == 'Y' and supports_solana:
             solana_data = self._parse_solana_token_data(insert_text, schema_version)
             token_data.update(solana_data)
 
@@ -329,7 +332,7 @@ class UpdateChecker:
                 )
         elif schema_version == 2:
             common_details = {'forked': None}
-        elif schema_version >= 3:
+        elif modern_schema:
             match = self.versions[schema_version]['common_asset_details_re'].match(insert_text)
             if match is None:
                 raise DeserializationError(
@@ -337,7 +340,7 @@ class UpdateChecker:
                     f'details data out of {insert_text}',
                 )
             assert self._parse_str(match.group(1), 'identifier', insert_text) == asset_data['identifier'], f'Identifiers of assets {asset_data["identifier"]} and common_asset_details {match.group(1)} are not same'
-            if asset_data['asset_type'] == 'C' or (asset_data['asset_type'] == 'Y' and schema_version > 12):
+            if asset_data['asset_type'] == 'C' or (asset_data['asset_type'] == 'Y' and supports_solana):
                 assert token_data['identifier'] == asset_data['identifier'], f'Identifiers of assets {asset_data["identifier"]} and token {token_data["identifier"]} are not same'
 
             common_details = {
@@ -390,9 +393,11 @@ class UpdateChecker:
             assert len(asset_data.symbol) != 0
 
             # Validate identifier formats for tokens
-            if asset_data.asset_type == 'C' and schema_version > 2:
+            modern_schema = schema_version == 0 or schema_version > 2
+            supports_solana = schema_version == 0 or schema_version > 12
+            if asset_data.asset_type == 'C' and modern_schema:
                 assert asset_data.identifier == f'eip155:{asset_data.chain}/erc20:{asset_data.address}', f'Mismatch in identifier, chain id, and/or address for {asset_data.identifier}'
-            elif asset_data.asset_type == 'Y' and schema_version > 12:
+            elif asset_data.asset_type == 'Y' and supports_solana:
                 assert asset_data.identifier == f'solana/token:{asset_data.address}', f'Solana token identifier should be solana/token:<address> for {asset_data.identifier}'
 
             # Check address-related validations
@@ -401,7 +406,7 @@ class UpdateChecker:
                 if asset_data.asset_type == 'C':
                     assert is_checksum_address(asset_data.address), f'Address not checksummed in {asset_data}, {asset_data.address}'
                     address_validations.append(('ethereum', (asset_data.address, asset_data.chain)))
-                elif asset_data.asset_type == 'Y' and schema_version > 12:
+                elif asset_data.asset_type == 'Y' and supports_solana:
                     address_validations.append(('solana', asset_data.address))
 
                 # ensure address appears in the action text

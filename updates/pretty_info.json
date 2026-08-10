@@ -1,5 +1,5 @@
 {
-  "latest": 40,
+  "latest": 41,
   "updates": {
     "1": {
       "changes": 249,
@@ -200,6 +200,11 @@
       "min_schema_version": 16,
       "max_schema_version": 17,
       "changes": 85
+    },
+    "41": {
+      "min_schema_version": 17,
+      "max_schema_version": 17,
+      "changes": 198
     }
   }
 }

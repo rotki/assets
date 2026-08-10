@@ -1,5 +1,52 @@
 # Kraken asset automation workflow
 
+## Multi-exchange missing-assets compiler
+
+For warning files containing multiple exchanges, use the cache-first compiler:
+
+```bash
+.venv/bin/python tools/compile_missing_assets.py \
+  --missing missing.txt \
+  --version 41 \
+  --global-db /path/to/rotkehlchen/data/global.db \
+  --refresh
+```
+
+The compiler:
+
+- parses and deduplicates every supported exchange warning;
+- excludes symbols ending in `UP` or `DOWN`, plus KuCoin leveraged symbols
+  ending in `2L`, `2S`, `3L`, or `3S`;
+- refreshes the large CoinGecko and CryptoCompare catalogues once, then reuses
+  them according to `--cache-max-age-hours`;
+- checks both the global database and pending update SQL before generating rows;
+- accepts unique exact CoinGecko symbol/name matches and leaves unsupported or
+  ambiguous matches unresolved;
+- supports evidence-backed decisions in
+  `updates/<version>/asset_compilation/reviewed_overrides.json`;
+- invokes the SQL generator per exchange and reconciles collection-main asset
+  mappings into SQL, JSON, and the root `mappings.csv`;
+- backfills missing EVM `started` timestamps using Blockscout PRO when
+  configured, then chain explorers and batched archive-RPC lookup, with all
+  successful results stored in a persistent deployment cache;
+- writes the full evidence manifest, resolved CSVs, ignored assets, and
+  unresolved assets under `updates/<version>/asset_compilation/`.
+
+Use `--resolve-only` to rebuild reports without changing SQL or mappings. Use
+`--offline` for a fully cached rerun. If CryptoCompare requires authentication,
+set `CRYPTOCOMPARE_API_KEY` and rerun with `--refresh`; until then, the manifest
+records the missing authentication and CryptoCompare IDs remain null.
+
+For authenticated Blockscout deployment lookups, create an ignored `.env` file
+at the repository root:
+
+```dotenv
+BLOCKSCOUT_API_KEY=your-key
+```
+
+`tools/backfill_started_dates.py` reads this file automatically and never
+writes the credential to generated output or the deployment cache.
+
 This document describes all scripts used in this asset-mapping workflow, the order to run them, and expected outputs.
 
 ## Goal
@@ -79,6 +126,86 @@ Then run generation using the resolved CSV:
   --location-mappings-json updates/40/location_asset_mappings.json \
   --insert-or-ignore
 ```
+
+## Manual exchange mappings
+
+Keep mappings confirmed outside the CoinGecko matcher in a separate batch CSV
+until they are ready to be converted to JSON. Use the format
+`asset,location,location_symbol`, for example
+`updates/<version>/asset_compilation/manual_mappings.csv`.
+
+For Bitstamp symbols, check the market page by replacing `w` in
+`https://www.bitstamp.net/markets/w/eur/` with the exchange symbol. For
+example, the Bitstamp `W` market is Wormhole, which already exists in the
+global database. Map it to the existing main asset identifier rather than
+creating a new asset:
+
+```text
+eip155:1/erc20:0xB0fFa8000886e57F86dd5264b9582b2Ad87b2b91,bitstamp,W
+```
+
+When an exchange uses a non-token symbol, verify the listing before mapping it.
+Kraken `HYPER.CORE` is the existing Hyperliquid `HYPE` asset, so it maps to
+`HYPE` rather than creating a new asset:
+
+```text
+HYPE,kraken,HYPER.CORE
+```
+
+For a CoinGecko collection such as CAP, add the Ethereum and BNB deployments as
+one collection, use the Ethereum asset as the main identifier for exchange
+mappings, and checksum both contract addresses before writing the SQL or CSV.
+Bybit `USDS` is Maker's USDS and already exists as the `USDS Stablecoin`
+collection; map it to the collection main asset
+`eip155:1/erc20:0xdC035D45d973E3EC169d2276DDab16f1e407384F`.
+
+For Binance tokenized-stock symbols ending in `B`, use the matching CoinGecko
+bStocks page to identify the asset and add its BNB deployment. Verify the
+contract address and checksum it before adding the token SQL and exchange
+mapping. For OKX stock symbols with the `X` prefix, leave them unmapped when
+their identity is not confirmed and add them to the next
+`location_unsupported_assets` update instead.
+
+Robinhood Chain is an enum-only EVM chain for asset generation:
+`Chain.ROBINHOOD = 4663`, with CoinGecko platform ID `robinhood`. Keep it out
+of RPC, explorer, history, and balance-provider maps until those integrations
+are implemented. The CoinGecko `the-index` deployment uses chain id `4663`; if
+generated before a Robinhood RPC/indexer is available, keep its deployment
+timestamp as `NULL` rather than inventing one.
+
+Convert a reviewed batch CSV to the location-mapping JSON with:
+
+```bash
+/Users/yabirgb/work/rotki/.venv/bin/python tools/location_mappings.py \
+  updates/<version>/asset_compilation/manual_mappings.csv \
+  updates/<version>/asset_compilation/manual_mappings.json
+```
+
+## Poloniex asset extraction
+
+For unresolved Poloniex symbols, use the local Poloniex helpers:
+
+- `tools/poloniex_yolo.py` queries the public currency-detail endpoint and can
+  extract a contract address from `blockQuery`.
+- `tools/poloniex_search.py` queries `/v2/currencies/{symbol}` and returns the
+  authoritative currency name, `delisted` flag, and `networkList` entries.
+
+For a batch, prefer the v2 `networkList` values for the final mapping because
+the detail endpoint can append URL fragments to `blockQuery` addresses. Check
+each returned contract against `global.db` and the local `coingecko_coins.json`
+before adding it to `manual_mappings.csv`.
+
+Use these network-to-identifier conversions:
+
+- `ETH` -> `eip155:1/erc20:<checksummed address>`
+- `BSC` -> `eip155:56/erc20:<checksummed address>`
+- `ETHBASE` -> `eip155:8453/erc20:<checksummed address>`
+- `SOL` -> `solana/token:<address>`
+
+Do not guess identifiers for unsupported Poloniex networks such as `ETHROB` or
+`TRX`; leave those symbols in the review report until a supported identifier
+format or canonical asset is confirmed. Then convert the reviewed mapping CSV
+with `tools/location_mappings.py` as described above.
 
 ---
 

@@ -2,6 +2,7 @@ import sqlite3
 from pathlib import Path
 
 from tools.generate_certain_sql_and_mappings import (
+    COINGECKO_PLATFORM_TO_CHAIN,
     Chain,
     TokenRecord,
     choose_main_asset,
@@ -9,12 +10,18 @@ from tools.generate_certain_sql_and_mappings import (
     find_existing_identifier_by_chain_address,
     find_existing_identifier_by_coingecko,
     load_existing_evm_address_map,
+    load_collection_main_by_symbol,
     load_next_collection_id,
     merge_location_json_additions,
     parse_certain_rows,
     resolve_existing_identifier,
     token_sql,
 )
+
+
+def test_robinhood_chain_is_coin_gecko_only() -> None:
+    assert Chain.ROBINHOOD.value == 4663
+    assert COINGECKO_PLATFORM_TO_CHAIN['robinhood'] == Chain.ROBINHOOD
 
 
 def test_parse_certain_rows_only_unique(tmp_path: Path) -> None:
@@ -26,7 +33,7 @@ def test_parse_certain_rows_only_unique(tmp_path: Path) -> None:
         "CCC,2,ccc1|ccc2,C1|C2\n"
     )
 
-    assert parse_certain_rows(csv_path) == [("AAA", "aaa-token")]
+    assert parse_certain_rows(csv_path) == [("AAA", "aaa-token", None, None)]
 
 
 def test_extract_tokens_from_coin_dedupes_and_maps_supported_chains() -> None:
@@ -63,15 +70,17 @@ def test_choose_main_asset_prefers_ethereum() -> None:
 
 def test_token_sql_uses_started_timestamp() -> None:
     token = TokenRecord(
-        address="0xabc",
+        address="0x0000000000000000000000000000000000000abc",
         chain=Chain.ETHEREUM,
         decimals=18,
         name="Token",
         symbol="TOK",
         started=1700000000,
     )
-    sql = token_sql(token, coin_id="token-id", insert_or_ignore=True)
-    assert ", NULL, NULL, 1700000000, NULL);" in sql
+    sql = token_sql(token, coin_id="token-id", cryptocompare_id="TOK", insert_or_ignore=True)
+    assert "'TOK', NULL, 1700000000, NULL);" in sql
+    assert "'token-id', 'TOK'" in sql
+    assert "0x0000000000000000000000000000000000000aBc" in sql
 
 
 def test_find_existing_identifier_by_chain_address(tmp_path: Path) -> None:
@@ -138,6 +147,25 @@ def test_merge_location_json_additions_preserves_existing_and_dedupes() -> None:
         ("a2", "binance", "BBB"),
         ("a3", "kraken", "CCC"),
     }
+
+
+def test_merge_location_json_additions_replaces_same_location_symbol() -> None:
+    merged = merge_location_json_additions(
+        [{"asset": "old", "location": "kraken", "location_symbol": "AAA"}],
+        [{"asset": "new", "location": "kraken", "location_symbol": "AAA"}],
+    )
+
+    assert merged == [{"asset": "new", "location": "kraken", "location_symbol": "AAA"}]
+
+
+def test_load_collection_main_by_symbol(tmp_path: Path) -> None:
+    path = tmp_path / "collections.sql"
+    path.write_text(
+        "INSERT INTO asset_collections(id, name, symbol, main_asset) "
+        "VALUES (1, 'Nesa', 'NES', 'eip155:56/erc20:0x123');\n"
+    )
+
+    assert load_collection_main_by_symbol(path) == {"NES": "eip155:56/erc20:0x123"}
 
 
 def test_load_next_collection_id_prefers_collections_sql(tmp_path: Path) -> None:

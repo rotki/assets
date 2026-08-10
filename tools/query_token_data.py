@@ -57,6 +57,7 @@ class Chain(Enum):
     HYPERLIQUID = 999
     INK = 57073
     MEGAETH = 4326
+    ROBINHOOD = 4663
 
 
 CHAINS_TO_COINGECKO_IDS = {  # id used on coingecko for each chain
@@ -79,6 +80,7 @@ CHAINS_TO_COINGECKO_IDS = {  # id used on coingecko for each chain
     Chain.HYPERLIQUID: "hyperevm",
     Chain.INK: "ink",
     Chain.MEGAETH: "megaeth",
+    Chain.ROBINHOOD: "robinhood",
 }
 RPC_PROVIDERS = {  # RPC endpoints for each supported chain
     Chain.ETHEREUM: "https://eth.blockrazor.xyz",

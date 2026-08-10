@@ -58,6 +58,7 @@ class Chain(Enum):
     HYPERLIQUID = 999
     INK = 57073
     MEGAETH = 4326
+    ROBINHOOD = 4663
 
 
 COINGECKO_PLATFORM_TO_CHAIN = {
@@ -79,6 +80,7 @@ COINGECKO_PLATFORM_TO_CHAIN = {
     "hyperevm": Chain.HYPERLIQUID,
     "ink": Chain.INK,
     "megaeth": Chain.MEGAETH,
+    "robinhood": Chain.ROBINHOOD,
     "solana": Chain.SOLANA,
 }
 

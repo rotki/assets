@@ -2,6 +2,7 @@ import sqlite3
 from pathlib import Path
 
 from tools.generate_certain_sql_and_mappings import (
+    COINGECKO_PLATFORM_TO_CHAIN,
     Chain,
     TokenRecord,
     choose_main_asset,
@@ -16,6 +17,11 @@ from tools.generate_certain_sql_and_mappings import (
     resolve_existing_identifier,
     token_sql,
 )
+
+
+def test_robinhood_chain_is_coin_gecko_only() -> None:
+    assert Chain.ROBINHOOD.value == 4663
+    assert COINGECKO_PLATFORM_TO_CHAIN['robinhood'] == Chain.ROBINHOOD
 
 
 def test_parse_certain_rows_only_unique(tmp_path: Path) -> None:

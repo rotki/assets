@@ -26,3 +26,9 @@ INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (614, 'Zest P
 *
 INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (615, 'Geodnet', 'GEOD', 'eip155:137/erc20:0xAC0F66379A6d7801D7726d5a943356A172549Adb');
 *
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (616, 'Stable Mint USD', 'USDSM', 'eip155:1/erc20:0x399B29975CBE313C56269cD5097F5AE097Fa2741');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (617, 'Cap', 'CAP', 'eip155:1/erc20:0x99991c6AAbba5a096f24f250b73580F5179b9999');
+*
+INSERT INTO asset_collections(id, name, symbol, main_asset) VALUES (618, 'Starpower', 'STAR', 'eip155:56/erc20:0x8fce7206E3043DD360F115AFa956EE31b90B787C');
+*

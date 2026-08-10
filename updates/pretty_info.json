@@ -202,8 +202,8 @@
       "changes": 85
     },
     "41": {
-      "min_schema_version": 0,
-      "max_schema_version": 0,
+      "min_schema_version": 17,
+      "max_schema_version": 17,
       "changes": 159
     }
   }

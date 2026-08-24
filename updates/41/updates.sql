@@ -394,3 +394,5 @@ INSERT INTO assets(identifier, name, type) VALUES('eip155:4663/erc20:0xc2362AfF2
 *
 INSERT INTO assets(identifier, name, type) VALUES('hyperc:0x6781b92b6ea5d8ed37d275eb201f64af', '$MAX', '\'); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('hyperc:0x6781b92b6ea5d8ed37d275eb201f64af', 'MAX', NULL, NULL, NULL, 1749829092, NULL); INSERT INTO hyperliquid_tokens(identifier, address, decimals) VALUES('hyperc:0x6781b92b6ea5d8ed37d275eb201f64af', '0x6781b92b6ea5d8ed37d275eb201f64af', 6);
 *
+INSERT INTO assets(identifier, name, type) VALUES('S', 'Sonic', 'B'); INSERT INTO common_asset_details(identifier, symbol, coingecko, cryptocompare, forked, started, swapped_for) VALUES('S', 'S', 'sonic', 'SONIC', NULL, 1733011200, NULL);
+*

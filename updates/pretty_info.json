@@ -203,7 +203,7 @@
     },
     "41": {
       "min_schema_version": 17,
-      "max_schema_version": 17,
+      "max_schema_version": 18,
       "changes": 198
     },
     "42": {

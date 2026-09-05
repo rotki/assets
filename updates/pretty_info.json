@@ -209,7 +209,7 @@
     "42": {
       "min_schema_version": 17,
       "max_schema_version": 18,
-      "changes": 10
+      "changes": 11
     }
   }
 }
